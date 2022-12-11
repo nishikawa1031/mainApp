@@ -33,6 +33,7 @@ statusがdraftのページだけをページ一覧に表示するだけ。
 いいねした記事の一覧を見れる。
 
 ## 認証機能の実装
+https://qiita.com/taki_21/items/cc8bc157d5742294ec98
 認証済みユーザーかどうかで表示できるページ制御。
 https://qiita.com/ren0826jam/items/eaa3e5b6d16cc22c4179
 
