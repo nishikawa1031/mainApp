@@ -22,7 +22,11 @@ module MyProj
     # Don't generate system test files.
     config.generators.system_tests = nil
     config.generators do |g|
-      g.test_framework :rspec
+      g.test_framework :rspec,
+        controller_specs: false,  # controller specは作らない
+        view_specs: false,        # view specは作らない
+        helper_specs: false,      # helper specは作らない
+        routing_specs: false      # routing specは作らない
     end
   end
 end
