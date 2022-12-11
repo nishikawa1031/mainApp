@@ -11,7 +11,7 @@ Category id, name
 記事の新規作成・編集　ログイン済みユーザーのみ
 記事に対するブックマーク
 
-## 新規作成
+## 新規作成 ←最もこだわりたい部分。
 投稿時、カテゴリの登録ができる。
 記事の下書き保存ができる。
 ### 入力方法は、markdown?
@@ -24,6 +24,7 @@ https://www.web-knowledge-info.com/wp/ruby-on-rails32/
 
 action text css当てるのは自力でやらないといけないかも。
 https://www.techscore.com/blog/2019/12/19/ruby-on-rails-6-action-text/
+
 
 ## 下書き保存したページ一覧
 statusがdraftのページだけをページ一覧に表示するだけ。
