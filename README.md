@@ -1,8 +1,12 @@
 # DB構造
 User id, name, 
-Article id, title, contents, category_id, user_id, status(published, draft)
+Article id, title, body, category_id, user_id, status(published, draft)
 ArticleCategory
 Category id, name
+
+rails generate scaffold Article title:string body:text status:integer user:references category:references
+https://railstutorial.jp/chapters/user_microposts?version=6.0#sec-a_micropost_model
+
 
 # 大まかな実装の順番
 ## ページ構成
