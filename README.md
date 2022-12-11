@@ -4,9 +4,12 @@ Article id, title, body, category_id, user_id, status(published, draft)
 ArticleCategory
 Category id, name
 
-rails generate scaffold Article title:string body:text status:integer user:references category:references
+rails g scaffold Article title:string body:text status:integer user:references
 https://railstutorial.jp/chapters/user_microposts?version=6.0#sec-a_micropost_model
 
+中間テーブルの作り方 https://b.pyar.bz/20141016/many-to-many-table/
+rails g scaffold Category name:string
+rails g model category_articles category:references article:references
 
 # 大まかな実装の順番
 ## ページ構成
