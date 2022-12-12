@@ -1,14 +1,14 @@
-# DB構造
-User id, name, 
-Article id, title, body, category_id, user_id, status(published, draft)
-ArticleCategory
-Category id, name
+# デプロイ方法
+heroku run rails db:migrate
+git push heroku master
 
+# DB構造
 rails g scaffold Article title:string body:text status:integer user:references
 https://railstutorial.jp/chapters/user_microposts?version=6.0#sec-a_micropost_model
 
 中間テーブルの作り方 https://b.pyar.bz/20141016/many-to-many-table/
-rails g controller Category name:string
+rails g model Category name:string
+rails g controller Category
 rails g model category_articles category:references article:references
 
 # 大まかな実装の順番
