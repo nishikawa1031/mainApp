@@ -1,3 +1,6 @@
+# やること
+headerの検索窓の実装
+
 # デプロイ方法
 git push heroku master
 heroku run rails db:migrate
