@@ -13,3 +13,7 @@ Article.create(title: "First Article", body: "This is the first article", status
 Article.create(title: "Second Article", body: "This is the second article", status: 1, user_id: 1)
 
 Article.create(title: "Third Article", body: "This is the third article", status: 2, user_id: 1)
+
+Category.create(name: "Ruby")
+
+category_articles = CategoryArticle.create(category_id: 1, article_id: 1)
