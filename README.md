@@ -1,6 +1,8 @@
 # デプロイ方法
-heroku run rails db:migrate
 git push heroku master
+heroku run rails db:migrate
+heroku run rails db:seed
+https://main-app-1209.herokuapp.com/articles
 
 # DB構造
 rails g scaffold Article title:string body:text status:integer user:references
