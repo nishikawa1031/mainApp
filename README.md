@@ -4,15 +4,6 @@ heroku run rails db:migrate
 heroku run rails db:seed
 https://main-app-1209.herokuapp.com/articles
 
-# DB構造
-rails g scaffold Article title:string body:text status:integer user:references
-https://railstutorial.jp/chapters/user_microposts?version=6.0#sec-a_micropost_model
-
-中間テーブルの作り方 https://b.pyar.bz/20141016/many-to-many-table/
-rails g model Category name:string
-rails g controller Category
-rails g model category_articles category:references article:references
-
 # 大まかな実装の順番
 ## ページ構成
 記事の一覧ページ(ホーム画面)
