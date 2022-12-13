@@ -18,15 +18,11 @@ https://main-app-1209.herokuapp.com/articles
 投稿時、カテゴリの登録ができる。
 記事の下書き保存ができる。
 ### 入力方法は、markdown?
-reactのmarkdownエディタのライブラリ
-https://qiita.com/t_okkan/items/0a3318f90ee6c4468f82
+WYSIWYG
+https://qiita.com/mgmgmogumi/items/06b12e7f09a8d9041caa
 
-エンジニアじゃないから、markdownはだめ。
-action text で十分な気もする。
-https://www.web-knowledge-info.com/wp/ruby-on-rails32/
-
-action text css当てるのは自力でやらないといけないかも。
-https://www.techscore.com/blog/2019/12/19/ruby-on-rails-6-action-text/
+TINYMCE
+https://github.com/spohlenz/tinymce-rails
 
 
 ## 下書き保存したページ一覧
