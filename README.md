@@ -1,6 +1,3 @@
-# やること
-headerの検索窓の実装
-
 # デプロイ方法
 git push heroku master
 heroku run rails db:migrate
@@ -8,6 +5,8 @@ heroku run rails db:seed
 heroku run rake tmp:cache:clear
 
 https://main-app-1209.herokuapp.com/articles
+https://dashboard.heroku.com/apps
+https://www.figma.com/files/recent?fuid=838989140608738953
 
 ## DBリセット方法
 heroku pg:reset DATABASE_URL
@@ -17,6 +16,8 @@ https://qiita.com/motoki4917/items/1bc8d539f36852abf090
 ### LoadError: cannot load such file -- coffee_script heroku
 heroku repo:purge_cache -a main-app-1209
 
+# やること
+headerの検索窓の実装
 # 大まかな実装の順番
 ## ページ構成
 記事の一覧ページ(ホーム画面)
