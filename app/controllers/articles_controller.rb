@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  before_action :authenticate_user!, except: [:show, :index]
   before_action :set_article, only: %i[ show edit update destroy ]
 
   # GET /articles
@@ -22,7 +23,7 @@ class ArticlesController < ApplicationController
   # POST /articles
   def create
     @article = Article.new(article_params)
-
+    @article.user_id = current_user.id
     if @article.save
       redirect_to @article, notice: "Article was successfully created."
     else
