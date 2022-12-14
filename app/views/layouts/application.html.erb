@@ -15,10 +15,10 @@
       <h5 class="my-0 mr-md-auto font-weight-normal">
         <%= link_to "Redis", articles_path, class:"p-2 text-dark" %>
       </h5>
-      <nav class="my-2 my-md-0 mr-md-3">
-        <%= link_to "edit", edit_user_registration_path, class:"p-2 text-dark" %>
-      </nav>
-      <% if user_signed_in? %> 
+      <% if user_signed_in? %>
+        <nav class="my-2 my-md-0 mr-md-3">
+          <%= link_to "edit", edit_user_registration_path, class:"p-2 text-dark" %>
+        </nav>
         <%= link_to "投稿する", new_article_path, class:"btn btn-outline-primary" %>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn btn-outline-primary" %>
       <% else %>  
