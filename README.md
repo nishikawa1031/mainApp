@@ -16,6 +16,10 @@ https://qiita.com/motoki4917/items/1bc8d539f36852abf090
 ### LoadError: cannot load such file -- coffee_script heroku
 heroku repo:purge_cache -a main-app-1209
 
+# レイアウトドキュメント
+## card
+https://getbootstrap.jp/docs/5.0/components/card/
+
 # やること
 headerの検索窓の実装
 # 大まかな実装の順番
