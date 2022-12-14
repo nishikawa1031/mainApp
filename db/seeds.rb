@@ -8,9 +8,13 @@
 
 User.create(email: "test@example.com", password: "password", password_confirmation: "password")
 
-Article.create(title: "First Article", body: "This is the first article", status: 0, user_id: 1)
+3.times do |article|   
+  Article.create(title: "Article #{article}", body: "This is article number #{article}", status: 0, user_id: 1)
+end
 
-Article.create(title: "Second Article", body: "This is the second article", status: 1, user_id: 1)
+5.times do |article|   
+    Article.create(title: "Article #{article}", body: "This is article number #{article}", status: 1, user_id: 1)
+end
 
 Article.create(title: "Third Article", body: "This is the third article", status: 2, user_id: 1)
 
