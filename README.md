@@ -5,9 +5,17 @@ headerの検索窓の実装
 git push heroku master
 heroku run rails db:migrate
 heroku run rails db:seed
-
 heroku run rake tmp:cache:clear
+
 https://main-app-1209.herokuapp.com/articles
+
+## DBリセット方法
+heroku pg:reset DATABASE_URL
+https://qiita.com/motoki4917/items/1bc8d539f36852abf090
+
+## エラー
+### LoadError: cannot load such file -- coffee_script heroku
+heroku repo:purge_cache -a main-app-1209
 
 # 大まかな実装の順番
 ## ページ構成
