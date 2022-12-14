@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @articles = Article.all
+    @articles = Article.where(status: "published").order("created_at DESC")
   end
 
   # GET /articles/1
