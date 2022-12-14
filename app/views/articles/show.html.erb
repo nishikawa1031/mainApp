@@ -1,10 +1,21 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @article %>
+<div class="row">
+    <div class="col-sm-1">
+      Column
+    </div>
+    <div class="col-sm-8">
+      <%= render @article %>
 
-<div>
-  <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-primary" %> |
-  <%= link_to "Back to articles", articles_path, class:"btn btn-primary" %>
+      <div>
+        <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-primary" %> |
+        <%= link_to "Back to articles", articles_path, class:"btn btn-primary" %>
 
-  <%= button_to "Destroy this article", @article, method: :delete, class:"btn btn-primary"  %>
+        <%= button_to "Destroy this article", @article, method: :delete, class:"btn btn-primary"  %>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      Column
+    </div>
 </div>
+
