@@ -5,6 +5,8 @@ headerの検索窓の実装
 git push heroku master
 heroku run rails db:migrate
 heroku run rails db:seed
+
+heroku run rake tmp:cache:clear
 https://main-app-1209.herokuapp.com/articles
 
 # 大まかな実装の順番
