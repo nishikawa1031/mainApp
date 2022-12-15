@@ -22,16 +22,7 @@
     <div class="col-sm-8">
       <div id="articles">
         <% @articles.each do |article| %>
-            <div class="card">
-              <div class="card-body">
-                  <%= render article %>
-                  <p>
-                    <%= link_to "Show this article", article, class:"btn btn-primary" %>
-                  </p>
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              </div>
-            </div>
+          <%= render article %>
         <% end %>
       </div>
     </div>
