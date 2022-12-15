@@ -57,3 +57,6 @@ https://qiita.com/ren0826jam/items/eaa3e5b6d16cc22c4179
 ## 変更履歴の保存
 redmineみたいな感じで変更履歴が保存されるようにしたい。
 https://github.com/paper-trail-gem/paper_trail
+
+# 後回し
+follow/follower機能
