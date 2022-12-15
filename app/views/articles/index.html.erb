@@ -2,7 +2,11 @@
     <br />
   <div class="row">
     <div class="col-sm-2">
-
+      <div id="users">
+        <% @users.each do |user| %>
+          <%= render user %>
+        <% end %>
+      </div>
     </div>
     <div class="col-sm-8">
       <div id="articles">
