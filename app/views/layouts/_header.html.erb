@@ -6,9 +6,19 @@
     <nav class="my-2 my-md-0 mr-md-3">
       <%= link_to "edit", edit_user_registration_path, class:"p-2 text-dark" %>
     </nav>
-    <%= link_to "投稿する", new_article_path, class:"btn btn-outline-primary" %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn btn-outline-primary" %>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <%= link_to "投稿する", new_article_path, class:"btn btn-outline-primary" %>
+    </nav>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn 
+    btn-outline-primary" %>
+    </nav>
   <% else %>
-    <%= link_to "新規登録", new_user_registration_path, class:"btn btn-outline-primary" %>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <%= link_to "ログイン", new_user_session_path, class:"btn btn-outline-primary" %>
+    </nav>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <%= link_to "新規登録", new_user_registration_path, class:"btn btn-outline-primary" %>
+    </nav>
   <% end %>
 </div>
