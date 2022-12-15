@@ -24,7 +24,17 @@ https://getbootstrap.jp/docs/5.0/components/card/
 https://fontawesome.com/search?m=free&o=r
 
 # やること
+カテゴリの登録
+マイページの作成
+footerの記載修正
+ログイン時のcookie保存
+userのアイコン作成
+企業アイコンの表示
+広告代わりのamazonリンクの作成
+# 後回し
 headerの検索窓の実装
+follow/follower機能
+
 # 大まかな実装の順番
 ## 新規作成 ←最もこだわりたい部分。
 投稿時、カテゴリの登録ができる。
@@ -44,5 +54,3 @@ https://qiita.com/ren0826jam/items/eaa3e5b6d16cc22c4179
 redmineみたいな感じで変更履歴が保存されるようにしたい。
 https://github.com/paper-trail-gem/paper_trail
 
-# 後回し
-follow/follower機能
