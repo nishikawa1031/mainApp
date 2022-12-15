@@ -23,9 +23,7 @@
       <%= render @article %>
 
       <div>
-        <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-primary" %> |
-        <%= link_to "Back to articles", articles_path, class:"btn btn-primary" %>
-
+        <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-primary" %>
         <%= button_to "Destroy this article", @article, method: :delete, class:"btn btn-primary"  %>
       </div>
     </div>
