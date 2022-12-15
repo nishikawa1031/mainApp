@@ -24,13 +24,18 @@ https://getbootstrap.jp/docs/5.0/components/card/
 https://fontawesome.com/search?m=free&o=r
 
 # やること
-カテゴリの登録
+header色の修正
+userのアイコン作成
 マイページの作成
+企業アイコンの表示
+
+カテゴリの登録
+seedデータの作成
+
 footerの記載修正
 ログイン時のcookie保存
-userのアイコン作成
-企業アイコンの表示
 広告代わりのamazonリンクの作成
+
 # 後回し
 headerの検索窓の実装
 follow/follower機能
