@@ -50,6 +50,7 @@ gem 'devise'
 # 参考　https://kitsune.blog/rails-bootstrap
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem "font-awesome-sass"
 
 gem "tinymce-rails"
 

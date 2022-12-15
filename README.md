@@ -20,6 +20,9 @@ heroku repo:purge_cache -a main-app-1209
 ## card
 https://getbootstrap.jp/docs/5.0/components/card/
 
+## icon
+https://fontawesome.com/search?m=free&o=r
+
 # やること
 headerの検索窓の実装
 # 大まかな実装の順番
