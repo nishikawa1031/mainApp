@@ -36,6 +36,10 @@ footerの記載修正
 ログイン時のcookie保存
 広告代わりのamazonリンクの作成
 
+# カラム追加
+Aritcle like
+User icon nickname
+
 # 後回し
 headerの検索窓の実装
 follow/follower機能
