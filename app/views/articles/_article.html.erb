@@ -1,6 +1,12 @@
 <div id="<%= dom_id article %>">
   <div class="card">
     <a href="/articles/<%= article.id %>" class="card-body text-dark">
+      <p>
+        <%= article.user.email %>
+      </p>
+      <p>
+        <%= article.created_at %>
+      </p>
       <h5 class="card-title"><%= article.title %></h5>
       <p>
         <%= article.body %>
