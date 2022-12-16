@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1
   def show
+    @categories = @article.categories.pluck(:name)
   end
 
   # GET /articles/new
