@@ -1,18 +1,13 @@
 <div id="<%= dom_id article %>">
   <div class="card">
     <div class="card-body">
-      <p>
-        <strong>Title:</strong>
-        <%= article.title %>
-      </p>
+      <h5 class="card-title"><%= article.title %></h5>
       <p>
         <%= article.body %>
       </p>
-        <p>
-          <%= link_to "Show this article", article, class:"btn btn-primary" %>
-        </p>
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p>
+        <%= link_to "Show this article", article, class:"btn btn-primary" %>
+      </p>
     </div>
   </div>
 </div>
