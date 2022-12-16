@@ -1,13 +1,10 @@
 <div id="<%= dom_id article %>">
   <div class="card">
-    <div class="card-body">
+    <a href="/articles/<%= article.id %>" class="card-body text-dark">
       <h5 class="card-title"><%= article.title %></h5>
       <p>
         <%= article.body %>
       </p>
-      <p>
-        <%= link_to "Show this article", article, class:"btn btn-primary" %>
-      </p>
-    </div>
+    </a>
   </div>
 </div>
