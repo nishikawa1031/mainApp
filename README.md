@@ -25,7 +25,7 @@ https://fontawesome.com/search?m=free&o=r
 
 # やること
 header色の修正
-userのアイコン作成
+userのアイコン作成  ←画像生成AIとか使えないかな。
 マイページの作成
 企業アイコンの表示
 

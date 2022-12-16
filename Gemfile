@@ -46,6 +46,8 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'devise'
+gem 'carrierwave' # 画像アップロード
+gem 'mini_magick'
 
 # 参考　https://kitsune.blog/rails-bootstrap
 gem 'bootstrap', '~> 4.3.1'
