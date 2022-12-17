@@ -28,6 +28,11 @@ footerの記載修正
 
 決済機能の実装　← 勝手に値段が上がるようにしたい。
 
+- usernameカラム削除
+idをusernameカラムとして扱う。マイページへのurlとかparameterに修正加える必要あるかも。
+http://www.code-magagine.com/?p=697
+
+
 # カラム追加
 ## https://qiita.com/azusanakano/items/a2847e4e582b9a627e3a
 ### rails generate migration AddColumnTitles
