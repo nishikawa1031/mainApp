@@ -19,9 +19,10 @@ heroku repo:purge_cache -a main-app-1209
 # レイアウトドキュメント
 ## card
 https://getbootstrap.jp/docs/5.0/components/card/
-
 ## icon
 https://fontawesome.com/search?m=free&o=r
+## avatar
+https://mdbootstrap.com/docs/standard/extended/avatar/
 
 # やること
 header色の修正
@@ -35,6 +36,8 @@ seedデータの作成
 footerの記載修正
 ログイン時のcookie保存
 広告代わりのamazonリンクの作成
+
+決済機能の実装
 
 # カラム追加
 Aritcle like
