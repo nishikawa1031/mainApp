@@ -6,20 +6,37 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+# user1
 User.create(email: "test@example.com", username: "taroyama", password: "password", password_confirmation: "password")
 
-# 下書きの記事
+## 下書きの記事
 3.times do |article|   
   Article.create(title: "Article #{article}", body: "This is article number #{article}", status: 0, user: User.first)
 end
 
-# 公開中の記事
+## 公開中の記事
 5.times do |article|   
     Article.create(title: "Article #{article}", body: "This is article number #{article}", status: 1, user: User.first)
 end
 
-# アーカイブの記事
-Article.create(title: "Third Article", body: "This is the third article", status: 2, user_id: 1)
+## アーカイブの記事
+Article.create(title: "Third Article", body: "This is the third article", status: 2, user_id: User.first)
+
+# user2
+User.create(email: "another_test@example.com", username: "another_man", password: "password2", password_confirmation: "password2")
+
+## 下書きの記事
+3.times do |article|   
+  Article.create(title: "Article #{article}", body: "This is article number #{article}", status: 0, user: User.second)
+end
+
+## 公開中の記事
+5.times do |article|   
+    Article.create(title: "Article #{article}", body: "This is article number #{article}", status: 1, user: User.second)
+end
+
+## アーカイブの記事
+Article.create(title: "Third Article", body: "This is the third article", status: 2, user_id: User.second)
 
 # カテゴリ
 Category.create(name: '民法')
