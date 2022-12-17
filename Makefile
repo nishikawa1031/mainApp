@@ -8,14 +8,14 @@ p: # pushの略
 
 # 本番用コマンド
 ## migrateを走らせる
-pro_migrate:
+prod_migrate:
 	heroku run rails db:migrate
 	heroku run rails db:seed
 	heroku run rake tmp:cache:clear
 
 ## DBリセット方法
 ### https://qiita.com/motoki4917/items/1bc8d539f36852abf090
-pro_reset:
+prod_reset:
 	heroku pg:reset DATABASE_URL
 	heroku run rails db:migrate
 	heroku run rails db:seed
