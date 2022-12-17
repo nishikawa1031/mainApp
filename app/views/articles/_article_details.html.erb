@@ -1,17 +1,19 @@
-  <div class="card">
-      <div class="avatar"><%= image_tag @article&.user&.avatar , class: 'rounded-circle mb-3', style: 'width: 150px', alt: "Avatar"  %></div>
-         
-      <p>
-        <%= @article.user.email %>
-      </p>
-      <small>
-        <%= @article.created_at %>
-      </small>
-          <p>
-          </p>
-      <h5 class="card-title"><%= @article.title %></h5>
-      <p>
-        <%= @article.body %>
-      </p>
-    </a>
+<div class="card">
+  <div class="avatar">
+    <% if @user.avatar.attached? %>
+      <%= image_tag @article&.user&.avatar, class: 'rounded-circle mb-3', style: 'width: 150px', alt: "Avatar" %>
+    <% else %>
+      <%= image_tag ("default.jpg"), class: 'rounded-circle mb-3', style: 'width: 150px', alt: "Avatar" %>
+    <% end %>
   </div>
+  <p>
+    <%= @article.user.email %>
+  </p>
+  <small>
+    <%= @article.created_at %>
+  </small>
+  <h5 class="card-title"><%= @article.title %></h5>
+  <p>
+    <%= @article.body %>
+  </p>
+</div>

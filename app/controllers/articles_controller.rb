@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   def show
     @categories = @article.categories.pluck(:name)
+    @user = current_user
   end
 
   # GET /articles/new
