@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.where(status: "published").order("created_at DESC")
     @users = User.all
+    @categories = Category.all
   end
 
   # GET /articles/1
