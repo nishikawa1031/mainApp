@@ -20,7 +20,7 @@ userのアイコン作成  ←画像生成AIとか使えないかな。
 カテゴリとは別でSubjectモデルで管理する必要があるかも。
 →
 
-seedデータの作成
+本番用seedデータの作成
 
 footerの記載修正
 ログイン時のcookie保存
@@ -29,6 +29,8 @@ footerの記載修正
 決済機能の実装　← 勝手に値段が上がるようにしたい。
 
 # カラム追加
+## https://qiita.com/azusanakano/items/a2847e4e582b9a627e3a
+### rails generate migration AddColumnTitles
 Aritcle like, views: number
 
 # 後回し
