@@ -41,8 +41,7 @@ footerの記載修正
 決済機能の実装　← 勝手に値段が上がるようにしたい。
 
 # カラム追加
-Aritcle like
-User icon nickname
+Aritcle like, views: number
 
 # 後回し
 headerの検索窓の実装
