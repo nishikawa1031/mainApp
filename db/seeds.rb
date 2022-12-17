@@ -11,16 +11,35 @@ User.create(email: "test@example.com", username: "taroyama", password: "password
 
 ## 下書きの記事
 3.times do |article|   
-  Article.create(title: "Article #{article}", body: "This is article number #{article}", status: 0, user: User.first)
-end
+  Article.create(
+    title: "Article #{article}",
+    body: "This is article number #{article}",
+    status: 0,
+    user: User.first
+  )
+  end
 
 ## 公開中の記事
 5.times do |article|   
-    Article.create(title: "Article #{article}", body: "This is article number #{article}", status: 1, user: User.first)
+  Article.create(
+    title: "Article #{article}",
+    body: "This is article number #{article}",
+    status: 1,
+    user: User.first,
+    views: 10,
+    likes: 2
+  )
 end
 
 ## アーカイブの記事
-Article.create(title: "Third Article", body: "This is the third article", status: 2, user_id: User.first)
+Article.create(title: "Third Article",
+  body: "This is the third article",
+  status: 2,
+  user_id: User.first,
+  views: 5,
+  likes: 3
+)
+
 
 # user2
 User.create(email: "another_test@example.com", username: "another_man", password: "password2", password_confirmation: "password2")
