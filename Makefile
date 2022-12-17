@@ -1,3 +1,7 @@
+# ローカル環境
+up:
+	bundle exec rails s
+
 # デプロイ方法
 ## https://main-app-1209.herokuapp.com/articles
 ## https://dashboard.heroku.com/apps
