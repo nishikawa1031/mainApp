@@ -1,50 +1,23 @@
-<div class="d-flex flex-column flex-md-row align-items-center px-md-4 bg-primary shadow-sm">
+<div class="d-flex flex-column flex-md-row align-items-center px-md-4 pt-2 bg-primary shadow-sm">
   <h5 class="my-0 mr-md-auto font-weight-normal">
     <%= link_to "Buy Docs", articles_path, class:"p-2 text-light" %>
   </h5>
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown button
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-    </div>
-  </div>
   <form class="form-inline my-2 my-lg-0">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownMenuLink"
-      role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle"
-        height="40" alt="Avatar" loading="lazy" />
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-      <li>
-        <a class="dropdown-item" href="#">My profile</a>
-      </li>
-      <li>
-        <a class="dropdown-item" href="#">Settings</a>
-      </li>
-      <li>
-        <a class="dropdown-item" href="#">Logout</a>
-      </li>
-    </ul>
-  </li>
   <% if user_signed_in? %>
-    <nav class="my-2 my-md-0 mr-md-3">
-      <%= link_to "edit", edit_user_registration_path, class:"p-2 text-dark" %>
-    </nav>
-    <nav class="my-2 my-md-0 mr-md-3">
-      <%= link_to "投稿する", new_article_path, class:"btn btn-outline-light" %>
-    </nav>
-    <nav class="my-2 my-md-0 mr-md-3">
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn 
-    btn-outline-light" %>
-    </nav>
+    <div class="dropdown pl-2 pr-2">
+        <img id="dropdownMenuButton" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle" height="40" alt="Avatar" loading="lazy" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <div class="dropdown-item">
+          <%= link_to "edit", edit_user_registration_path, class:"p-2 text-dark" %>
+        </div>
+        <div class="dropdown-item">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn btn-outline-light" %>
+        </div>
+      </div>
+    </div>
   <% else %>
     <nav class="my-2 my-md-0 mr-md-3">
       <%= link_to "ログイン", new_user_session_path, class:"btn btn-outline-light" %>
@@ -53,4 +26,8 @@
       <%= link_to "新規登録", new_user_registration_path, class:"btn btn-light" %>
     </nav>
   <% end %>
+  </li>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <%= link_to "投稿する", new_article_path, class:"btn btn-outline-light" %>
+  </nav>
 </div>
