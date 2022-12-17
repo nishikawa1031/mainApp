@@ -1,17 +1,3 @@
-# デプロイ方法
-git push heroku master
-heroku run rails db:migrate
-heroku run rails db:seed
-heroku run rake tmp:cache:clear
-
-https://main-app-1209.herokuapp.com/articles
-https://dashboard.heroku.com/apps
-https://www.figma.com/files/recent?fuid=838989140608738953
-
-## DBリセット方法
-heroku pg:reset DATABASE_URL
-https://qiita.com/motoki4917/items/1bc8d539f36852abf090
-
 ## エラー
 ### LoadError: cannot load such file -- coffee_script heroku
 heroku repo:purge_cache -a main-app-1209
@@ -32,6 +18,8 @@ userのアイコン作成  ←画像生成AIとか使えないかな。
 
 カテゴリの登録
 カテゴリとは別でSubjectモデルで管理する必要があるかも。
+→
+
 seedデータの作成
 
 footerの記載修正
