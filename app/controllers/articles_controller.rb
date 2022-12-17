@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
     else
       @articles = Article.where(status: "published").order("created_at DESC")
     end
+    @user = current_user
     @users = User.all
     @categories = Category.all
   end
