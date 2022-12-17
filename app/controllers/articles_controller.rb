@@ -4,8 +4,8 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    if params[:status]
-      @articles = Article.where(status: "draft")
+    if params[:status] == "draft"
+      @articles = Article.where(status: "draft").where(user_id: current_user.id).order("created_at DESC")
     else
       @articles = Article.where(status: "published").order("created_at DESC")
     end
