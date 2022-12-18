@@ -11,16 +11,16 @@ https://fontawesome.com/search?m=free&o=r
 https://mdbootstrap.com/docs/standard/extended/avatar/
 
 # やること
+本番用seedデータの作成
+
 header色の修正
 userのアイコン作成  ←画像生成AIとか使えないかな。
 マイページの作成
-企業アイコンの表示
 
-カテゴリの登録
-カテゴリとは別でSubjectモデルで管理する必要があるかも。
-→
+- カテゴリで、答案を選択した場合は、司法試験の問題と解説へのリンクを付与する。
 
-本番用seedデータの作成
+- Subject関連のリファクタ
+sub_headerのlinkの表示と、controllerのindexの実装、動的に生成しないと流石にsubjectが多すぎる。
 
 footerの記載修正
 ログイン時のcookie保存
@@ -28,6 +28,7 @@ footerの記載修正
 
 決済機能の実装　← 勝手に値段が上がるようにしたい。
 
+- 企業アイコンの表示
 - usernameカラム削除
 idをusernameカラムとして扱う。マイページへのurlとかparameterに修正加える必要あるかも。
 http://www.code-magagine.com/?p=697
