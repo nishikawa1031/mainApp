@@ -16,7 +16,7 @@ User.create(email: "test@example.com", username: "taroyama", password: "password
     body: "This is article number #{article}",
     status: 0,
     user: User.first,
-    subject: 1
+    subject: article
   )
   end
 
@@ -29,7 +29,7 @@ User.create(email: "test@example.com", username: "taroyama", password: "password
     user: User.first,
     views: 10,
     likes: 2,
-    subject: 2
+    subject: article
   )
 end
 
@@ -43,7 +43,6 @@ Article.create(title: "Third Article",
   subject: 3
 )
 
-
 # user2
 User.create(email: "another_test@example.com", username: "another_man", password: "password2", password_confirmation: "password2")
 
@@ -54,6 +53,7 @@ User.create(email: "another_test@example.com", username: "another_man", password
     body: "This is article number #{article}",
     status: 0,
     user: User.second,
+    subject: article
   )
   end
 
@@ -66,7 +66,7 @@ User.create(email: "another_test@example.com", username: "another_man", password
     user: User.second,
     views: 10,
     likes: 2,
-    subject: 4
+    subject: article
   )
 end
 
