@@ -11,7 +11,7 @@
   <% end %>
   <% if user_signed_in? %>
     <div class="dropdown pl-2 pr-2">
-      <% if @user.avatar.attached? %>
+      <% if @user&.avatar&.attached? %>
         <%= image_tag @article&.user&.avatar, class: 'rounded-circle mb-3', id: "dropdownMenuButton", style: 'width: 150px', alt: "Avatar" %>
       <% else %>
         <img id="dropdownMenuButton" src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img (31).webp" class="rounded-circle" height="30" alt="Avatar" loading="lazy" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
