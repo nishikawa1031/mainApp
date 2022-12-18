@@ -9,6 +9,9 @@
       </div>
     </div>
     <div class="col-sm-8">
+      <p>
+        <%= @number_of_articles %>
+      </p>
       <div id="articles">
         <% @articles.each do |article| %>
           <%= render article %>
