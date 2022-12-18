@@ -17,6 +17,9 @@ sub_headerのlinkの表示と、controllerのindexの実装、動的に生成し
 - ログイン時のcookie保存
 - 広告代わりのamazonリンクの作成
 - usernameカラムをURLにする。
+- articleにbookmarkカラムを追加。userにもか。
+user bookmarks many article
+article bookmarked many users
 
 ## 最後でいい
 - 企業アイコンの表示
