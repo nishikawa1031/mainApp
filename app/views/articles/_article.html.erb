@@ -7,7 +7,7 @@
           <%= article.user.username %>
         </p>
         <small>
-          <%= article.created_at %>
+          <%= article.created_at.to_s(:datetime_jp) %>
         </small>
       </div>
       <div class="col-sm-9">
