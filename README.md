@@ -16,9 +16,7 @@ sub_headerのlinkの表示と、controllerのindexの実装、動的に生成し
 - footerの記載修正
 - ログイン時のcookie保存
 - 広告代わりのamazonリンクの作成
-- usernameカラム削除
-idをusernameカラムとして扱う。マイページへのurlとかparameterに修正加える必要あるかも。
-http://www.code-magagine.com/?p=697
+- usernameカラムをURLにする。
 
 ## 最後でいい
 - 企業アイコンの表示
