@@ -1,22 +1,31 @@
 <div id="<%= dom_id article %>">
   <div class="card">
-      <%= render "/users/avatar" %>
-    <a href="/articles/<%= article.id %>" class="card-body text-dark">
-      <p>
-        <%= article.user.username %>
-      </p>
-      <small>
-        <%= article.created_at %>
-      </small>
-        <%= article.categories.pluck(:name).each do |category_name| %>
+    <div class="row">
+      <div class="col-sm-2">
+        <%= render "/users/avatar" %>
+      </div>
+      <div class="col-sm-8">
+        <p>
+          <%= article.user.username %>
+        </p>
+        <small>
+          <%= article.created_at %>
+        </small>
+        <a href="/articles/<%= article.id %>" class="card-body text-dark">
+
+            <%= article.categories.pluck(:name).each do |category_name| %>
+              <p>
+                <%= category_name %>
+              </p>
+            <% end %>
+          <h5 class="card-title"><%= article.title %></h5>
           <p>
-            <%= category_name %>
+            <%= article.body %>
           </p>
-        <% end %>
-      <h5 class="card-title"><%= article.title %></h5>
-      <p>
-        <%= article.body %>
-      </p>
-    </a>
+        </a>
+      </div>
+      <div class="col-sm-2">
+      </div>
+    </div>
   </div>
 </div>
