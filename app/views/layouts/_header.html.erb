@@ -18,19 +18,19 @@
       <% end %>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <div class="dropdown-item">
-          <%= link_to "edit", edit_user_registration_path, class:"p-2 text-dark" %>
+          <%= link_to "edit", edit_user_registration_path, class:"p-2 text-dark btn-sm" %>
         </div>
         <div class="dropdown-item">
-          <%= link_to "下書き", articles_path(status: "draft"), class:"p-2 text-dark" %>
+          <%= link_to "下書き", articles_path(status: "draft"), class:"p-2 text-dark btn-sm" %>
         </div>
         <div class="dropdown-item">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn btn-light" %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn btn-light btn-sm" %>
         </div>
       </div>
     </div>
   <% else %>
     <nav class="my-2 my-md-0 mr-md-3 pl-2">
-      <%= link_to "ログイン", new_user_session_path, class:"btn btn-outline-light" %>
+      <%= link_to "ログイン", new_user_session_path, class:"btn btn-outline-light btn-sm" %>
     </nav>
   <% end %>
   </li>
