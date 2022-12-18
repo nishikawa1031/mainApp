@@ -1,10 +1,8 @@
 # やること
 ## Must
-本番用seedデータの作成
-
-header色の修正
-userのアイコン作成  ←画像生成AIとか使えないかな。
-マイページの作成
+- 本番用seedデータの作成
+- userのアイコン作成  ←画像生成AIとか使えないかな。
+- マイページの作成
 
 - カテゴリで、答案を選択した場合は、司法試験の問題と解説へのリンクを付与する。
 
@@ -15,9 +13,9 @@ sub_headerのlinkの表示と、controllerのindexの実装、動的に生成し
 - 投稿時、カテゴリの登録ができる。
 - 記事の下書き保存ができる。
 
-footerの記載修正
-ログイン時のcookie保存
-広告代わりのamazonリンクの作成
+- footerの記載修正
+- ログイン時のcookie保存
+- 広告代わりのamazonリンクの作成
 - usernameカラム削除
 idをusernameカラムとして扱う。マイページへのurlとかparameterに修正加える必要あるかも。
 http://www.code-magagine.com/?p=697
