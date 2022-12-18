@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-sm-2 text-center">
       <p>ユーザーランキング</p>
+      <hr>
       <div id="users">
         <% @users.each do |user| %>
           <%= render user %>
@@ -9,14 +10,16 @@
       </div>
     </div>
     <div class="col-sm-8">
-      <p>
-        <%= @number_of_articles %>
-      </p>
       <div id="articles">
         <% @articles.each do |article| %>
           <%= render article %>
         <% end %>
       </div>
+      <% if Rails.env == "development" %>
+        <p>
+          debug用に記事数を表示:<%= @number_of_articles %>
+        </p>
+      <% end %>
     </div>
     <div class="col-sm-2">
       <div class="card">
