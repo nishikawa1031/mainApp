@@ -12,17 +12,12 @@
           <%= article.created_at %>
         </small>
         <a href="/articles/<%= article.id %>" class="card-body text-dark">
-
-            <%= article.categories.pluck(:name).each do |category_name| %>
-              <p>
-                <%= category_name %>
-              </p>
-            <% end %>
           <h5 class="card-title"><%= article.title %></h5>
           <p>
             <%= article.body %>
           </p>
         </a>
+        <%= article.categories.pluck(:name) %>
       </div>
       <div class="col-sm-2">
       </div>
