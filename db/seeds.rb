@@ -81,9 +81,9 @@ Article.create(title: "Third Article",
 )
 
 # カテゴリ
-Category.create(name: '民法')
-Category.create(name: '刑法')
-Category.create(name: '憲法')
+Category.create(name: '2014年憲法答案')
+Category.create(name: '2016年刑法答案')
+Category.create(name: '2011年憲法答案')
  
 # 記事、カテゴリのidを列挙して中間テーブルに投入
 Article.all.ids.sort.each do |article_id|
