@@ -15,7 +15,8 @@ User.create(email: "test@example.com", username: "taroyama", password: "password
     title: "Article #{article}",
     body: "This is article number #{article}",
     status: 0,
-    user: User.first
+    user: User.first,
+    subject: 1
   )
   end
 
@@ -27,7 +28,8 @@ User.create(email: "test@example.com", username: "taroyama", password: "password
     status: 1,
     user: User.first,
     views: 10,
-    likes: 2
+    likes: 2,
+    subject: 2
   )
 end
 
@@ -37,7 +39,8 @@ Article.create(title: "Third Article",
   status: 2,
   user_id: User.first,
   views: 5,
-  likes: 3
+  likes: 3,
+  subject: 3
 )
 
 
@@ -50,7 +53,7 @@ User.create(email: "another_test@example.com", username: "another_man", password
     title: "Article #{article}",
     body: "This is article number #{article}",
     status: 0,
-    user: User.second
+    user: User.second,
   )
   end
 
@@ -62,7 +65,8 @@ User.create(email: "another_test@example.com", username: "another_man", password
     status: 1,
     user: User.second,
     views: 10,
-    likes: 2
+    likes: 2,
+    subject: 4
   )
 end
 
@@ -72,7 +76,8 @@ Article.create(title: "Third Article",
   status: 2,
   user_id: User.second,
   views: 5,
-  likes: 3
+  likes: 3,
+  subject: 5
 )
 
 # カテゴリ
