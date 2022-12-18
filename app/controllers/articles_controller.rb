@@ -6,16 +6,14 @@ class ArticlesController < ApplicationController
   def index
     if params[:status] == "draft"
       @articles = Article.where(status: "draft").where(user_id: current_user.id).order("created_at DESC")
-    else
-      if params[:subject] == "civil_law"
-        @articles = Article.where(status: "published").where(subject: "civil_law").order("created_at DESC")
-     elsif params[:subject] == "criminal_law"
-        @articles = Article.where(status: "published").where(subject: "criminal_law").order("created_at DESC")
-    elsif params[:subject] == "constitution"
-        @articles = Article.where(status: "published").where(subject: "constitution").order("created_at DESC")
-     else
-        @articles = Article.where(status: "published").order("created_at DESC")
+    elsif params[:subject].present?
+      Article.subjects.keys.each do |subject|
+        if params[:subject] == subject
+          @articles = Article.where(status: "published").where(subject: subject).order("created_at DESC")
+        end
       end
+    else
+      @articles = Article.where(status: "published").order("created_at DESC")
     end
     @number_of_articles = @articles.count
     @user = current_user
