@@ -29,6 +29,7 @@ http://www.code-magagine.com/?p=697
 - 変更履歴の保存
 redmineみたいな感じで変更履歴が保存されるようにしたい。
 https://github.com/paper-trail-gem/paper_trail
+- グループだけに公開する。
 
 # 開発関連
 ## エラー
