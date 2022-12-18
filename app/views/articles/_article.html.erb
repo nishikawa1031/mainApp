@@ -1,5 +1,6 @@
 <div id="<%= dom_id article %>">
   <div class="card">
+      <%= render "/users/avatar" %>
     <a href="/articles/<%= article.id %>" class="card-body text-dark">
       <p>
         <%= article.user.username %>

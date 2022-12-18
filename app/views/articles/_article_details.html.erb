@@ -1,11 +1,5 @@
 <div class="card">
-  <div class="avatar">
-    <% if @user.avatar.attached? %>
-      <%= image_tag @article&.user&.avatar, class: 'rounded-circle mb-3', style: 'width: 150px', alt: "Avatar" %>
-    <% else %>
-      <%= image_tag ("default.jpg"), class: 'rounded-circle mb-3', style: 'width: 150px', alt: "Avatar" %>
-    <% end %>
-  </div>
+  <%= render "/users/avatar" %>
   <p>
     <%= @article.user.email %>
   </p>
