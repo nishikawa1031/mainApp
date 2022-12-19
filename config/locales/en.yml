@@ -30,4 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  article:
+    subject:
+      constitution: 下書き
+      civil_law: 公開中

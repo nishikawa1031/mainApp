@@ -10,7 +10,7 @@ module ApplicationHelper
     private
         def li_html(subject)
             concat(tag.li(class: 'nav-item active', style: "font-size: 14px;") do
-                link_to "#{subject}", articles_path(subject: "#{subject}"), class:"nav-link text-light" 
+                link_to I18n.t("article.subject.#{subject.to_s}"), articles_path(subject: "#{subject}"), class:"nav-link text-light" 
             end)
         end
 end
