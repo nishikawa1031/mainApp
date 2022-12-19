@@ -4,18 +4,22 @@
 - userのアイコン作成  ←画像生成AIとか使えないかな。
 - マイページの作成
 - カテゴリで、答案を選択した場合は、司法試験の問題と解説へのリンクを付与する。
-- いいね。bookmark機能の実装
-https://techlife.cookpad.com/entry/2016/10/26/135818
-- いいねした記事の一覧を見れる。
+
 - 投稿時、カテゴリの登録ができる。
 - 記事の下書き保存ができる。
-- footerの記載修正
 - ログイン時のcookie保存
 https://railstutorial.jp/chapters/advanced_login?version=5.1#sec-remember_token
-- 広告代わりのamazonリンクの作成
+
 - articleにbookmarkカラムを追加。userにもか。
 user bookmarks many article
 article bookmarked many users
+- いいね。bookmark機能の実装
+https://techlife.cookpad.com/entry/2016/10/26/135818
+- いいねした記事の一覧を見れる。
+
+- footerの記載修正
+- 広告代わりのamazonリンクの作成
+
 
 ## 最後でいい
 - 企業アイコンの表示
