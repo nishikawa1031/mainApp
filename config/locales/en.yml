@@ -32,5 +32,9 @@
 en:
   article:
     subject:
-      constitution: 下書き
-      civil_law: 公開中
+      others: その他
+      civil_law: 民法
+      constitution: 憲法
+      criminal_law: 刑法
+      civil_procedure_law: 民訴
+      criminal_procedure_law: 刑訴
