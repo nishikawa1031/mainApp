@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_article, only: %i[ show edit update destroy ]
+  before_action :correct_user, only: [:edit, :update, :destory]
 
   # GET /articles
   def index
@@ -71,5 +72,10 @@ class ArticlesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def article_params
       params.require(:article).permit(:title, :body, :status, :user_id)
+    end
+
+    def correct_user
+      @user = User.find(@article.user.id)
+      redirect_to(root_url) unless @user == current_user
     end
 end

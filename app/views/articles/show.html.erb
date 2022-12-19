@@ -25,10 +25,15 @@
     </div>
     <div class="col-sm-11">
       <%= render "article_details" %>
-      <div>
-        <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-primary" %>
-        <%= button_to "Destroy this article", @article, method: :delete, class:"btn btn-primary"  %>
-      </div>
+      <% if current_user?(@article.user) %>
+        <div>
+          <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-primary" %>
+          <%= button_to "Destroy this article", @article, method: :delete, class:"btn btn-primary"  %>
+        </div>
+      <% else %>
+        <div>
+        </div>
+      <% end %>
     </div>
 </div>
 
