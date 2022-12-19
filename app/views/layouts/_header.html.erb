@@ -21,6 +21,9 @@
           <%= link_to "edit", edit_user_registration_path, class:"p-2 text-dark btn-sm" %>
         </div>
         <div class="dropdown-item">
+          <%= link_to "マイページ", user_path(current_user.username), class:"p-2 text-dark btn-sm" %>
+        </div>
+        <div class="dropdown-item">
           <%= link_to "下書き", articles_path(status: "draft"), class:"p-2 text-dark btn-sm" %>
         </div>
         <div class="dropdown-item">
