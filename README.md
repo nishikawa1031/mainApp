@@ -3,7 +3,6 @@
 - 本番用seedデータの作成
 - userのアイコン作成  ←画像生成AIとか使えないかな。
 - マイページの作成
-
 - カテゴリで、答案を選択した場合は、司法試験の問題と解説へのリンクを付与する。
 
 - いいねした記事の一覧を見れる。
@@ -13,7 +12,6 @@
 - footerの記載修正
 - ログイン時のcookie保存
 - 広告代わりのamazonリンクの作成
-- usernameカラムをURLにする。
 - articleにbookmarkカラムを追加。userにもか。
 user bookmarks many article
 article bookmarked many users
