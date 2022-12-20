@@ -4,6 +4,7 @@
 - userのアイコン作成  ←画像生成AIとか使えないかな。
 - マイページの作成
 - カテゴリで、答案を選択した場合は、司法試験の問題と解説へのリンクを付与する。
+- faviconの作成
 
 - 投稿時、カテゴリの登録ができる。
 - 記事の下書き保存ができる。
@@ -19,6 +20,13 @@ https://techlife.cookpad.com/entry/2016/10/26/135818
 
 - footerの記載修正
 - 広告代わりのamazonリンクの作成
+- userモデルに追加　twitterみたいな青バッチ作りたい
+弁護士、検事、裁判官
+司法試験の合格
+予備試験の合格
+大学院在学/卒
+司法試験の順位
+予備試験の順位
 
 
 ## 最後でいい
@@ -40,6 +48,8 @@ https://github.com/paper-trail-gem/paper_trail
 heroku repo:purge_cache -a main-app-1209
 
 # レイアウトドキュメント
+## クラス
+https://qiita.com/nakanishi03/items/c80a16b9b9796c25f890
 ## card
 https://getbootstrap.jp/docs/5.0/components/card/
 ## icon
