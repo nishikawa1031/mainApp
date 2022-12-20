@@ -1,37 +1,41 @@
 <div id="<%= dom_id article %>">
   <div class="card">
-    <div class="row">
-      <div class="col-sm-2">
-        <%= render "/users/avatar" %>
-        <p>
-          <%= article.user.username %>
-        </p>
-        <small>
-          <%= article.created_at.to_s(:datetime_jp) %>
-        </small>
-      </div>
-      <div class="col-sm-8">
-          <a href="/articles/<%= article.id %>" class="card-body text-dark">
-            <h5 class="card-title"><%= article.title %></h5>
-            <p>
-              <%= article.body %>
-            </p>
-          </a>
-          <%= article.categories.pluck(:name) %>
-      </div>
-      <div class="col-sm-2">
-            <div class="float-right">
-              <i class="fa-solid fa-thumbs-up px-2 pt-2"></i>
-              <p class="text-right px-2">
-                <%= article.likes %>
+    <div class="col">
+      <div class="row">
+        <div class="col-sm-2 px-1">
+          <%= render "/users/avatar" %>
+          <p class="px-1 mb-0 text-center">
+            <%= article.user.username %>
+          </p>
+          <div class="text-center pb-1">
+            <small class="px-1">
+              <%= article.created_at.to_s(:datetime_jp) %>
+            </small>
+          </div>
+        </div>
+        <div class="col-sm-8 px-1">
+            <a href="/articles/<%= article.id %>" class="card-body text-dark">
+              <h5 class="card-title"><%= article.title %></h5>
+              <p>
+                <%= article.body %>
               </p>
-            </div>
-            <div class="float-right">
-              <i class="fa-solid fa-eye px-2 pt-2"></i>
-              <p class="text-right px-2">
-                <%= article.views %>
-              </p>
-            </div>
+            </a>
+            <%= article.categories.pluck(:name) %>
+        </div>
+        <div class="col-sm-2 px-1">
+              <div class="float-right">
+                <i class="fa-solid fa-thumbs-up px-2 pt-2"></i>
+                <p class="text-right px-2">
+                  <%= article.likes %>
+                </p>
+              </div>
+              <div class="float-right">
+                <i class="fa-solid fa-eye px-2 pt-2"></i>
+                <p class="text-right px-2">
+                  <%= article.views %>
+                </p>
+              </div>
+        </div>
       </div>
     </div>
   </div>
