@@ -7,20 +7,26 @@
           <p class="px-1 mb-0 text-center">
             <%= article.user.username %>
           </p>
-          <div class="text-center pb-1">
+          <p class="px-1 mb-0 text-center">
+            xxxxx
+          </p>
+
+        </div>
+        <div class="col-sm-8 px-1">
+          <a href="/articles/<%= article.id %>" class="card-body text-dark">
+            <h5 class="card-title"><%= article.title %></h5>
+            <p>
+              <%= article.body %>
+            </p>
+          </a>
+          <% if params[:subject].nil? || params[:subject] == "others" %>
+            <%= I18n.t("article.subject.#{article.subject}") %>
+          <% end %>
+          <div class="text-right pb-1">
             <small class="px-1">
               <%= article.created_at.to_s(:datetime_jp) %>
             </small>
           </div>
-        </div>
-        <div class="col-sm-8 px-1">
-            <a href="/articles/<%= article.id %>" class="card-body text-dark">
-              <h5 class="card-title"><%= article.title %></h5>
-              <p>
-                <%= article.body %>
-              </p>
-            </a>
-            <%= article.categories.pluck(:name) %>
         </div>
         <div class="col-sm-2 px-1">
               <div class="float-right">
