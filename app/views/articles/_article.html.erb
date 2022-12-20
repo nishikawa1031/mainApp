@@ -10,7 +10,7 @@
           <%= article.created_at.to_s(:datetime_jp) %>
         </small>
       </div>
-      <div class="col-sm-9">
+      <div class="col-sm-8">
           <a href="/articles/<%= article.id %>" class="card-body text-dark">
             <h5 class="card-title"><%= article.title %></h5>
             <p>
@@ -19,16 +19,16 @@
           </a>
           <%= article.categories.pluck(:name) %>
       </div>
-      <div class="col-sm-1">
+      <div class="col-sm-2">
             <div class="float-right">
-              <i class="fa-solid fa-thumbs-up"></i>
-              <p class="text-right">
+              <i class="fa-solid fa-thumbs-up px-2 pt-2"></i>
+              <p class="text-right px-2">
                 <%= article.likes %>
               </p>
             </div>
             <div class="float-right">
-              <i class="fa-solid fa-eye"></i>
-              <p class="text-right">
+              <i class="fa-solid fa-eye px-2 pt-2"></i>
+              <p class="text-right px-2">
                 <%= article.views %>
               </p>
             </div>
