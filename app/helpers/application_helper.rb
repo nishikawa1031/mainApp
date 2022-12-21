@@ -15,8 +15,11 @@ module ApplicationHelper
                 border-width:5px;
             " if params[:subject] == subject
 
+            no_article = Article.where(subject: subject).empty?
+            classname = no_article ? "nav-link text-muted" : "nav-link text-light" ;
+
             concat(tag.li(class: 'nav-item active', style: "font-size: 14px;") do
-                link_to I18n.t("article.subject.#{subject.to_s}"), articles_path(subject: "#{subject}"), class:"nav-link text-light" , style: undlerline
+                link_to I18n.t("article.subject.#{subject.to_s}"), articles_path(subject: "#{subject}"), class: classname, style: undlerline
             end)
         end
 end
