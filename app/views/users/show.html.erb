@@ -22,9 +22,10 @@
           <%= render article %>
         <% end %>
       </div>
+      <%= paginate @articles %>
       <% if Rails.env == "development" %>
         <p>
-          debug用に記事数を表示:<%= @number_of_articles %>
+          debug用に下書きの記事数を表示:<%= @number_of_articles %>
         </p>
       <% end %>
     </div>

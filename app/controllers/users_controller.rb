@@ -5,6 +5,8 @@ class UsersController < ApplicationController
     def show
         @user = User.find_by(username: params[:username])
         @articles = @user.articles
+        @articles = @articles.page(params[:page]).per(10)
+        @number_of_articles = @articles.count
     end
 
     private
