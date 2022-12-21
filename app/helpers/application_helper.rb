@@ -15,6 +15,7 @@ module ApplicationHelper
                 border-width:5px;
             " if params[:subject] == subject
 
+            # TODO:記事が十分集まったら削除する
             no_article = Article.where(subject: subject).empty?
             classname = no_article ? "nav-link text-muted" : "nav-link text-light" ;
 
