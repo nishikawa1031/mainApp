@@ -8,6 +8,10 @@ module ApplicationHelper
     end
 
     private
+        def current_user?(user)
+            user == current_user
+        end
+
         def li_html(subject)
             undlerline = "
                 border-bottom:solid;
