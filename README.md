@@ -6,7 +6,6 @@
 https://railstutorial.jp/chapters/advanced_login?version=5.1#sec-remember_token
 - footerの記載修正
 
-
 ## Want
 - 記事の下書き保存ができる。
 - 投稿時、カテゴリの登録ができる。
