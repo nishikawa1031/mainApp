@@ -16,6 +16,7 @@ class ArticlesController < ApplicationController
     else
       @articles = Article.where(status: "published").order("created_at DESC")
     end
+    @articles = @articles.page(params[:page]).per(10)
     @number_of_articles = @articles.count
     @user = current_user
     @users = User.all

@@ -49,6 +49,7 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'carrierwave' # 画像アップロード
 gem 'mini_magick'
+gem 'kaminari'
 
 # 参考　https://kitsune.blog/rails-bootstrap
 gem 'bootstrap', '~> 4.3.1'
