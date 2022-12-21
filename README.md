@@ -2,14 +2,18 @@
 ## Must
 - 本番用seedデータの作成
 - userのアイコン作成  ←画像生成AIとか使えないかな。
+- ログイン時のcookie保存
+https://railstutorial.jp/chapters/advanced_login?version=5.1#sec-remember_token
+- footerの記載修正
+
+
+## Want
+- 記事の下書き保存ができる。
+- 投稿時、カテゴリの登録ができる。
+
 - マイページの作成
 - カテゴリで、答案を選択した場合は、司法試験の問題と解説へのリンクを付与する。
 - faviconの作成
-
-- 投稿時、カテゴリの登録ができる。
-- 記事の下書き保存ができる。
-- ログイン時のcookie保存
-https://railstutorial.jp/chapters/advanced_login?version=5.1#sec-remember_token
 
 - articleにbookmarkカラムを追加。userにもか。
 user bookmarks many article
@@ -18,7 +22,6 @@ article bookmarked many users
 https://techlife.cookpad.com/entry/2016/10/26/135818
 - いいねした記事の一覧を見れる。
 
-- footerの記載修正
 - 広告代わりのamazonリンクの作成
 - userモデルに追加　twitterみたいな青バッチ作りたい
 弁護士、検事、裁判官
@@ -28,9 +31,6 @@ https://techlife.cookpad.com/entry/2016/10/26/135818
 司法試験の順位
 予備試験の順位
 
-
-## 最後でいい
-- 企業アイコンの表示
 ## 後回し
 - 決済機能の実装　← 勝手に値段が上がるようにしたい。
 AIに運用を任せるか、自分で値付けをするか選択できる。前者だとしても自分で修正できる。
