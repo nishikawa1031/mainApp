@@ -2,14 +2,13 @@
 ## Must
 - 本番用seedデータの作成
 - userのアイコン作成  ←画像生成AIとか使えないかな。
-- ログイン時のcookie保存
-https://railstutorial.jp/chapters/advanced_login?version=5.1#sec-remember_token
 - footerの記載修正
-- pagenationの実装
 - 全体のレイアウト修正
 - enum全部網羅
 記事がないボタンは押せないようにする。
 - 既読数、いいねが変わるように変更する。
+likesカラムは、articleから削除しないとおかしい。articleとusersそれぞれが持つはずなので。
+既読数カラムもいらない。qiitaにないから。
 
 ## Want
 - 記事の下書き保存ができる。
