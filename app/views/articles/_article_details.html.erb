@@ -4,7 +4,7 @@
     <%= @article.user.email %>
   </p>
   <small>
-    <%= @article.created_at.to_s(:datetime_jp) %>
+    <%= @article.created_at.to_fs(:datetime_jp) %>
   </small>
   <h5 class="card-title"><%= @article.title %></h5>
   <p>
