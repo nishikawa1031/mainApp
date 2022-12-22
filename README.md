@@ -60,4 +60,5 @@ https://fontawesome.com/search?m=free&o=r
 ## avatar
 https://mdbootstrap.com/docs/standard/extended/avatar/
 
-
+## favicon
+https://www.canva.com/search/templates?q=favicon
