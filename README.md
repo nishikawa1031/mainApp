@@ -13,10 +13,8 @@ likesカラムは、articleから削除しないとおかしい。articleとuser
 ## Want
 - 記事の下書き保存ができる。
 - 投稿時、カテゴリの登録ができる。
-
 - マイページの作成
 - カテゴリで、答案を選択した場合は、司法試験の問題と解説へのリンクを付与する。
-- faviconの作成
 
 - articleにbookmarkカラムを追加。userにもか。
 user bookmarks many article
