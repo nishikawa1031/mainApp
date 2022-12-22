@@ -15,7 +15,7 @@ module ApplicationHelper
         def li_html(subject)
             undlerline = "
                 border-bottom:solid;
-                border-color:#FFFF00;
+                border-color:#F0A500;
                 border-width:5px;
             " if params[:subject] == subject
 
