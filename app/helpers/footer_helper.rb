@@ -1,9 +1,18 @@
 module FooterHelper
-    def li_maker
-        link_name = "R4司法試験問題"
 
-        tag.li() do
-            link_to link_name, root_path, class: "text-white"
+    def li_maker
+        tag.ul(class: 'list-unstyled mb-0') do
+            I18n.t("links").keys.each do |year|
+                each_li(year)
+            end
         end
+    end
+
+    private
+    def each_li(year)
+
+        concat(tag.li() do
+            link_to year, root_path, class: "text-white"
+        end)
     end
 end
