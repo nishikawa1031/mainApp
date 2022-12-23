@@ -28,7 +28,7 @@ users.each do  |user|
     end
 
   ## 公開中の記事
-  5.times do |article|   
+  8.times do |article|   
     Article.create(
       title: "Article #{article}",
       body: "This is article number #{article}",
