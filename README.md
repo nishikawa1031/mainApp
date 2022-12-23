@@ -4,10 +4,11 @@
 - userのアイコン作成  ←画像生成AIとか使えないかな。
 https://zenn.dev/yoiyoicho/articles/974c73ac75c100
 line loginでアイコン取得できるらしい。
+ログインがメール送信も存在しないのはおかしい。
 - footerの記載修正
 - 全体のレイアウト修正
-パスワード忘れた場合のページ
-user/editページ
+パスワード忘れた場合のページ、sign_inページもレイアウト崩れてる。
+user/editページで、usernameが編集できない。
 - 既読数、いいねが変わるように変更する。
 likesカラムは、articleから削除しないとおかしい。articleとusersそれぞれが持つはずなので。
 既読数カラムもいらない。qiitaにないから。
