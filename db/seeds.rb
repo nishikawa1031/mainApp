@@ -8,77 +8,48 @@
 
 # user1
 User.create(email: "test@example.com", username: "taroyama", password: "password", password_confirmation: "password")
-
-## 下書きの記事
-3.times do |article|   
-  Article.create(
-    title: "Article #{article}",
-    body: "This is article number #{article}",
-    status: 0,
-    user: User.first,
-    subject: article
-  )
-  end
-
-## 公開中の記事
-5.times do |article|   
-  Article.create(
-    title: "Article #{article}",
-    body: "This is article number #{article}",
-    status: 1,
-    user: User.first,
-    views: 10,
-    likes: 2,
-    subject: article
-  )
-end
-
-## アーカイブの記事
-Article.create(title: "Third Article",
-  body: "This is the third article",
-  status: 2,
-  user_id: User.first,
-  views: 5,
-  likes: 3,
-  subject: 3
-)
-
 # user2
 User.create(email: "another_test@example.com", username: "another_man", password: "password2", password_confirmation: "password2")
+# user3
+User.create(email: "another_test2@example.com", username: "another_man2", password: "password2", password_confirmation: "password2")
 
-## 下書きの記事
-3.times do |article|   
-  Article.create(
-    title: "Article #{article}",
-    body: "This is article number #{article}",
-    status: 0,
-    user: User.second,
-    subject: article
-  )
+users = User.all
+
+users.each do  |user|
+  ## 下書きの記事
+  3.times do |article|   
+    Article.create(
+      title: "Article #{article}",
+      body: "This is article number #{article}",
+      status: 0,
+      user: user,
+      subject: article
+    )
+    end
+
+  ## 公開中の記事
+  5.times do |article|   
+    Article.create(
+      title: "Article #{article}",
+      body: "This is article number #{article}",
+      status: 1,
+      user: user,
+      views: 10,
+      likes: 2,
+      subject: article
+    )
   end
 
-## 公開中の記事
-5.times do |article|   
-  Article.create(
-    title: "Article #{article}",
-    body: "This is article number #{article}",
-    status: 1,
-    user: User.second,
-    views: 10,
-    likes: 2,
-    subject: article
+  ## アーカイブの記事
+  Article.create(title: "Third Article",
+    body: "This is the third article",
+    status: 2,
+    user_id: user,
+    views: 5,
+    likes: 3,
+    subject: 3
   )
 end
-
-## アーカイブの記事
-Article.create(title: "Third Article",
-  body: "This is the third article",
-  status: 2,
-  user_id: User.second,
-  views: 5,
-  likes: 3,
-  subject: 5
-)
 
 # カテゴリ
 Category.create(name: '2014年憲法答案')
