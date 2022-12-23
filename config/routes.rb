@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'articles#index'
-  resources :articles
+  resources :articles do
+    resource :bookmarks, only: [:create, :destroy]
+  end
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'

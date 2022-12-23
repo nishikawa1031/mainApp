@@ -11,7 +11,6 @@ line loginでアイコン取得できるらしい。
 user/editページで、usernameが編集できない。
 - 既読数、いいねが変わるように変更する。
 likesカラムは、articleから削除しないとおかしい。articleとusersそれぞれが持つはずなので。
-既読数カラムもいらない。qiitaにないから。
 
 ## Want
 - 記事の下書き保存ができる。
