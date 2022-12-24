@@ -1,8 +1,6 @@
 class BookmarksController < ApplicationController
     before_action :authenticate_user!
-  
     def create
-        binding.pry
       @article = Article.find(params[:article_id])
       bookmark = @article.bookmarks.new(user_id: current_user.id)
       if bookmark.save
