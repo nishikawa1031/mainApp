@@ -51,7 +51,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_24_195315) do
     t.datetime "updated_at", null: false
     t.integer "views", default: 0, null: false
     t.integer "subject", default: 0, null: false
-    t.boolean "answer"
+    t.boolean "answer", default: false, null: false
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
