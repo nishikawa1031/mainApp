@@ -35,7 +35,6 @@ users.each do  |user|
       status: 1,
       user: user,
       views: 10,
-      likes: 2,
       subject: article
     )
   end
@@ -46,7 +45,6 @@ users.each do  |user|
     status: 2,
     user_id: user,
     views: 5,
-    likes: 3,
     subject: 3
   )
 end
@@ -57,7 +55,6 @@ Article.create(
   status: 1,
   user: User.first,
   views: 10,
-  likes: 2,
   subject: 1
 )
 
