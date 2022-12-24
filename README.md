@@ -11,6 +11,8 @@ line loginでアイコン取得できるらしい。
 user/editページで、usernameが編集できない。
 - 既読数、いいねが変わるように変更する。
 likesカラムは、articleから削除しないとおかしい。articleとusersそれぞれが持つはずなので。
+- bookmarkを一覧表示する
+https://qiita.com/japwork/items/3ca48e7c5fa1053b910b#%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB%E3%81%AF
 
 ## Want
 - 記事の下書き保存ができる。
@@ -18,9 +20,6 @@ likesカラムは、articleから削除しないとおかしい。articleとuser
 - マイページの作成
 - カテゴリで、答案を選択した場合は、司法試験の問題と解説へのリンクを付与する。
 
-- articleにbookmarkカラムを追加。userにもか。
-user bookmarks many article
-article bookmarked many users
 - いいね。bookmark機能の実装
 https://techlife.cookpad.com/entry/2016/10/26/135818
 - いいねした記事の一覧を見れる。
