@@ -11,6 +11,8 @@ line loginでアイコン取得できるらしい。
 user/editページで、usernameが編集できない。
 - 既読数、いいねが変わるように変更する。
 likesカラムは、articleから削除しないとおかしい。articleとusersそれぞれが持つはずなので。
+
+
 - bookmarkを一覧表示する
 https://qiita.com/japwork/items/3ca48e7c5fa1053b910b#%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB%E3%81%AF
 - 答案かどうかを示すカラムを追加して、答案の場合は、新規登録時に年度も入力してもらう。
@@ -44,6 +46,9 @@ AIに運用を任せるか、自分で値付けをするか選択できる。前
 redmineみたいな感じで変更履歴が保存されるようにしたい。
 https://github.com/paper-trail-gem/paper_trail
 - グループだけに公開する。
+
+# ドキュメント
+https://github.com/nishikawa1031/mainApp
 
 # 開発関連
 ## エラー
