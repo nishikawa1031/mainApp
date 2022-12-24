@@ -51,6 +51,16 @@ users.each do  |user|
   )
 end
 
+Article.create(
+  title: "long article",
+  body: 'a' * 1000,
+  status: 1,
+  user: User.first,
+  views: 10,
+  likes: 2,
+  subject: 1
+)
+
 # カテゴリ
 Category.create(name: '2014年憲法答案')
 Category.create(name: '2016年刑法答案')
