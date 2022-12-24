@@ -8,4 +8,5 @@ class User < ApplicationRecord
   # mount_uploader :avatar, AvatarUploader
 
   has_many :bookmarks, dependent: :destroy
+  has_many :likes, dependent: :destroy
 end

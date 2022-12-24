@@ -7,12 +7,16 @@
           <div class="float-right">
             <i class="fa-regular fa-thumbs-up fa-2x"></i>
             <p class="text-right">
-              <%= @article.likes %>
             </p>
             <% if @article.bookmarked_by?(current_user) %>
               <td><%= link_to "ブックマークを外す", article_bookmarks_path(@article), method: :delete %></td>
             <% else %>
               <td><%= link_to "ブックマーク", article_bookmarks_path(@article), method: :post %></td>
+            <% end %>
+            <% if @article.liked_by?(current_user) %>
+              <td><%= link_to "Likeを外す", article_likes_path(@article), method: :delete %></td>
+            <% else %>
+              <td><%= link_to "Like", article_likes_path(@article), method: :post %></td>
             <% end %>
           </div>
         </div>

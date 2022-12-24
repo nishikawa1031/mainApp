@@ -23,6 +23,11 @@ class Article < ApplicationRecord
   has_many :categories, through: :category_articles
 
   has_many :bookmarks, dependent: :destroy
+  has_many :likes, dependent: :destroy
+
+  def liked_by?(user)
+    likes.where(user_id: user).exists?
+  end
 
   def bookmarked_by?(user)
     bookmarks.where(user_id: user).exists?
