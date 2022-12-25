@@ -2,6 +2,10 @@
 up:
 	bundle exec rails s
 
+# #外部キーを明らかにし、他のカラムも表示する。
+erd:
+	bundle exec erd --attributes=foreign_keys,content
+
 # デプロイ方法
 ## https://main-app-1209.herokuapp.com/articles
 ## https://dashboard.heroku.com/apps
