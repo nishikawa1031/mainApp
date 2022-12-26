@@ -10,9 +10,15 @@
         </div>
     </div>
     <div class="col-sm-8">
-        <div class="card">
-            <p>ユーザーランキング</p>
+        <div class="card bg-dark text-light">
+            <p>下書きの数：<%= @number_of_draft_articles %></p>
+            <p>公開中の記事の数：<%= @number_of_published_articles %></p>
+            <p>公開中の記事のsubjectごとの数</p>
+            <p>ブックマークした記事の数：<%= @number_of_bookmarked_articles %></p>
+            <p>ブックマークした記事のsubjectごとの数</p>
+            <p>いいねした記事の数：<%= @number_of_liked_articles %></p>
         </div>
+        <br>
     </div>
   </div>
   <div class="row">
