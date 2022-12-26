@@ -39,7 +39,9 @@ users.each do  |user|
     )
 
     # ブックマーク
-    Bookmark.create(user_id: user.id, article_id: article)
+    if article.even?
+      Bookmark.create(user_id: user.id, article_id: article)
+    end
   end
 
   ## アーカイブの記事
