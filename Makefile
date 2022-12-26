@@ -24,6 +24,6 @@ prod_migrate:
 ## DBリセット方法
 ### https://qiita.com/motoki4917/items/1bc8d539f36852abf090
 prod_reset:
-	heroku pg:reset DATABASE_URL
+	heroku pg:reset DATABASE_URL --confirm main-app-1209
 	heroku run rails db:migrate
 	heroku run rails db:seed
