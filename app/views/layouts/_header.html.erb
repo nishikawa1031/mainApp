@@ -24,6 +24,9 @@
           <%= link_to "ブックマーク", user_path(current_user.username, key: "bookmarks"), class:"p-2 text-dark btn-sm" %>
         </div>
         <div class="dropdown-item">
+          <%= link_to "いいね", user_path(current_user.username, key: "likes"), class:"p-2 text-dark btn-sm" %>
+        </div>
+        <div class="dropdown-item">
           <%= link_to "下書き", articles_path(status: "draft"), class:"p-2 text-dark btn-sm" %>
         </div>
         <hr>
