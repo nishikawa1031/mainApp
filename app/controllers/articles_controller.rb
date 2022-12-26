@@ -6,15 +6,15 @@ class ArticlesController < ApplicationController
   # GET /articles
   def index
     if params[:status] == "draft"
-      @articles = Article.where(status: "draft").where(user_id: current_user.id).order("created_at DESC")
+      @articles = Article.draft.where(user_id: current_user.id).order("created_at DESC")
     elsif params[:subject].present?
       Article.subjects.keys.each do |subject|
         if params[:subject] == subject
-          @articles = Article.where(status: "published").where(subject: subject).order("created_at DESC")
+          @articles = Article.published.where(subject: subject).order("created_at DESC")
         end
       end
     else
-      @articles = Article.where(status: "published").order("created_at DESC")
+      @articles = Article.published.order("created_at DESC")
     end
     @articles = @articles.page(params[:page]).per(10)
     @number_of_articles = @articles.count
