@@ -25,6 +25,10 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1
   def show
+    # 下書きの記事は、投稿者以外は見れないようにする
+    if @article.status == "draft" && @article.user_id != current_user.id
+      redirect_to root_path
+    end
     @categories = @article.categories.pluck(:name)
     @user = @article.user
   end
