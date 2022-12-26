@@ -265,3 +265,12 @@ h1 {
   justify-content: center;
   padding: 3px;
 }
+
+.page-item.active .page-link {
+  background-color: #33404D;
+  border-color: #33404D;
+}
+
+.page-link {
+  color: #33404D;
+}
