@@ -5,9 +5,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    if params[:status] == "draft"
-      @articles = Article.draft.where(user_id: current_user.id).order("created_at DESC")
-    elsif params[:subject].present?
+    if params[:subject].present?
       Article.subjects.keys.each do |subject|
         if params[:subject] == subject
           @articles = Article.published.where(subject: subject).order("created_at DESC")

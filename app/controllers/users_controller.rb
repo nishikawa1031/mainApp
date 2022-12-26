@@ -5,6 +5,9 @@ class UsersController < ApplicationController
     def show
         @user = User.find_by(username: params[:username])
         @articles = @user.articles
+        if params[:status] = "draft"
+            @articles = Article.draft.where(user_id: current_user.id).order("created_at DESC")
+        end
         if params[:key] == "bookmarks"
             @articles = Article.joins(:bookmarks).where(bookmarks: {user_id: current_user.id}).order(created_at: :desc)
         end
