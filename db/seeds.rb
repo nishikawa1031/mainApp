@@ -41,6 +41,10 @@ users.each do  |user|
     # ブックマーク
     if article.even?
       Bookmark.create(user_id: user.id, article_id: article)
+    
+    # いいね
+    if article/2.odd?
+      Like.create(user_id: user.id, article_id: article)
     end
   end
 
