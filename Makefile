@@ -18,7 +18,6 @@ p: # pushの略
 ## migrateを走らせる
 prod_migrate:
 	heroku run rails db:migrate
-	heroku run rails db:seed
 	heroku run rake tmp:cache:clear
 
 ## DBリセット方法
