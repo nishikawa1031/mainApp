@@ -11,7 +11,7 @@ class BookmarksController < ApplicationController
     end
   
     def destroy
-      @article = article.find(params[:article_id])
+      @article = Article.find(params[:article_id])
       bookmark = @article.bookmarks.find_by(user_id: current_user.id)
       if bookmark.present?
           bookmark.destroy
