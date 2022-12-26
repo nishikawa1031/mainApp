@@ -43,7 +43,7 @@ users.each do  |user|
       Bookmark.create(user_id: user.id, article_id: article)
     end
     # いいね
-    if article/2.odd?
+    if article.odd?
       Like.create(user_id: user.id, article_id: article)
     end
   end
