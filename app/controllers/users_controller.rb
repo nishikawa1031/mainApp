@@ -5,6 +5,9 @@ class UsersController < ApplicationController
     def show
         @user = User.find_by(username: params[:username])
         @articles = @user.articles
+        if params[:key] == "bookmarks"
+            @articles = Article.joins(:bookmarks).where(user_id: current_user.id).order(created_at: :desc)
+        end
         @articles = @articles.page(params[:page]).per(10)
         @number_of_articles = @articles.count
     end
