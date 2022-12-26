@@ -11,8 +11,6 @@ user/editページで、usernameが編集できない。
 - bookmarkカラム等に、has many :throughを記載しないといけないかもしれないので確認する。
 https://higmonta.hatenablog.com/entry/2021/05/25/165758
 
-- bookmarkを一覧表示する
-https://qiita.com/japwork/items/3ca48e7c5fa1053b910b#%E4%B8%80%E8%A6%A7%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB%E3%81%AF
 - 答案かどうかを示すカラムを追加して、答案の場合は、新規登録時に年度も入力してもらう。
 ユーザーの選択肢の選択結果で、表示を変更したいので、react使う必要がありそう。
 
