@@ -37,6 +37,9 @@ users.each do  |user|
       views: 10,
       subject: article
     )
+
+    # ブックマーク
+    Bookmark.create(user_id: user.id, article_id: article)
   end
 
   ## アーカイブの記事
