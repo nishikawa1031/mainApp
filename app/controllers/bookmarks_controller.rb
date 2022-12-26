@@ -2,6 +2,7 @@ class BookmarksController < ApplicationController
     before_action :authenticate_user!
     def create
       @article = Article.find(params[:article_id])
+      return unless @article.status == "published"
       bookmark = @article.bookmarks.new(user_id: current_user.id)
       if bookmark.save
         redirect_to request.referer
