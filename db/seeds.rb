@@ -36,7 +36,6 @@ User.all.each do  |user|
       body: "This is article number #{article}",
       status: 1,
       user: user,
-      views: 10,
       subject: article
     )
 
@@ -55,7 +54,6 @@ User.all.each do  |user|
     body: "This is the third article",
     status: 2,
     user_id: user,
-    views: 5,
     subject: 3
   )
 end
@@ -65,7 +63,6 @@ Article.create(
   body: 'a' * 1000,
   status: 1,
   user: User.first,
-  views: 10,
   subject: 1
 )
 
