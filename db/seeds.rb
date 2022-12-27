@@ -7,15 +7,17 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # user1
-User.create(email: "test@example.com", username: "taroyama", password: "password", password_confirmation: "password")
+user1 = User.create(email: "test@example.com", username: "taroyama", password: "password", password_confirmation: "password")
+user1.avatar.attach(io: File.open(Rails.root.join('app/assets/images/avatar.jpeg')), filename: 'avatar.jpeg')
+
 # user2
-User.create(email: "another_test@example.com", username: "another_man", password: "password2", password_confirmation: "password2")
+user2 = User.create(email: "another_test@example.com", username: "another_man", password: "password2", password_confirmation: "password2")
+user2.avatar.attach(io: File.open(Rails.root.join('app/assets/images/avatar2.jpeg')), filename: 'avatar2.jpeg')
+
 # user3
 User.create(email: "another_test2@example.com", username: "another_man2", password: "password2", password_confirmation: "password2")
 
-users = User.all
-
-users.each do  |user|
+User.all.each do  |user|
   ## 下書きの記事
   3.times do |article|   
     Article.create(
