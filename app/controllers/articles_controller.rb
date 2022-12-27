@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+  impressionist :actions => [:show]
+  
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_article, only: %i[ show edit update destroy ]
   before_action :correct_user, only: [:edit, :update, :destory]
@@ -15,6 +17,7 @@ class ArticlesController < ApplicationController
       @articles = Article.published.order("created_at DESC")
     end
     @articles = @articles.page(params[:page]).per(10)
+    @rank_articles = @articles.order(impressions_count: 'DESC')
     @number_of_articles = @articles.count
     @user = current_user
     @users = User.all
@@ -27,6 +30,7 @@ class ArticlesController < ApplicationController
     if @article.status == "draft" && @article.user_id != current_user.id
       redirect_to root_path
     end
+    impressionist(@article, nil, unique: [:ip_address])
     @categories = @article.categories.pluck(:name)
     @user = @article.user
   end
