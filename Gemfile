@@ -58,6 +58,8 @@ gem "font-awesome-sass"
 
 gem "tinymce-rails"
 
+gem 'impressionist' # PVカウント
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-nav'

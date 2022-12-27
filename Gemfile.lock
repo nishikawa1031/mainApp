@@ -123,6 +123,8 @@ GEM
     importmap-rails (1.1.0)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
+    impressionist (2.0.0)
+      nokogiri (~> 1)
     io-console (0.5.11)
     irb (1.5.1)
       reline (>= 0.3.0)
@@ -297,6 +299,7 @@ DEPENDENCIES
   factory_bot_rails
   font-awesome-sass
   importmap-rails
+  impressionist
   jquery-rails
   kaminari
   mini_magick
