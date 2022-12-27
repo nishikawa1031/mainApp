@@ -13,7 +13,6 @@ user/newページで、usernameのvalidation追加しないといけない。英
 
 - 答案の場合は、新規登録時に年度も入力してもらう。
 ユーザーの選択肢の選択結果で、表示を変更したいので、react使う必要がありそう。
-- 答案の場合は、答案にコメントを書き込めるように修正する
 ## Want
 - userのアイコン作成  ←画像生成AIとか使えないかな。
 https://zenn.dev/yoiyoicho/articles/974c73ac75c100
