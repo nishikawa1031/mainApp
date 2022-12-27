@@ -1,8 +1,6 @@
 <div class="card">
   <%= render "/users/avatar" %>
-  <p>
-    <%= @article.user.email %>
-  </p>
+  <%= "@#{@article.user.username}" %>
   <small>
     <%= @article.created_at.to_fs(:datetime_jp) %>
   </small>
