@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-  impressionist :actions => [:show]
-  
+  impressionist :actions => [:show], :unique => [:impressionable_id, :ip_address]
+
   before_action :authenticate_user!, except: [:show, :index]
   before_action :set_article, only: %i[ show edit update destroy ]
   before_action :correct_user, only: [:edit, :update, :destory]
@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
     if @article.status == "draft" && @article.user_id != current_user.id
       redirect_to root_path
     end
-    impressionist(@article, nil, unique: [:ip_address])
+    impressionist(@article, nil)
     @categories = @article.categories.pluck(:name)
     @user = @article.user
   end
