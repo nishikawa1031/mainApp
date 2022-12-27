@@ -6,6 +6,44 @@
   padding: 0.25rem 1rem;
 }
 
+// headerのavatarのサイズ
+.header-avatar {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+}
+.header-avatar > img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+  object-fit: cover;
+}
+
+// 一覧画面のavatarのサイズ
+.avatar {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 62px;
+  height: 62px;
+}
+.avatar > img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-50%);
+  object-fit: cover;
+}
+
 // ログイン画面
 * {
     margin: 0px;

@@ -3,7 +3,7 @@
     <div class="col">
       <div class="row">
         <div class="col-sm-2 px-1">
-          <%= render "/users/avatar" %>
+          <%= render "/users/avatar_index", { article: article } %>
           <p class="px-1 mb-0 text-center">
             <%= link_to article.user.username, user_path(article.user.username), class:"p-2 text-dark btn-sm" %>
           </p>
