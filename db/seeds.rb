@@ -23,6 +23,7 @@ User.all.each do  |user|
     Article.create(
       title: "Article #{article}",
       body: "This is article number #{article}",
+      comment: "This is comment number #{article}",
       status: 0,
       user: user,
       subject: article
@@ -34,6 +35,7 @@ User.all.each do  |user|
     Article.create(
       title: "Article #{article}",
       body: "This is article number #{article}",
+      comment: "This is comment number #{article}",
       status: 1,
       user: user,
       subject: article
@@ -52,6 +54,7 @@ User.all.each do  |user|
   ## アーカイブの記事
   Article.create(title: "Third Article",
     body: "This is the third article",
+    comment: "This is comment",
     status: 2,
     user_id: user,
     subject: 3
@@ -61,6 +64,7 @@ end
 Article.create(
   title: "long article",
   body: 'a' * 1000,
+  comment: "This is comment",
   status: 1,
   user: User.first,
   subject: 1
