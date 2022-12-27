@@ -11,6 +11,8 @@ user/newページで、usernameのvalidation追加しないといけない。英
 - 答案の場合は、答案にコメントを書き込めるように修正する
 
 ## Want
+- 閲覧数カウント
+https://qiita.com/MandoNarin/items/38288be03415d5a462b8
 - userのアイコン作成  ←画像生成AIとか使えないかな。
 https://zenn.dev/yoiyoicho/articles/974c73ac75c100
 line loginでアイコン取得できるらしい。
