@@ -7,7 +7,9 @@ line loginでアイコン取得できるらしい。
 ログインがメール送信も存在しないのはおかしい。
 - 全体のレイアウト修正
 パスワード忘れた場合のページ、sign_inページもレイアウト崩れてる。
-user/editページで、usernameが編集できない。
+displaynameのカラム追加する。
+user/editページで、usernameとdisplaynameが編集できない。
+user/newページで、usernameのvalidation追加しないといけない。英数字のみ許容するようにする。
 - bookmarkカラム等に、has many :throughを記載しないといけないかもしれないので確認する。
 https://higmonta.hatenablog.com/entry/2021/05/25/165758
 
@@ -20,6 +22,8 @@ https://higmonta.hatenablog.com/entry/2021/05/25/165758
 - 投稿時、カテゴリの登録ができる。
 - マイページの作成
 - カテゴリで、答案を選択した場合は、司法試験の問題と解説へのリンクを付与する。
+- マイページの分析ボードについて
+科目ごとの達成した記事を、githubの草みたいにしたい。投稿するモチベーションに繋がりそう。
 
 - いいね。bookmark機能の実装
 https://techlife.cookpad.com/entry/2016/10/26/135818
