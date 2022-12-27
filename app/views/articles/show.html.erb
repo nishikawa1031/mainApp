@@ -13,6 +13,11 @@
             <p class="text-right">
             </p>
             <% if @article.bookmarked_by?(current_user) %>
+              <i class="fa-solid fa-bookmark"></i>
+            <% else %>
+              <i class="fa-regular fa-bookmark"></i>
+            <% end %>
+            <% if @article.bookmarked_by?(current_user) %>
               <td><%= link_to "ブックマークを外す", article_bookmarks_path(@article), method: :delete %></td>
             <% else %>
               <td><%= link_to "ブックマーク", article_bookmarks_path(@article), method: :post %></td>
