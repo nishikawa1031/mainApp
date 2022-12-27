@@ -1,18 +1,21 @@
 # やること
 ## Must
-- 本番用seedデータの作成
-
 - 全体のレイアウト修正
 パスワード忘れた場合のページ、sign_inページもレイアウト崩れてる。
-displaynameのカラム追加する。
-user/editページで、usernameとdisplaynameが編集できない。
+
+user/newでdisplayname追加できるようにする。
 user/newページで、usernameのvalidation追加しないといけない。英数字のみ許容するようにする。
+
+user/editページで、usernameとdisplaynameが編集できない。
 
 いいねのアイコン押せるようにする。
 ブックマークもアイコン化
 
 - 答案の場合は、新規登録時に年度も入力してもらう。
 ユーザーの選択肢の選択結果で、表示を変更したいので、react使う必要がありそう。
+
+- 本番用seedデータの作成
+
 ## Want
 - userのアイコン作成  ←画像生成AIとか使えないかな。
 https://zenn.dev/yoiyoicho/articles/974c73ac75c100
