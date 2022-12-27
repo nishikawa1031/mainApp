@@ -5,7 +5,11 @@
       <div class="row">
         <div class="col-sm-12">
           <div class="float-right">
-            <i class="fa-regular fa-thumbs-up fa-2x"></i>
+            <% if @article.liked_by?(current_user) %>
+                <i class="fa-solid fa-thumbs-up fa-2x"></i>
+              <% else %>
+                <i class="fa-regular fa-thumbs-up fa-2x"></i>
+              <% end %>
             <p class="text-right">
             </p>
             <% if @article.bookmarked_by?(current_user) %>
