@@ -25,7 +25,7 @@ class Article < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  is_impressionable counter_cache: true
+  is_impressionable :counter_cache => true, :unique => true
 
   def liked_by?(user)
     likes.where(user_id: user).exists?

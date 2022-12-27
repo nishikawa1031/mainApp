@@ -30,7 +30,7 @@
           <div class="float-right">
             <i class="fa-solid fa-eye fa-2x"></i>
             <p class="text-right">
-              <%= @article.views %>
+              <%= @article.impressionist_count(:filter=>:ip_address) %>
             </p>
           </div>
         </div>
