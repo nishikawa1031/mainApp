@@ -1,10 +1,6 @@
 # やること
 ## Must
 - 本番用seedデータの作成
-- userのアイコン作成  ←画像生成AIとか使えないかな。
-https://zenn.dev/yoiyoicho/articles/974c73ac75c100
-line loginでアイコン取得できるらしい。
-ログインがメール送信も存在しないのはおかしい。
 - 全体のレイアウト修正
 パスワード忘れた場合のページ、sign_inページもレイアウト崩れてる。
 displaynameのカラム追加する。
@@ -12,12 +8,16 @@ user/editページで、usernameとdisplaynameが編集できない。
 user/newページで、usernameのvalidation追加しないといけない。英数字のみ許容するようにする。
 - bookmarkカラム等に、has many :throughを記載しないといけないかもしれないので確認する。
 https://higmonta.hatenablog.com/entry/2021/05/25/165758
-
 - 答案の場合は、新規登録時に年度も入力してもらう。
 ユーザーの選択肢の選択結果で、表示を変更したいので、react使う必要がありそう。
 - 答案の場合は、答案にコメントを書き込めるように修正する
 
 ## Want
+- userのアイコン作成  ←画像生成AIとか使えないかな。
+https://zenn.dev/yoiyoicho/articles/974c73ac75c100
+line loginでアイコン取得できるらしい。
+ログインがメール送信も存在しないのはおかしい。
+
 - 記事の下書き保存ができる。
 - 投稿時、カテゴリの登録ができる。
 - マイページの作成
