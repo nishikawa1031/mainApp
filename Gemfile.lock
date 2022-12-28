@@ -79,6 +79,11 @@ GEM
       popper_js (>= 1.14.3, < 2)
       sassc-rails (>= 2.0.0)
     builder (3.2.4)
+    bundle-audit (0.1.0)
+      bundler-audit
+    bundler-audit (0.9.1)
+      bundler (>= 1.2.0, < 3)
+      thor (~> 1.0)
     carrierwave (2.2.3)
       activemodel (>= 5.0.0)
       activesupport (>= 5.0.0)
@@ -292,6 +297,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap (~> 4.3.1)
+  bundle-audit
   carrierwave
   debug
   devise
