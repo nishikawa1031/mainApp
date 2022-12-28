@@ -1,20 +1,18 @@
 class ArticlesController < ApplicationController
-  impressionist :actions => [:show]
+  impressionist actions: [:show]
 
-  before_action :authenticate_user!, except: [:show, :index]
-  before_action :set_article, only: %i[ show edit update destroy ]
-  before_action :correct_user, only: [:edit, :update, :destory]
+  before_action :authenticate_user!, except: %i[show index]
+  before_action :set_article, only: %i[show edit update destroy]
+  before_action :correct_user, only: %i[edit update destory]
 
   # GET /articles
   def index
     if params[:subject].present?
       Article.subjects.keys.each do |subject|
-        if params[:subject] == subject
-          @articles = Article.published.where(subject: subject).order("created_at DESC")
-        end
+        @articles = Article.published.where(subject:).order('created_at DESC') if params[:subject] == subject
       end
     else
-      @articles = Article.published.order("created_at DESC")
+      @articles = Article.published.order('created_at DESC')
     end
     @articles = @articles.page(params[:page]).per(10)
     @rank_articles = @articles.order(impressions_count: 'DESC')
@@ -27,11 +25,9 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   def show
     # 下書きの記事は、投稿者以外は見れないようにする
-    if @article.status == "draft" && @article.user_id != current_user.id
-      redirect_to root_path
-    end
+    redirect_to root_path if @article.status == 'draft' && @article.user_id != current_user.id
     impressionist(@article)
-    @article.impressionist_count(:filter=>:ip_address)
+    @article.impressionist_count(filter: :ip_address)
     @categories = @article.categories.pluck(:name)
     @user = @article.user
   end
@@ -42,15 +38,14 @@ class ArticlesController < ApplicationController
   end
 
   # GET /articles/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /articles
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
     if @article.save
-      redirect_to @article, notice: "Article was successfully created."
+      redirect_to @article, notice: 'Article was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -59,7 +54,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   def update
     if @article.update(article_params)
-      redirect_to @article, notice: "Article was successfully updated."
+      redirect_to @article, notice: 'Article was successfully updated.'
     else
       render :edit, status: :unprocessable_entity
     end
@@ -68,22 +63,23 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   def destroy
     @article.destroy
-    redirect_to articles_url, notice: "Article was successfully destroyed."
+    redirect_to articles_url, notice: 'Article was successfully destroyed.'
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_article
-      @article = Article.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def article_params
-      params.require(:article).permit(:title, :body, :status, :user_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_article
+    @article = Article.find(params[:id])
+  end
 
-    def correct_user
-      @user = User.find(@article.user.id)
-      redirect_to(root_url) unless @user == current_user
-    end
+  # Only allow a list of trusted parameters through.
+  def article_params
+    params.require(:article).permit(:title, :body, :status, :user_id)
+  end
+
+  def correct_user
+    @user = User.find(@article.user.id)
+    redirect_to(root_url) unless @user == current_user
+  end
 end

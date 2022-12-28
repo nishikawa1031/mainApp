@@ -7,64 +7,62 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 # user1
-user1 = User.create(email: "test@example.com", username: "taroyama", password: "password", password_confirmation: "password")
+user1 = User.create(email: 'test@example.com', username: 'taroyama', password: 'password',
+                    password_confirmation: 'password')
 user1.avatar.attach(io: File.open(Rails.root.join('app/assets/images/avatar.jpeg')), filename: 'avatar.jpeg')
 
 # user2
-user2 = User.create(email: "another_test@example.com", username: "another_man", password: "password2", password_confirmation: "password2")
+user2 = User.create(email: 'another_test@example.com', username: 'another_man', password: 'password2',
+                    password_confirmation: 'password2')
 user2.avatar.attach(io: File.open(Rails.root.join('app/assets/images/avatar2.jpeg')), filename: 'avatar2.jpeg')
 
 # user3
-User.create(email: "another_test2@example.com", username: "another_man2", password: "password2", password_confirmation: "password2")
+User.create(email: 'another_test2@example.com', username: 'another_man2', password: 'password2',
+            password_confirmation: 'password2')
 
-User.all.each do  |user|
+User.all.each do |user|
   ## 下書きの記事
-  3.times do |article|   
+  3.times do |article|
     Article.create(
       title: "Article #{article}",
       body: "This is article number #{article}",
       comment: "This is comment number #{article}",
       status: 0,
-      user: user,
+      user:,
       subject: article
     )
-    end
+  end
 
   ## 公開中の記事
-  8.times do |article|   
+  8.times do |article|
     Article.create(
       title: "Article #{article}",
       body: "This is article number #{article}",
       comment: "This is comment number #{article}",
       status: 1,
-      user: user,
+      user:,
       subject: article
     )
 
     # ブックマーク
-    if article.even?
-      Bookmark.create(user_id: user.id, article_id: article)
-    end
+    Bookmark.create(user_id: user.id, article_id: article) if article.even?
     # いいね
-    if article.odd?
-      Like.create(user_id: user.id, article_id: article)
-    end
+    Like.create(user_id: user.id, article_id: article) if article.odd?
   end
 
   ## アーカイブの記事
-  Article.create(title: "Third Article",
-    body: "This is the third article",
-    comment: "This is comment",
-    status: 2,
-    user_id: user,
-    subject: 3
-  )
+  Article.create(title: 'Third Article',
+                 body: 'This is the third article',
+                 comment: 'This is comment',
+                 status: 2,
+                 user_id: user,
+                 subject: 3)
 end
 
 Article.create(
-  title: "long article",
+  title: 'long article',
   body: 'a' * 1000,
-  comment: "This is comment",
+  comment: 'This is comment',
   status: 1,
   user: User.first,
   subject: 1
@@ -74,10 +72,10 @@ Article.create(
 Category.create(name: '2014年憲法答案')
 Category.create(name: '2016年刑法答案')
 Category.create(name: '2011年憲法答案')
- 
+
 # 記事、カテゴリのidを列挙して中間テーブルに投入
 Article.all.ids.sort.each do |article_id|
   Category.all.ids.sort.each do |category_id|
-    CategoryArticle.create(article_id: article_id, category_id: category_id)
+    CategoryArticle.create(article_id:, category_id:)
   end
 end

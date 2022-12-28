@@ -3,7 +3,8 @@ class LikesController < ApplicationController
 
   def create
     @article = Article.find(params[:article_id])
-    return unless @article.status == "published"
+    return unless @article.status == 'published'
+
     like = @article.likes.new(user_id: current_user.id)
     if like.save
       redirect_to request.referer
@@ -16,10 +17,10 @@ class LikesController < ApplicationController
     @article = Article.find(params[:article_id])
     like = @article.likes.find_by(user_id: current_user.id)
     if like.present?
-        like.destroy
-        redirect_to request.referer
+      like.destroy
+      redirect_to request.referer
     else
-        redirect_to request.referer
+      redirect_to request.referer
     end
   end
 end

@@ -1,14 +1,13 @@
 module FooterHelper
+  def li_maker(linkname)
+    tag.ul(class: 'list-unstyled mb-0') do
+      I18n.t('links').keys.each do |year|
+        link_path = I18n.t("links.#{year}.#{linkname}")
 
-    def li_maker(linkname)
-        tag.ul(class: 'list-unstyled mb-0') do
-            I18n.t("links").keys.each do |year|
-                link_path = I18n.t("links.#{year}.#{linkname}")
-
-                concat(tag.li() do
-                    link_to year, link_path, class: "text-white"
-                end)
-            end
-        end
+        concat(tag.li do
+          link_to year, link_path, class: 'text-white'
+        end)
+      end
     end
+  end
 end

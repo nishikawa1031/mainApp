@@ -1,6 +1,6 @@
 class Article < ApplicationRecord
   enum :status, { draft: 0, published: 1, archived: 2, trashed: 3 }
-  enum :subject, { 
+  enum :subject, {
     civil_law: 0,
     constitution: 1,
     criminal_law: 2,
@@ -25,7 +25,7 @@ class Article < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  is_impressionable :counter_cache => true, :unique => true
+  is_impressionable counter_cache: true, unique: true
 
   def liked_by?(user)
     likes.where(user_id: user).exists?

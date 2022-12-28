@@ -1,6 +1,6 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -27,11 +27,11 @@ module MyProj
     config.generators.system_tests = nil
     config.generators do |g|
       g.test_framework :rspec,
-        controller_specs: false,  # controller specは作らない
-        view_specs: false,        # view specは作らない
-        helper_specs: false,      # helper specは作らない
-        routing_specs: false,      # routing specは作らない
-        request_specs: false
+                       controller_specs: false,  # controller specは作らない
+                       view_specs: false,        # view specは作らない
+                       helper_specs: false,      # helper specは作らない
+                       routing_specs: false,      # routing specは作らない
+                       request_specs: false
     end
   end
 end
