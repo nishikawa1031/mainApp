@@ -3,10 +3,7 @@
 - 全体のレイアウト修正
 パスワード忘れた場合のページ、sign_inページもレイアウト崩れてる。
 
-user/newでdisplayname追加できるようにする。
 user/newページで、usernameのvalidation追加しないといけない。英数字のみ許容するようにする。
-
-user/editページで、usernameとdisplaynameが編集できない。
 
 いいねのアイコン押せるようにする。
 ブックマークもアイコン化
