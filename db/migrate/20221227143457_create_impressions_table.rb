@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateImpressionsTable < ActiveRecord::Migration[7.0]
   def self.up
     create_table :impressions, force: true do |t|

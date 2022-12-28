@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ArticlesController < ApplicationController
   impressionist actions: [:show]
 
@@ -8,7 +10,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   def index
     if params[:subject].present?
-      Article.subjects.keys.each do |subject|
+      Article.subjects.each_key do |subject|
         @articles = Article.published.where(subject:).order('created_at DESC') if params[:subject] == subject
       end
     else

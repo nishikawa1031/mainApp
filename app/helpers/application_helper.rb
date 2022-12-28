@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module ApplicationHelper
   def ul_sub_header
     tag.ul(class: 'navbar-nav mr-auto pl-2') do
-      Article.subjects.keys.each do |subject|
+      Article.subjects.each_key do |subject|
         li_html(subject)
       end
     end
@@ -27,7 +29,7 @@ module ApplicationHelper
     classname = no_article ? 'nav-link text-muted' : 'nav-link text-light'
 
     concat(tag.li(class: 'nav-item active', style: 'font-size: 14px;') do
-      link_to I18n.t("article.subject.#{subject}"), articles_path(subject: "#{subject}"),
+      link_to I18n.t("article.subject.#{subject}"), articles_path(subject: subject.to_s),
               class: classname, style: undlerline
     end)
   end

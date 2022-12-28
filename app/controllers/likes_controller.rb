@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LikesController < ApplicationController
   before_action :authenticate_user!
 
@@ -6,21 +8,13 @@ class LikesController < ApplicationController
     return unless @article.status == 'published'
 
     like = @article.likes.new(user_id: current_user.id)
-    if like.save
-      redirect_to request.referer
-    else
-      redirect_to request.referer
-    end
+    redirect_to request.referer
   end
 
   def destroy
     @article = Article.find(params[:article_id])
     like = @article.likes.find_by(user_id: current_user.id)
-    if like.present?
-      like.destroy
-      redirect_to request.referer
-    else
-      redirect_to request.referer
-    end
+    like.destroy if like.present?
+    redirect_to request.referer
   end
 end

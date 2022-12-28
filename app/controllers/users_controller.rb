@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:show]
   before_action :correct_user, only: %i[edit update destory]
