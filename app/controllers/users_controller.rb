@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:show]
+  before_action :authenticate_user!, except: [:show]
   before_action :correct_user, only: %i[edit update destory]
 
   def show
     @user = User.find_by(username: params[:username])
     @articles = @user.articles
-    @articles = Article.draft.where(user_id: current_user.id).order('created_at DESC') if (params[:status] = 'draft')
+    if params[:status] == 'draft'
+      @articles = Article.draft.where(user_id: current_user.id).order('created_at DESC')
+    end
     if params[:key] == 'bookmarks'
       @articles = Article.joins(:bookmarks).where(bookmarks: { user_id: current_user.id }).order(created_at: :desc)
     end
