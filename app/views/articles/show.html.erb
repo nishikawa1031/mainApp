@@ -15,9 +15,14 @@
   <div class="col-sm-12">
     <%= render "article_details" %>
     <% if current_user?(@article.user) %>
-      <div>
-        <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-primary" %>
-        <%= button_to "Destroy this article", @article, method: :delete, class:"btn btn-primary"  %>
+      <br>
+      <div class="row">
+        <div class="col-sm-6" style="text-align: center">
+          <%= link_to "Edit", edit_article_path(@article), class:"btn btn-primary" %>
+        </div>
+        <div class="col-sm-6" style="text-align: center">
+          <%= button_to "Destroy", @article, method: :delete, class:"btn btn-primary"  %>
+        </div>
       </div>
     <% else %>
       <div>
