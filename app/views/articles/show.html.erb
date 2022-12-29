@@ -1,55 +1,28 @@
 <p style="color: green"><%= notice %></p>
 
 <div class="row">
-    <div class="col-sm-1">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="float-right">
-            <% if @article.liked_by?(current_user) %>
-              <%= link_to article_likes_path(@article), method: :delete do %>
-                <i class="fa-solid fa-thumbs-up fa-2x"></i>
-              <% end %>
-            <% else %>
-              <%= link_to article_likes_path(@article), method: :post do %>
-                <i class="fa-regular fa-thumbs-up fa-2x"></i>
-              <% end %>
-            <% end %>
-            <p class="text-right">
-            </p>
-            <% if @article.bookmarked_by?(current_user) %>
-              <%= link_to article_bookmarks_path(@article), method: :delete do %>
-                <i class="fa-solid fa-bookmark"></i>
-              <% end %>
-            <% else %>
-              <%= link_to article_bookmarks_path(@article), method: :post do %>
-                <i class="fa-regular fa-bookmark"></i>
-              <% end %>
-            <% end %>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="float-right">
-            <i class="fa-solid fa-eye fa-2x"></i>
-            <p class="text-right">
-              <%= @article.impressionist_count(:filter=>:ip_address) %>
-            </p>
-          </div>
-        </div>
+  <div class="col-sm-12">
+    <div class="row">
+      <%= render "/users/avatar" %>
+    </div>
+    <div class="row">
+      <div style="margin: 2px auto">
+        <%= "@#{@article.user.username}" %>
+        <i class="fa-solid fa-eye"> <%= @article.impressionist_count(:filter=>:ip_address) %></i>
       </div>
     </div>
-    <div class="col-sm-11">
-      <%= render "article_details" %>
-      <% if current_user?(@article.user) %>
-        <div>
-          <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-primary" %>
-          <%= button_to "Destroy this article", @article, method: :delete, class:"btn btn-primary"  %>
-        </div>
-      <% else %>
-        <div>
-        </div>
-      <% end %>
-    </div>
+  </div>
+  <div class="col-sm-12">
+    <%= render "article_details" %>
+    <% if current_user?(@article.user) %>
+      <div>
+        <%= link_to "Edit this article", edit_article_path(@article), class:"btn btn-primary" %>
+        <%= button_to "Destroy this article", @article, method: :delete, class:"btn btn-primary"  %>
+      </div>
+    <% else %>
+      <div>
+      </div>
+    <% end %>
+  </div>
 </div>
 

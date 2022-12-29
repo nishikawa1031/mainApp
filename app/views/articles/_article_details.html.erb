@@ -1,7 +1,5 @@
-<div class="card">
-  <%= render "/users/avatar" %>
-  <%= "@#{@article.user.username}" %>
-  <small>
+<div class="card" style="text-align: center">
+    <small>
     <%= @article.created_at.to_fs(:datetime_jp) %>
   </small>
   <h5 class="card-title"><%= @article.title %></h5>
