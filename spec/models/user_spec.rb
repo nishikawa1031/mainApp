@@ -21,6 +21,11 @@ RSpec.describe User, type: :model do
         user.username = 'dddd234'
         expect(user).to be_valid
       end
+
+      it 'アンダースコアを登録できること' do
+        user.username = 'dd_dd234'
+        expect(user).to be_valid
+      end
     end
   end
 end
