@@ -6,8 +6,6 @@
 
 - 本番用seedデータの作成
 
-- カテゴリのリンク化
-
 ## 本番運用するなら
 - ログインがメール送信も存在しないのはおかしい。
 https://zenn.dev/yoiyoicho/articles/974c73ac75c100
