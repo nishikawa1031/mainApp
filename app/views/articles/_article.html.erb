@@ -1,43 +1,41 @@
 <div id="<%= dom_id article %>">
   <div class="card">
-    <div class="col">
-      <div class="row">
-        <div class="col-sm-2 px-1">
-          <%= render "/users/avatar_index", { article: article } %>
-          <p class="px-1 mb-0 text-center">
-            <%= link_to "@#{article.user.username}", user_path(article.user.username), class:"p-2 text-dark btn-sm" %>
-          </p>
-          <p class="px-1 mb-0 text-center">
-          </p>
+    <div class="row">
+      <div class="col-sm-2 px-1">
+        <%= render "/users/avatar_index", { article: article } %>
+        <p class="px-1 mb-0 text-center">
+          <%= link_to "@#{article.user.username}", user_path(article.user.username), class:"p-2 text-dark btn-sm" %>
+        </p>
+        <p class="px-1 mb-0 text-center">
+        </p>
 
+      </div>
+      <div class="col-sm-8 px-1">
+        <a href="/articles/<%= article.id %>" class="card-body text-dark">
+          <h5 class="card-title"><%= article.title %></h5>
+          <p  class="text-truncate">
+            <%= article.comment %>
+          </p>
+        </a>
+        <% if params[:subject].nil? || params[:subject] == "others" %>
+          <%= I18n.t("article.subject.#{article.subject}") %>
+        <% end %>
+        <div class="text-right pb-1">
+          <small class="px-1">
+            <%= article.created_at.to_s(:datetime_jp) %>
+          </small>
         </div>
-        <div class="col-sm-8 px-1">
-          <a href="/articles/<%= article.id %>" class="card-body text-dark">
-            <h5 class="card-title"><%= article.title %></h5>
-            <p  class="text-truncate">
-              <%= article.comment %>
-            </p>
-          </a>
-          <% if params[:subject].nil? || params[:subject] == "others" %>
-            <%= I18n.t("article.subject.#{article.subject}") %>
-          <% end %>
-          <div class="text-right pb-1">
-            <small class="px-1">
-              <%= article.created_at.to_s(:datetime_jp) %>
-            </small>
-          </div>
-        </div>
-        <div class="col-sm-2 px-1">
-          <div class="float-right">
-              <p class="text-right px-2">
-              </p>
-          </div>
-          <div class="float-right">
-            <i class="fa-solid fa-eye px-2 pt-2"></i>
+      </div>
+      <div class="col-sm-2 px-1">
+        <div class="float-right">
             <p class="text-right px-2">
-              <%= article.impressionist_count(:filter=>:ip_address) %>
             </p>
-          </div>
+        </div>
+        <div class="float-right">
+          <i class="fa-solid fa-eye px-2 pt-2"></i>
+          <p class="text-right px-2">
+            <%= article.impressionist_count(:filter=>:ip_address) %>
+          </p>
         </div>
       </div>
     </div>
