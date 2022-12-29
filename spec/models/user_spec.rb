@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.new(username: 'ExampleUser', email: 'user@example.com') }
+  let(:user) { User.new(username: 'ExampleUser', email: 'user@example.com', password: "password") }
 
   describe 'バリデーションのテスト' do
     context 'usernameカラム' do
@@ -15,6 +15,11 @@ RSpec.describe User, type: :model do
       it '英数字以外を含まないこと' do
         user.username = 'あいう'
         expect(user).not_to be_valid
+      end
+
+      it '英数字以外を含まないこと' do
+        user.username = 'dddd234'
+        expect(user).to be_valid
       end
     end
   end
