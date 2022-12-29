@@ -6,14 +6,22 @@
 
 - 本番用seedデータの作成
 
+- カテゴリのリンク化
+
+## 本番運用するなら
+- ログインがメール送信も存在しないのはおかしい。
+https://zenn.dev/yoiyoicho/articles/974c73ac75c100
+line loginでアイコン取得できるらしい。
+- レスポンシブ対応
+- S3と接続
+- レンタルサーバー契約、ドメイン取得
+
 ## Want
 - indexページにアイコン追加するためには、jsで書き直す。
 リロードで先頭に行ってしまうので。
 
 - userのアイコン作成  ←画像生成AIとか使えないかな。
-https://zenn.dev/yoiyoicho/articles/974c73ac75c100
-line loginでアイコン取得できるらしい。
-ログインがメール送信も存在しないのはおかしい。
+
 - bookmarkカラム等に、has many :throughを記載しないといけないかもしれないので確認する。
 https://higmonta.hatenablog.com/entry/2021/05/25/165758
 - 記事の下書き保存ができる。
