@@ -1,4 +1,10 @@
 ja:
+  views:
+    pagination:
+      first: 先頭
+      previous: 前に
+      next: 次に
+      last: 最後
   article:
     subject:
       civil_law: 民法
