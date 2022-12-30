@@ -49,6 +49,7 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit '下書き保存', :status => 'draft', class: "btn btn-primary" %>
+    <%= form.submit '公開', :status => 'published', class: "btn btn-primary" %>
   </div>
 <% end %>
