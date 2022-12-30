@@ -1,6 +1,13 @@
 <%= tinymce_assets %>
 <%= tinymce %>
 
+  <div class="my-2 my-md-0 mr-md-3">
+    <%= link_to "答案", new_article_path(answer: true), class:"btn btn-primary btn-sm" %>
+  </div>
+  <div class="my-2 my-md-0 mr-md-3">
+    <%= link_to "記事", new_article_path, class:"btn btn-primary btn-sm" %>
+  </div>
+
 <%= form_with(model: article) do |form| %>
   <% if article.errors.any? %>
     <div style="color: red">
@@ -19,18 +26,22 @@
     <%= form.text_field :title %>
   </div>
 
-  <div>
-    <%= form.label :comment, style: "display: block" %>
-    <%= form.text_field :comment %>
-  </div>
+  <% if params[:answer] %>
+    <div>
+      <%= form.label :comment, style: "display: block" %>
+      <%= form.text_field :comment %>
+    </div>
+    <div>
+      <%= form.hidden_field :answer, :value => true %>
+    </div>
+  <% else %>
+    <div>
+      <%= form.hidden_field :status, :value => false %>
+    </div>
+  <% end %>
 
   <div>
     <%= form.text_area :body, :class => "tinymce"%>
-  </div>
-
-  <div>
-    <%= form.label :status, style: "display: block" %>
-    <%= form.number_field :status %>
   </div>
 
   <div>
