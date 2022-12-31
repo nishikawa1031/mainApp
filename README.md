@@ -11,7 +11,6 @@ https://zenn.dev/yoiyoicho/articles/974c73ac75c100
 line loginでアイコン取得できるらしい。
 - S3と接続
 - レンタルサーバー契約、ドメイン取得
-- アナリティクス導入
 
 ## Want
 - 運用費と収入を全ユーザーが見えるようにしたい
