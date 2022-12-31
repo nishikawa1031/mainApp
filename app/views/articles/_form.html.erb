@@ -1,10 +1,17 @@
 <%= tinymce_assets %>
 <%= tinymce %>
 
+<% if params[:answer] %>
   <div class="my-2 my-md-0 mr-md-3">
     <%= link_to "答案", new_article_path(answer: true), class:"btn btn-sm", style:"background-color: #33404D; color: white;"%>
     <%= link_to "記事", new_article_path, class:"btn btn-outline btn-sm" %>
   </div>
+<% else %>
+  <div class="my-2 my-md-0 mr-md-3">
+    <%= link_to "答案", new_article_path(answer: true), class:"btn btn-outline btn-sm"%>
+    <%= link_to "記事", new_article_path, class:"btn btn-sm", style:"background-color: #33404D; color: white;"%>
+  </div>
+<% end %>
 
 <%= form_with(model: article) do |form| %>
   <% if article.errors.any? %>
