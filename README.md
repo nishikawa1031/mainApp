@@ -53,6 +53,8 @@ https://github.com/paper-trail-gem/paper_trail
 # ドキュメント
 https://github.com/nishikawa1031/mainApp
 
+https://analytics.google.com/analytics/web/#/p347800174/reports/intelligenthome
+
 # 開発関連
 ## エラー
 ### LoadError: cannot load such file -- coffee_script heroku
