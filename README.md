@@ -10,6 +10,8 @@ https://zenn.dev/yoiyoicho/articles/974c73ac75c100
 line loginでアイコン取得できるらしい。
 - S3と接続
 - レンタルサーバー契約、ドメイン取得
+- heroku内で、開発環境と本番環境を用意する
+https://engineer.crowdworks.jp/entry/2016/09/05/154304
 
 ## Want
 - 運用費と収入を全ユーザーが見えるようにしたい
