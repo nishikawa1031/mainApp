@@ -1,9 +1,9 @@
   <% if @article.bookmarked_by?(current_user) %>
-    <%= link_to article_bookmarks_path(@article), style:"text-align: right", method: :delete do %>
+    <%= link_to article_bookmarks_path(@article), class: "px-2", style:"text-align: right; color: #33404D;", method: :delete do %>
       <i class="fa-solid fa-bookmark fa-2x"></i>
     <% end %>
   <% else %>
-    <%= link_to article_bookmarks_path(@article), style:"text-align: right", method: :post do %>
+    <%= link_to article_bookmarks_path(@article), class: "px-2", style:"text-align: right; color: #33404D;", method: :post do %>
       <i class="fa-regular fa-bookmark fa-2x"></i>
     <% end %>
   <% end %>
