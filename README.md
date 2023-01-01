@@ -3,15 +3,10 @@
 - 本番用seedデータの作成
 
 ## 本番運用するなら
-- ログインがメール送信も存在しないのはおかしい。
-https://zenn.dev/yoiyoicho/articles/974c73ac75c100
-line loginでアイコン取得できるらしい。
-google
-facebook
-twitter
+- amazon cognitoを使おう
+https://tech.stmn.co.jp/entry/tech/6689
 
 - S3と接続
-- レンタルサーバー契約、ドメイン取得
 - heroku内で、開発環境と本番環境を用意する
 https://engineer.crowdworks.jp/entry/2016/09/05/154304
 
