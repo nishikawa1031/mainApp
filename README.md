@@ -6,6 +6,10 @@
 - ログインがメール送信も存在しないのはおかしい。
 https://zenn.dev/yoiyoicho/articles/974c73ac75c100
 line loginでアイコン取得できるらしい。
+google
+facebook
+twitter
+
 - S3と接続
 - レンタルサーバー契約、ドメイン取得
 - heroku内で、開発環境と本番環境を用意する
@@ -20,6 +24,8 @@ https://engineer.crowdworks.jp/entry/2016/09/05/154304
 リロードで先頭に行ってしまうので。
 
 - userのアイコン作成  ←画像生成AIとか使えないかな。
+
+- マイページ上に、twitter,youtube等のアカウントリンク表示したい。
 
 - bookmarkカラム等に、has many :throughを記載しないといけないかもしれないので確認する。
 https://higmonta.hatenablog.com/entry/2021/05/25/165758
