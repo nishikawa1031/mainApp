@@ -8,6 +8,7 @@ class LikesController < ApplicationController
     return unless @article.status == 'published'
 
     like = @article.likes.new(user_id: current_user.id)
+    like.save
     redirect_to request.referer
   end
 

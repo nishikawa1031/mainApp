@@ -7,6 +7,7 @@ class BookmarksController < ApplicationController
     return unless @article.status == 'published'
 
     bookmark = @article.bookmarks.new(user_id: current_user.id)
+    bookmark.save
     redirect_to request.referer
   end
 
