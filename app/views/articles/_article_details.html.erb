@@ -1,26 +1,10 @@
 <div class="card">
-      <small class="p-1" style="text-align: center">
-        <%= @article.created_at.to_fs(:datetime_jp) %>
-      </small>
-      <h5 class="card-title" style="text-align: center"><%= @article.title %></h5>
-        <% if @article.bookmarked_by?(current_user) %>
-          <%= link_to article_bookmarks_path(@article), method: :delete do %>
-            <i class="fa-solid fa-bookmark fa-2x"></i>
-          <% end %>
-        <% else %>
-          <%= link_to article_bookmarks_path(@article), method: :post do %>
-            <i class="fa-regular fa-bookmark fa-2x"></i>
-          <% end %>
-        <% end %>
-        <% if @article.liked_by?(current_user) %>
-          <%= link_to article_likes_path(@article), method: :delete do %>
-            <i class="fa-solid fa-thumbs-up fa-2x"></i>
-          <% end %>
-        <% else %>
-          <%= link_to article_likes_path(@article), method: :post do %>
-            <i class="fa-regular fa-thumbs-up fa-2x"></i>
-          <% end %>
-        <% end %>
+  <small class="p-1" style="text-align: center">
+    <%= @article.created_at.to_fs(:datetime_jp) %>
+  </small>
+  <h5 class="card-title" style="text-align: center"><%= @article.title %></h5>
+  <%= render "/articles/bookmark" %>
+  <%= render "/articles/like" %>
         <p class="text-right">
         </p>
   <p class="card-body">
