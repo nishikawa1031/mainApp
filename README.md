@@ -2,6 +2,8 @@
 ## Must
 - 本番用seedデータの作成
 
+- レスポンシブ対応
+
 ## 本番運用するなら
 - amazon cognitoを使おう
 https://tech.stmn.co.jp/entry/tech/6689
