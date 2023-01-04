@@ -4,7 +4,6 @@
 
 - レスポンシブ対応
 index欄に表示されるcardのavatarの位置を中央に。
-headerも太すぎるので調整したい
 
 ## 本番運用するなら
 - amazon cognitoを使おう
