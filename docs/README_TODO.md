@@ -5,15 +5,18 @@
 - レスポンシブ対応
 index欄に表示されるcardのavatarの位置を中央に。
 
-## 本番運用するなら
+## とりあえず本番運用するなら
+- avatarにdefault画像を設定する。
+
 - amazon cognitoを使おう
 https://tech.stmn.co.jp/entry/tech/6689
 
-- S3と接続
 - heroku内で、開発環境と本番環境を用意する
 https://engineer.crowdworks.jp/entry/2016/09/05/154304
 
 ## Want
+- avatarのアップロードのために、S3と接続
+
 - 選択科目はログインユーザーしか閲覧できないように修正する。
 価格戦略として、選択科目で稼ぐモデルになるかも。
 
