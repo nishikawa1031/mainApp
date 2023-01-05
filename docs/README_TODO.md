@@ -1,17 +1,16 @@
 # やること
 ## Must
-- 本番用seedデータの作成
-
 - レスポンシブ対応
 index欄に表示されるcardのavatarの位置を中央に。
 
-## とりあえず本番運用するなら
 - avatarにdefault画像を設定する。
 ランダムで、いくつかの画像から勝手に設定されるようにしておきたい。
 
 - amazon cognitoを使おう
 https://tech.stmn.co.jp/entry/tech/6689
 
+- 本番用seedデータの作成
+## リリース直前
 - heroku内で、開発環境と本番環境を用意する
 https://engineer.crowdworks.jp/entry/2016/09/05/154304
 
