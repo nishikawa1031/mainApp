@@ -1,8 +1,5 @@
 # やること
 ## Must
-- レスポンシブ対応
-index欄に表示されるcardのavatarの位置を中央に。
-
 - avatarにdefault画像を設定する。
 ランダムで、いくつかの画像から勝手に設定されるようにしておきたい。
 
@@ -15,6 +12,9 @@ cognitoは諦める
 https://engineer.crowdworks.jp/entry/2016/09/05/154304
 
 ## Want
+- レスポンシブ対応
+index欄に表示されるcardのavatarの位置を中央に。
+
 - avatarのアップロードのために、S3と接続
 
 - 選択科目はログインユーザーしか閲覧できないように修正する。
