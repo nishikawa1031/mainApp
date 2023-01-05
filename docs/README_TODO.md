@@ -6,8 +6,8 @@ index欄に表示されるcardのavatarの位置を中央に。
 - avatarにdefault画像を設定する。
 ランダムで、いくつかの画像から勝手に設定されるようにしておきたい。
 
-- amazon cognitoを使おう
-https://tech.stmn.co.jp/entry/tech/6689
+- deviseのgoogle認証等を追加
+cognitoは諦める
 
 - 本番用seedデータの作成
 ## リリース直前
