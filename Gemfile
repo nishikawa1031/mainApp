@@ -52,6 +52,8 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'kaminari'
 gem 'mini_magick'
+gem 'googleauth' # Google認証
+gem 'dotenv' # 環境変数
 
 # 参考　https://kitsune.blog/rails-bootstrap
 gem 'bootstrap', '~> 4.3.1'
