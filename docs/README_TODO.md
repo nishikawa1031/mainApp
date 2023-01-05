@@ -1,6 +1,7 @@
 # やること
 ## Must
 - avatarにdefault画像を設定する。
+default画像を準備して
 ランダムで、いくつかの画像から勝手に設定されるようにしておきたい。
 
 - deviseのgoogle認証等を追加
