@@ -32,3 +32,5 @@
 node_modules
 tmp
 storage
+
+.env
