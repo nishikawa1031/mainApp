@@ -1,19 +1,23 @@
 # やること
 ## Must
-- avatarにdefault画像を設定する。
-default画像を準備して
-ランダムで、いくつかの画像から勝手に設定されるようにしておきたい。
-単色一色とかをcssで作る感じでいい。
+- やっぱり、avatarにdefault画像を準備する。
+あるいは、default画像であることがわかるようにする。
+https://bootstrap-vue.org/docs/components/avatar#variants
 
+- 本番用seedデータの作成
+
+## リリース直前
 - deviseのgoogle認証を本番用に。
 https://zenn.dev/yoiyoicho/articles/c44a80e4bb4515#google%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3%E3%83%9C%E3%82%BF%E3%83%B3%E3%82%92%E5%AE%9F%E8%A3%85%E3%81%99%E3%82%8B
 
-- 本番用seedデータの作成
-## リリース直前
 - heroku内で、開発環境と本番環境を用意する
 https://engineer.crowdworks.jp/entry/2016/09/05/154304
 
 ## Want
+- マイページもっとしっかりさせたい。
+ここらへん使ってレイアウト調整する
+https://mdbootstrap.com/docs/standard/extended/avatar/#section-with-content
+
 - 認証
 twwiter,line,facebook等でログインできるように修正する
 
