@@ -22,6 +22,8 @@ class ArticlesController < ApplicationController
     @user = current_user
     @users = User.all
     @categories = Category.all
+
+    @avatar_bg_color = 'red;'
   end
 
   # GET /articles/1

@@ -2,6 +2,6 @@
   <% if article&.user&.avatar&.attached? %>
     <%= image_tag article.user.avatar, alt: "Avatar" %>
   <% else %>
-    <%= image_tag ("default.jpg"), alt: "Avatar" %>
+    <div class="circle" style="width: 80px; height: 80px; background: <%= @avatar_bg_color %>"></div>
   <% end %>
 </div>
