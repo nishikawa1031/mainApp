@@ -1,9 +1,5 @@
 # やること
 ## Must
-- やっぱり、avatarにdefault画像を準備する。
-あるいは、default画像であることがわかるようにする。
-https://bootstrap-vue.org/docs/components/avatar#variants
-
 - 本番用seedデータの作成
 
 ## リリース直前
@@ -14,6 +10,10 @@ https://zenn.dev/yoiyoicho/articles/c44a80e4bb4515#google%E3%83%AD%E3%82%B0%E3%8
 https://engineer.crowdworks.jp/entry/2016/09/05/154304
 
 ## Want
+- やっぱり、avatarにdefault画像を準備する。
+あるいは、default画像であることがわかるようにする。
+https://bootstrap-vue.org/docs/components/avatar#variants
+
 - マイページもっとしっかりさせたい。
 ここらへん使ってレイアウト調整する
 https://mdbootstrap.com/docs/standard/extended/avatar/#section-with-content
