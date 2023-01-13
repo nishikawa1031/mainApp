@@ -9,8 +9,10 @@
       <h5 class="card-title" style="text-align: center"><%= @article.title %></h5>
     </div>
     <div class="col-sm" style="text-align: right">
-      <%= render "/articles/like" %>
-      <%= render "/articles/bookmark" %>
+      <% if !current_user?(@article.user) %>
+       <%= render "/articles/like" %>
+       <%= render "/articles/bookmark" %>
+      <% end %>
     </div>
   </div>
   <p class="card-body">
