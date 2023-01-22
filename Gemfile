@@ -60,8 +60,6 @@ gem 'bootstrap', '~> 4.3.1'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
 
-gem 'tinymce-rails'
-
 gem 'impressionist' # PVカウント
 
 group :development, :test do
