@@ -28,6 +28,7 @@ class Article < ApplicationRecord
   has_many :likes, dependent: :destroy
 
   is_impressionable counter_cache: true, unique: true
+  has_one_attached :file
 
   Colors = %w[blue indigo purple pink red orange yellow green teal cyan gray].freeze
 

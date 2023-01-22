@@ -29,6 +29,11 @@
     <%= form.text_field :title %>
   </div>
 
+  <div class="field">
+    <%= form.label :file %><br />
+    <%= form.file_field :file %>
+  </div>
+
   <% if params[:answer] %>
     <div>
       <%= form.label :year, style: "display: block" %>
