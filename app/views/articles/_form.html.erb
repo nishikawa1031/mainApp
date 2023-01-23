@@ -36,8 +36,12 @@
 
   <% if params[:answer] %>
     <div>
+      <%= form.label :subject, style: "display: block" %>
+      <%= form.select :subject, Article.subjects.map { |subject| [subject[0], subject[1]] }  %>
+    </div>
+    <div>
       <%= form.label :year, style: "display: block" %>
-      <%= form.number_field :year %>
+      <%= form.select :year, Article::YEARS.map {|y| y.to_i} %>
     </div>
     <div>
       <%= form.label :comment, style: "display: block" %>
