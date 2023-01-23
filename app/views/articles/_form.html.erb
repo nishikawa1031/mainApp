@@ -31,11 +31,6 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :file %><br />
-    <%= form.file_field :file %>
-  </div>
-
   <% if params[:answer] %>
     <div>
       <%= form.label :subject, style: "display: block" %>
@@ -48,6 +43,10 @@
     <div>
       <%= form.label :comment, style: "display: block" %>
       <%= form.text_field :comment %>
+    </div>
+    <div class="field">
+      <%= form.label :file %><br />
+      <%= form.file_field :file %>
     </div>
     <div>
       <%= form.hidden_field :answer, :value => true %>
