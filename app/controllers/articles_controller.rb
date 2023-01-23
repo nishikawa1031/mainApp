@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1
   def show
+    ActiveStorage::Current.host = "http://localhost:3000"
     # 下書きの記事は、投稿者以外は見れないようにする
     redirect_to root_path if @article.status == 'draft' && @article.user_id != current_user.id
     impressionist(@article)

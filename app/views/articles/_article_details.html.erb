@@ -1,15 +1,15 @@
 <div class="card">
   <div class="row">
     <div class="col-sm">
-      <% if @article&.file&.attached? %>
-        <%= image_tag @article.file, alt: "File" %>
-      <% end %>
     </div>
     <div class="col-sm">
       <p class="small p-1" style="text-align: center">
         <%= @article.created_at.to_fs(:datetime_jp) %>
       </p>
       <h5 class="card-title" style="text-align: center"><%= @article.title %></h5>
+      <% if @article&.file&.attached? %>
+        <iframe src=<%= "#{@article.file.url}" %> width="100%" height="100%"></iframe>
+      <% end %>
     </div>
     <div class="col-sm" style="text-align: right">
       <% if !current_user?(@article.user) %>
