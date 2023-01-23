@@ -24,10 +24,12 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
-  </div>
+  <% unless params[:answer] %>
+    <div>
+      <%= form.label :title, style: "display: block" %>
+      <%= form.text_field :title %>
+    </div>
+  <% end %>
 
   <div class="field">
     <%= form.label :file %><br />
@@ -37,7 +39,7 @@
   <% if params[:answer] %>
     <div>
       <%= form.label :subject, style: "display: block" %>
-      <%= form.select :subject, Article.subjects.map { |subject| [subject[0], subject[1]] }  %>
+      <%= form.select :subject, Article.subjects.map { |subject| [I18n.t("article.subject.#{subject[0]}"), subject[1]] }  %>
     </div>
     <div>
       <%= form.label :year, style: "display: block" %>
