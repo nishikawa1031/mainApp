@@ -4,7 +4,6 @@ class LikesController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    binding.pry
     @article = Article.find(params[:article_id])
     return if current_user?(@article.user)
     return unless @article.status == 'published'
