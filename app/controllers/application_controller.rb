@@ -2,7 +2,8 @@
 
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller? # 追加
-  # 以下追加
+
+  include ApplicationHelper
 
   protected
 
