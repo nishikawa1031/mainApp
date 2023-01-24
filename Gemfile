@@ -56,7 +56,7 @@ gem 'googleauth' # Google認証
 gem 'dotenv-rails' # 環境変数
 
 # 参考　https://kitsune.blog/rails-bootstrap
-gem 'bootstrap', '~> 4.3.1'
+gem 'bootstrap'
 gem 'font-awesome-sass'
 gem 'jquery-rails'
 
