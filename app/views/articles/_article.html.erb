@@ -12,30 +12,31 @@
       </div>
       <div class="col-sm-8">
         <a href="/articles/<%= article.id %>" class="card-body text-dark">
-          <h5 class="card-title px-4"><%= article.title %></h5>
-          <p  class="text-truncate px-2">
-            <%= article.comment %>
-          </p>
+          <% unless article.answer %>
+            <h5 class="card-title px-4"><%= article.title %></h5>
+          <% else %>
+            <h5 class="card-title px-4"><%= article.year %>年度 <%= I18n.t("article.subject.#{article.subject}") %> 答案</h5>
+            <p  class="text-truncate px-2">
+              <%= article.comment %>
+            </p>
+          <% end %>
+
         </a>
-        <% if params[:subject].nil? || params[:subject] == "others" %>
-          <%= I18n.t("article.subject.#{article.subject}") %>
-        <% end %>
-        <div class="text-right pb-1">
-          <small class="px-1">
-            <%= article.created_at.to_s(:datetime_jp) %>
-          </small>
-        </div>
       </div>
       <div class="col-sm-2 px-1">
-        <div class="float-right">
-            <p class="text-right px-2">
-            </p>
-        </div>
         <div class="float-right">
           <i class="fa-solid fa-eye px-2 pt-2"></i>
           <p class="text-right px-2">
             <%= article.impressionist_count(:filter=>:ip_address) %>
           </p>
+        </div>
+        <% if params[:subject].nil? || params[:subject] == "others" %>
+          <%= I18n.t("article.subject.#{article.subject}") %>
+        <% end %>
+        <div class="float-right">
+          <small class="px-1">
+            <%= article.created_at.to_s(:datetime_jp) %>
+          </small>
         </div>
       </div>
     </div>
