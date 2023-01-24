@@ -78,8 +78,8 @@ class ArticlesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def article_params
-    params[:article][:subject] = params[:article][:subject].to_i
-    params[:article][:year] = params[:article][:year].to_i
+    params[:article][:subject] = params[:article][:subject].to_i if params[:article][:subject]
+    params[:article][:year] = params[:article][:year].to_i if params[:article][:year]
     params.require(:article).permit(:title, :body, :status, :user_id, :file, :year, :subject, category_ids: [])
   end
 
