@@ -11,8 +11,8 @@ gem 'rails', '~> 7.0.4'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-# Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
+# Use mysql as the database for Active Record
+gem "mysql2", "~> 0.5"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
@@ -62,6 +62,8 @@ gem 'jquery-rails'
 
 gem 'impressionist' # PVカウント
 
+gem 'mini_racer' # JavaScriptの実行環境
+
 group :development, :test do
   gem 'pry-nav'
   gem 'pry-rails'
@@ -83,4 +85,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+end
+
+group :production do
+  # Use postgresql as the database for Active Record
+  gem 'pg', '~> 1.1'
 end

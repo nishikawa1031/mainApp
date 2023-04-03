@@ -1,10 +1,28 @@
 # ローカル環境
-up:
+s:
 	bundle exec rails s
 
 # #外部キーを明らかにし、他のカラムも表示する。
 erd:
 	bundle exec erd --attributes=foreign_keys,content
+
+# docker-composeを使った開発環境
+down:
+	docker-compose -f docker-compose-local.yml down
+	docker system prune -f
+
+setup:
+	cp config/database.tmpl.yml config/database.yml
+	docker-compose -f docker-compose-local.yml build --no-cache
+
+db:	# DBの作成
+	docker-compose -f docker-compose-local.yml run web rails db:migrate:reset db:seed
+
+build:
+	docker-compose -f docker-compose-local.yml build
+
+up:
+	docker-compose -f docker-compose-local.yml up
 
 # デプロイ方法
 ## https://main-app-1209.herokuapp.com/articles
