@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   post '/google_login_api/callback', to: 'google_login_api#callback'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :subjects, only: %i[show]do
+    resources :years, only: %i[show] do
+      resources :questions, only: %i[show]
+    end
+  end
 end
