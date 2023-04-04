@@ -12,7 +12,9 @@ erd:
 ## https://www.figma.com/files/recent?fuid=838989140608738953
 p: # pushの略
 	git push origin HEAD
-	git push heroku master
+
+# herokuに手動でデプロイする場合
+## git push heroku master
 
 # 本番用コマンド
 ## migrateを走らせる
