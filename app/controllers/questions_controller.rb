@@ -5,6 +5,10 @@ class QuestionsController < ApplicationController
         question_num = params[:id].to_i
         yml = File.open("config/files/all/minpo2015.ja.yml") { |f| YAML.load(f) }
 
-        @questions = yml["ja"]["minpo"][year][question_num]
+        question_set = yml["ja"]["minpo"][year][question_num]
+        
+        @question = question_set["questions"]
+        @answer = question_set["answer"].values.filter_map { |v| v if v }
+        @additional_answer = question_set["additional_answer"].values.filter_map { |v| v if v }
     end
 end

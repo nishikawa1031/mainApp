@@ -5,10 +5,10 @@
     <div class="row">
         <div class="card">
             <h5 class="card-title" style="text-align: center; margin-top: 10px">
-                <%= @questions["questions"] %>
+                <%= @question %>
             </h5>
             <p class="card-body">
-                <% @questions["answer"].values.each do |a| %>
+                <% @answer.each do |a| %>
                     <div style="margin-bottom: 3px">
                         <%= a %>
                         <br>
@@ -16,10 +16,9 @@
                 <% end %>
             </p>
         </div>
-        <% @questions["additional_answer"].values.each do |a| %>
+        <% @additional_answer.each do |a| %>
             <div style="margin-bottom: 3px">
                 <div class="card">
-
                     <%= a %>
                     <br>
                 </div>
