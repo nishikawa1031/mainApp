@@ -4,17 +4,27 @@
   <div class="col-sm-12">
     <div class="row">
         <div class="card">
-            <h5 class="card-title" style="text-align: center">
+            <h5 class="card-title" style="text-align: center; margin-top: 10px">
                 <%= @questions["questions"] %>
             </h5>
             <p class="card-body">
-                <%= @questions["answer"].values %>
+                <% @questions["answer"].values.each do |a| %>
+                    <div style="margin-bottom: 3px">
+                        <%= a %>
+                        <br>
+                    </div>
+                <% end %>
             </p>
         </div>
-        <div class="card">
-            <p class="card-body">
-                <%= @questions["additional_answer"]  %>
-            </p>
+        <% @questions["additional_answer"].values.each do |a| %>
+            <div style="margin-bottom: 3px">
+                <div class="card">
+
+                    <%= a %>
+                    <br>
+                </div>
+            </div>
+        <% end %>
         </div>
     </div>
 </div>
