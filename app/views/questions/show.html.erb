@@ -4,14 +4,16 @@
   <div class="col-sm-12">
     <div class="row">
         <div class="card">
-            <h5 class="card-title" style="text-align: center; margin-top: 10px">
+            <h5 class="card-title" style="text-align: left; margin: 10px">
                 <%= @question %>
             </h5>
             <p class="card-body">
                 <% @answer.each do |a| %>
-                    <div style="margin-bottom: 3px">
-                        <%= a %>
-                        <br>
+                    <div style="margin: 3px">
+                        <div class="card">
+                            <%= a %>
+                            <br>
+                        </div>
                     </div>
                 <% end %>
             </p>
