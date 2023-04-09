@@ -22,6 +22,7 @@
             <div style="margin-bottom: 3px">
                 <div class="card">
                     <%= a %>
+                    <%= button_to '選択', subject_year_questions_path(answer: a), remote: true %>
                     <br>
                 </div>
             </div>
