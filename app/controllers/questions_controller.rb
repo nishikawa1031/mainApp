@@ -19,8 +19,8 @@ class QuestionsController < ApplicationController
     end
 
     def check
-        correct_answer = 'A'  # 正解の選択肢を設定
-        selected_answer = params[:answer]  # ユーザーが選んだ選択肢を取得
+        correct_answer = 1  # 正解の選択肢を設定
+        selected_answer = params[:answer].to_i  # ユーザーが選んだ選択肢を取得
         if selected_answer == correct_answer
           render json: {correct: true}
         else
