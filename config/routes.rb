@@ -23,7 +23,7 @@ Rails.application.routes.draw do
 
   resources :subjects, only: %i[show]do
     resources :years, only: %i[show] do
-      post '/questions', to: 'questions#check'
+      post '/questions/:id', to: 'questions#check'
       resources :questions, only: %i[show]
     end
   end
