@@ -29,6 +29,7 @@ class QuestionsController < ApplicationController
             @subject = params[:subject_id].to_i
             @question_num = params[:id].to_i
 
+            # subjectの数字がどの科目を表すのかここをみるまでわからないのでリファクタする必要がある。
             @subject_name = "minpo" if @subject == 1
             @subject_name = "kenpo" if @subject == 2
             @subject_name = "keiho" if @subject == 3

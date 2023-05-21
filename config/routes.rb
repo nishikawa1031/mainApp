@@ -25,6 +25,7 @@ Rails.application.routes.draw do
     resources :years, only: %i[show] do
       post '/questions/:id', to: 'questions#check'
       resources :questions, only: %i[show]
+      # 例 http://localhost:3000/subjects/1/years/2022/questions/2
     end
   end
 end
