@@ -34,3 +34,5 @@ tmp
 storage
 
 .env
+
+/docs/local/*
