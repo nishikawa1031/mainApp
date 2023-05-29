@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
         yml = File.open("config/files/all/#{@subject_name}#{@year}.ja.yml") { |f| YAML.load(f) }
 
         question_set = yml["ja"][@subject_name][@year][@question_num]
-        
+
         @question = question_set["questions"]
         @answer = question_set["answer"].values.filter_map { |v| v if v }
         @additional_answer = question_set["additional_answer"].values.filter_map { |v| v if v }
@@ -17,9 +17,9 @@ class QuestionsController < ApplicationController
 
         selected_answer = params[:answer].to_i  # ユーザーが選んだ選択肢を取得
         if selected_answer == correct_answer
-          render json: {correct: true}
+            redirect_to action: :show, params:{'correct'  => 'true', 'answer' => selected_answer}
         else
-          render json: {correct: false}
+            redirect_to action: :show, params:{'correct'  => 'false', 'answer' => selected_answer}
         end
     end
 
