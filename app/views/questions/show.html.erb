@@ -19,7 +19,7 @@
     <% end %>
     <hr>
     <% @additional_answer.each.with_index(1) do |text, index| %>
-    <div style="margin-bottom: 3px">
+    <div style="margin: 0px 20px 10px">
         <div class="card">
         <%= text %>
         <%= form_with url: subject_year_question_path, method: :post, remote: true do |form| %>
