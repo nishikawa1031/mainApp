@@ -17,9 +17,9 @@ class QuestionsController < ApplicationController
 
         selected_answer = params[:answer].to_i  # ユーザーが選んだ選択肢を取得
         if selected_answer == correct_answer
-            redirect_to action: :show, params:{'correct'  => 'true', 'answer' => selected_answer}
+            redirect_to action: :show, params:{'answer' => selected_answer}
         else
-            redirect_to action: :show, params:{'correct'  => 'false', 'answer' => selected_answer}
+            redirect_to action: :show, params:{'answer' => selected_answer}
         end
     end
 
