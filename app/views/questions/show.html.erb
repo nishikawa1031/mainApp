@@ -12,12 +12,10 @@
         </h5>
     <div>
     <hr>
-    <% @answer.each do |a| %>
-        <div style="margin: 3px">
-            <div class="card">
-                <%= a %>
-                <br>
-            </div>
+    <% @answer.each do |text| %>
+        <div style="margin-bottom: 8px">
+            <%= text %>
+            <br>
         </div>
     <% end %>
     <hr>
