@@ -19,17 +19,14 @@
     <% end %>
     <hr>
     <% @additional_answer.each.with_index(1) do |text, index| %>
-    <div style="margin: 0px 20px 10px">
-        <div class="card">
-        <%= text %>
-        <%= form_with url: subject_year_question_path, method: :post, remote: true do |form| %>
-            <%= form.hidden_field :answer, value: index %>
-            <%= form.submit '選択' %>
-        <% end %>
-        <br>
+        <div style="margin: 0px 20px 10px">
+            <%= form_with url: subject_year_question_path, method: :post, remote: true do |form| %>
+                <div class="card">
+                    <%= form.hidden_field :answer, value: index %>
+                    <%= form.submit text %>
+                </div>
+            <% end %>
         </div>
-    </div>
     <% end %>
-    </div>
 </div>
 
