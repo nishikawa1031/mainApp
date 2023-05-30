@@ -5,6 +5,7 @@ class QuestionsController < ApplicationController
 
         question_set = yml["ja"][@subject_name][@year][@question_num]
 
+        @correct = (params[:answer].to_i == correct_answer)
         @question = question_set["questions"]
         @answer = question_set["answer"].values.filter_map { |v| v if v }
         @additional_answer = question_set["additional_answer"].values.filter_map { |v| v if v }
@@ -12,8 +13,6 @@ class QuestionsController < ApplicationController
 
     def check
         subject_traslate
-        answers_yml = File.open("config/files/answers/#{@subject_name}/#{@year}.yml") { |f| YAML.load(f) }
-        correct_answer = answers_yml[@question_num]
 
         selected_answer = params[:answer].to_i  # ユーザーが選んだ選択肢を取得
         if selected_answer == correct_answer
@@ -24,6 +23,10 @@ class QuestionsController < ApplicationController
     end
 
     private
+        def correct_answer
+            answers_yml = File.open("config/files/answers/#{@subject_name}/#{@year}.yml") { |f| YAML.load(f) }
+            answers_yml[@question_num]
+        end
         def subject_traslate
             @year = params[:year_id].to_i
             @subject = params[:subject_id].to_i

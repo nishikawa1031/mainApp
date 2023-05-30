@@ -1,6 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
 <div class="row">
+    <% if @correct %>
+        <div style="text-align: center">correct</div>
+    <% else %>
+        <div style="text-align: center">not</div>
+    <% end %>
     <div class="card">
         <h5 class="card-title" style="text-align: left; margin: 10px">
             <%= @question %>
