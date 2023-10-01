@@ -48,3 +48,7 @@ en:
       public_international_law: 国際公法
       environmental_law: 環境法
       others: その他
+  simple_calendar:
+    previous: "<<"
+    next: ">>"
+    week: Week

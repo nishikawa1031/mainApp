@@ -36,3 +36,7 @@ ja:
     R1:
       questions: https://www.moj.go.jp/jinji/shihoushiken/jinji08_00177.html
       score_report: https://www.moj.go.jp/jinji/shihoushiken/jinji08_00005.html
+  simple_calendar:
+    previous: "<<"
+    next: ">>"
+    week: Week
