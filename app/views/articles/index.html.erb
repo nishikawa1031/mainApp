@@ -1,28 +1,18 @@
 <p style="color: green"><%= notice %></p>
-  <%= month_calendar(events: @articles, number_of_weeks: 2) do |date, articles| %>
-    <div class="day">
-      <%= date.day %>
-    <% articles.each do |article| %>
-      <div class="card-header">
-        <h5 class="card-title">
-          <%= link_to article.title, article %>
-        </h5>
-      </div>
-    <% end %>
-  <% end %>
   <div class="row">
-    <div class="card col-sm-2 mt-3 text-center">
-      <div class="card-header">
-        <h5 class="card-title">
-          次会う人
-        </h5>
-      </div>
-      <div id="users">
-        <% @users.each do |user| %>
-          <%= render user %>
-        <% end %>
-      </div>
-    </div>
+    <%= month_calendar(events: @articles, number_of_weeks: 2) do |date, articles| %>
+      <div class="day">
+        <%= date.day %>
+      <% articles.each do |article| %>
+        <div class="card-header">
+          <h5 class="card-title">
+            <%= link_to article.title, article %>
+          </h5>
+        </div>
+     <% end %>
+    <% end %>
+  </div>
+  <div class="row">
     <div class="col-sm-10 mt-3">
       <div class="row" id="articles">
         <% @articles.each do |article| %>
