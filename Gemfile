@@ -54,6 +54,7 @@ gem 'kaminari'
 gem 'mini_magick'
 gem 'googleauth' # Google認証
 gem 'dotenv-rails' # 環境変数
+gem 'simple_calendar' # カレンダー
 
 # 参考　https://kitsune.blog/rails-bootstrap
 gem 'bootstrap'
