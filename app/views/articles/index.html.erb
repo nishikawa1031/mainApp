@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
   <div class="row">
-    <%= month_calendar(events: @articles, number_of_weeks: 2) do |date, articles| %>
+    <%= week_calendar(events: @articles, number_of_weeks: 3) do |date, articles| %>
       <div class="day">
         <%= date.day %>
       <% articles.each do |article| %>
@@ -13,10 +13,10 @@
     <% end %>
   </div>
   <div class="row">
-    <div class="col-sm-10 mt-3">
+    <div class="col-sm-9 mt-2">
       <div class="row" id="articles">
         <% @articles.each do |article| %>
-          <div class="col-sm-3 mb-3">
+          <div class="col-sm-4 mb-2">
             <%= render article %>
           </div>
         <% end %>
@@ -28,9 +28,7 @@
         </p>
       <% end %>
     </div>
-  <% if false %>
-    TODO: カテゴリ一覧は、とりあえず表示しない。
-    <div class="col-sm-2">
+    <div class="col-sm-3 mt-2">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">カテゴリ一覧</h5>
@@ -42,5 +40,4 @@
         </div>
       </div>
     </div>
-  <% end %>
   </div>
