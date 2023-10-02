@@ -1,15 +1,4 @@
-
-<% if params[:answer] %>
-  <div class="my-2 my-md-0 mr-md-3">
-    <%= link_to "答案", new_article_path(answer: true), class:"btn btn-sm", style:"background-color: #33404D; color: white;"%>
-    <%= link_to "記事", new_article_path, class:"btn btn-outline btn-sm" %>
-  </div>
-<% else %>
-  <div class="my-2 my-md-0 mr-md-3">
-    <%= link_to "答案", new_article_path(answer: true), class:"btn btn-outline btn-sm"%>
-    <%= link_to "記事", new_article_path, class:"btn btn-sm", style:"background-color: #33404D; color: white;"%>
-  </div>
-<% end %>
+<%= link_to "記事", new_article_path, class:"btn btn-sm", style:"background-color: #33404D; color: white;"%>
 
 <%= form_with(model: article) do |form| %>
   <% if article.errors.any? %>
@@ -24,35 +13,22 @@
     </div>
   <% end %>
 
-  <% unless params[:answer] %>
-    <div>
-      <%= form.label :title, style: "display: block" %>
-      <%= form.text_field :title %>
-    </div>
-  <% end %>
-
   <div>
-    <%= form.label :subject, style: "display: block" %>
-    <%= form.select :subject, Article.subjects.map { |subject| [I18n.t("article.subject.#{subject[0]}"), subject[1]] }  %>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
   </div>
 
-  <% if params[:answer] %>
-    <div>
-      <%= form.label :year, style: "display: block" %>
-      <%= form.select :year, Article::YEARS.map {|y| y.to_i} %>
-    </div>
-    <div>
-      <%= form.label :comment, style: "display: block" %>
-      <%= form.text_field :comment %>
-    </div>
-    <div class="field">
-      <%= form.label :file %><br />
-      <%= form.file_field :file %>
-    </div>
-    <div>
-      <%= form.hidden_field :answer, :value => true %>
-    </div>
-  <% end %>
+  <div>
+    <%= form.label :comment, style: "display: block" %>
+    <%= form.text_field :comment %>
+  </div>
+  <div class="field">
+    <%= form.label :file %><br />
+    <%= form.file_field :file %>
+  </div>
+  <div>
+    <%= form.hidden_field :answer, :value => true %>
+  </div>
 
   <div class="p-2">
     <%= form.submit '下書き保存', class: "btn", style:"background-color: #33404D; color: white;"%>
