@@ -31,7 +31,6 @@ User.all.each do |user|
       comment: "This is comment number #{article}",
       status: 0,
       user:,
-      subject: article,
       start_time: Time.zone.now,
       end_time: Time.zone.now,
     )
@@ -45,7 +44,6 @@ User.all.each do |user|
       comment: "This is comment number #{article}",
       status: 1,
       user:,
-      subject: article,
       start_time: Time.zone.now + 1.day,
       end_time: Time.zone.now + 1.day,
     )
@@ -62,7 +60,6 @@ User.all.each do |user|
                  comment: 'This is comment',
                  status: 2,
                  user_id: user,
-                 subject: 3,
                  start_time: Time.zone.now + 2.day,
                  end_time: Time.zone.now + 2.day,
     )
@@ -74,7 +71,6 @@ Article.create(
   comment: 'This is comment',
   status: 1,
   user: User.first,
-  subject: 1,
   start_time: Time.zone.now + 3.day,
   end_time: Time.zone.now + 3.day,
 )
