@@ -80,9 +80,9 @@ Article.create(
 )
 
 # カテゴリ
-Category.create(name: '2014年憲法答案')
-Category.create(name: '2016年刑法答案')
-Category.create(name: '2011年憲法答案')
+Category.create(name: '山田太郎')
+Category.create(name: '田中二郎')
+Category.create(name: '佐藤李子')
 
 # 記事、カテゴリのidを列挙して中間テーブルに投入
 Article.all.ids.sort.each do |article_id|
