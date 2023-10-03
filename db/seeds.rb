@@ -44,8 +44,8 @@ User.all.each do |user|
       comment: "This is comment number #{article}",
       status: 1,
       user:,
-      start_time: Time.zone.now + 1.day,
-      end_time: Time.zone.now + 1.day,
+      start_time: Time.zone.now + article.day,
+      end_time: Time.zone.now + article.day,
     )
 
     # ブックマーク
