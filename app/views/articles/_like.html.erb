@@ -1,9 +1,9 @@
   <% if @article.liked_by?(current_user) %>
-    <%= link_to article_likes_path(@article), method: :delete, style: "color: #33404D;" do %>
+    <%= link_to article_likes_path(@article), method: :delete, style: "color: black;" do %>
       <i class="fa-solid fa-thumbs-up fa-2x"></i>
     <% end %>
   <% else %>
-    <%= link_to article_likes_path(@article), method: :post, style: "color: #33404D;" do %>
+    <%= link_to article_likes_path(@article), method: :post, style: "color: black;" do %>
       <i class="fa-regular fa-thumbs-up fa-2x"></i>
     <% end %>
   <% end %>
