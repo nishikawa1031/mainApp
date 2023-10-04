@@ -22,17 +22,6 @@ user2.avatar.attach(io: File.open(Rails.root.join('app/assets/images/avatar2.jpe
 User.create(email: 'another_test2@example.com', username: 'another_man2', password: 'password2',
             password_confirmation: 'password2')
 
-titles = [
-  "雨の一日",
-  "古い友人との再会",
-  "読み始めた本",
-  "クッキング実験: 手作りピザ",
-  "映画の夜: 予想外のスリラー",
-  "朝のランニングの意外な喜び",
-  "地元の農民市場を探索",
-  "静かな夜の独り言"
-]
-
 bodies = [
   "今日は窓に雨が打ち付ける音が終わることがないような日だった。雨の音は不思議と心地よい。",
   "久しぶりにアレックスと会った。何時間も話して、学生時代を思い出したり、新しい出来事をキャッチアップしたりした。",
@@ -58,7 +47,6 @@ comments = [
 User.all.each do |user|
   8.times do |i|
     Article.create(
-      title: titles[i],
       body: bodies[i],
       comment: comments[i],
       user: user,
@@ -69,7 +57,6 @@ User.all.each do |user|
 end
 
 Article.create(
-  title: 'long article',
   body: 'a' * 1000,
   comment: 'This is comment',
   user: User.first,
