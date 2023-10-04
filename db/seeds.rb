@@ -77,16 +77,20 @@ Article.create(
 
 # Person
 4.times do |person|
-  Person.create(name: "山田太郎_#{person}", user_id: person)
-  Person.create(name: "山田太郎_#{person}", user_id: person)
-  Person.create(name: "山田太郎_#{person}", user_id: person)
-  Person.create(name: '田中二郎', user_id: person)
-  Person.create(name: '佐藤李子', user_id: person)
+  Person.create(name: "山田一郎", user_id: person)
+  Person.create(name: "高山弘仁", user_id: person)
+  Person.create(name: "川崎参", user_id: person)
+  Person.create(name: '田中四郎', user_id: person)
+  Person.create(name: '佐藤五郎丸')
+  Person.create(name: '田辺六花')
+  Person.create(name: '一河ななみ')
+  Person.create(name: '田畑はち')
 end
 
-# 記事、カテゴリのidを列挙して中間テーブルに投入
-Article.all.ids.sort.each do |article_id|
-  Person.all.ids.sort.each do |person_id|
-    PersonArticle.create(article_id:, person_id:)
+# 記事、Personのidを列挙して中間テーブルに投入
+Article.all.each do |article|
+  persons = Person.all.sample(rand(1..2))
+  persons.each do |person|
+    PersonArticle.create(article_id: article.id, person_id: person.id)
   end
 end
