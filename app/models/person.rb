@@ -10,5 +10,5 @@
 #
 class Person < ApplicationRecord
     has_many :person_articles
-    has_many :aricles, through: :person_articles
+    has_many :articles, through: :person_articles
 end
