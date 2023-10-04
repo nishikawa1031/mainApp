@@ -33,22 +33,10 @@ bodies = [
   "ポーチに座って、手にはお茶を持って、私は世界が過ぎ去るのを見ながら考えにふけっていた。孤独にはある種の平和がある。"
 ]
 
-comments = [
-  "新しい傘を買う必要がある。",
-  "もっと頻繁にアレックスと会うべきだ。",
-  "来月のギャツビーテーマのパーティーを思い出した。",
-  "料理教室を受けるべきかもしれない。",
-  "映画をジェイクに推薦する。",
-  "新しいランニングシューズを買う。",
-  "オーガニックの野菜は最高！",
-  "もっとこういう夜を過ごすべきだ。"
-]
-
 User.all.each do |user|
   8.times do |i|
     Article.create(
       body: bodies[i],
-      comment: comments[i],
       user: user,
       start_time: Time.zone.now + i.days,
       end_time: Time.zone.now + i.days + 2.hours
@@ -58,7 +46,6 @@ end
 
 Article.create(
   body: 'a' * 1000,
-  comment: 'This is comment',
   user: User.first,
   start_time: Time.zone.now + 3.day,
   end_time: Time.zone.now + 3.day,
