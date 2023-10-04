@@ -10,12 +10,12 @@ class ArticlesController < ApplicationController
   # GET /articles
   def index
     if current_user
-      @articles = Article.published.where(user_id: current_user.id).order('created_at DESC')
+      @articles = Article.where(user_id: current_user.id).order('created_at DESC')
       @persons = Person.includes(:articles)
         .where(user_id: current_user.id)
         .where.not(articles: { id: nil })
     else
-      @articles = Article.published.order('created_at DESC')
+      @articles = Article.order('created_at DESC')
       @persons = Person.all
     end
       @articles = @articles.page(params[:page]).per(10)

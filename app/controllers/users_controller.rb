@@ -9,10 +9,6 @@ class UsersController < ApplicationController
     @articles = @user.articles
     @articles = @articles.page(params[:page]).per(10)
     @number_of_articles = @articles.count
-    @number_of_published_articles = @user.articles.published.count
-    @number_of_draft_articles = @user.articles.draft.count
-    @number_of_bookmarked_articles = @user.bookmarks.count
-    @number_of_liked_articles = @user.likes.count
   end
 
   private
