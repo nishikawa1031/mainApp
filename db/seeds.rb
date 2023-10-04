@@ -23,41 +23,16 @@ User.create(email: 'another_test2@example.com', username: 'another_man2', passwo
             password_confirmation: 'password2')
 
 User.all.each do |user|
-  ## 下書きの記事
-  3.times do |article|
-    Article.create(
-      title: "Article #{article}",
-      body: "This is article number #{article}",
-      comment: "This is comment number #{article}",
-      status: 0,
-      user:,
-      start_time: Time.zone.now,
-      end_time: Time.zone.now,
-    )
-  end
-
-  ## 公開中の記事
   8.times do |article|
     Article.create(
       title: "Article #{article}",
       body: "This is article number #{article}",
       comment: "This is comment number #{article}",
-      status: 1,
       user:,
       start_time: Time.zone.now + article.day,
       end_time: Time.zone.now + article.day,
     )
   end
-
-  ## アーカイブの記事
-  Article.create(title: 'Third Article',
-                 body: 'This is the third article',
-                 comment: 'This is comment',
-                 status: 2,
-                 user_id: user,
-                 start_time: Time.zone.now + 2.day,
-                 end_time: Time.zone.now + 2.day,
-    )
 end
 
 Article.create(
