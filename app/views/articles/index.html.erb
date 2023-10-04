@@ -6,14 +6,13 @@
         <%= date.day %>
         <% articles.each do |article| %>
           <div class="card-header">
-            <h5 class="card-title">
+            <h6 class="card-title">
               <% if article.persons.any? %>
                 <%= link_to "#{article.persons.first.name}#{'...' if article.persons.count > 1}", article %>
               <% else %>
-                <!-- こちらは、記事に関連するpersonがいない場合の処理 -->
                 <%= link_to article.title, article %>
               <% end %>
-            </h5>
+            </h6>
           </div>
         <% end %>
     <% end %>
@@ -22,7 +21,6 @@
   <div class="col-sm-2 mb-3">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">名前</h5>
           <p class="card-text">
             <% @persons.each do |person| %>
               <%= person.name %><br>
