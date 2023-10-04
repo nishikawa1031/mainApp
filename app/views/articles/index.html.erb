@@ -1,6 +1,5 @@
-<p style="color: green"><%= notice %></p>
-
 <div class="row align-items-end">
+  <p style="color: green"><%= notice %></p>
   <div class="col-sm-10">
     <%= week_calendar(events: @articles, number_of_weeks: 4) do |date, articles| %>
       <div class="day">
