@@ -7,7 +7,6 @@
 #  id                :bigint           not null, primary key
 #  title             :string
 #  body              :text
-#  status            :integer          default("draft")
 #  user_id           :bigint           not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
