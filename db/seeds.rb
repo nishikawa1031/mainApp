@@ -47,11 +47,6 @@ User.all.each do |user|
       start_time: Time.zone.now + article.day,
       end_time: Time.zone.now + article.day,
     )
-
-    # ブックマーク
-    Bookmark.create(user_id: user.id, article_id: article) if article.even?
-    # いいね
-    Like.create(user_id: user.id, article_id: article) if article.odd?
   end
 
   ## アーカイブの記事
