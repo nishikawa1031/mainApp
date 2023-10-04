@@ -1,9 +1,13 @@
 <div class="card" style="min-width: 10rem;">
   <div class="card-body">
-    <h5 class="card-title">
-      <h5 class="card-title px-2"><%= article.title %></h5>
-    </h5>
+    <h5 class="card-title px-2"><%= article.title %></h5>
     <%= article.comment %>
+    <div>
+      <strong>Persons:</strong>
+      <% article.persons.each do |person| %>
+        <span><%= person.name %></span>
+      <% end %>
+    </div>
     <a href="#" class="btn btn-primary">Go somewhere</a>
     <div class="text-left pb-1">
       <small class="px-1">
