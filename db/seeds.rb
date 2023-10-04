@@ -39,7 +39,6 @@ Article.create(
   title: 'long article',
   body: 'a' * 1000,
   comment: 'This is comment',
-  status: 1,
   user: User.first,
   start_time: Time.zone.now + 3.day,
   end_time: Time.zone.now + 3.day,

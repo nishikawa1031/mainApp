@@ -6,7 +6,6 @@ class LikesController < ApplicationController
   def create
     @article = Article.find(params[:article_id])
     return if current_user?(@article.user)
-    return unless @article.status == 'published'
 
     like = @article.likes.new(user_id: current_user.id)
     like.save
