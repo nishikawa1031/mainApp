@@ -1,8 +1,8 @@
 <div class="simple-calendar" style="background-color: black">
   <div class="calendar-heading">
-    <h1 class="calendar-title" style="color: white"><%= start_date.year %>年 <%= t('date.month_names')[start_date.month] %>
+    <h1 class="calendar-title" style="color: white">
       <%= link_to t('simple_calendar.previous', default: 'Previous'), calendar.url_for_previous_view %>
-      <%= link_to t('simple_calendar.today', default: 'Today'), calendar.url_for_today_view %>
+      <%= link_to "#{start_date.year}年 #{t('date.month_names')[start_date.month]}", calendar.url_for_today_view %>
       <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view %>
     </h1>
   </div>
