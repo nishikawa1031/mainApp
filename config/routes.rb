@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# == Route Map
+#
+
 Rails.application.routes.draw do
   get 'google_login_api/callback'
   root to: 'articles#index'
