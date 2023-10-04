@@ -9,4 +9,6 @@
 #  updated_at :datetime         not null
 #
 class Person < ApplicationRecord
+    has_many :person_articles
+    has_many :aricles, through: :person_articles
 end

@@ -38,8 +38,8 @@ class Article < ApplicationRecord
     others: 15
   }
   belongs_to :user
-  has_many :category_articles
-  has_many :categories, through: :category_articles
+  has_many :person_articles
+  has_many :persons, through: :person_articles
 
   has_many :bookmarks, dependent: :destroy
   has_many :likes, dependent: :destroy
