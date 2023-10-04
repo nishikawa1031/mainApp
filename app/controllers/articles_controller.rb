@@ -31,7 +31,6 @@ class ArticlesController < ApplicationController
     redirect_to root_path if @article.status == 'draft' && @article.user_id != current_user.id
     impressionist(@article)
     @article.impressionist_count(filter: :ip_address)
-    @categories = @article.categories.pluck(:name)
     @user = @article.user
   end
 
