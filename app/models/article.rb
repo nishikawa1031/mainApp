@@ -5,12 +5,10 @@
 # Table name: articles
 #
 #  id                :bigint           not null, primary key
-#  title             :string
 #  body              :text
 #  user_id           :bigint           not null
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
-#  comment           :text
 #  impressions_count :integer          default(0)
 #  file              :string
 #  start_time        :datetime
