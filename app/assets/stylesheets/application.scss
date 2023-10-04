@@ -282,6 +282,12 @@ h1 {
   color: black;
 }
 
+// Articleのcard
+.article-card {
+  min-height: 200px;
+  min-width: 10rem;
+}
+
 // calendar
 .rounded-table {
   border-radius: 5px; /* この値を調整して好みの角の丸みを得る */
