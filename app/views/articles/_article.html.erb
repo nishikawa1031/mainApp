@@ -5,7 +5,7 @@
     <div>
       <strong>Persons:</strong>
       <% article.persons.each do |person| %>
-        <span><%= person.name %></span>
+        <span><%= truncate(person.name, length: 10) %></span>
       <% end %>
     </div>
     <a href="#" class="btn btn-primary">Go somewhere</a>
