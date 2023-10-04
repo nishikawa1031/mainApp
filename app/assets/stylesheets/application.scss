@@ -2,65 +2,16 @@
 @import "font-awesome";
 @import "simple_calendar";
 
-// マイページの画面のavatarのサイズ
-.avatar {
-  margin: 2% auto;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-  width: 62px;
-  height: 62px;
-}
-.avatar > img {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  height: 100%;
-  transform: translateY(-50%);
-  object-fit: cover;
+.main-container {
+  background-color: black;
 }
 
-// 一覧画面のavatarのサイズ
-.avatar-index {
-  margin: 2% 25%;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-  width: 62px;
-  height: 62px;
-}
-.avatar-index > img {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  height: 100%;
-  transform: translateY(-50%);
-  object-fit: cover;
+.top-contents-container {
+  background-color: black;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-// 詳細画面のavatarのサイズ
-.avatar-show {
-  margin: 0px auto;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-  width: 62px;
-  height: 62px;
-}
-.avatar-show > img {
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  height: 100%;
-  transform: translateY(-50%);
-  object-fit: cover;
-}
 
 // ログイン画面
 * {
