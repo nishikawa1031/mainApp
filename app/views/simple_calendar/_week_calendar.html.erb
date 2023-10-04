@@ -1,5 +1,5 @@
-<div class="simple-calendar">
-  <div class="calendar-heading mt-3">
+<div class="simple-calendar" style="background-color: #33404D">
+  <div class="calendar-heading">
     <h1 class="calendar-title"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></h1>
 
     <nav>
@@ -9,7 +9,7 @@
     </nav>
   </div>
 
-  <table class="table table-striped">
+  <table class="table table-striped rounded-table">
     <thead>
       <tr>
         <% date_range.slice(0, 7).each do |day| %>
