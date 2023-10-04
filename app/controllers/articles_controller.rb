@@ -9,15 +9,20 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @articles = Article.published.where(user_id: current_user.id).order('created_at DESC')
-    @articles = @articles.page(params[:page]).per(10)
-    @rank_articles = @articles.order(impressions_count: 'DESC')
-    @number_of_articles = @articles.count
-    @user = current_user
-    @users = User.all
-    @persons = Person.includes(:articles)
-                 .where(user_id: current_user.id)
-                 .where.not(articles: { id: nil })
+    if current_user
+      @articles = Article.published.where(user_id: current_user.id).order('created_at DESC')
+      @persons = Person.includes(:articles)
+        .where(user_id: current_user.id)
+        .where.not(articles: { id: nil })
+    else
+      @articles = Article.published.order('created_at DESC')
+      @persons = Person.all
+    end
+      @articles = @articles.page(params[:page]).per(10)
+      @rank_articles = @articles.order(impressions_count: 'DESC')
+      @number_of_articles = @articles.count
+      @user = current_user
+      @users = User.all
   end
 
   # GET /articles/1
