@@ -9,19 +9,15 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    if params[:subject].present?
-      Article.subjects.each_key do |subject|
-        @articles = Article.published.where(subject:).order('created_at DESC') if params[:subject] == subject
-      end
-    else
-      @articles = Article.published.order('created_at DESC')
-    end
+    @articles = Article.published.where(user_id: current_user.id).order('created_at DESC')
     @articles = @articles.page(params[:page]).per(10)
     @rank_articles = @articles.order(impressions_count: 'DESC')
     @number_of_articles = @articles.count
     @user = current_user
     @users = User.all
-    @persons = Person.where(user_id: current_user.id)
+    @persons = Person.includes(:articles)
+                 .where(user_id: current_user.id)
+                 .where.not(articles: { id: nil })
   end
 
   # GET /articles/1
