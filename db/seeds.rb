@@ -22,15 +22,48 @@ user2.avatar.attach(io: File.open(Rails.root.join('app/assets/images/avatar2.jpe
 User.create(email: 'another_test2@example.com', username: 'another_man2', password: 'password2',
             password_confirmation: 'password2')
 
+titles = [
+  "雨の一日",
+  "古い友人との再会",
+  "読み始めた本",
+  "クッキング実験: 手作りピザ",
+  "映画の夜: 予想外のスリラー",
+  "朝のランニングの意外な喜び",
+  "地元の農民市場を探索",
+  "静かな夜の独り言"
+]
+
+bodies = [
+  "今日は窓に雨が打ち付ける音が終わることがないような日だった。雨の音は不思議と心地よい。",
+  "久しぶりにアレックスと会った。何時間も話して、学生時代を思い出したり、新しい出来事をキャッチアップしたりした。",
+  "今日、「グレート・ギャツビー」を読み始めた。フィッツジェラルドの言葉の選び方には魅了される。",
+  "手作りのピザ作りを試みた。結果は？今の仕事を辞めることはないと思う。",
+  "「インセプション」を3回目に観た。以前の視聴時に見逃していた新しい詳細をまだ見つけている。",
+  "朝に公園でランニングを楽しむという自分がいるとは思わなかったが、夜明けの公園の静けさが気を変えてくれた。",
+  "今日、農民市場に行った。新鮮な野菜や手作りの商品は魅力的だった。手いっぱいの袋を持って帰った。",
+  "ポーチに座って、手にはお茶を持って、私は世界が過ぎ去るのを見ながら考えにふけっていた。孤独にはある種の平和がある。"
+]
+
+comments = [
+  "新しい傘を買う必要がある。",
+  "もっと頻繁にアレックスと会うべきだ。",
+  "来月のギャツビーテーマのパーティーを思い出した。",
+  "料理教室を受けるべきかもしれない。",
+  "映画をジェイクに推薦する。",
+  "新しいランニングシューズを買う。",
+  "オーガニックの野菜は最高！",
+  "もっとこういう夜を過ごすべきだ。"
+]
+
 User.all.each do |user|
-  8.times do |article|
+  8.times do |i|
     Article.create(
-      title: "Article #{article}",
-      body: "This is article number #{article}",
-      comment: "This is comment number #{article}",
-      user:,
-      start_time: Time.zone.now + article.day,
-      end_time: Time.zone.now + article.day,
+      title: titles[i],
+      body: bodies[i],
+      comment: comments[i],
+      user: user,
+      start_time: Time.zone.now + i.days,
+      end_time: Time.zone.now + i.days + 2.hours
     )
   end
 end
