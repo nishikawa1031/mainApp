@@ -17,10 +17,10 @@
   <div class="col-sm-2">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">カテゴリ一覧</h5>
+          <h5 class="card-title">名前</h5>
           <p class="card-text">
-            <% @categories.each do |category| %>
-              <%= category.name %>
+            <% @persons.each do |person| %>
+              <%= person.name %>
             <% end %>
           </p>
         </div>

@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
     @number_of_articles = @articles.count
     @user = current_user
     @users = User.all
-    @categories = Category.all
+    @persons = Person.where(user_id: current_user.id)
   end
 
   # GET /articles/1
