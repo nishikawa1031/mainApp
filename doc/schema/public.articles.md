@@ -7,8 +7,8 @@
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('articles_id_seq'::regclass) | false | [public.bookmarks](public.bookmarks.md) [public.category_articles](public.category_articles.md) [public.likes](public.likes.md) [public.person_articles](public.person_articles.md) |  |  |
-| body | text |  | true |  |  |  |
-| user_id | bigint |  | false |  | [public.users](public.users.md) |  |
+| body | text |  | true |  |  | 日記の本文 |
+| user_id | bigint |  | false |  | [public.users](public.users.md) | 日記を書いたユーザー |
 | created_at | timestamp(6) without time zone |  | false |  |  |  |
 | updated_at | timestamp(6) without time zone |  | false |  |  |  |
 | impressions_count | integer | 0 | true |  |  |  |
