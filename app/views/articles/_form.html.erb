@@ -16,6 +16,10 @@
     <%= form.text_field :body %>
   </div>
 
+  <div>
+    <%= form.hidden_field :start_time, :value => Time.current %>
+  </div>
+
   <div class="p-2">
     <%= form.submit '保存', class: "btn", style:"background-color: black; color: white;"%>
   </div>
