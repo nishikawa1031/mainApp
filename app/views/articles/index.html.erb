@@ -19,23 +19,32 @@
   </div>
 
   <div class="col-sm-2 mb-3">
-      <div class="card">
-        <div class="card-body">
-          <p class="card-text">
-            <% @persons.each do |person| %>
-              <%= person.name %><br>
-            <% end %>
-          </p>
-        </div>
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text">
+          <% @persons.each do |person| %>
+            <%= person.name %><br>
+          <% end %>
+        </p>
+      </div>
     </div>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-12 mt-3">
+  <div class="col-sm-9 mt-3">
+    <div class="card create-new">
+      <div class="card-body">
+        <h3 class="card-title px-2"><%= Time.current.strftime('%Y年%m月%d日') %></h3>
+        <p class="card-text">
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3 mt-3">
     <div class="row" id="articles">
       <% @articles.each do |article| %>
-        <div class="col-sm-3 mb-3">
+        <div class="col-sm-12 mb-3">
           <%= render article %>
         </div>
       <% end %>
