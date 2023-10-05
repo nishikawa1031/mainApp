@@ -8,7 +8,7 @@
         <span><%= truncate(person.name, length: 10) %></span>
       <% end %>
     </div>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <%= button_to "Destroy", article, method: :delete, class:"btn btn-primary"  %>
     <div class="text-left pb-1">
     </div>
   </div>
