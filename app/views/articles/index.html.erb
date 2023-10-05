@@ -10,7 +10,7 @@
               <% if article.persons.any? %>
                 <%= link_to "#{article.persons.first.name}#{'...' if article.persons.count > 1}", article %>
               <% else %>
-                <%= link_to article.body, article %>
+                <%= link_to truncate(article.body, length: 10), article %>
               <% end %>
             </h6>
           </div>
