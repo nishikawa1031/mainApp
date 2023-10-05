@@ -7,7 +7,7 @@
 | [public.active_storage_attachments](public.active_storage_attachments.md) | 6 |  | BASE TABLE |
 | [public.active_storage_blobs](public.active_storage_blobs.md) | 9 |  | BASE TABLE |
 | [public.active_storage_variant_records](public.active_storage_variant_records.md) | 3 |  | BASE TABLE |
-| [public.articles](public.articles.md) | 9 |  | BASE TABLE |
+| [public.articles](public.articles.md) | 9 | articles table | BASE TABLE |
 | [public.bookmarks](public.bookmarks.md) | 5 |  | BASE TABLE |
 | [public.categories](public.categories.md) | 4 |  | BASE TABLE |
 | [public.category_articles](public.category_articles.md) | 5 |  | BASE TABLE |

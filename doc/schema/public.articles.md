@@ -2,6 +2,8 @@
 
 ## Description
 
+articles table
+
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |

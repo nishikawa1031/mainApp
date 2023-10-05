@@ -7,7 +7,7 @@ docPath: doc/schema
 comments:
   -
     table: articles
-    comment: 記事というか、日記
+    tableComment: articles table
     columnComments:
       body: 日記の本文
       user_id: 日記を書いたユーザー
