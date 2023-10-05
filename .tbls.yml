@@ -3,3 +3,11 @@ dsn: postgresql://tanishi:@localhost:5432/my_proj_development?sslmode=disable
 
 # ドキュメントのディレクトリを指定します
 docPath: doc/schema
+
+comments:
+  -
+    table: articles
+    comment: 記事というか、日記
+    columnComments:
+      body: 日記の本文
+      user_id: 日記を書いたユーザー
