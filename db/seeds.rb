@@ -11,38 +11,14 @@
 # user1
 user1 = User.create(email: 'test@example.com', username: 'taroyama', password: 'password',
                     password_confirmation: 'password')
-user1.avatar.attach(io: File.open(Rails.root.join('app/assets/images/avatar.jpeg')), filename: 'avatar.jpeg')
 
 # user2
-user2 = User.create(email: 'another_test@example.com', username: 'another_man', password: 'password2',
+user2 = User.create(email: 'another_test@example.com', username: 'another_man', password: 'password',
                     password_confirmation: 'password2')
-user2.avatar.attach(io: File.open(Rails.root.join('app/assets/images/avatar2.jpeg')), filename: 'avatar2.jpeg')
 
 # user3
-User.create(email: 'another_test2@example.com', username: 'another_man2', password: 'password2',
+User.create(email: 'another_test2@example.com', username: 'another_man2', password: 'password',
             password_confirmation: 'password2')
-
-bodies = [
-  "今日は窓に雨が打ち付ける音が終わることがないような日だった。雨の音は不思議と心地よい。",
-  "久しぶりにアレックスと会った。何時間も話して、学生時代を思い出したり、新しい出来事をキャッチアップしたりした。",
-  "今日、「グレート・ギャツビー」を読み始めた。フィッツジェラルドの言葉の選び方には魅了される。",
-  "手作りのピザ作りを試みた。結果は？今の仕事を辞めることはないと思う。",
-  "「インセプション」を3回目に観た。以前の視聴時に見逃していた新しい詳細をまだ見つけている。",
-  "朝に公園でランニングを楽しむという自分がいるとは思わなかったが、夜明けの公園の静けさが気を変えてくれた。",
-  "今日、農民市場に行った。新鮮な野菜や手作りの商品は魅力的だった。手いっぱいの袋を持って帰った。",
-  "ポーチに座って、手にはお茶を持って、私は世界が過ぎ去るのを見ながら考えにふけっていた。孤独にはある種の平和がある。"
-]
-
-User.all.each do |user|
-  8.times do |i|
-    Article.create(
-      body: bodies[i],
-      user: user,
-      start_time: Time.zone.now + i.days,
-      end_time: Time.zone.now + i.days + 2.hours
-    )
-  end
-end
 
 Article.create(
   body: 'a' * 1000,
@@ -51,22 +27,42 @@ Article.create(
   end_time: Time.zone.now + 3.day,
 )
 
-# Person
-4.times do |person|
-  Person.create(name: "山田一郎", user_id: person)
-  Person.create(name: "高山弘仁", user_id: person)
-  Person.create(name: "川崎参", user_id: person)
-  Person.create(name: '田中四郎', user_id: person)
-  Person.create(name: '佐藤五郎丸')
-  Person.create(name: '田辺六花')
-  Person.create(name: '一河ななみ')
-  Person.create(name: '田畑はち')
+historical_people = [
+  { name: "織田信長", user_id: 1 },
+  { name: "明智光秀", user_id: 2 },
+  { name: "豊臣秀吉", user_id: 3 },
+  { name: "徳川家康" },
+  { name: "武田信玄" },
+  { name: "上杉謙信" },
+  { name: "今川義元" },
+  { name: "北条氏康" }
+]
+
+historical_people.each do |person_data|
+  Person.create(person_data)
 end
 
-# 記事、Personのidを列挙して中間テーブルに投入
-Article.all.each do |article|
-  people = Person.all.sample(rand(1..2))
-  people.each do |person|
-    PersonArticle.create(article_id: article.id, person_id: person.id)
-  end
-end
+# Historical People's Diaries
+historical_diaries = {
+  "織田信長" => "本能寺の変が近づいている気がする。しかし、我が野望は終わることはない。",
+  "明智光秀" => "信長様との間に亀裂が生じ始めている。私の行動が日本の歴史を変えるだろうか？",
+  "豊臣秀吉" => "天下統一への道は険しくも、私の策略と魅力でこれを成し遂げる。",
+  "徳川家康" => "関ヶ原の戦いが成功すれば、新しい時代が始まる。平和な日本を築くための準備を始めるべきだ。",
+  "武田信玄" => "風林火山。私の旗印のもと、私は今日も戦場を駆け巡る。",
+  "上杉謙信" => "信玄との合戦は名将同士の戦いとなるだろう。しかし、我が信念を貫くことは譲れない。",
+  "今川義元" => "桶狭間への進軍を計画中。これによって歴史がどう変わるか、楽しみである。",
+  "北条氏康" => "関東地方を我が物とするため、日々策略を巡らせている。"
+}
+
+# 織田信長の日記エントリの作成
+nobunaga_meeting_mitsuhide_diary = Article.create(
+  body: "今日は明智光秀と重要な面会を持った。彼の策略や智慧には常に感銘を受けている。しかし、彼の瞳には未解決の謎が隠れているようにも見える。我々の関係がこれからどのように展開していくのか、興味深く思う。",
+  user_id: 1, # 織田信長のuser_id
+  start_time: Time.zone.now - 2.days,
+  end_time: Time.zone.now - 2.days + 2.hours
+)
+
+# 明智光秀との関連付け
+mitsuhide = Person.find_by(name: '明智光秀')
+PersonArticle.create(article_id: nobunaga_meeting_mitsuhide_diary.id, person_id: mitsuhide.id)
+
