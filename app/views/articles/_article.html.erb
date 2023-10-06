@@ -1,7 +1,7 @@
 <div class="card article-card">
   <div class="card-body">
     <h5 class="card-title px-2"><%= article.start_time&.strftime('%Y年%m月%d日') %></h5>
-    <%= truncate(article.body, length: 50) %>
+    <%= article.body %>
     <div>
       <strong>people:</strong>
       <% article.people.each do |person| %>

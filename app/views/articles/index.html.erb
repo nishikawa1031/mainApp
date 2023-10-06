@@ -29,7 +29,11 @@
   <div class="col-sm-4">
     <div class="card article-card">
       <div class="card-body">
-        年表
+        <% @articles.each do |article| %>
+          <%= article.start_time&.strftime('%Y年%m月%d日') %>
+          <%= truncate(article.body, length: 20) %>
+          <br>
+        <% end %>
       </div>
     </div>
   </div>
