@@ -16,6 +16,14 @@
   </div>
 
   <div>
+    <h3>関連する人々</h3>
+    <%= form.fields_for :people, article.people.build do |person_form| %>
+      <%= person_form.label :name %>
+      <%= person_form.text_field :name %>
+    <% end %>
+  </div>
+
+  <div>
     <%= form.label :body, style: "display: block" %>
     <%= form.text_area :body, style: "width: 100%; height: 80vh;" %>
   </div>

@@ -65,8 +65,8 @@ end
 
 # 記事、Personのidを列挙して中間テーブルに投入
 Article.all.each do |article|
-  persons = Person.all.sample(rand(1..2))
-  persons.each do |person|
+  people = Person.all.sample(rand(1..2))
+  people.each do |person|
     PersonArticle.create(article_id: article.id, person_id: person.id)
   end
 end

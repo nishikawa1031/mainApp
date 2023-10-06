@@ -11,12 +11,12 @@ class ArticlesController < ApplicationController
   def index
     if current_user
       @articles = Article.where(user_id: current_user.id).order('created_at DESC')
-      @persons = Person.includes(:articles)
+      @people = Person.includes(:articles)
         .where(user_id: current_user.id)
         .where.not(articles: { id: nil })
     else
       @articles = Article.order('created_at DESC')
-      @persons = Person.all
+      @people = Person.all
     end
       @articles = @articles.page(params[:page]).per(5)
       @rank_articles = @articles.order(impressions_count: 'DESC')
@@ -44,6 +44,7 @@ class ArticlesController < ApplicationController
 
   # POST /articles
   def create
+    puts params.inspect
     @article = Article.new(article_params)
     @article.user_id = current_user.id
     if @article.save
@@ -77,7 +78,8 @@ class ArticlesController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def article_params
-    params.require(:article).permit(:title, :body, :user_id, :file, :start_time)
+    params.require(:article).permit!
+    # params.require(:article).permit(:user_id, :body, :start_time, :end_time, person_ids: [], people_attributes: [:id, :name, :_destroy])
   end
 
   def correct_user

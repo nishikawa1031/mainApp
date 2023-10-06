@@ -7,8 +7,8 @@
         <% articles.each do |article| %>
           <div class="card-header">
             <h6 class="card-title">
-              <% if article.persons.any? %>
-                <%= link_to "#{article.persons.first.name}#{'...' if article.persons.count > 1}", article %>
+              <% if article.people.any? %>
+                <%= link_to "#{article.people.first.name}#{'...' if article.people.count > 1}", article %>
               <% else %>
                 <%= link_to truncate(article.body, length: 10), article %>
               <% end %>
@@ -22,7 +22,7 @@
     <div class="card">
       <div class="card-body">
         <p class="card-text">
-          <% @persons.each do |person| %>
+          <% @people.each do |person| %>
             <%= person.name %><br>
           <% end %>
         </p>

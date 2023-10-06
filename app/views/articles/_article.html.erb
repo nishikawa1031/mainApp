@@ -3,8 +3,8 @@
     <h5 class="card-title px-2"><%= article.start_time&.strftime('%Y年%m月%d日') %></h5>
     <%= truncate(article.body, length: 50) %>
     <div>
-      <strong>Persons:</strong>
-      <% article.persons.each do |person| %>
+      <strong>people:</strong>
+      <% article.people.each do |person| %>
         <span><%= truncate(person.name, length: 10) %></span>
       <% end %>
     </div>
