@@ -13,9 +13,9 @@
 | [public.category_articles](public.category_articles.md) | 5 |  | BASE TABLE |
 | [public.impressions](public.impressions.md) | 15 |  | BASE TABLE |
 | [public.likes](public.likes.md) | 5 |  | BASE TABLE |
-| [public.people](public.people.md) | 5 |  | BASE TABLE |
+| [public.people](public.people.md) | 5 | 日記に出てきた登場人物 | BASE TABLE |
 | [public.person_articles](public.person_articles.md) | 5 |  | BASE TABLE |
-| [public.users](public.users.md) | 11 |  | BASE TABLE |
+| [public.users](public.users.md) | 11 | 日記を書くユーザー | BASE TABLE |
 | [public.schema_migrations](public.schema_migrations.md) | 1 |  | BASE TABLE |
 | [public.ar_internal_metadata](public.ar_internal_metadata.md) | 4 |  | BASE TABLE |
 

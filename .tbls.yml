@@ -4,6 +4,10 @@ dsn: postgresql://tanishi:@localhost:5432/my_proj_development?sslmode=disable
 # ドキュメントのディレクトリを指定します
 docPath: doc/schema
 
+# 参考
+# https://qiita.com/k1LoW/items/92d1be1437a259827338
+# tbls doc --rm-dist
+# tbls doc --force
 comments:
   -
     table: articles
@@ -11,3 +15,14 @@ comments:
     columnComments:
       body: 日記の本文
       user_id: 日記を書いたユーザー
+  -
+    table: people
+    tableComment: 日記に出てきた登場人物
+    columnComments:
+      name: 日記に出てきた登場人物の名前
+      user_id: この登場人物が、本アプリのユーザーである場合には、user_idにそのユーザーのIDを入れる
+  -
+    table: users
+    tableComment: 日記を書くユーザー
+    columnComments:
+      username: 日記を書くユーザーの名前

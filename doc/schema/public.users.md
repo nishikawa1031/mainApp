@@ -2,6 +2,8 @@
 
 ## Description
 
+日記を書くユーザー
+
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
@@ -15,7 +17,7 @@
 | created_at | timestamp(6) without time zone |  | false |  |  |  |
 | updated_at | timestamp(6) without time zone |  | false |  |  |  |
 | avatar | varchar |  | true |  |  |  |
-| username | varchar |  | false |  |  |  |
+| username | varchar |  | false |  |  | 日記を書くユーザーの名前 |
 | default_color | varchar | 'blue'::character varying | true |  |  |  |
 
 ## Constraints

@@ -2,13 +2,15 @@
 
 ## Description
 
+日記に出てきた登場人物
+
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('people_id_seq'::regclass) | false | [public.person_articles](public.person_articles.md) |  |  |
-| name | varchar |  | true |  |  |  |
-| user_id | integer |  | true |  |  |  |
+| name | varchar |  | true |  |  | 日記に出てきた登場人物の名前 |
+| user_id | integer |  | true |  |  | この登場人物が、本アプリのユーザーである場合には、user_idにそのユーザーのIDを入れる |
 | created_at | timestamp(6) without time zone |  | false |  |  |  |
 | updated_at | timestamp(6) without time zone |  | false |  |  |  |
 
