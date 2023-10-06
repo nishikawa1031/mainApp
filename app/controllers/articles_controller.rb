@@ -11,9 +11,7 @@ class ArticlesController < ApplicationController
   def index
     if current_user
       @articles = Article.where(user_id: current_user.id).order('start_time DESC')
-      @people = Person.includes(:articles)
-        .where(user_id: current_user.id)
-        .where.not(articles: { id: nil })
+      @people = Person.where(user_id: current_user.id)
     else
       @articles = Article.order('start_time DESC')
       @people = Person.all
@@ -43,7 +41,6 @@ class ArticlesController < ApplicationController
 
   # POST /articles
   def create
-    puts params.inspect
     @article = Article.new(article_params)
     @article.user_id = current_user.id
     if @article.save
