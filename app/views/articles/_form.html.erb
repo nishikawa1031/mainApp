@@ -12,12 +12,12 @@
   <% end %>
 
   <div>
-    <%= form.label :body, style: "display: block" %>
-    <%= form.text_area :body, style: "width: 100%; height: 80vh;" %>
+    <%= form.date_field :start_time, value: Date.today %>
   </div>
 
   <div>
-    <%= form.hidden_field :start_time, :value => Time.current %>
+    <%= form.label :body, style: "display: block" %>
+    <%= form.text_area :body, style: "width: 100%; height: 80vh;" %>
   </div>
 
   <div class="p-2">
