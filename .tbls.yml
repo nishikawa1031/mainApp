@@ -10,19 +10,120 @@ docPath: doc/schema
 # tbls doc --force
 comments:
   -
-    table: articles
-    tableComment: articles table
+    table: active_storage_attachments
+    tableComment: ActiveStorageの添付ファイルの関連付けテーブル
     columnComments:
-      body: 日記の本文
-      user_id: 日記を書いたユーザー
+      name: 添付の名前
+      record_type: 添付されているレコードの型
+      record_id: 添付されているレコードのID
+      blob_id: 添付のblobへの参照ID
+      created_at: 作成日時
+  -
+    table: active_storage_blobs
+    tableComment: ActiveStorageのblobテーブル
+    columnComments:
+      key: blobのキー
+      filename: ファイル名
+      content_type: コンテンツタイプ
+      metadata: メタデータ
+      service_name: サービス名
+      byte_size: バイトサイズ
+      checksum: チェックサム
+      created_at: 作成日時
+  -
+    table: active_storage_variant_records
+    tableComment: ActiveStorageの画像のバリアント情報テーブル
+    columnComments:
+      blob_id: 元のblobへの参照ID
+      variation_digest: バリアントのダイジェスト
+  -
+    table: articles
+    tableComment: 日記のエントリテーブル
+    columnComments:
+      body: 日記の内容
+      user_id: 記事を作成したユーザーのID
+      created_at: 作成日時
+      updated_at: 更新日時
+      impressions_count: インプレッションのカウント
+      file: 添付ファイルへのパス
+      start_time: 記事の開始時刻
+      end_time: 記事の終了時刻
+  -
+    table: bookmarks
+    tableComment: ユーザーがブックマークした記事のテーブル
+    columnComments:
+      user_id: ブックマークしたユーザーのID
+      article_id: ブックマークされた記事のID
+      created_at: 作成日時
+      updated_at: 更新日時
+  -
+    table: categories
+    tableComment: 記事のカテゴリテーブル
+    columnComments:
+      name: カテゴリ名
+      created_at: 作成日時
+      updated_at: 更新日時
+  -
+    table: category_articles
+    tableComment: 記事とカテゴリの中間テーブル
+    columnComments:
+      category_id: カテゴリのID
+      article_id: 記事のID
+      created_at: 作成日時
+      updated_at: 更新日時
+  -
+    table: impressions
+    tableComment: インプレッションのテーブル
+    columnComments:
+      impressionable_type: インプレッションを持つオブジェクトの型
+      impressionable_id: インプレッションを持つオブジェクトのID
+      user_id: インプレッションを持つユーザーのID
+      controller_name: コントローラ名
+      action_name: アクション名
+      view_name: ビュー名
+      request_hash: リクエストハッシュ
+      ip_address: IPアドレス
+      session_hash: セッションハッシュ
+      message: メッセージ
+      referrer: 参照元
+      params: パラメータ
+      created_at: 作成日時
+      updated_at: 更新日時
+  -
+    table: likes
+    tableComment: ユーザーがいいねした記事のテーブル
+    columnComments:
+      user_id: いいねしたユーザーのID
+      article_id: いいねされた記事のID
+      created_at: 作成日時
+      updated_at: 更新日時
   -
     table: people
-    tableComment: 日記に出てきた登場人物
+    tableComment: 日記に関連する人物情報テーブル
     columnComments:
-      name: 日記に出てきた登場人物の名前
-      user_id: この登場人物が、本アプリのユーザーである場合には、user_idにそのユーザーのIDを入れる
+      name: 人物の名前
+      user_id: この人物がアプリのユーザーである場合のID
+      created_at: 作成日時
+      updated_at: 更新日時
+  -
+    table: person_articles
+    tableComment: 人物と記事の関連付けテーブル
+    columnComments:
+      person_id: 人物のID
+      article_id: 記事のID
+      created_at: 作成日時
+      updated_at: 更新日時
   -
     table: users
-    tableComment: 日記を書くユーザー
+    tableComment: アプリケーションのユーザー情報テーブル
     columnComments:
-      username: 日記を書くユーザーの名前
+      email: メールアドレス
+      encrypted_password: 暗号化されたパスワード
+      reset_password_token: パスワードリセットトークン
+      reset_password_sent_at: パスワードリセットの送信日時
+      remember_created_at: ログイン情報を記憶するためのタイムスタンプ
+      created_at: 作成日時
+      updated_at: 更新日時
+      avatar: アバター画像へのパス
+      username: ユーザーネーム
+      default_color: デフォルトのカラー設定
