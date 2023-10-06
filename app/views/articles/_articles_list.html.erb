@@ -1,0 +1,8 @@
+<div class="row" id="articles">
+  <% articles.each do |article| %>
+    <div class="col-sm-12 mb-3">
+      <%= render article %>
+    </div>
+  <% end %>
+</div>
+<%= paginate articles %>

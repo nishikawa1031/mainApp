@@ -17,31 +17,17 @@
         <% end %>
     <% end %>
   </div>
-
-  <div class="col-sm-2 mb-3">
-    <%= render "people" %>
-  </div>
 </div>
 
 <div class="row">
-  <div class="col-sm-9 mt-3">
-    <div class="row">
-      <div class="col-sm-6">
-        <%= render "form", article: Article.new %>
-      </div>
-      <div class="col-sm-6">
-      </div>
-    </div>
+  <div class="col-sm-2 mb-3">
+    <%= render "people" %>
   </div>
-  <div class="col-sm-3 mt-3">
-    <div class="row" id="articles">
-      <% @articles.each do |article| %>
-        <div class="col-sm-12 mb-3">
-          <%= render article %>
-        </div>
-      <% end %>
-    </div>
-    <%= paginate @articles %>
+  <div class="col-sm-4">
+    <%= render "form", article: Article.new %>
+  </div>
+  <div class="col-sm-6 mt-3">
+    <%= render "articles_list", articles: @articles %>
     <% if Rails.env == "development" %>
       <p>
         debug用に記事数を表示:<%= @number_of_articles %>
