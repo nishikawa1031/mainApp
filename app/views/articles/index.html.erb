@@ -30,7 +30,7 @@
     <div class="card article-card">
       <div class="card-body">
         <% @articles.each do |article| %>
-          <%= article.start_time&.strftime('%Y年%m月%d日') %>
+          <%= article.start_time&.strftime('%m月%d日') %>
           <%= truncate(article.body, length: 20) %>
           <br>
         <% end %>
