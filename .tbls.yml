@@ -99,7 +99,7 @@ comments:
       updated_at: 更新日時
   -
     table: people
-    tableComment: 日記に関連する人物情報テーブル
+    tableComment: 日記に登場する人物情報テーブル
     columnComments:
       name: 人物の名前
       user_id: この人物がアプリのユーザーである場合のID
