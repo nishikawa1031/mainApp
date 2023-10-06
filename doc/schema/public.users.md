@@ -2,23 +2,23 @@
 
 ## Description
 
-日記を書くユーザー
+アプリケーションのユーザー情報テーブル
 
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('users_id_seq'::regclass) | false | [public.articles](public.articles.md) [public.bookmarks](public.bookmarks.md) [public.likes](public.likes.md) |  |  |
-| email | varchar | ''::character varying | false |  |  |  |
-| encrypted_password | varchar | ''::character varying | false |  |  |  |
-| reset_password_token | varchar |  | true |  |  |  |
-| reset_password_sent_at | timestamp(6) without time zone |  | true |  |  |  |
-| remember_created_at | timestamp(6) without time zone |  | true |  |  |  |
-| created_at | timestamp(6) without time zone |  | false |  |  |  |
-| updated_at | timestamp(6) without time zone |  | false |  |  |  |
-| avatar | varchar |  | true |  |  |  |
-| username | varchar |  | false |  |  | 日記を書くユーザーの名前 |
-| default_color | varchar | 'blue'::character varying | true |  |  |  |
+| email | varchar | ''::character varying | false |  |  | メールアドレス |
+| encrypted_password | varchar | ''::character varying | false |  |  | 暗号化されたパスワード |
+| reset_password_token | varchar |  | true |  |  | パスワードリセットトークン |
+| reset_password_sent_at | timestamp(6) without time zone |  | true |  |  | パスワードリセットの送信日時 |
+| remember_created_at | timestamp(6) without time zone |  | true |  |  | ログイン情報を記憶するためのタイムスタンプ |
+| created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
+| updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
+| avatar | varchar |  | true |  |  | アバター画像へのパス |
+| username | varchar |  | false |  |  | ユーザーネーム |
+| default_color | varchar | 'blue'::character varying | true |  |  | デフォルトのカラー設定 |
 
 ## Constraints
 

@@ -2,16 +2,18 @@
 
 ## Description
 
+ActiveStorageの添付ファイルの関連付けテーブル
+
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('active_storage_attachments_id_seq'::regclass) | false |  |  |  |
-| name | varchar |  | false |  |  |  |
-| record_type | varchar |  | false |  |  |  |
-| record_id | bigint |  | false |  |  |  |
-| blob_id | bigint |  | false |  | [public.active_storage_blobs](public.active_storage_blobs.md) |  |
-| created_at | timestamp(6) without time zone |  | false |  |  |  |
+| name | varchar |  | false |  |  | 添付の名前 |
+| record_type | varchar |  | false |  |  | 添付されているレコードの型 |
+| record_id | bigint |  | false |  |  | 添付されているレコードのID |
+| blob_id | bigint |  | false |  | [public.active_storage_blobs](public.active_storage_blobs.md) | 添付のblobへの参照ID |
+| created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
 
 ## Constraints
 

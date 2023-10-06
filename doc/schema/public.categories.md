@@ -2,14 +2,16 @@
 
 ## Description
 
+記事のカテゴリテーブル
+
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('categories_id_seq'::regclass) | false | [public.category_articles](public.category_articles.md) |  |  |
-| name | varchar |  | true |  |  |  |
-| created_at | timestamp(6) without time zone |  | false |  |  |  |
-| updated_at | timestamp(6) without time zone |  | false |  |  |  |
+| name | varchar |  | true |  |  | カテゴリ名 |
+| created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
+| updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
 
 ## Constraints
 

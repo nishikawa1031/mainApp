@@ -2,19 +2,21 @@
 
 ## Description
 
+ActiveStorageのblobテーブル
+
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('active_storage_blobs_id_seq'::regclass) | false | [public.active_storage_attachments](public.active_storage_attachments.md) [public.active_storage_variant_records](public.active_storage_variant_records.md) |  |  |
-| key | varchar |  | false |  |  |  |
-| filename | varchar |  | false |  |  |  |
-| content_type | varchar |  | true |  |  |  |
-| metadata | text |  | true |  |  |  |
-| service_name | varchar |  | false |  |  |  |
-| byte_size | bigint |  | false |  |  |  |
-| checksum | varchar |  | true |  |  |  |
-| created_at | timestamp(6) without time zone |  | false |  |  |  |
+| key | varchar |  | false |  |  | blobのキー |
+| filename | varchar |  | false |  |  | ファイル名 |
+| content_type | varchar |  | true |  |  | コンテンツタイプ |
+| metadata | text |  | true |  |  | メタデータ |
+| service_name | varchar |  | false |  |  | サービス名 |
+| byte_size | bigint |  | false |  |  | バイトサイズ |
+| checksum | varchar |  | true |  |  | チェックサム |
+| created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
 
 ## Constraints
 

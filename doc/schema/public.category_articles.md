@@ -2,15 +2,17 @@
 
 ## Description
 
+記事とカテゴリの中間テーブル
+
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('category_articles_id_seq'::regclass) | false |  |  |  |
-| category_id | bigint |  | false |  | [public.categories](public.categories.md) |  |
-| article_id | bigint |  | false |  | [public.articles](public.articles.md) |  |
-| created_at | timestamp(6) without time zone |  | false |  |  |  |
-| updated_at | timestamp(6) without time zone |  | false |  |  |  |
+| category_id | bigint |  | false |  | [public.categories](public.categories.md) | カテゴリのID |
+| article_id | bigint |  | false |  | [public.articles](public.articles.md) | 記事のID |
+| created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
+| updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
 
 ## Constraints
 

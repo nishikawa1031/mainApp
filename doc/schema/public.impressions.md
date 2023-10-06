@@ -2,25 +2,27 @@
 
 ## Description
 
+インプレッションのテーブル
+
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('impressions_id_seq'::regclass) | false |  |  |  |
-| impressionable_type | varchar |  | true |  |  |  |
-| impressionable_id | integer |  | true |  |  |  |
-| user_id | integer |  | true |  |  |  |
-| controller_name | varchar |  | true |  |  |  |
-| action_name | varchar |  | true |  |  |  |
-| view_name | varchar |  | true |  |  |  |
-| request_hash | varchar |  | true |  |  |  |
-| ip_address | varchar |  | true |  |  |  |
-| session_hash | varchar |  | true |  |  |  |
-| message | text |  | true |  |  |  |
-| referrer | text |  | true |  |  |  |
-| params | text |  | true |  |  |  |
-| created_at | timestamp(6) without time zone |  | false |  |  |  |
-| updated_at | timestamp(6) without time zone |  | false |  |  |  |
+| impressionable_type | varchar |  | true |  |  | インプレッションを持つオブジェクトの型 |
+| impressionable_id | integer |  | true |  |  | インプレッションを持つオブジェクトのID |
+| user_id | integer |  | true |  |  | インプレッションを持つユーザーのID |
+| controller_name | varchar |  | true |  |  | コントローラ名 |
+| action_name | varchar |  | true |  |  | アクション名 |
+| view_name | varchar |  | true |  |  | ビュー名 |
+| request_hash | varchar |  | true |  |  | リクエストハッシュ |
+| ip_address | varchar |  | true |  |  | IPアドレス |
+| session_hash | varchar |  | true |  |  | セッションハッシュ |
+| message | text |  | true |  |  | メッセージ |
+| referrer | text |  | true |  |  | 参照元 |
+| params | text |  | true |  |  | パラメータ |
+| created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
+| updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
 
 ## Constraints
 

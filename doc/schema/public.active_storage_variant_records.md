@@ -2,13 +2,15 @@
 
 ## Description
 
+ActiveStorageの画像のバリアント情報テーブル
+
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('active_storage_variant_records_id_seq'::regclass) | false |  |  |  |
-| blob_id | bigint |  | false |  | [public.active_storage_blobs](public.active_storage_blobs.md) |  |
-| variation_digest | varchar |  | false |  |  |  |
+| blob_id | bigint |  | false |  | [public.active_storage_blobs](public.active_storage_blobs.md) | 元のblobへの参照ID |
+| variation_digest | varchar |  | false |  |  | バリアントのダイジェスト |
 
 ## Constraints
 

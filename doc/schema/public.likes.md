@@ -2,15 +2,17 @@
 
 ## Description
 
+ユーザーがいいねした記事のテーブル
+
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('likes_id_seq'::regclass) | false |  |  |  |
-| user_id | bigint |  | false |  | [public.users](public.users.md) |  |
-| article_id | bigint |  | false |  | [public.articles](public.articles.md) |  |
-| created_at | timestamp(6) without time zone |  | false |  |  |  |
-| updated_at | timestamp(6) without time zone |  | false |  |  |  |
+| user_id | bigint |  | false |  | [public.users](public.users.md) | いいねしたユーザーのID |
+| article_id | bigint |  | false |  | [public.articles](public.articles.md) | いいねされた記事のID |
+| created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
+| updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
 
 ## Constraints
 

@@ -2,21 +2,21 @@
 
 ## Description
 
-articles table
+日記のエントリテーブル
 
 ## Columns
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('articles_id_seq'::regclass) | false | [public.bookmarks](public.bookmarks.md) [public.category_articles](public.category_articles.md) [public.likes](public.likes.md) [public.person_articles](public.person_articles.md) |  |  |
-| body | text |  | true |  |  | 日記の本文 |
-| user_id | bigint |  | false |  | [public.users](public.users.md) | 日記を書いたユーザー |
-| created_at | timestamp(6) without time zone |  | false |  |  |  |
-| updated_at | timestamp(6) without time zone |  | false |  |  |  |
-| impressions_count | integer | 0 | true |  |  |  |
-| file | varchar |  | true |  |  |  |
-| start_time | timestamp(6) without time zone |  | true |  |  |  |
-| end_time | timestamp(6) without time zone |  | true |  |  |  |
+| body | text |  | true |  |  | 日記の内容 |
+| user_id | bigint |  | false |  | [public.users](public.users.md) | 記事を作成したユーザーのID |
+| created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
+| updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
+| impressions_count | integer | 0 | true |  |  | インプレッションのカウント |
+| file | varchar |  | true |  |  | 添付ファイルへのパス |
+| start_time | timestamp(6) without time zone |  | true |  |  | 記事の開始時刻 |
+| end_time | timestamp(6) without time zone |  | true |  |  | 記事の終了時刻 |
 
 ## Constraints
 
