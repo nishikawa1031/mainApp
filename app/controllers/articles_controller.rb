@@ -19,7 +19,6 @@ class ArticlesController < ApplicationController
       @people = Person.all
     end
       @articles = @articles.page(params[:page]).per(5)
-      @rank_articles = @articles.order(impressions_count: 'DESC')
       @number_of_articles = @articles.count
       @user = current_user
       @users = User.all
