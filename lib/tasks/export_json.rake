@@ -1,10 +1,10 @@
 namespace :export do
     desc "Export seed data to JSON"
     task json: :environment do
-      users = User.all.as_json
-      articles = Article.all.as_json
-      people = Person.all.as_json
-      person_articles = PersonArticle.all.as_json
+      users = User.all.as_json(only: [:id, :email, :username])
+      articles = Article.all.as_json(only: [:id, :body, :user_id, :start_time, :end_time])
+      people = Person.all.as_json(only: [:id, :name, :user_id, :creater_id])
+      person_articles = PersonArticle.all.as_json(only: [:id, :article_id, :person_id])
   
       data = {
         users: users,
