@@ -15,7 +15,6 @@ class ArticlesController < ApplicationController
       @people = Person.where(creater_id: current_user.id)
       @number_of_articles = @articles.count
       @user = current_user
-      @users = User.all
     else
       # サンプルデータをロード
       seed_data = JSON.parse(File.read(Rails.root.join('db', 'seed_data.json')))
@@ -35,7 +34,6 @@ class ArticlesController < ApplicationController
       # VirtualPersonに変換して@peopleに格納
       @people = seed_data["people"].map { |person_data| VirtualPerson.new(person_data) }
 
-      @users = seed_data["users"]
       @number_of_articles = @articles.size
       @user = nil
     end
