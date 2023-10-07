@@ -2,7 +2,6 @@
 
 # 織田信長の日記
 user1 = User.create(email: 'test@example.com', username: 'taroyama', password: 'password', password_confirmation: 'password')
-user1.avatar.attach(io: File.open(Rails.root.join('app/assets/images/avatar.jpeg')), filename: 'avatar.jpeg')
 
 ## 明智光秀との面会に関する日記
 nobunaga_meeting_mitsuhide_diary = Article.create(
