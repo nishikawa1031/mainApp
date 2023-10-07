@@ -18,7 +18,6 @@
 | updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
 | avatar | varchar |  | true |  |  | アバター画像へのパス |
 | username | varchar |  | false |  |  | ユーザーネーム |
-| default_color | varchar | 'blue'::character varying | true |  |  | デフォルトのカラー設定 |
 
 ## Constraints
 
