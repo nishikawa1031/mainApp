@@ -18,7 +18,7 @@
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-| fk_rails_d7ea8e7774 | FOREIGN KEY | FOREIGN KEY (article_id) REFERENCES articles(id) |
+| fk_rails_d7ea8e7774 | FOREIGN KEY | FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE |
 | fk_rails_a9fa80467a | FOREIGN KEY | FOREIGN KEY (person_id) REFERENCES people(id) |
 | person_articles_pkey | PRIMARY KEY | PRIMARY KEY (id) |
 

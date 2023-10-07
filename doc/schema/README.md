@@ -13,7 +13,7 @@
 | [public.category_articles](public.category_articles.md) | 5 | 記事とカテゴリの中間テーブル | BASE TABLE |
 | [public.impressions](public.impressions.md) | 15 | インプレッションのテーブル | BASE TABLE |
 | [public.likes](public.likes.md) | 5 | ユーザーがいいねした記事のテーブル | BASE TABLE |
-| [public.people](public.people.md) | 5 | 日記に登場する人物情報テーブル | BASE TABLE |
+| [public.people](public.people.md) | 6 | 日記に登場する人物情報テーブル | BASE TABLE |
 | [public.person_articles](public.person_articles.md) | 5 | 人物と記事の関連付けテーブル | BASE TABLE |
 | [public.users](public.users.md) | 11 | アプリケーションのユーザー情報テーブル | BASE TABLE |
 | [public.schema_migrations](public.schema_migrations.md) | 1 |  | BASE TABLE |

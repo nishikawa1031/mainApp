@@ -381,26 +381,29 @@
 <!-- public.people -->
 <g id="node10" class="node">
 <title>public.people</title>
-<polygon fill="#efefef" stroke="transparent" points="2395,-739.5 2395,-774.5 2715,-774.5 2715,-739.5 2395,-739.5"/>
-<polygon fill="none" stroke="#000000" points="2395,-739.5 2395,-774.5 2715,-774.5 2715,-739.5 2395,-739.5"/>
-<text text-anchor="start" x="2438.1988" y="-752.3" font-family="Arial Bold" font-size="18.00" fill="#000000">public.people</text>
-<text text-anchor="start" x="2544.2332" y="-752.3" font-family="Arial" font-size="14.00" fill="#000000">    </text>
-<text text-anchor="start" x="2578.438" y="-752.3" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
-<polygon fill="none" stroke="#000000" points="2395,-709.5 2395,-739.5 2715,-739.5 2715,-709.5 2395,-709.5"/>
-<text text-anchor="start" x="2402" y="-720.9" font-family="Arial" font-size="14.00" fill="#000000">id    </text>
-<text text-anchor="start" x="2447.094" y="-720.9" font-family="Arial" font-size="14.00" fill="#666666">[bigint]</text>
-<polygon fill="none" stroke="#000000" points="2395,-679.5 2395,-709.5 2715,-709.5 2715,-679.5 2395,-679.5"/>
-<text text-anchor="start" x="2402" y="-690.9" font-family="Arial" font-size="14.00" fill="#000000">name    </text>
-<text text-anchor="start" x="2471.2132" y="-690.9" font-family="Arial" font-size="14.00" fill="#666666">[varchar]</text>
-<polygon fill="none" stroke="#000000" points="2395,-649.5 2395,-679.5 2715,-679.5 2715,-649.5 2395,-649.5"/>
-<text text-anchor="start" x="2402" y="-660.9" font-family="Arial" font-size="14.00" fill="#000000">user_id    </text>
-<text text-anchor="start" x="2482.1024" y="-660.9" font-family="Arial" font-size="14.00" fill="#666666">[integer]</text>
-<polygon fill="none" stroke="#000000" points="2395,-619.5 2395,-649.5 2715,-649.5 2715,-619.5 2395,-619.5"/>
-<text text-anchor="start" x="2402" y="-630.9" font-family="Arial" font-size="14.00" fill="#000000">created_at    </text>
-<text text-anchor="start" x="2502.3422" y="-630.9" font-family="Arial" font-size="14.00" fill="#666666">[timestamp(6) without time zone]</text>
-<polygon fill="none" stroke="#000000" points="2395,-589.5 2395,-619.5 2715,-619.5 2715,-589.5 2395,-589.5"/>
-<text text-anchor="start" x="2401.7546" y="-600.9" font-family="Arial" font-size="14.00" fill="#000000">updated_at    </text>
-<text text-anchor="start" x="2506.0014" y="-600.9" font-family="Arial" font-size="14.00" fill="#666666">[timestamp(6) without time zone]</text>
+<polygon fill="#efefef" stroke="transparent" points="2395,-754.5 2395,-789.5 2715,-789.5 2715,-754.5 2395,-754.5"/>
+<polygon fill="none" stroke="#000000" points="2395,-754.5 2395,-789.5 2715,-789.5 2715,-754.5 2395,-754.5"/>
+<text text-anchor="start" x="2438.1988" y="-767.3" font-family="Arial Bold" font-size="18.00" fill="#000000">public.people</text>
+<text text-anchor="start" x="2544.2332" y="-767.3" font-family="Arial" font-size="14.00" fill="#000000">    </text>
+<text text-anchor="start" x="2578.438" y="-767.3" font-family="Arial" font-size="14.00" fill="#666666">[BASE TABLE]</text>
+<polygon fill="none" stroke="#000000" points="2395,-724.5 2395,-754.5 2715,-754.5 2715,-724.5 2395,-724.5"/>
+<text text-anchor="start" x="2402" y="-735.9" font-family="Arial" font-size="14.00" fill="#000000">id    </text>
+<text text-anchor="start" x="2447.094" y="-735.9" font-family="Arial" font-size="14.00" fill="#666666">[bigint]</text>
+<polygon fill="none" stroke="#000000" points="2395,-694.5 2395,-724.5 2715,-724.5 2715,-694.5 2395,-694.5"/>
+<text text-anchor="start" x="2402" y="-705.9" font-family="Arial" font-size="14.00" fill="#000000">name    </text>
+<text text-anchor="start" x="2471.2132" y="-705.9" font-family="Arial" font-size="14.00" fill="#666666">[varchar]</text>
+<polygon fill="none" stroke="#000000" points="2395,-664.5 2395,-694.5 2715,-694.5 2715,-664.5 2395,-664.5"/>
+<text text-anchor="start" x="2402" y="-675.9" font-family="Arial" font-size="14.00" fill="#000000">user_id    </text>
+<text text-anchor="start" x="2482.1024" y="-675.9" font-family="Arial" font-size="14.00" fill="#666666">[integer]</text>
+<polygon fill="none" stroke="#000000" points="2395,-634.5 2395,-664.5 2715,-664.5 2715,-634.5 2395,-634.5"/>
+<text text-anchor="start" x="2402" y="-645.9" font-family="Arial" font-size="14.00" fill="#000000">created_at    </text>
+<text text-anchor="start" x="2502.3422" y="-645.9" font-family="Arial" font-size="14.00" fill="#666666">[timestamp(6) without time zone]</text>
+<polygon fill="none" stroke="#000000" points="2395,-604.5 2395,-634.5 2715,-634.5 2715,-604.5 2395,-604.5"/>
+<text text-anchor="start" x="2401.7546" y="-615.9" font-family="Arial" font-size="14.00" fill="#000000">updated_at    </text>
+<text text-anchor="start" x="2506.0014" y="-615.9" font-family="Arial" font-size="14.00" fill="#666666">[timestamp(6) without time zone]</text>
+<polygon fill="none" stroke="#000000" points="2395,-574.5 2395,-604.5 2715,-604.5 2715,-574.5 2395,-574.5"/>
+<text text-anchor="start" x="2402" y="-585.9" font-family="Arial" font-size="14.00" fill="#000000">creater_id    </text>
+<text text-anchor="start" x="2498.4362" y="-585.9" font-family="Arial" font-size="14.00" fill="#666666">[integer]</text>
 </g>
 <!-- public.person_articles -->
 <g id="node11" class="node">
@@ -431,13 +434,13 @@
 <title>public.person_articles:article_id&#45;&gt;public.articles:id</title>
 <path fill="none" stroke="#000000" d="M2384.7565,-1180.995C2283.2995,-1170.2982 2430.4128,-992.441 2343,-914 2271.9618,-850.2529 1995.7921,-928.8208 1915,-878 1874.1904,-852.3295 1908.212,-784.5 1860,-784.5"/>
 <polygon fill="#000000" stroke="#000000" points="2385.0121,-1181.0075 2394.7784,-1185.9945 2390.0061,-1181.2538 2395,-1181.5 2395,-1181.5 2395,-1181.5 2390.0061,-1181.2538 2395.2216,-1177.0055 2385.0121,-1181.0075 2385.0121,-1181.0075"/>
-<text text-anchor="start" x="2402.1175" y="-1191.5" font-family="Arial" font-size="10.00" fill="#000000">FOREIGN KEY (article_id) REFERENCES articles(id)</text>
+<text text-anchor="start" x="2401.8365" y="-1191.5" font-family="Arial" font-size="10.00" fill="#000000">FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE</text>
 </g>
 <!-- public.person_articles&#45;&gt;public.people -->
 <g id="edge11" class="edge">
 <title>public.person_articles:person_id&#45;&gt;public.people:id</title>
-<path fill="none" stroke="#000000" d="M2723.9544,-1206.68C2768.9253,-1156.1017 2765.9405,-724.5 2715,-724.5"/>
-<polygon fill="#000000" stroke="#000000" points="2723.8054,-1206.7602 2712.8671,-1207.5376 2719.4027,-1209.1301 2715,-1211.5 2715,-1211.5 2715,-1211.5 2719.4027,-1209.1301 2717.1329,-1215.4624 2723.8054,-1206.7602 2723.8054,-1206.7602"/>
+<path fill="none" stroke="#000000" d="M2723.9493,-1206.5186C2767.2522,-1156.0741 2764.2691,-739.5 2715,-739.5"/>
+<polygon fill="#000000" stroke="#000000" points="2723.7376,-1206.6364 2712.8114,-1207.5681 2719.3688,-1209.0682 2715,-1211.5 2715,-1211.5 2715,-1211.5 2719.3688,-1209.0682 2717.1886,-1215.4319 2723.7376,-1206.6364 2723.7376,-1206.6364"/>
 <text text-anchor="start" x="2721.992" y="-1221.5" font-family="Arial" font-size="10.00" fill="#000000">FOREIGN KEY (person_id) REFERENCES people(id)</text>
 </g>
 <!-- public.schema_migrations -->

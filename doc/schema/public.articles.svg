@@ -217,7 +217,7 @@
 <title>public.person_articles:article_id&#45;&gt;public.articles:id</title>
 <path fill="none" stroke="#000000" d="M1314.9192,-1036.519C1273.4948,-1027.4793 1310.2451,-958.1487 1273,-920 1176.5422,-821.202 1130.0766,-787.5 992,-787.5"/>
 <polygon fill="#000000" stroke="#000000" points="1315.047,-1036.5314 1324.5641,-1041.9788 1320.0235,-1037.0157 1325,-1037.5 1325,-1037.5 1325,-1037.5 1320.0235,-1037.0157 1325.4359,-1033.0212 1315.047,-1036.5314 1315.047,-1036.5314"/>
-<text text-anchor="start" x="1081.1175" y="-1047.5" font-family="Arial" font-size="10.00" fill="#000000">FOREIGN KEY (article_id) REFERENCES articles(id)</text>
+<text text-anchor="start" x="1331.8365" y="-1047.5" font-family="Arial" font-size="10.00" fill="#000000">FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE</text>
 </g>
 </g>
 </svg>
