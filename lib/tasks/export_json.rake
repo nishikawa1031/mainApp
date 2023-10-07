@@ -1,3 +1,5 @@
+# 実行方法
+# rake export:json
 namespace :export do
     desc "Export seed data to JSON"
     task json: :environment do
