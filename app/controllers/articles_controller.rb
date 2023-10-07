@@ -20,19 +20,19 @@ class ArticlesController < ApplicationController
       seed_data = JSON.parse(File.read(Rails.root.join('db', 'seed_data.json')))
 
       # VirtualArticleに変換
-      @articles = seed_data["articles"].map do |article_data|
+      @articles = seed_data['articles'].map do |article_data|
         article = VirtualArticle.new(article_data)
-        related_people_hashes = seed_data["person_articles"].select { |pa| pa["article_id"] == article.id }.map { |pa| seed_data["people"].find { |p| p["id"] == pa["person_id"] } }
-        
+        related_people_hashes = seed_data['person_articles'].select { |pa| pa['article_id'] == article.id }.map { |pa| seed_data['people'].find { |p| p['id'] == pa['person_id'] } }
+
         # VirtualPersonに変換
         related_people = related_people_hashes.map { |person_hash| VirtualPerson.new(person_hash) }
-        
+
         article.people = related_people
         article
       end
 
       # VirtualPersonに変換して@peopleに格納
-      @people = seed_data["people"].map { |person_data| VirtualPerson.new(person_data) }
+      @people = seed_data['people'].map { |person_data| VirtualPerson.new(person_data) }
 
       @number_of_articles = @articles.size
       @user = nil
@@ -41,8 +41,8 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1
   def show
-    ActiveStorage::Current.host = "http://localhost:3000"
-    
+    ActiveStorage::Current.host = 'http://localhost:3000'
+
     impressionist(@article)
     @article.impressionist_count(filter: :ip_address)
     @user = @article.user

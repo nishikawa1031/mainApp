@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: people
@@ -10,7 +12,7 @@
 #
 FactoryBot.define do
   factory :person do
-    name { "MyString" }
+    name { 'MyString' }
     user_id { 1 }
   end
 end

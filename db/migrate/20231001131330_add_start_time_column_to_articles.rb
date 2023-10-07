@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddStartTimeColumnToArticles < ActiveRecord::Migration[7.0]
   def change
     add_column :articles, :start_time, :datetime

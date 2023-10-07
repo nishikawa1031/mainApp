@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   post '/google_login_api/callback', to: 'google_login_api#callback'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  resources :subjects, only: %i[show]do
+  resources :subjects, only: %i[show] do
     resources :years, only: %i[show] do
       post '/questions/:id', to: 'questions#check'
       resources :questions, only: %i[show]

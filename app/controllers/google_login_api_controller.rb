@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class GoogleLoginApiController < ApplicationController
   require 'googleauth/id_tokens/verifier'
 
@@ -14,8 +16,8 @@ class GoogleLoginApiController < ApplicationController
   private
 
   def verify_g_csrf_token
-    if cookies["g_csrf_token"].blank? || params[:g_csrf_token].blank? || cookies["g_csrf_token"] != params[:g_csrf_token]
-      redirect_to root_path, notice: '不正なアクセスです'
-    end
+    return unless cookies['g_csrf_token'].blank? || params[:g_csrf_token].blank? || cookies['g_csrf_token'] != params[:g_csrf_token]
+
+    redirect_to root_path, notice: '不正なアクセスです'
   end
 end

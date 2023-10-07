@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: people
@@ -9,6 +11,6 @@
 #  updated_at :datetime         not null
 #
 class Person < ApplicationRecord
-    has_many :person_articles
-    has_many :articles, through: :person_articles
+  has_many :person_articles
+  has_many :articles, through: :person_articles
 end

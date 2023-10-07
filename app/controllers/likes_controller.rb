@@ -15,6 +15,7 @@ class LikesController < ApplicationController
   def destroy
     @article = Article.find(params[:article_id])
     return if current_user?(@article.user)
+
     like = @article.likes.find_by(user_id: current_user.id)
     like.destroy if like.present?
     redirect_to request.referer
