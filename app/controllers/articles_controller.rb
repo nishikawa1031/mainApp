@@ -10,16 +10,35 @@ class ArticlesController < ApplicationController
   # GET /articles
   def index
     if current_user
-      @articles = Article.where(user_id: current_user.id).order('start_time DESC')
+      # ログインユーザーのデータを取得
+      @articles = Article.where(user_id: current_user.id).order('start_time DESC').page(params[:page]).per(5)
       @people = Person.where(user_id: current_user.id)
-    else
-      @articles = Article.order('start_time DESC')
-      @people = Person.all
-    end
-      @articles = @articles.page(params[:page]).per(5)
       @number_of_articles = @articles.count
       @user = current_user
       @users = User.all
+    else
+      # サンプルデータをロード
+      seed_data = JSON.parse(File.read(Rails.root.join('db', 'seed_data.json')))
+
+      # VirtualArticleに変換
+      @articles = seed_data["articles"].map do |article_data|
+        article = VirtualArticle.new(article_data)
+        related_people_hashes = seed_data["person_articles"].select { |pa| pa["article_id"] == article.id }.map { |pa| seed_data["people"].find { |p| p["id"] == pa["person_id"] } }
+        
+        # VirtualPersonに変換
+        related_people = related_people_hashes.map { |person_hash| VirtualPerson.new(person_hash) }
+        
+        article.people = related_people
+        article
+      end
+
+      # VirtualPersonに変換して@peopleに格納
+      @people = seed_data["people"].map { |person_data| VirtualPerson.new(person_data) }
+
+      @users = seed_data["users"]
+      @number_of_articles = @articles.size
+      @user = nil
+    end
   end
 
   # GET /articles/1

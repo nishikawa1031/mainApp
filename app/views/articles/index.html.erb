@@ -8,13 +8,14 @@
           <div class="card-header">
             <h6 class="card-title">
               <% if article.people.any? %>
-                <%= link_to "#{article.people.first.name}#{'...' if article.people.count > 1}", article %>
+                <%= link_to "#{article.people.first.name}#{'...' if article.people.count > 1}", (@user ? article : "#") %>
               <% else %>
-                <%= link_to truncate(article.body, length: 10), article %>
+                <%= link_to truncate(article.body, length: 10), (@user ? article : "#") %>
               <% end %>
             </h6>
           </div>
         <% end %>
+      </div>
     <% end %>
   </div>
   <div class="col-sm-2 mb-3">

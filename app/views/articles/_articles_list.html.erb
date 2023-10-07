@@ -1,8 +1,11 @@
 <div class="row" id="articles">
   <% articles.each do |article| %>
     <div class="col-sm-12 mb-3">
-      <%= render article %>
+      <%= render "articles/article", article: article %>
     </div>
   <% end %>
 </div>
-<%= paginate articles %>
+  <% if @user %>
+    <%= paginate articles %>
+  <% end %>
+
