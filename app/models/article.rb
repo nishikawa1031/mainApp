@@ -27,8 +27,6 @@ class Article < ApplicationRecord
 
   accepts_nested_attributes_for :people, reject_if: :all_blank, allow_destroy: true
 
-  Colors = %w[blue indigo purple pink red orange yellow green teal cyan gray].freeze
-
   def liked_by?(user)
     likes.where(user_id: user).exists?
   end
