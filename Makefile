@@ -17,14 +17,18 @@ p: # pushの略
 ## git push heroku master
 
 # 本番用コマンド
+## ログの確認
+log:
+	heroku logs --tail --app main-app-1209
+
 ## migrateを走らせる
 prod_migrate:
-	heroku run rails db:migrate
-	heroku run rake tmp:cache:clear
+	heroku run rake db:migrate --app main-app-1209
+	heroku run rake tmp:cache:clear --app main-app-1209
 
 ## DBリセット方法
 ### https://qiita.com/motoki4917/items/1bc8d539f36852abf090
 prod_reset:
-	heroku pg:reset DATABASE_URL --confirm main-app-1209
-	heroku run rails db:migrate
-	heroku run rails db:seed
+	heroku pg:reset DATABASE_URL --confirm main-app-1209 --app main-app-1209
+	heroku run rails db:migrate --app main-app-1209
+	heroku run rails db:seed --app main-app-1209
