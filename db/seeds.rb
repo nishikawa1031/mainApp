@@ -1,16 +1,8 @@
 # frozen_string_literal: true
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
 # 織田信長の日記
-user1 = User.create(email: 'test@example.com', username: 'taroyama', password: 'password',
-                    password_confirmation: 'password')
+user1 = User.create(email: 'test@example.com', username: 'taroyama', password: 'password', password_confirmation: 'password')
+user1.avatar.attach(io: File.open(Rails.root.join('app/assets/images/avatar.jpeg')), filename: 'avatar.jpeg')
 
 ## 明智光秀との面会に関する日記
 nobunaga_meeting_mitsuhide_diary = Article.create(
@@ -20,7 +12,7 @@ nobunaga_meeting_mitsuhide_diary = Article.create(
   end_time: Time.zone.now - 2.days + 2.hours
 )
 
-mitsuhide = Person.create(name: "明智光秀", user_id: 2)
+mitsuhide = Person.create(name: "明智光秀", user_id: 2, creater_id: user1.id)
 PersonArticle.create(article_id: nobunaga_meeting_mitsuhide_diary.id, person_id: mitsuhide.id)
 
 ## 豊臣秀吉との面会に関する日記
@@ -31,7 +23,7 @@ nobunaga_meeting_hideyoshi_diary = Article.create(
   end_time: Time.zone.now - 4.days + 2.hours
 )
 
-hideyoshi = Person.create(name: "豊臣秀吉", user_id: 3)
+hideyoshi = Person.create(name: "豊臣秀吉", user_id: 3, creater_id: user1.id)
 PersonArticle.create(article_id: nobunaga_meeting_hideyoshi_diary.id, person_id: hideyoshi.id)
 
 ## 武田信玄との面会に関する日記
@@ -42,11 +34,11 @@ nobunaga_meeting_shingen_diary = Article.create(
   end_time: Time.zone.now - 7.days + 2.hours
 )
 
-shingen = Person.create(name: "武田信玄")
+shingen = Person.create(name: "武田信玄", creater_id: user1.id)
 PersonArticle.create(article_id: nobunaga_meeting_shingen_diary.id, person_id: shingen.id)
 
 # 豊臣秀吉の日記
-user2 = User.create(email: 'another_test@example.com', username: 'another_man', password: 'password', password_confirmation: 'password2')
+user2 = User.create(email: 'another_test@example.com', username: 'another_man', password: 'password2', password_confirmation: 'password2')
 
 # 織田信長との面会に関する日記エントリの作成
 hideyoshi_meeting_nobunaga_diary = Article.create(
@@ -56,8 +48,8 @@ hideyoshi_meeting_nobunaga_diary = Article.create(
   end_time: Time.zone.now - 5.days + 2.hours
 )
 
-nobunaga = Person.create(name: '織田信長')
-PersonArticle.create(article_id: hideyoshi_meeting_nobunaga_diary.id, person_id: nobunaga.id)
+nobunaga2 = Person.create(name: '織田信長', creater_id: user2.id)
+PersonArticle.create(article_id: hideyoshi_meeting_nobunaga_diary.id, person_id: nobunaga2.id)
 
 # 明智光秀との面会に関する日記エントリの作成
 hideyoshi_meeting_mitsuhide_diary = Article.create(
@@ -67,8 +59,8 @@ hideyoshi_meeting_mitsuhide_diary = Article.create(
   end_time: Time.zone.now - 3.days + 2.hours
 )
 
-mitsuhide = Person.find_by(name: '明智光秀')
-PersonArticle.create(article_id: hideyoshi_meeting_mitsuhide_diary.id, person_id: mitsuhide.id)
+mitsuhide2 = Person.create(name: '明智光秀', creater_id: user2.id)
+PersonArticle.create(article_id: hideyoshi_meeting_mitsuhide_diary.id, person_id: mitsuhide2.id)
 
 # 武田信玄との面会に関する日記エントリの作成
 hideyoshi_meeting_shingen_diary = Article.create(
@@ -78,5 +70,5 @@ hideyoshi_meeting_shingen_diary = Article.create(
   end_time: Time.zone.now - 10.days + 2.hours
 )
 
-shingen = Person.find_by(name: '武田信玄')
-PersonArticle.create(article_id: hideyoshi_meeting_shingen_diary.id, person_id: shingen.id)
+shingen2 = Person.create(name: '武田信玄', creater_id: user2.id)
+PersonArticle.create(article_id: hideyoshi_meeting_shingen_diary.id, person_id: shingen2.id)
