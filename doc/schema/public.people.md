@@ -9,7 +9,7 @@
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('people_id_seq'::regclass) | false | [public.person_articles](public.person_articles.md) |  |  |
-| name | varchar |  | true |  |  | 人物の名前 |
+| name | varchar |  | false |  |  | 人物の名前 |
 | user_id | integer |  | true |  |  | この人物がアプリのユーザーである場合のID |
 | created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
 | updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
