@@ -21,6 +21,9 @@ p: # pushの略
 log:
 	heroku logs --tail --app main-app-1209
 
+console:
+	heroku run console --app main-app-1209
+
 ## migrateを走らせる
 prod_migrate:
 	heroku run rake db:migrate --app main-app-1209
