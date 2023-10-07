@@ -10,3 +10,6 @@ inherit_from: .rubocop_todo.yml
 # where the inspected file is and continue its way up to the root directory.
 #
 # See https://docs.rubocop.org/rubocop/configuration
+Metrics/BlockLength:
+  Exclude:
+    - 'db/schema.rb' # schemaファイルは通常、手動で編集されないため、除外する
