@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
     if current_user
       # ログインユーザーのデータを取得
       @articles = Article.where(user_id: current_user.id).order('start_time DESC').page(params[:page]).per(5)
-      @people = Person.where(user_id: current_user.id)
+      @people = Person.where(creater_id: current_user.id)
       @number_of_articles = @articles.count
       @user = current_user
       @users = User.all
