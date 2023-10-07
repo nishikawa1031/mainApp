@@ -105,6 +105,7 @@ comments:
       user_id: この人物がアプリのユーザーである場合のID
       created_at: 作成日時
       updated_at: 更新日時
+      creater_id: この人物を作成したユーザーのID
   -
     table: person_articles
     tableComment: 人物と記事の関連付けテーブル
