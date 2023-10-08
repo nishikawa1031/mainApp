@@ -1,4 +1,14 @@
 ja:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "を入力してください"
+            username:
+              blank: "を入力してください"
+              invalid: "が無効です"
   views:
     pagination:
       first: 先頭
@@ -6,23 +16,10 @@ ja:
       next: 次に
       last: 最後
   article:
-    subject:
-      civil_law: 民法
-      constitution: 憲法
-      criminal_law: 刑法
-      civil_procedure_law: 民訴
-      criminal_procedure_law: 刑訴
-      administrative_law: 行政法
-      company_law: 会社法
-      labor_law: 労働法
-      intellectual_property_law: 知財法
-      tax_law: 租税法
-      bankruptcy_law: 倒産法
-      economic_law: 経済法
-      private_international_law: 国際私法
-      public_international_law: 国際公法
-      environmental_law: 環境法
-      others: その他
+    title: タイトル
+    body: 本文
+    created_at: 作成日時
+    updated_at: 更新日時
   simple_calendar:
     previous: "<<"
     next: ">>"
