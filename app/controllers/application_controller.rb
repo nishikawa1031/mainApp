@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  before_action :configure_permitted_parameters, if: :devise_controller? # 追加
-
+  helper_method :current_user  # これにより、ビューでもcurrent_userを使用できるようになります
   include ApplicationHelper
 
-  protected
+  private
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:avatar])
+  def current_user
+    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
   end
 end
