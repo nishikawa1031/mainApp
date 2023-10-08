@@ -48,8 +48,6 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'carrierwave' # 画像アップロード
-gem 'devise'
-gem 'devise-i18n'
 gem 'dotenv-rails' # 環境変数
 gem 'googleauth' # Google認証
 gem 'kaminari'
