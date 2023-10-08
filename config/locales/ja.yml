@@ -6,9 +6,6 @@ ja:
           attributes:
             password:
               blank: "を入力してください"
-            username:
-              blank: "を入力してください"
-              invalid: "が無効です"
   views:
     pagination:
       first: 先頭

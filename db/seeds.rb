@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # 織田信長の日記
-user1 = User.create(email: 'test@example.com', username: 'taroyama', password: 'password', password_confirmation: 'password')
+user1 = User.create(email: 'test@example.com', password: 'password', password_confirmation: 'password')
 
 ## 明智光秀との面会に関する日記
 nobunaga_meeting_mitsuhide_diary = Article.create(
@@ -37,7 +37,7 @@ shingen = Person.create(name: '武田信玄', creater_id: user1.id)
 PersonArticle.create(article_id: nobunaga_meeting_shingen_diary.id, person_id: shingen.id)
 
 # 豊臣秀吉の日記
-user2 = User.create(email: 'another_test@example.com', username: 'another_man', password: 'password2', password_confirmation: 'password2')
+user2 = User.create(email: 'another_test@example.com', password: 'password2', password_confirmation: 'password2')
 
 # 織田信長との面会に関する日記エントリの作成
 hideyoshi_meeting_nobunaga_diary = Article.create(

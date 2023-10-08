@@ -17,9 +17,6 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
-  scope 'users/:username' do
-    get '/' => 'users#show', as: :user
-  end
 
   post '/google_login_api/callback', to: 'google_login_api#callback'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
