@@ -14,3 +14,4 @@ AllCops:
   Exclude:
     - 'vendor/**/*' # CircleCIでは、bundle installしたgemsをvendor/bundle配下にロードしているためvendorディレクトリは除外する
     - 'db/schema.rb' # schemaファイルは通常、手動で編集されないため、除外する
+    - 'db/migrate/*' # マイグレーションファイルは通常、手動で編集されないため、除外する
