@@ -13,8 +13,6 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  avatar                 :string
-#  username               :string           not null
-#  default_color          :string           default("blue")
 #
 require 'rails_helper'
 
