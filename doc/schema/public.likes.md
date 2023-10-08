@@ -18,17 +18,17 @@
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
+| fk_rails_1e09b5dabf | FOREIGN KEY | FOREIGN KEY (user_id) REFERENCES users(id) |
 | fk_rails_86adad7015 | FOREIGN KEY | FOREIGN KEY (article_id) REFERENCES articles(id) |
 | likes_pkey | PRIMARY KEY | PRIMARY KEY (id) |
-| fk_rails_1e09b5dabf | FOREIGN KEY | FOREIGN KEY (user_id) REFERENCES users(id) |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
 | likes_pkey | CREATE UNIQUE INDEX likes_pkey ON public.likes USING btree (id) |
-| index_likes_on_article_id | CREATE INDEX index_likes_on_article_id ON public.likes USING btree (article_id) |
 | index_likes_on_user_id | CREATE INDEX index_likes_on_user_id ON public.likes USING btree (user_id) |
+| index_likes_on_article_id | CREATE INDEX index_likes_on_article_id ON public.likes USING btree (article_id) |
 
 ## Relations
 

@@ -27,8 +27,8 @@
 | Name | Definition |
 | ---- | ---------- |
 | category_articles_pkey | CREATE UNIQUE INDEX category_articles_pkey ON public.category_articles USING btree (id) |
-| index_category_articles_on_article_id | CREATE INDEX index_category_articles_on_article_id ON public.category_articles USING btree (article_id) |
 | index_category_articles_on_category_id | CREATE INDEX index_category_articles_on_category_id ON public.category_articles USING btree (category_id) |
+| index_category_articles_on_article_id | CREATE INDEX index_category_articles_on_article_id ON public.category_articles USING btree (article_id) |
 
 ## Relations
 

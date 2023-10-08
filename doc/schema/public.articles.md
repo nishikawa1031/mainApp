@@ -8,7 +8,7 @@
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
-| id | bigint | nextval('articles_id_seq'::regclass) | false | [public.bookmarks](public.bookmarks.md) [public.category_articles](public.category_articles.md) [public.likes](public.likes.md) [public.person_articles](public.person_articles.md) |  |  |
+| id | bigint | nextval('articles_id_seq'::regclass) | false | [public.category_articles](public.category_articles.md) [public.bookmarks](public.bookmarks.md) [public.likes](public.likes.md) [public.person_articles](public.person_articles.md) |  |  |
 | body | text |  | true |  |  | 日記の内容 |
 | user_id | bigint |  | false |  | [public.users](public.users.md) | 記事を作成したユーザーのID |
 | created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
@@ -22,8 +22,8 @@
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-| articles_pkey | PRIMARY KEY | PRIMARY KEY (id) |
 | fk_rails_3d31dad1cc | FOREIGN KEY | FOREIGN KEY (user_id) REFERENCES users(id) |
+| articles_pkey | PRIMARY KEY | PRIMARY KEY (id) |
 
 ## Indexes
 

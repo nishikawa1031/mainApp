@@ -4,20 +4,20 @@
 
 | Name | Columns | Comment | Type |
 | ---- | ------- | ------- | ---- |
-| [public.active_storage_attachments](public.active_storage_attachments.md) | 6 | ActiveStorageの添付ファイルの関連付けテーブル | BASE TABLE |
-| [public.active_storage_blobs](public.active_storage_blobs.md) | 9 | ActiveStorageのblobテーブル | BASE TABLE |
-| [public.active_storage_variant_records](public.active_storage_variant_records.md) | 3 | ActiveStorageの画像のバリアント情報テーブル | BASE TABLE |
-| [public.articles](public.articles.md) | 9 | 日記のエントリテーブル | BASE TABLE |
-| [public.bookmarks](public.bookmarks.md) | 5 | ユーザーがブックマークした記事のテーブル | BASE TABLE |
-| [public.categories](public.categories.md) | 4 | 記事のカテゴリテーブル | BASE TABLE |
-| [public.category_articles](public.category_articles.md) | 5 | 記事とカテゴリの中間テーブル | BASE TABLE |
-| [public.impressions](public.impressions.md) | 15 | インプレッションのテーブル | BASE TABLE |
-| [public.likes](public.likes.md) | 5 | ユーザーがいいねした記事のテーブル | BASE TABLE |
-| [public.people](public.people.md) | 6 | 日記に登場する人物情報テーブル | BASE TABLE |
-| [public.person_articles](public.person_articles.md) | 5 | 人物と記事の関連付けテーブル | BASE TABLE |
-| [public.users](public.users.md) | 10 | アプリケーションのユーザー情報テーブル | BASE TABLE |
 | [public.schema_migrations](public.schema_migrations.md) | 1 |  | BASE TABLE |
 | [public.ar_internal_metadata](public.ar_internal_metadata.md) | 4 |  | BASE TABLE |
+| [public.users](public.users.md) | 9 | アプリケーションのユーザー情報テーブル | BASE TABLE |
+| [public.articles](public.articles.md) | 9 | 日記のエントリテーブル | BASE TABLE |
+| [public.categories](public.categories.md) | 4 | 記事のカテゴリテーブル | BASE TABLE |
+| [public.category_articles](public.category_articles.md) | 5 | 記事とカテゴリの中間テーブル | BASE TABLE |
+| [public.active_storage_blobs](public.active_storage_blobs.md) | 9 | ActiveStorageのblobテーブル | BASE TABLE |
+| [public.active_storage_attachments](public.active_storage_attachments.md) | 6 | ActiveStorageの添付ファイルの関連付けテーブル | BASE TABLE |
+| [public.active_storage_variant_records](public.active_storage_variant_records.md) | 3 | ActiveStorageの画像のバリアント情報テーブル | BASE TABLE |
+| [public.bookmarks](public.bookmarks.md) | 5 | ユーザーがブックマークした記事のテーブル | BASE TABLE |
+| [public.likes](public.likes.md) | 5 | ユーザーがいいねした記事のテーブル | BASE TABLE |
+| [public.impressions](public.impressions.md) | 15 | インプレッションのテーブル | BASE TABLE |
+| [public.people](public.people.md) | 6 | 日記に登場する人物情報テーブル | BASE TABLE |
+| [public.person_articles](public.person_articles.md) | 5 | 人物と記事の関連付けテーブル | BASE TABLE |
 
 ## Relations
 

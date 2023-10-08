@@ -27,8 +27,8 @@
 | Name | Definition |
 | ---- | ---------- |
 | person_articles_pkey | CREATE UNIQUE INDEX person_articles_pkey ON public.person_articles USING btree (id) |
-| index_person_articles_on_article_id | CREATE INDEX index_person_articles_on_article_id ON public.person_articles USING btree (article_id) |
 | index_person_articles_on_person_id | CREATE INDEX index_person_articles_on_person_id ON public.person_articles USING btree (person_id) |
+| index_person_articles_on_article_id | CREATE INDEX index_person_articles_on_article_id ON public.person_articles USING btree (article_id) |
 
 ## Relations
 

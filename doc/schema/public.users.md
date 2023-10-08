@@ -17,7 +17,6 @@
 | created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
 | updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
 | avatar | varchar |  | true |  |  | アバター画像へのパス |
-| username | varchar |  | false |  |  | ユーザーネーム |
 
 ## Constraints
 
@@ -32,7 +31,6 @@
 | users_pkey | CREATE UNIQUE INDEX users_pkey ON public.users USING btree (id) |
 | index_users_on_email | CREATE UNIQUE INDEX index_users_on_email ON public.users USING btree (email) |
 | index_users_on_reset_password_token | CREATE UNIQUE INDEX index_users_on_reset_password_token ON public.users USING btree (reset_password_token) |
-| index_users_on_username | CREATE UNIQUE INDEX index_users_on_username ON public.users USING btree (username) |
 
 ## Relations
 
