@@ -3,6 +3,14 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user  # これにより、ビューでもcurrent_userを使用できるようになります
   include ApplicationHelper
+  include SessionsHelper
+  before_action :check_logged_in
+
+  def check_logged_in
+    return if current_user
+
+    redirect_to root_path
+  end
 
   private
 
