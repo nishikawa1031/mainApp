@@ -17,8 +17,6 @@
   <body>
     <header>
       <% if current_user %>
-        <%= image_tag current_user.image %>
-        <%= current_user.name %>さん
         <%= link_to "ログアウト", log_out_path %>
       <% else  %>
         ゲストさん
