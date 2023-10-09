@@ -13,6 +13,6 @@ module ApplicationHelper
 
   def authenticate_user!
     redirect_to home_index_path unless current_user
-    #ユーザーがログインしていない限り、ログイン画面にレダイレクトする
+    # ユーザーがログインしていない限り、ログイン画面にレダイレクトする
   end
 end

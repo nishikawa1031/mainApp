@@ -49,10 +49,10 @@ gem 'bootsnap', require: false
 
 gem 'carrierwave' # 画像アップロード
 gem 'dotenv-rails' # 環境変数
-gem 'omniauth-google-oauth2'
-gem 'omniauth-rails_csrf_protection'
 gem 'kaminari'
 gem 'mini_magick'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
 gem 'simple_calendar' # https://github.com/excid3/simple_calendar
 
 # 参考　https://kitsune.blog/rails-bootstrap
