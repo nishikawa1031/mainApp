@@ -2,17 +2,20 @@
 @import "font-awesome";
 @import "simple_calendar";
 
+:root {
+  --background-color: black;
+}
+
 .main-container {
-  background-color: black;
-  min-height: 95vh
+  background-color: var(--background-color);
+  min-height: 95vh;
 }
 
 .top-contents-container {
-  background-color: black;
+  background-color: var(--background-color);
   margin-left: 5px;
   margin-right: 5px;
 }
-
 
 // ログイン画面
 * {
