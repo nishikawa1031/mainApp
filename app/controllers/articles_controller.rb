@@ -58,7 +58,7 @@ class ArticlesController < ApplicationController
   # POST /articles
   def create
     @article = current_user.articles.build(article_params)
-    
+
     # 新しいpersonが作成される場合、そのpersonのcreater_idを設定する
     @article.people.each { |person| person.creater_id ||= current_user.id }
 
