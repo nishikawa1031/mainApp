@@ -34,4 +34,4 @@ prod_migrate:
 prod_reset:
 	heroku pg:reset DATABASE_URL --confirm main-app-1209 --app main-app-1209
 	heroku run rails db:migrate --app main-app-1209
-	heroku run rails db:seed --app main-app-1209
+# heroku run rails db:seed --app main-app-1209
