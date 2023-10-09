@@ -10,9 +10,8 @@ Rails.application.routes.draw do
     resource :bookmarks, only: %i[create destroy]
     resource :likes, only: %i[create destroy]
   end
-
-  post '/google_login_api/callback', to: 'google_login_api#callback'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # https://github.com/omniauth/omniauth#integrating-omniauth-into-your-application
+  post '/auth/:provider/callback', to: 'sessions#create'
 
   resources :subjects, only: %i[show] do
     resources :years, only: %i[show] do
