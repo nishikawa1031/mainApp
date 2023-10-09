@@ -1,4 +1,4 @@
-<div class="row align-items-end top-contents-container">
+<div class="row top-contents-container">
   <p style="color: green"><%= notice %></p>
   <div class="col-sm-10">
     <%= week_calendar(events: @articles, number_of_weeks: 4) do |date, articles| %>
@@ -19,11 +19,12 @@
     <% end %>
   </div>
   <div class="col-sm-2 mb-3">
-    <%
-=begin%>
- <%= render "form", article: Article.new %> 
-<%
-=end%>
+    <% if current_user %>
+      <%= link_to "ログアウト", log_out_path %>
+    <% else  %>
+      ゲストさん
+      <%= button_to "Googleでログイン", "/auth/google_oauth2", method: :post, data: { turbo: false } %>
+    <% end %>
   </div>
 </div>
 

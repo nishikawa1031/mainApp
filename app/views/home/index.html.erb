@@ -1,2 +1,8 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+<% if current_user %>
+    <%= link_to "ログアウト", log_out_path %>
+<% else  %>
+    ゲストさん
+    <%= button_to "Googleでログイン", "/auth/google_oauth2", method: :post, data: { turbo: false } %>
+<% end %>

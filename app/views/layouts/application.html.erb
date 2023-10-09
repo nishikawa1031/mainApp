@@ -15,15 +15,6 @@
   </head>
 
   <body>
-    <header>
-      <% if current_user %>
-        <%= link_to "ログアウト", log_out_path %>
-      <% else  %>
-        ゲストさん
-        <%= button_to "Googleでログイン", "/auth/google_oauth2", method: :post, data: { turbo: false } %>
-      <% end %>
-    </header>
-
     <div class="container-fluid text-center main-container">
       <%= yield %>
     </div>
