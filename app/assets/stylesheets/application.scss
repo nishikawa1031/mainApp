@@ -79,8 +79,9 @@ html, body {
   font-size: 12px;
   font-family: Arial, sans-serif;
   color: #333;
-  background-color: #fff;
+  background-color: var(--background-color);
 }
+
 .day {
   padding: 5px;
   border: 1px solid #ccc;
