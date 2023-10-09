@@ -6,8 +6,18 @@
   --background-color: black;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  overflow-x: hidden;  // 横スクロールを防ぐ場合
+}
+
 .main-container {
   background-color: var(--background-color);
+  height: auto;
+  position: relative;
   min-height: 95vh;
 }
 
