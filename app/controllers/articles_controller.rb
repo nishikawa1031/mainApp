@@ -59,6 +59,12 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user_id = current_user.id
+
+    # フォームを通して新しいpersonが作成される場合、そのpersonのcreater_idを設定する
+    @article.people.each do |person|
+      person.creater_id = current_user.id
+    end
+
     if @article.save
       redirect_to @article, notice: 'Article was successfully created.'
     else
