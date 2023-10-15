@@ -3,7 +3,7 @@
 @import "simple_calendar";
 
 :root {
-  --background-color: black;
+  --background-color: white;
 }
 
 html, body {
@@ -141,4 +141,17 @@ html, body {
 // 新規作成画面
 .create-new {
   min-height: 100%;
+}
+
+// card
+.card {
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+
+// footer
+.footer-container {
+  text-align: center;
+  color: black;
+  position: relative;
+  min-height: 5vh;
 }
