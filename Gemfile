@@ -62,6 +62,10 @@ gem 'jquery-rails'
 
 gem 'impressionist' # PVカウント
 
+gem 'rack-cors'
+
+gem 'graphql'
+
 group :development, :test do
   gem 'pry-nav'
   gem 'pry-rails'
@@ -78,6 +82,8 @@ group :development do
   gem 'rails-erd'
   gem 'rubocop', require: false
   gem 'web-console'
+
+  gem 'graphiql-rails'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

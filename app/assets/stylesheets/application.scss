@@ -82,6 +82,11 @@ html, body {
   background-color: var(--background-color);
 }
 
+.table .table-striped {
+  background-color: var(--background-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .day {
   padding: 5px;
   border: 1px solid #ccc;
@@ -146,6 +151,24 @@ html, body {
 // card
 .card {
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+}
+
+// a {
+//   color: black;
+//   transform: translateY(-5px);
+//   transition: transform 0.3s ease;
+//   text-decoration: none;
+// }
+a {
+  text-decoration: none;
+  color: black; /* リンクのデフォルトのテキスト色（例: 青色） */
+  transition: color 0.3s; /* カラー変化のアニメーション */
+  cursor: pointer; /* カーソルをポインターに変更 */
+}
+
+a:hover {
+  color: #0056b3; /* リンクのホバー時のテキスト色（例: より濃い青色） */
+  transform: translateY(-2px); /* リンクを少し上に移動（押すような効果） */
 }
 
 // footer
