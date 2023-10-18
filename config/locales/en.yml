@@ -39,8 +39,8 @@ en:
               blank: "を入力してください"
   article:
   simple_calendar:
-    previous: "<<"
-    next: ">>"
+    previous: "<"
+    next: ">"
     week: Week
   date:
     formats:

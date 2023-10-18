@@ -82,6 +82,22 @@ html, body {
   background-color: var(--background-color);
 }
 
+.calendar-title {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  color: black; /* Text color for the title */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-title a {
+  color: black; /* Text color for the links within the title */
+  text-decoration: none;
+  margin: 0 10px; /* Add spacing between the links */
+}
+
 .day {
   padding: 5px;
   border: 1px solid #ccc;
