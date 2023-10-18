@@ -4,6 +4,7 @@
 
 :root {
   --background-color: white;
+  --calendar-title-color: black;
 }
 
 html, body {
@@ -86,14 +87,14 @@ html, body {
   text-align: center;
   font-weight: bold;
   border-bottom: 1px solid #ccc;
-  color: black; /* Text color for the title */
+  color: var(--calendar-title-color); /* Text color for the title */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .calendar-title a {
-  color: black; /* Text color for the links within the title */
+  color: var(--calendar-title-color); /* Text color for the links within the title */
   text-decoration: none;
   margin: 0 10px; /* Add spacing between the links */
 }
