@@ -1,6 +1,6 @@
 <div class="row top-contents-container">
   <p style="color: green"><%= notice %></p>
-  <div class="col-sm-10 mx-auto"> <!-- Add mx-auto to center-align the col-sm-10 div -->
+  <div class="col-sm-10 mx-auto calendar-container mb-3"> <!-- Add mx-auto to center-align the col-sm-10 div -->
     <%= month_calendar(events: @articles) do |date, articles| %>
       <div class="day">
         <%= date.day %>
