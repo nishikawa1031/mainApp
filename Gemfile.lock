@@ -125,6 +125,11 @@ GEM
       sassc (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    graphiql-rails (1.9.0)
+      railties
+      sprockets-rails
+    graphql (2.1.3)
+      racc (~> 1.4)
     hashie (5.0.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -230,6 +235,8 @@ GEM
       nio4r (~> 2.0)
     racc (1.7.1)
     rack (2.2.8)
+    rack-cors (2.0.1)
+      rack (>= 2.0.0)
     rack-protection (3.1.0)
       rack (~> 2.2, >= 2.2.4)
     rack-test (2.1.0)
@@ -372,6 +379,8 @@ DEPENDENCIES
   dotenv-rails
   factory_bot_rails
   font-awesome-sass
+  graphiql-rails
+  graphql
   importmap-rails
   impressionist
   jquery-rails
@@ -383,6 +392,7 @@ DEPENDENCIES
   pry-nav
   pry-rails
   puma (~> 5.0)
+  rack-cors
   railroady
   rails (~> 7.0.4)
   rails-erd
