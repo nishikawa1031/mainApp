@@ -7,5 +7,9 @@ module Types
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :articles, [ArticleType], null: false # 追加
+
+    def articles
+      Loaders::AssociationLoader.for(User, :articles).load(object)
+    end
   end
 end
