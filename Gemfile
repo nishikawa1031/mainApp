@@ -65,6 +65,7 @@ gem 'impressionist' # PVカウント
 gem 'rack-cors'
 
 gem 'graphql'
+gem 'graphql-batch'
 
 group :development, :test do
   gem 'pry-nav'
