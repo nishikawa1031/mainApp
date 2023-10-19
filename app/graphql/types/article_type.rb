@@ -11,5 +11,11 @@ module Types
     field :file, String
     field :start_time, GraphQL::Types::ISO8601DateTime
     field :end_time, GraphQL::Types::ISO8601DateTime
+
+    field :user, UserType, null: false
+    def user
+      Loaders::RecordLoader.for(User).load(object.user_id)
+    end
+   
   end
 end
