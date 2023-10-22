@@ -36,5 +36,13 @@ module MyProj
                        routing_specs: false,      # routing specは作らない
                        request_specs: false
     end
+
+    # CORS設定
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'http://localhost:3000' # フロントエンドのオリジン
+        resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      end
+    end
   end
 end
