@@ -63,6 +63,9 @@ development:
 test:
   <<: *default
   database: my_proj_test
+  host: localhost
+  password:
+  username:
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
