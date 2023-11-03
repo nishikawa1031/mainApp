@@ -25,7 +25,7 @@ class Auth0Client
                })
   end
 
-  def self.get_jwks
+  def self.get_jwks # rubocop:disable Naming/AccessorMethodName
     jwks_uri = URI("#{domain_url}.well-known/jwks.json")
     Net::HTTP.get_response jwks_uri
   end
