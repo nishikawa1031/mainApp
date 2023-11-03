@@ -11,7 +11,7 @@ users = users_data.map do |user_data|
 end
 
 # Categories
-categories_data = ['面会', '戦略', '外交']
+categories_data = %w[面会 戦略 外交]
 categories = categories_data.map do |category_name|
   Category.find_or_create_by!(name: category_name)
 end
@@ -71,7 +71,7 @@ diary_entries_data.each do |entry_data|
     article.categories << category unless article.categories.include?(category)
   end
 
-  PersonArticle.find_or_create_by!(article: article, person: entry_data[:person])
+  PersonArticle.find_or_create_by!(article:, person: entry_data[:person])
 end
 
 puts 'Seeds populated successfully!'

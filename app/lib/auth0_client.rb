@@ -5,7 +5,6 @@ require 'net/http'
 
 # https://developer.auth0.com/resources/guides/api/rails/basic-authorization#validate-a-json-web-token-jwt-in-rails
 class Auth0Client
-
   # Auth0 Client Objects
   Error = Struct.new(:message, :status)
   Response = Struct.new(:decoded_token, :error)
@@ -45,7 +44,7 @@ class Auth0Client
     decoded_token = decode_token(token, jwks_hash)
 
     Response.new(decoded_token, nil)
-  rescue JWT::VerificationError, JWT::DecodeError => e
+  rescue JWT::VerificationError, JWT::DecodeError
     error = Error.new('Bad credentials', :unauthorized)
     Response.new(nil, error)
   end
