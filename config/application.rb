@@ -48,5 +48,7 @@ module MyProj
         resource '*', headers: :any, methods: %i[get post put patch delete options head]
       end
     end
+
+    config.auth0 = config_for(:auth0)
   end
 end

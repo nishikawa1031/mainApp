@@ -147,6 +147,7 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (2.6.3)
+    jwt (2.7.1)
     kaminari (1.2.2)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.2)
@@ -355,6 +356,7 @@ DEPENDENCIES
   importmap-rails
   impressionist
   jquery-rails
+  jwt
   kaminari
   mini_magick
   pg

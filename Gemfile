@@ -60,6 +60,7 @@ gem 'jquery-rails'
 
 gem 'impressionist' # PVカウント
 
+gem 'jwt'
 gem 'rack-cors'
 
 gem 'graphql'
