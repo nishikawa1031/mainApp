@@ -40,7 +40,11 @@ module MyProj
     # CORS設定
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'http://localhost:3000' # フロントエンドのオリジン
+        if Rails.env.development?
+          origins 'http://localhost:3000'
+        else
+          origins 'https://frontend-theta-umber.vercel.app'
+        end
         resource '*', headers: :any, methods: %i[get post put patch delete options head]
       end
     end
