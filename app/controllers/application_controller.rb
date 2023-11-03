@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  helper_method :current_user  # これにより、ビューでもcurrent_userを使用できるようになります
+  helper_method :current_user # これにより、ビューでもcurrent_userを使用できるようになります
   include ApplicationHelper
   # before_action :check_logged_in
 

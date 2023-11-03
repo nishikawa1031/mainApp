@@ -78,11 +78,11 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'annotate'
+  gem 'graphiql-rails'
   gem 'railroady'
   gem 'rails-erd'
   gem 'rubocop', require: false
   gem 'web-console'
-  gem 'graphiql-rails'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
