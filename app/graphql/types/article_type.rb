@@ -11,10 +11,15 @@ module Types
     field :file, String
     field :start_time, GraphQL::Types::ISO8601DateTime
     field :end_time, GraphQL::Types::ISO8601DateTime
+    field :categories, [Types::CategoryType], null: false
 
     field :user, UserType, null: false
     def user
       Loaders::RecordLoader.for(User).load(object.user_id)
+    end
+
+    def categories
+      object.category_articles.map(&:category)
     end
   end
 end
