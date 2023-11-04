@@ -22,7 +22,7 @@ class Article < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  has_many :category_articles
+  has_many :category_articles, dependent: :destroy
   has_many :categories, through: :category_articles
 
   is_impressionable counter_cache: true, unique: true
