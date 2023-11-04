@@ -6,7 +6,7 @@ module Resolvers
     type [Types::ArticleType], null: false
 
     def resolve
-      Article.all
+      Article.order(start_time: :desc)
     end
   end
 end
