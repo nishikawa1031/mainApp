@@ -66,6 +66,8 @@ gem 'rack-cors'
 gem 'graphql'
 gem 'graphql-batch'
 
+gem 'ruby-openai'
+
 group :development, :test do
   gem 'pry-nav'
   gem 'pry-rails'
