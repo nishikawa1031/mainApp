@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LDocs</title>
+    <title>Matches</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= favicon_link_tag('favicon.png') %>
     <%= csrf_meta_tags %>
@@ -14,8 +14,10 @@
     <% end %>
   </head>
 
-  <body>
+  <body class="pastel-blue-gradient">
+    <div class="container main-container">
     <header>
+      <p>Matches</p>
       <% if current_user %>
         <%= link_to "ログアウト", log_out_path %>
       <% else  %>
@@ -24,7 +26,6 @@
       <% end %>
     </header>
 
-    <div class="container-fluid text-center main-container">
       <%= yield %>
     </div>
     <%= render "layouts/footer" %>
