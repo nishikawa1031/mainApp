@@ -16,15 +16,22 @@
 
   <body class="pastel-blue-gradient">
     <div class="container main-container">
-    <header>
-      <p>Matches</p>
-      <% if current_user %>
-        <%= link_to "ログアウト", log_out_path %>
-      <% else  %>
-        ゲストさん
-        <%= button_to "Googleでログイン", "/auth/google_oauth2", method: :post, data: { turbo: false } %>
-      <% end %>
-      <%= link_to '採用企業様はこちら', root_path, style: "color: blue; text-decoration: none;" %>
+    <header style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
+      <h1 style="margin: 0;">Matches</h1>
+
+      <div style="display: flex;">
+        <%= link_to '採用企業様はこちら', root_path, style: "color: blue; text-decoration: none; padding: 10px;" %>
+        <% if current_user %>
+          <div>
+            <%= link_to "ログアウト", log_out_path, style: "color: blue; text-decoration: none; padding: 10px;" %>
+          </div>
+        <% else %>
+          <div style="display: flex;">
+            <span style="padding: 10px;">ゲストさん</span>
+            <%= button_to "Googleでログイン", "/auth/google_oauth2", method: :post, data: { turbo: false }, style: "padding: 10px;" %>
+          </div>
+        <% end %>
+      </div>
     </header>
 
       <%= yield %>
