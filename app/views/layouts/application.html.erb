@@ -24,6 +24,7 @@
         ゲストさん
         <%= button_to "Googleでログイン", "/auth/google_oauth2", method: :post, data: { turbo: false } %>
       <% end %>
+      <%= link_to '採用企業様はこちら', root_path, style: "color: blue; text-decoration: none;" %>
     </header>
 
       <%= yield %>
