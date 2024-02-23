@@ -46,6 +46,27 @@ html, body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* 影を強調 */
 }
 
+/* リンクの基本スタイル */
+.link-modern {
+  background-color: #4285F4; /* 背景色 */
+  color: white; /* テキスト色 */
+  padding: 10px 15px; /* パディング */
+  margin-right: 5px; /* 右マージン */
+  text-decoration: none; /* テキストの下線を削除 */
+  border-radius: 5px; /* ボーダーの丸み */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* 背景色、変形、影のトランジション効果 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 通常時の影 */
+}
+
+/* ホバー時のスタイル */
+.link-modern:hover {
+  background-color: #34A853; /* ホバー時の背景色 */
+  transform: translateY(-2px); /* 少し持ち上げる効果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ホバー時の強調された影 */
+}
+
+
+
 
 // ログイン画面
 * {
