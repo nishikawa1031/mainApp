@@ -9,12 +9,13 @@
   <%= link_to '希望年収', root_path, class: "link-modern" %>
 </div>
 
-<div style="margin-bottom: 20px;">
+<div class="form-modern">
   <%= form_with url: root_path, local: true do |form| %>
-    <%= form.search_field :query, style: "padding: 5px;" %>
-    <%= form.submit "Search", style: "padding: 5px 15px;" %>
+    <%= form.search_field :query, style: "padding: 10px; font-size: 16px; border: 2px solid #ccc; border-radius: 20px 0 0 20px; outline: none;" %>
+    <%= form.submit "Search", style: "padding: 10px 15px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 0 20px 20px 0; cursor: pointer;" %>
   <% end %>
 </div>
+
 
 <div style="display: flex; justify-content: space-around;">
   <div class="card" style="border: 1px solid #ddd; padding: 15px; width: 200px; text-align: left;">

@@ -66,6 +66,46 @@ html, body {
 }
 
 
+/* 検索フォーム全体のスタイル */
+.form-modern {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* 検索フィールドのスタイル */
+.form-modern input[type="search"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc; /* 軽いグレーのボーダー */
+  border-radius: 20px 0 0 20px; /* 左側に丸みを持たせる */
+  outline: none; /* フォーカス時のアウトラインを削除 */
+  transition: border-color 0.3s; /* ボーダーカラーのトランジション効果 */
+}
+
+/* 検索フィールドフォーカス時のスタイル */
+.form-modern input[type="search"]:focus {
+  border-color: #4285F4; /* フォーカス時にボーダーカラーを変更 */
+}
+
+/* 送信ボタンのスタイル */
+.form-modern input[type="submit"] {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #4285F4; /* ボタンの背景色 */
+  color: white; /* テキスト色 */
+  border: none;
+  border-radius: 0 20px 20px 0; /* 右側に丸みを持たせる */
+  cursor: pointer; /* ホバー時のカーソル変更 */
+  transition: background-color 0.3s; /* 背景色のトランジション効果 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 通常時の影 */
+}
+
+/* 送信ボタンホバー時のスタイル */
+.form-modern input[type="submit"]:hover {
+  background-color: #34A853; /* ホバー時の背景色を変更 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* ホバー時の強調された影 */
+}
 
 
 // ログイン画面
