@@ -19,37 +19,45 @@
   </div>
 </div>
 
-
-
-<div style="display: flex; justify-content: space-around;">
-  <div class="card" style="border: 1px solid #ddd; padding: 15px; width: 200px; text-align: left;">
-    <h3 style="color: #333;">Home deposit</h3>
-    <p style="font-size: 1.5em; color: #333;">$64,240.60</p>
-  </div>
-  <!-- Repeat for each card -->
-</div>
-
 <div class="row">
-  <div class="col-sm-2 mb-3">
-    <%= render "people" %>
-  </div>
-  <div class="col-sm-4">
-    <div class="card article-card">
-      <div class="card-body">
-        <% @articles.each do |article| %>
-          <%= article.start_time&.strftime('%m月%d日') %>
-          <%= truncate(article.body, length: 20) %>
-          <br>
-        <% end %>
+  <% @articles.each do |article| %>
+    <div class="col-sm-4">
+      <div class="card article-card">
+
+        <img src="job-image1.jpg" class="card-img-top" alt="Job Image 1">
+        <div class="card-body">
+          <h5 class="card-title">フロントエンド開発者</h5>
+          <p class="card-text">株式会社テクノロジーズ</p>
+          <p class="card-text">東京都港区</p>
+          <p class="card-text">年収: 500万円 - 700万円</p>
+          <a href="#" class="btn btn-primary">応募する</a>
+        </div>
+
       </div>
     </div>
-  </div>
-  <div class="col-sm-6 mb-3">
-    <%= render "articles_list", articles: @articles %>
-    <% if Rails.env == "development" %>
-      <p>
-        debug用に記事数を表示:<%= @number_of_articles %>
-      </p>
-    <% end %>
-  </div>
+    <div class="col-sm-4">
+      <div class="card article-card">
+        <img src="job-image2.jpg" class="card-img-top" alt="Job Image 2">
+        <div class="card-body">
+          <h5 class="card-title">バックエンドエンジニア</h5>
+          <p class="card-text">グローバルITソリューション株式会社</p>
+          <p class="card-text">大阪府大阪市</p>
+          <p class="card-text">年収: 600万円 - 800万円</p>
+          <a href="#" class="btn btn-primary">応募する</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card article-card">
+        <img src="job-image3.jpg" class="card-img-top" alt="Job Image 3">
+        <div class="card-body">
+          <h5 class="card-title">プロジェクトマネージャー</h5>
+          <p class="card-text">イノベーションデザイン株式会社</p>
+          <p class="card-text">福岡県福岡市</p>
+          <p class="card-text">年収: 700万円 - 900万円</p>
+          <a href="#" class="btn btn-primary">応募する</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
