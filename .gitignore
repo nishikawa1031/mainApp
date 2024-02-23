@@ -36,3 +36,4 @@ storage
 .env
 
 /docs/.*
+/docs/db/*
