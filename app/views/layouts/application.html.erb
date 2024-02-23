@@ -27,8 +27,7 @@
             </div>
           <% else %>
             <div style="display: flex;">
-              <span style="padding: 10px;">ゲストさん</span>
-              <%= button_to "Googleでログイン", "/auth/google_oauth2", method: :post, data: { turbo: false }, style: "padding: 10px;" %>
+              <%= button_to "Sign in", "/auth/google_oauth2", method: :post, data: { turbo: false }, class: "button-modern" %>
             </div>
           <% end %>
         </div>
