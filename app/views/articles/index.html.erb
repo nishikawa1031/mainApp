@@ -1,20 +1,24 @@
 <div style="display: flex; align-items: center; padding: 2px; text-align: center;">
   <h1 style="flex: 1; font-size: 6em; text-align: right; margin-bottom: 0; font-weight: bold;">Find your job <br>in Japan</h1>
-  <img src="<%= asset_path('World-10.png') %>" alt="Matches Logo" style="flex: 1; width: auto; max-width: 100%;"> <!-- This will scale the image to fit the flex item -->
+  <img src="<%= asset_path('World-10.png') %>" alt="Matches Logo" style="flex: 1; width: auto; max-width: 100%;">
 </div>
 
-<div style="display: flex; align-items: right; margin-bottom: 20px;">
-  <%= link_to '業界', root_path, class: "link-modern" %>
-  <%= link_to '地域', root_path, class: "link-modern" %>
-  <%= link_to '希望年収', root_path, class: "link-modern" %>
+<!-- ボタンを中央寄せで配置するためのdiv -->
+<div style="display: flex; justify-content: center; margin-bottom: 20px;">
+  <div>
+    <%= link_to '業界', root_path, class: "link-modern" %>
+    <%= link_to '地域', root_path, class: "link-modern" %>
+    <%= link_to '希望年収', root_path, class: "link-modern" %>
+  </div>
+
+  <div class="form-modern">
+    <%= form_with url: root_path, local: true do |form| %>
+      <%= form.search_field :query, style: "padding: 10px; font-size: 16px; border: 2px solid #ccc; border-radius: 20px 0 0 20px; outline: none;" %>
+      <%= form.submit "Search", style: "padding: 10px 15px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 0 20px 20px 0; cursor: pointer;" %>
+    <% end %>
+  </div>
 </div>
 
-<div class="form-modern">
-  <%= form_with url: root_path, local: true do |form| %>
-    <%= form.search_field :query, style: "padding: 10px; font-size: 16px; border: 2px solid #ccc; border-radius: 20px 0 0 20px; outline: none;" %>
-    <%= form.submit "Search", style: "padding: 10px 15px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 0 20px 20px 0; cursor: pointer;" %>
-  <% end %>
-</div>
 
 
 <div style="display: flex; justify-content: space-around;">
