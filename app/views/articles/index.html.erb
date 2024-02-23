@@ -1,23 +1,33 @@
-<div class="row top-contents-container">
-  <p style="color: green"><%= notice %></p>
-  <div class="col-sm-10 mx-auto calendar-container mb-3 pt-1"> <!-- Add mx-auto to center-align the col-sm-10 div -->
-    <%= month_calendar(events: @articles) do |date, articles| %>
-      <div class="day">
-        <%= date.day %>
-        <% articles.each do |article| %>
-          <div class="card-header">
-            <h6 class="card-title">
-              <% if article.people.any? %>
-                <%= link_to "#{article.people.first.name}#{'...' if article.people.count > 1}", (@user ? article : "#") %>
-              <% else %>
-                <%= link_to truncate(article.body, length: 10), (@user ? article : "#") %>
-              <% end %>
-            </h6>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+<div style="display: flex; align-items: center; padding: 2px; text-align: center;">
+  <h1 style="flex: 1; font-size: 6em; text-align: right; margin-bottom: 0; font-weight: bold;">Find your job <br>in Japan</h1>
+  <img src="<%= asset_path('World-10.png') %>" alt="Matches Logo" style="flex: 1; width: auto; max-width: 100%;"> <!-- This will scale the image to fit the flex item -->
+</div>
+
+<div style="margin-bottom: 20px;">
+  <%= link_to '業界', root_path, style: "background-color: blue; color: white; padding: 10px 15px; margin-right: 5px; text-decoration: none;" %>
+  <%= link_to 'Area', root_path, style: "background-color: blue; color: white; padding: 10px 15px; margin-right: 5px; text-decoration: none;" %>
+  <%= link_to '希望年収', root_path, style: "background-color: blue; color: white; padding: 10px 15px; margin-right: 5px; text-decoration: none;" %>
+  <%= form_with url: root_path, local: true do |form| %>
+    <%= form.search_field :query, style: "padding: 5px;" %>
+    <%= form.submit "Search", style: "padding: 5px 15px;" %>
+  <% end %>
+</div>
+
+<div style="margin-bottom: 20px;">
+  <h2 style="margin-bottom: 5px;">Active users right now</h2>
+  <%
+=begin%>
+ <%= image_tag('world_map.png', alt: 'World Map', style: "width: 100%; max-width: 600px;") %> 
+<%
+=end%>
+</div>
+
+<div style="display: flex; justify-content: space-around;">
+  <div class="card" style="border: 1px solid #ddd; padding: 15px; width: 200px; text-align: left;">
+    <h3 style="color: #333;">Home deposit</h3>
+    <p style="font-size: 1.5em; color: #333;">$64,240.60</p>
   </div>
+  <!-- Repeat for each card -->
 </div>
 
 <div class="row">
