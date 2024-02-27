@@ -58,6 +58,8 @@ gem 'font-awesome-sass'
 gem 'jquery-rails'
 
 gem 'impressionist' # PVカウント
+gem 'omniauth-auth0', '~> 3.0'
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
 gem 'rack-cors'
 gem 'rails_admin'

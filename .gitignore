@@ -38,3 +38,5 @@ storage
 /docs/.*
 /docs/db/*
 /docs/ideas/*
+
+/config/auth0.yml
