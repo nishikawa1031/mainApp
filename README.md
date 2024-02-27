@@ -11,3 +11,6 @@
 docker-compose build
 docker-compose up
 docker-compose run web rails db:seed
+
+## dashboard
+https://manage.auth0.com/dashboard/jp/dev-kg26mhb8w8f3va47/applications/hgwPE8X64zNuE6ohT8yLYftVuQkYyr7s/settings
