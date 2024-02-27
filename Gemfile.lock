@@ -381,6 +381,7 @@ DEPENDENCIES
   rails_admin
   rspec-rails
   rubocop
+  sassc-rails
   simple_calendar
   sprockets-rails
   stimulus-rails

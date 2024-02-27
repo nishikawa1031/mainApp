@@ -41,9 +41,6 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
-# Use Sass to process CSS
-# gem "sassc-rails"
-
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -52,6 +49,7 @@ gem 'carrierwave' # 画像アップロード
 gem 'dotenv-rails' # 環境変数
 gem 'kaminari'
 gem 'mini_magick'
+gem 'sassc-rails'
 gem 'simple_calendar' # https://github.com/excid3/simple_calendar
 
 # 参考　https://kitsune.blog/rails-bootstrap
