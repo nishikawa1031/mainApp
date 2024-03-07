@@ -21,7 +21,7 @@
 
         <div style="display: flex;">
           <%= link_to '採用企業様はこちら', root_path, style: "color: blue; text-decoration: none; padding: 10px;" %>
-          <%= "current_user: #{current_user}" =%>
+          <%= "current_user: #{current_user.id}" =%>
           <% if current_user %>
             <div>
               <%= button_to 'Logout', 'auth/logout', method: :get, data: { turbo: false }, style: "color: blue; text-decoration: none; padding: 10px;" %>
