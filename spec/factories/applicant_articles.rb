@@ -11,7 +11,7 @@
 #  updated_at :datetime         not null
 #
 FactoryBot.define do
-  factory :person_article do
+  factory :applicant_article do
     person { nil }
     article { nil }
   end
