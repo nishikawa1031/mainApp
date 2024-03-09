@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_09_203745) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_09_204206) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,12 +43,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_09_203745) do
   end
 
   create_table "applicant_articles", force: :cascade do |t|
-    t.bigint "person_id", null: false
+    t.bigint "applicant_id", null: false
     t.bigint "article_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["applicant_id"], name: "index_applicant_articles_on_applicant_id"
     t.index ["article_id"], name: "index_applicant_articles_on_article_id"
-    t.index ["person_id"], name: "index_applicant_articles_on_person_id"
   end
 
   create_table "applicants", force: :cascade do |t|
@@ -140,7 +140,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_09_203745) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "applicant_articles", "applicants", column: "person_id"
+  add_foreign_key "applicant_articles", "applicants"
   add_foreign_key "applicant_articles", "articles", on_delete: :cascade
   add_foreign_key "articles", "users"
   add_foreign_key "bookmarks", "articles"
