@@ -28,3 +28,8 @@ https://manage.auth0.com/dashboard/jp/dev-kg26mhb8w8f3va47/applications/hgwPE8X6
 
 ## heroku
 https://dashboard.heroku.com/apps
+
+## site
+https://main-app-1209-466d97d1a50c.herokuapp.com/
+
+https://main-app-1209-466d97d1a50c.herokuapp.com/admin
