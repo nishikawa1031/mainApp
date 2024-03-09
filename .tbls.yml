@@ -38,37 +38,37 @@ comments:
       variation_digest: バリアントのダイジェスト
   -
     table: articles
-    tableComment: 日記のエントリテーブル
+    tableComment: 求人記事のエントリテーブル
     columnComments:
-      body: 日記の内容
-      user_id: 記事を作成したユーザーのID
+      body: 求人記事の内容
+      user_id: 求人記事を作成したユーザーのID
       created_at: 作成日時
       updated_at: 更新日時
       impressions_count: インプレッションのカウント
       file: 添付ファイルへのパス
-      start_time: 記事の開始時刻
-      end_time: 記事の終了時刻
+      start_time: 求人記事の開始時刻
+      end_time: 求人記事の終了時刻
   -
     table: bookmarks
-    tableComment: ユーザーがブックマークした記事のテーブル
+    tableComment: ユーザーがブックマークした求人記事のテーブル
     columnComments:
       user_id: ブックマークしたユーザーのID
-      article_id: ブックマークされた記事のID
+      article_id: ブックマークされた求人記事のID
       created_at: 作成日時
       updated_at: 更新日時
   -
     table: categories
-    tableComment: 記事のカテゴリテーブル
+    tableComment: 求人記事のカテゴリテーブル
     columnComments:
       name: カテゴリ名
       created_at: 作成日時
       updated_at: 更新日時
   -
     table: category_articles
-    tableComment: 記事とカテゴリの中間テーブル
+    tableComment: 求人記事とカテゴリの中間テーブル
     columnComments:
       category_id: カテゴリのID
-      article_id: 記事のID
+      article_id: 求人記事のID
       created_at: 作成日時
       updated_at: 更新日時
   -
@@ -91,27 +91,27 @@ comments:
       updated_at: 更新日時
   -
     table: likes
-    tableComment: ユーザーがいいねした記事のテーブル
+    tableComment: ユーザーがいいねした求人記事のテーブル
     columnComments:
       user_id: いいねしたユーザーのID
-      article_id: いいねされた記事のID
+      article_id: いいねされた求人記事のID
       created_at: 作成日時
       updated_at: 更新日時
   -
-    table: people
-    tableComment: 日記に登場する人物情報テーブル
+    table: applicants
+    tableComment: 求職者テーブル
     columnComments:
-      name: 人物の名前
-      user_id: この人物がアプリのユーザーである場合のID
+      name: 求職者の名前
+      user_id: この求職者がアプリのユーザーである場合のID
       created_at: 作成日時
       updated_at: 更新日時
-      creater_id: この人物を作成したユーザーのID
+      creater_id: この求職者を作成したユーザーのID
   -
-    table: person_articles
-    tableComment: 人物と記事の関連付けテーブル
+    table: applicant_articles
+    tableComment: 求職者と求人記事の関連付けテーブル
     columnComments:
-      person_id: 人物のID
-      article_id: 記事のID
+      applicant_id: 求職者のID
+      article_id: 求人記事のID
       created_at: 作成日時
       updated_at: 更新日時
   -
@@ -119,10 +119,5 @@ comments:
     tableComment: アプリケーションのユーザー情報テーブル
     columnComments:
       email: メールアドレス
-      encrypted_password: 暗号化されたパスワード
-      reset_password_token: パスワードリセットトークン
-      reset_password_sent_at: パスワードリセットの送信日時
-      remember_created_at: ログイン情報を記憶するためのタイムスタンプ
       created_at: 作成日時
       updated_at: 更新日時
-      avatar: アバター画像へのパス
