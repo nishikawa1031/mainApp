@@ -8,9 +8,11 @@
   username: postgres
 ```
 2. setup docker
+```
 docker-compose build
 docker-compose up
 docker-compose run web rails db:seed
+```
 
 ## tips
 [Makefile](/Makefile)
