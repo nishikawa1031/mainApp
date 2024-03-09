@@ -16,7 +16,9 @@ docker-compose run web rails db:seed
 [Makefile](/Makefile)
 
 ## documents
-[doc](/doc/)
+## DB
+[doc](/doc/schema/README.md)
+
 
 # dashboard
 ## auth0
