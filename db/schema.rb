@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_02_27_152753) do
+ActiveRecord::Schema[7.0].define(version: 2024_03_09_203528) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,6 +40,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_27_152753) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "applicants", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "creater_id", null: false
   end
 
   create_table "articles", force: :cascade do |t|
@@ -113,14 +121,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_27_152753) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
-  create_table "people", force: :cascade do |t|
-    t.string "name", null: false
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "creater_id", null: false
-  end
-
   create_table "person_articles", force: :cascade do |t|
     t.bigint "person_id", null: false
     t.bigint "article_id", null: false
@@ -147,6 +147,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_02_27_152753) do
   add_foreign_key "category_articles", "categories"
   add_foreign_key "likes", "articles"
   add_foreign_key "likes", "users"
+  add_foreign_key "person_articles", "applicants", column: "person_id"
   add_foreign_key "person_articles", "articles", on_delete: :cascade
-  add_foreign_key "person_articles", "people"
 end
