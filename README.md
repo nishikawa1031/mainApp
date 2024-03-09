@@ -18,6 +18,9 @@ docker-compose run web rails db:seed
 ## documents
 ## DB
 [doc](/doc/schema/README.md)
+[ER図](/erd.pdf)
+[controller](doc/controllers_complete.svg)
+[model](doc/models_complete.svg)
 
 
 # dashboard
