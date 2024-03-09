@@ -10,13 +10,9 @@
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('users_id_seq'::regclass) | false | [public.articles](public.articles.md) [public.bookmarks](public.bookmarks.md) [public.likes](public.likes.md) |  |  |
 | email | varchar | ''::character varying | false |  |  | メールアドレス |
-| encrypted_password | varchar | ''::character varying | false |  |  | 暗号化されたパスワード |
-| reset_password_token | varchar |  | true |  |  | パスワードリセットトークン |
-| reset_password_sent_at | timestamp(6) without time zone |  | true |  |  | パスワードリセットの送信日時 |
-| remember_created_at | timestamp(6) without time zone |  | true |  |  | ログイン情報を記憶するためのタイムスタンプ |
 | created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
 | updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
-| avatar | varchar |  | true |  |  | アバター画像へのパス |
+| role | integer | 0 | false |  |  |  |
 
 ## Constraints
 
@@ -30,7 +26,6 @@
 | ---- | ---------- |
 | users_pkey | CREATE UNIQUE INDEX users_pkey ON public.users USING btree (id) |
 | index_users_on_email | CREATE UNIQUE INDEX index_users_on_email ON public.users USING btree (email) |
-| index_users_on_reset_password_token | CREATE UNIQUE INDEX index_users_on_reset_password_token ON public.users USING btree (reset_password_token) |
 
 ## Relations
 
