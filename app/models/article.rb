@@ -17,7 +17,7 @@
 class Article < ApplicationRecord
   belongs_to :user
   has_many :applicant_articles
-  has_many :people, through: :applicant_articles
+  has_many :applicant, through: :applicant_articles
 
   has_many :bookmarks, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -25,7 +25,7 @@ class Article < ApplicationRecord
   is_impressionable counter_cache: true, unique: true
   has_one_attached :file
 
-  accepts_nested_attributes_for :people, reject_if: :all_blank, allow_destroy: true
+  accepts_nested_attributes_for :applicant, reject_if: :all_blank, allow_destroy: true
 
   def liked_by?(user)
     likes.where(user_id: user).exists?

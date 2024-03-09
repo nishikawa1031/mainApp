@@ -10,7 +10,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-class PersonArticle < ApplicationRecord
-  belongs_to :person
+class ApplicantArticle < ApplicationRecord
+  belongs_to :applicant
   belongs_to :article
 end

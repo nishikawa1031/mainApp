@@ -2,7 +2,7 @@
 
 # == Schema Information
 #
-# Table name: people
+# Table name: Applicants
 #
 #  id         :bigint           not null, primary key
 #  name       :string           not null
