@@ -11,7 +11,7 @@
 #  updated_at :datetime         not null
 #  creater_id :integer          not null
 #
-class Person < ApplicationRecord
-  has_many :person_articles
-  has_many :articles, through: :person_articles
+class Applicant < ApplicationRecord
+  has_many :applicant_articles
+  has_many :articles, through: :applicant_articles
 end

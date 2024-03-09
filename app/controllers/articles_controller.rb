@@ -21,7 +21,7 @@ class ArticlesController < ApplicationController
       # VirtualArticleに変換
       @articles = seed_data['articles'].map do |article_data|
         article = VirtualArticle.new(article_data)
-        related_people_hashes = seed_data['person_articles'].select { |pa| pa['article_id'] == article.id }.map { |pa| seed_data['people'].find { |p| p['id'] == pa['person_id'] } }
+        related_people_hashes = seed_data['applicant_articles'].select { |pa| pa['article_id'] == article.id }.map { |pa| seed_data['people'].find { |p| p['id'] == pa['person_id'] } }
 
         # VirtualPersonに変換
         related_people = related_people_hashes.map { |person_hash| VirtualPerson.new(person_hash) }

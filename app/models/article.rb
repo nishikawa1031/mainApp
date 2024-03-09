@@ -16,8 +16,8 @@
 #
 class Article < ApplicationRecord
   belongs_to :user
-  has_many :person_articles
-  has_many :people, through: :person_articles
+  has_many :applicant_articles
+  has_many :people, through: :applicant_articles
 
   has_many :bookmarks, dependent: :destroy
   has_many :likes, dependent: :destroy
