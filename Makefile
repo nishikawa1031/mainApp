@@ -3,7 +3,7 @@ up:
 	bundle exec rails s
 
 # #外部キーを明らかにし、他のカラムも表示する。
-doc:
+document:
 	bundle exec erd --attributes=foreign_keys,content
 	tbls doc --rm-dist
 	bin/rake diagram:all
