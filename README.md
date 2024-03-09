@@ -16,12 +16,11 @@ docker-compose run web rails db:seed
 [Makefile](/Makefile)
 
 ## documents
-## DB
-[doc](/doc/schema/README.md)
-[ER図](/erd.pdf)
-[controller](doc/controllers_complete.svg)
-[model](doc/models_complete.svg)
+[doc](/doc/)
 
+## DB
+* [tbls](/doc/schema/README.md)
+* [ER図](/erd.pdf)
 
 # dashboard
 ## auth0
