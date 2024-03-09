@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
       # サンプルデータをロード
       seed_data = JSON.parse(File.read(Rails.root.join('db', 'seed_data.json')))
 
-      @number_of_articles = @articles.size
+      @number_of_articles = @articles&.size
       @user = nil
     end
   end
@@ -44,8 +44,6 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.build(article_params)
 
-    # 新しいpersonが作成される場合、そのpersonのcreater_idを設定する
-    @article.people.each { |person| person.creater_id ||= current_user.id }
 
     if @article.save
       redirect_to @article, notice: 'Article was successfully created.'
