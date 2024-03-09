@@ -15,7 +15,7 @@ docker-compose run web rails db:seed
 ## tips
 [Makefile](/Makefile)
 
-## documents
+# Document
 [doc](/doc/)
 
 ## DB
