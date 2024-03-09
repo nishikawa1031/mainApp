@@ -12,5 +12,15 @@ docker-compose build
 docker-compose up
 docker-compose run web rails db:seed
 
-## dashboard
+## tips
+[Makefile](/Makefile)
+
+## documents
+[doc](/doc/)
+
+# dashboard
+## auth0
 https://manage.auth0.com/dashboard/jp/dev-kg26mhb8w8f3va47/applications/hgwPE8X64zNuE6ohT8yLYftVuQkYyr7s/settings
+
+## heroku
+
