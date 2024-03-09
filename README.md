@@ -1,13 +1,13 @@
 # setup
 ## docker
-- uncomment
+1. Uncomment
 ```
   # dockerを利用する際は、host,password,usernameを指定する必要がある
   host: db # docker-compose.ymlで定義したMySQLのコンテナ名
   password: password
   username: postgres
 ```
-
+2. setup docker
 docker-compose build
 docker-compose up
 docker-compose run web rails db:seed
@@ -27,4 +27,4 @@ docker-compose run web rails db:seed
 https://manage.auth0.com/dashboard/jp/dev-kg26mhb8w8f3va47/applications/hgwPE8X64zNuE6ohT8yLYftVuQkYyr7s/settings
 
 ## heroku
-
+https://dashboard.heroku.com/apps
