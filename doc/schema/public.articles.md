@@ -8,7 +8,7 @@
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
-| id | bigint | nextval('articles_id_seq'::regclass) | false | [public.applicant_articles](public.applicant_articles.md) [public.bookmarks](public.bookmarks.md) [public.category_articles](public.category_articles.md) [public.likes](public.likes.md) |  |  |
+| id | bigint | nextval('articles_id_seq'::regclass) | false | [public.category_articles](public.category_articles.md) [public.bookmarks](public.bookmarks.md) [public.likes](public.likes.md) [public.applicant_articles](public.applicant_articles.md) |  |  |
 | body | text |  | true |  |  | 求人記事の内容 |
 | user_id | bigint |  | false |  | [public.users](public.users.md) | 求人記事を作成したユーザーのID |
 | created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
@@ -17,13 +17,34 @@
 | file | varchar |  | true |  |  | 添付ファイルへのパス |
 | start_time | timestamp(6) without time zone |  | true |  |  | 求人記事の開始時刻 |
 | end_time | timestamp(6) without time zone |  | true |  |  | 求人記事の終了時刻 |
+| company_id | bigint |  | false |  | [public.companies](public.companies.md) |  |
+| title | varchar |  | true |  |  |  |
+| application_deadline | date |  | true |  |  |  |
+| salary_details | text |  | true |  |  |  |
+| work_location | varchar |  | true |  |  |  |
+| language_requirement | varchar |  | true |  |  |  |
+| japanese_level | varchar |  | true |  |  |  |
+| skills_required | text |  | true |  |  |  |
+| employment_type | varchar |  | true |  |  |  |
+| description | text |  | true |  |  |  |
+| work_hours | varchar |  | true |  |  |  |
+| trial_period | varchar |  | true |  |  |  |
+| days_off | varchar |  | true |  |  |  |
+| overtime | varchar |  | true |  |  |  |
+| transportation | varchar |  | true |  |  |  |
+| work_environment | varchar |  | true |  |  |  |
+| other_allowances | varchar |  | true |  |  |  |
+| insurance | varchar |  | true |  |  |  |
+| other_benefits | varchar |  | true |  |  |  |
+| status | integer |  | true |  |  |  |
 
 ## Constraints
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-| articles_pkey | PRIMARY KEY | PRIMARY KEY (id) |
 | fk_rails_3d31dad1cc | FOREIGN KEY | FOREIGN KEY (user_id) REFERENCES users(id) |
+| articles_pkey | PRIMARY KEY | PRIMARY KEY (id) |
+| fk_rails_9ae110b456 | FOREIGN KEY | FOREIGN KEY (company_id) REFERENCES companies(id) |
 
 ## Indexes
 
@@ -31,6 +52,7 @@
 | ---- | ---------- |
 | articles_pkey | CREATE UNIQUE INDEX articles_pkey ON public.articles USING btree (id) |
 | index_articles_on_user_id | CREATE INDEX index_articles_on_user_id ON public.articles USING btree (user_id) |
+| index_articles_on_company_id | CREATE INDEX index_articles_on_company_id ON public.articles USING btree (company_id) |
 
 ## Relations
 

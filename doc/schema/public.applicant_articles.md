@@ -18,9 +18,9 @@
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
+| fk_rails_d7ea8e7774 | FOREIGN KEY | FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE |
+| fk_rails_a9fa80467a | FOREIGN KEY | FOREIGN KEY (applicant_id) REFERENCES applicants(id) |
 | applicant_articles_pkey | PRIMARY KEY | PRIMARY KEY (id) |
-| fk_rails_0d1746e0af | FOREIGN KEY | FOREIGN KEY (applicant_id) REFERENCES applicants(id) |
-| fk_rails_a39e270f07 | FOREIGN KEY | FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE |
 
 ## Indexes
 
