@@ -8,7 +8,7 @@
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
-| id | bigint | nextval('articles_id_seq'::regclass) | false | [public.bookmarks](public.bookmarks.md) [public.category_articles](public.category_articles.md) [public.likes](public.likes.md) [public.applicant_articles](public.applicant_articles.md) |  |  |
+| id | bigint | nextval('articles_id_seq'::regclass) | false | [public.applicant_articles](public.applicant_articles.md) [public.bookmarks](public.bookmarks.md) [public.category_articles](public.category_articles.md) [public.likes](public.likes.md) |  |  |
 | body | text |  | true |  |  | 求人記事の内容 |
 | user_id | bigint |  | false |  | [public.users](public.users.md) | 求人記事を作成したユーザーのID |
 | created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |

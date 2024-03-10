@@ -18,17 +18,17 @@
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-| fk_rails_d7ea8e7774 | FOREIGN KEY | FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE |
-| fk_rails_a9fa80467a | FOREIGN KEY | FOREIGN KEY (applicant_id) REFERENCES applicants(id) |
 | applicant_articles_pkey | PRIMARY KEY | PRIMARY KEY (id) |
+| fk_rails_0d1746e0af | FOREIGN KEY | FOREIGN KEY (applicant_id) REFERENCES applicants(id) |
+| fk_rails_a39e270f07 | FOREIGN KEY | FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
 | applicant_articles_pkey | CREATE UNIQUE INDEX applicant_articles_pkey ON public.applicant_articles USING btree (id) |
-| index_applicant_articles_on_article_id | CREATE INDEX index_applicant_articles_on_article_id ON public.applicant_articles USING btree (article_id) |
 | index_applicant_articles_on_applicant_id | CREATE INDEX index_applicant_articles_on_applicant_id ON public.applicant_articles USING btree (applicant_id) |
+| index_applicant_articles_on_article_id | CREATE INDEX index_applicant_articles_on_article_id ON public.applicant_articles USING btree (article_id) |
 
 ## Relations
 
