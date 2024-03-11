@@ -1,7 +1,5 @@
 <header style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
-    <%= link_to root_path do %>
-        <h1 style="margin: 0; cursor: pointer;">Work in Japan</h1>
-    <% end %>
+    <%= link_to 'Work in Japan', root_path, class: "header-link" %>
 
     <div style="display: flex;">
         <%= link_to '採用企業様はこちら', applicants_path, style: "color: blue; text-decoration: none; padding: 10px;" %>
