@@ -20,87 +20,37 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-4 mb-4">
-    <div class="card article-card">
-      <img src="<%= asset_path('World-14.png') %>" class="card-img-top" alt="Job Image 1">
-      <div class="card-body">
-        <h5 class="card-title">介護職員</h5>
-        <p class="card-text"><strong>勤務地:</strong> 神奈川県横浜市</p>
-        <p class="card-text"><strong>給与詳細:</strong> 年収 350万円 - 500万円</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-8 mb-48">
-    <div class="card article-card">
-      <div class="card-body">
-        <h5 class="card-title">ケアマネージャー</h5>
-        <p class="card-text"><strong>必要言語スキル:</strong> 日本語（ネイティブレベル）</p>
-        <p class="card-text"><strong>必須スキル:</strong> 介護職員初任者研修（ヘルパー2級）以上、コミュニケーション能力</p>
-        <p class="card-text"><strong>雇用形態:</strong> 正社員、パート・アルバイト（選択可）</p>
-        <p class="card-text"><strong>勤務時間:</strong> シフト制（週5日、1日8時間から）</p>
-        <p class="card-text"><strong>福利厚生:</strong> 社会保険完備、交通費全額支給、資格取得支援制度あり</p>
-        <p class="card-text"><strong>その他:</strong> 未経験者歓迎、経験者優遇、年間休日110日</p>
-        <a href="#" class="btn btn-primary">応募する</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-sm-4 mb-4">
-    <div class="card article-card">
-      <img src="<%= asset_path('World-29.png') %>" class="card-img-top" alt="工場作業員の画像">
-      <div class="card-body">
-        <h5 class="card-title">工場作業員</h5>
-        <p class="card-text"><strong>勤務地:</strong> 愛知県名古屋市</p>
-        <p class="card-text"><strong>給与詳細:</strong> 年収 300万円 - 450万円</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-sm-8 mb-4">
-    <div class="card article-card">
-      <div class="card-body">
-        <h5 class="card-title">機械作業技術者</h5>
-        <p class="card-text"><strong>必要スキル:</strong> CNC旋盤操作、CAD図面の読解能力</p>
-        <p class="card-text"><strong>雇用形態:</strong> 正社員</p>
-        <p class="card-text"><strong>勤務時間:</strong> 8:00 - 17:00（週5日、土日休み）</p>
-        <p class="card-text"><strong>福利厚生:</strong> 社会保険完備、退職金制度あり、研修制度充実</p>
-        <p class="card-text"><strong>その他:</strong> 技術資格取得支援あり、経験者優遇</p>
-        <a href="#" class="btn btn-primary">応募する</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="row">
-    <div class="col-sm-4 mb-4">
-      <div class="card article-card">
-        <img src="<%= asset_path('World-17.png') %>" class="card-img-top" alt="ITエンジニアの画像">
-        <div class="card-body">
-          <h5 class="card-title">ITエンジニア</h5>
-          <p class="card-text"><strong>会社名:</strong> イノベーションITソリューションズ株式会社</p>
-          <p class="card-text"><strong>勤務地:</strong> 東京都渋谷区</p>
-          <p class="card-text"><strong>給与詳細:</strong> 年収 400万円 - 600万円</p>
+  <% @articles.each_slice(2) do |article_slice| %>
+    <% article_slice.each do |article| %>
+      <div class="col-sm-4 mb-4">
+        <div class="card article-card">
+          <% if article.file.attached? %>
+            <%= image_tag article.file.variant(resize_to_fill: [600, 400]), class: "card-img-top", alt: "Article Image" %>
+          <% else %>
+            <img src="<%= asset_path('World-14.png') %>" class="card-img-top" alt="Placeholder Image">
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title"><%= article.title %></h5>
+            <% if article.language_requirement.present? %>
+              <p class="card-text"><strong>必要言語スキル:</strong> <%= article.language_requirement %></p>
+            <% end %>
+            <% if article.skills_required.present? %>
+              <p class="card-text"><strong>必須スキル:</strong> <%= article.skills_required %></p>
+            <% end %>
+            <% if article.employment_type.present? %>
+              <p class="card-text"><strong>雇用形態:</strong> <%= article.employment_type %></p>
+            <% end %>
+            <% if article.work_hours.present? %>
+              <p class="card-text"><strong>勤務時間:</strong> <%= article.work_hours %></p>
+            <% end %>
+            <% if article.description.present? %>
+              <p class="card-text"><strong>詳細:</strong> <%= article.description %></p>
+            <% end %>
+            <a href="#" class="btn btn-primary">応募する</a>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="col-sm-8 mb-4">
-      <div class="card article-card">
-      <div class="card-body">
-        <h5 class="card-title">シニアITエンジニア</h5>
-        <p class="card-text"><strong>必要スキル:</strong> Java、Python、クラウドサービス（AWS/GCP/Azure）の経験</p>
-        <p class="card-text"><strong>雇用形態:</strong> 正社員</p>
-        <p class="card-text"><strong>勤務時間:</strong> 9:00 - 18:00（フレックスタイム制あり）</p>
-        <p class="card-text"><strong>福利厚生:</strong> 社会保険完備、交通費全額支給、リモートワーク可</p>
-        <p class="card-text"><strong>その他:</strong> 年間休日120日、技術書購入補助、研修制度充実</p>
-        <a href="#" class="btn btn-primary">応募する</a>
-      </div>
-    </div>
-    </div>
-  </div>
+    <% end %>
+  <% end %>
 </div>
-
 

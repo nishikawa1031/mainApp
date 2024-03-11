@@ -8,19 +8,9 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    if current_user
-      # ログインユーザーのデータを取得
-      @articles = Article.where(user_id: current_user.id).order('start_time DESC').page(params[:page]).per(5)
-      @people = Person.where(creater_id: current_user.id)
-      @number_of_articles = @articles.count
-      @user = current_user
-    else
-      # サンプルデータをロード
-      seed_data = JSON.parse(File.read(Rails.root.join('db', 'seed_data.json')))
-
-      @number_of_articles = @articles&.size
-      @user = nil
-    end
+    @articles = Article.all.order('start_time DESC').page(params[:page]).per(5)
+    @number_of_articles = @articles.count
+    @user = current_user
   end
 
   # GET /articles/1
