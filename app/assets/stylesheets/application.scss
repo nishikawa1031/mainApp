@@ -17,12 +17,20 @@ html, body {
   min-height: 95vh;
 }
 
-a.header-link {
+/* styles.css */
+.header-link {
   font-family: Arial, sans-serif;
+  font-size: 25px; /* フォントサイズを大きくする */
+  font-weight: bold; /* 太字にする */
   color: #333;
   margin: 0;
   cursor: pointer;
   text-decoration: none;
+  transition: color 0.3s ease; /* カラーの変化を滑らかにするトランジション */
+}
+
+.header-link:hover {
+  color: #007bff; /* ホバー時のカラー */
 }
 
 .pastel-blue-gradient {
