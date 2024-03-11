@@ -5,11 +5,17 @@
 
 <p style="color: green"><%= notice %></p>
 
-<div id="applicants">
+<div class="row">
   <% @applicants.each do |applicant| %>
-    <%= render applicant %>
-    <p>
-      <%= link_to "Show this applicant", applicant %>
-    </p>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body">
+          <%= render applicant %>
+          <p class="card-text">
+            <%= link_to "Show this applicant", applicant, class: "btn btn-primary" %>
+          </p>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
