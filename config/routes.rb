@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     resource :likes, only: %i[create destroy]
   end
 
+  resources :applicants
+
   get '/auth/auth0/callback' => 'auth0#callback'
   get '/auth/failure' => 'auth0#failure'
   get '/auth/logout' => 'auth0#logout', as: :log_out
