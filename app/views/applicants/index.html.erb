@@ -3,17 +3,14 @@
   <img src="<%= asset_path('World-10.png') %>" alt="Matches Logo" style="flex: 1; width: auto; max-width: 100%;">
 </div>
 
-<p style="color: green"><%= notice %></p>
-
 <div class="row">
   <% @applicants.each do |applicant| %>
-    <div class="col-md-4">
+    <div class="col-sm-4 mb-4">
       <div class="card">
         <div class="card-body">
-          <%= render applicant %>
-          <p class="card-text">
-            <%= link_to "Show this applicant", applicant, class: "btn btn-primary" %>
-          </p>
+          <h5 class="card-title"><%= applicant.name %></h5>
+          <!-- 他の属性も同様に表示する -->
+          <%= link_to "Show this applicant", applicant, class: "btn btn-primary" %>
         </div>
       </div>
     </div>
