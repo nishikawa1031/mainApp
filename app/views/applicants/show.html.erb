@@ -17,6 +17,8 @@
       <%= link_to "Back to Applicants", applicants_path, class: "btn btn-secondary" %>
       <div>
         <%= link_to "Edit", edit_applicant_path(@applicant), class: "btn btn-primary mr-2" %>
+      </div>
+      <div>
         <%= button_to "Destroy", @applicant, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
       </div>
     </div>
