@@ -33,6 +33,8 @@ prod_migrate:
 
 ## DBリセット方法
 ### https://qiita.com/motoki4917/items/1bc8d539f36852abf090
+
+# heroku run rake db:drop DISABLE_DATABASE_ENVIRONMENT_CHECK=1 --app main-app-1209
 prod_reset:
 	heroku pg:reset DATABASE_URL --confirm main-app-1209 --app main-app-1209
 	heroku run rails db:migrate --app main-app-1209
