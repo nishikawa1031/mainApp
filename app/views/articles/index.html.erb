@@ -4,6 +4,7 @@
 </div>
 
 <!-- ボタンを中央寄せで配置するためのdiv -->
+<% if false %>
 <div style="display: flex; justify-content: center; margin-bottom: 20px;">
   <div>
     <%= link_to '業界', root_path, class: "link-modern" %>
@@ -18,6 +19,7 @@
     <% end %>
   </div>
 </div>
+<% end %>
 
 <div class="row">
   <% @articles.each_slice(2) do |article_slice| %>
