@@ -1,4 +1,4 @@
-class AddColumnsToApplicant < ActiveRecord::Migration[7.0]
+class AddColumnsToApplicants < ActiveRecord::Migration[7.0]
     def change
       add_column :applicants, :birthday, :date
       add_column :applicants, :age, :integer
