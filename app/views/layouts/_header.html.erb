@@ -10,7 +10,7 @@
 
     <% if current_user %>
       <div>
-        <%= "current_user: #{current_user&.id}" =%>
+        <%= link_to "#{current_user&.email}", home_index_path, style: "color: blue; text-decoration: none; padding: 10px;" %>
       </div>
       <div>
         <%= button_to 'Logout', 'auth/logout', method: :get, data: { turbo: false }, class: "button-modern" %>
