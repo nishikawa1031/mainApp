@@ -7,7 +7,11 @@
           <%= "@#{@user.username}" %>
           <hr>
           <% if current_user?(@user) %>
-            <%= link_to "edit", edit_user_registration_path, class:"p-2 text-dark btn-sm" %>
+            <%
+=begin%>
+ <%= link_to "edit", edit_user_registration_path, class:"p-2 text-dark btn-sm" %> 
+<%
+=end%>
           <% end %>
         </div>
     </div>

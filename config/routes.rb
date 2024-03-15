@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   end
 
   resources :applicants
+  resources :users
 
   get '/auth/auth0/callback' => 'auth0#callback'
   get '/auth/failure' => 'auth0#failure'

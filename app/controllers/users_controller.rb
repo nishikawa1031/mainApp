@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :correct_user, only: %i[edit update destory]
 
   def show
-    @user = User.find_by(username: params[:username])
+    @user = User.find_by(id: params[:id])
     @articles = @user.articles
     @articles = @articles.page(params[:page]).per(10)
     @number_of_articles = @articles.count

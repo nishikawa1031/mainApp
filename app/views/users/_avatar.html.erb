@@ -1,7 +1,11 @@
 <div class="avatar">
-  <% if @user&.avatar&.attached? %>
+  <%
+=begin%>
+ <% if @user&.avatar&.attached? %>
     <%= image_tag @user&.avatar, alt: "Avatar" %>
   <% else %>
     <div class="circle" style="width: 80px; height: 80px; background: <%= Article::Colors[@user.id%11] %>"></div>
-  <% end %>
+  <% end %> 
+<%
+=end%>
 </div>
