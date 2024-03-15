@@ -7,6 +7,13 @@
   <% @applicants.each do |applicant| %>
     <div class="col-sm-4 mb-4">
       <div class="card">
+        <div class="card-header d-flex justify-content-end">
+          <% if true %>
+            <img src="<%= asset_path('World-14.png') %>" alt="Matches Logo" style="flex: 1; width: auto; max-width: 100%;">
+          <% else %>
+            <img src="<%= asset_path('World-14.png') %>" alt="Matches Logo" style="flex: 1; width: auto; max-width: 100%;">
+          <% end %>
+        </div>
         <div class="card-body">
           <h5 class="card-title"><%= applicant.name %></h5>
           <p class="card-text">年齢: <%= applicant.age %></p>
