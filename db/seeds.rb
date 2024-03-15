@@ -84,7 +84,6 @@ end
 
 # Create bookmarks
 Bookmark.create([
-  { user: user1, article: Article.first },
   { user: user1, article: Article.last },
   { user: user_care, article: Article.first },
   { user: user_factory, article: Article.third },
@@ -93,7 +92,6 @@ Bookmark.create([
 
 # Create likes
 Like.create([
-  { user: user1, article: Article.first },
   { user: user1, article: Article.last },
   { user: user_care, article: Article.first },
   { user: user_factory, article: Article.third },
@@ -101,9 +99,40 @@ Like.create([
 ])
 
 # Create applicants
-applicant1 = Applicant.create(name: 'John Doe', user_id: user1.id, creater_id: user1.id)
-applicant2 = Applicant.create(name: 'Jane Smith', user_id: user_care.id, creater_id: user_care.id)
-applicant3 = Applicant.create(name: 'Robert Johnson', user_id: user_factory.id, creater_id: user_factory.id)
+applicant1 = Applicant.find_or_create_by(
+  name: 'John Doe',
+  user_id: user1.id,
+  creater_id: user1.id,
+  birthday: Date.new(1990, 5, 10),
+  age: 32,
+  nationality: 1,
+  phone_number: 1234,
+  self_introduction: 'I have experience in caregiving.',
+  desired_salary: '¥400,000'
+)
+applicant2 = Applicant.find_or_create_by(
+  name: 'Jane Smith',
+  user_id: user_care.id,
+  creater_id: user_care.id,
+  birthday: Date.new(1985, 8, 20),
+  age: 37,
+  nationality: 2,
+  phone_number: 9876,
+  self_introduction: 'I am a certified care manager with 5 years of experience.', 
+  desired_salary: '¥450,000'
+)
+
+applicant3 = Applicant.find_or_create_by(
+  name: 'Robert Johnson',
+  user_id: user_factory.id,
+  creater_id: user_factory.id,
+  birthday: Date.new(1992, 3, 15),
+  age: 30,
+  nationality: 3,
+  phone_number: 5551,
+  self_introduction: 'I have worked in manufacturing for 5 years.',
+  desired_salary: '¥500,000'
+)
 
 # Create applicant articles
 ApplicantArticle.create([
