@@ -57,6 +57,12 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_12_230930) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "creater_id", null: false
+    t.date "birthday"
+    t.integer "age"
+    t.integer "nationality"
+    t.integer "phone_number"
+    t.text "self_introduction"
+    t.text "desired_salary"
   end
 
   create_table "articles", force: :cascade do |t|
