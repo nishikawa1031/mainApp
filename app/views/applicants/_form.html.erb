@@ -1,17 +1,17 @@
-<%= form_with(model: applicant) do |form| %>
+<%= form_with(model: applicant, class: "needs-validation", novalidate: true) do |form| %>
   <% if applicant.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(applicant.errors.count, "error") %> prohibited this applicant from being saved:</h2>
+    <div class="alert alert-danger">
+      <h4 class="alert-heading">Oops! <%= pluralize(applicant.errors.count, "error") %> prohibited this applicant from being saved:</h4>
 
       <ul>
-        <% applicant.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+        <% applicant.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
         <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div>
-    <%= form.submit %>
+  <div class="mb-3">
+    <%= form.submit "Save", class: "btn btn-primary" %>
   </div>
 <% end %>
