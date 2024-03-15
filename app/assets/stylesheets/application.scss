@@ -17,8 +17,37 @@ html, body {
   min-height: 95vh;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  color: #007bff; /* リンクのテキスト色 */
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease; /* リンクの色が変わるアニメーション */
+}
+
+.header-link:hover {
+  color: #0056b3; /* リンクのホバー時のテキスト色 */
+}
+
+.user-info {
+  margin-right: 10px;
+}
+
+.logout-button,
+.login-button {
+  margin-left: 10px;
+}
+
 /* styles.css */
-.header-link {
+.header-title-link {
   font-family: Arial, sans-serif;
   font-size: 25px; /* フォントサイズを大きくする */
   font-weight: bold; /* 太字にする */
@@ -29,7 +58,7 @@ html, body {
   transition: color 0.3s ease; /* カラーの変化を滑らかにするトランジション */
 }
 
-.header-link:hover {
+.header-title-link:hover {
   color: #007bff; /* ホバー時のカラー */
 }
 

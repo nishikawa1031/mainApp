@@ -1,22 +1,22 @@
-<header style="display: flex; align-items: center; justify-content: space-between; padding: 10px;">
-    <%= link_to 'Work in Japan', root_path, class: "header-link" %>
+<header class="header-container">
+  <%= link_to 'Work in Japan', root_path, class: "header-title-link" %>
 
-  <div style="display: flex;">
+  <div class="header-links">
     <% if current_page?(root_path) %>
-      <%= link_to '採用企業様はこちら', applicants_path, style: "color: blue; text-decoration: none; padding: 10px;" %>
+      <%= link_to '採用企業様はこちら', applicants_path, class: "header-link" %>
     <% else %>
-      <%= link_to 'Job seekers, click here', root_path, style: "color: blue; text-decoration: none; padding: 10px;" %>
+      <%= link_to 'Job seekers, click here', root_path, class: "header-link" %>
     <% end %>
 
     <% if current_user %>
-      <div>
-        <%= link_to "#{current_user&.email}", home_index_path, style: "color: blue; text-decoration: none; padding: 10px;" %>
+      <div class="user-info">
+        <%= link_to "#{current_user&.email}", home_index_path, class: "header-link" %>
       </div>
-      <div>
+      <div class="logout-button">
         <%= button_to 'Logout', 'auth/logout', method: :get, data: { turbo: false }, class: "button-modern" %>
       </div>
     <% else %>
-      <div style="display: flex;">
+      <div class="login-button">
         <%= button_to 'Login', '/auth/auth0', method: :post, data: { turbo: false }, class: "button-modern" %>
       </div>
     <% end %>
