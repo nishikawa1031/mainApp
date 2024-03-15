@@ -1,11 +1,10 @@
 # frozen_string_literal: true
 
 # Create users
-# Create users
-user1 = User.find_or_create_by(email: 'test@example.com')
-user_care = User.find_or_create_by(email: 'care@example.com')
-user_factory = User.find_or_create_by(email: 'factory@example.com')
-user_it = User.find_or_create_by(email: 'it@example.com')
+user1 = User.find_or_create_by(email: 'test@example.com', username: 'test_username')
+user_care = User.find_or_create_by(email: 'care@example.com', username: 'care_username')
+user_factory = User.find_or_create_by(email: 'factory@example.com', username: 'factory_username')
+user_it = User.find_or_create_by(email: 'it@example.com', username: 'it_username')
 
 # Create companies
 company_care = Company.create(name: '横浜介護サービス', area: 1, location: '神奈川県横浜市', website_url: 'http://care-service-yokohama.com')
