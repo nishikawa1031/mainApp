@@ -1,49 +1,49 @@
-<div class="row">
-  <p style="color: green"><%= notice %></p>
-
-  <div class="col-sm-12">
-    <div class="row">
+<div class="container">
+  <div class="card mt-4">
+    <div class="card-header" style="background-color: green; color: white;">
+      <%= notice %>
     </div>
-    <div class="row">
-      <div style="margin: 1% auto">
-        <i class="fa-solid fa-eye"> <%= @article.impressionist_count(:filter=>:ip_address) %></i>
-      </div>
+    <div class="card-body">
+      <h1 class="card-title"><%= @article.title %></h1>
+      <p class="card-text"><strong>勤務地:</strong> <%= @article.work_location %></p>
+      <p class="card-text"><strong>給与詳細:</strong> <%= @article.salary_details %></p>
+      <p class="card-text"><strong>言語要件:</strong> <%= @article.language_requirement %></p>
+      <p class="card-text"><strong>日本語レベル:</strong> <%= @article.japanese_level %></p>
+      <p class="card-text"><strong>雇用形態:</strong> <%= @article.employment_type %></p>
+      <p class="card-text"><strong>勤務時間:</strong> <%= @article.work_hours %></p>
+      <p class="card-text"><strong>試用期間:</strong> <%= @article.trial_period %></p>
+      <p class="card-text"><strong>休日:</strong> <%= @article.days_off %></p>
+      <p class="card-text"><strong>残業:</strong> <%= @article.overtime %></p>
+      <p class="card-text"><strong>交通手段:</strong> <%= @article.transportation %></p>
+      <p class="card-text"><strong>勤務環境:</strong> <%= @article.work_environment %></p>
+      <p class="card-text"><strong>その他手当:</strong> <%= @article.other_allowances %></p>
+      <p class="card-text"><strong>保険:</strong> <%= @article.insurance %></p>
+      <p class="card-text"><strong>その他福利厚生:</strong> <%= @article.other_benefits %></p>
+      <p class="card-text"><strong>説明:</strong> <%= @article.description %></p>
+
+      <!-- 記事の本文を表示 -->
+      <p class="card-text"><strong>本文:</strong> <%= @article.body %></p>
+
+      <% if current_user?(@article.user) %>
+        <div class="row mt-4">
+          <div class="col-md-6 text-center">
+            <%= link_to "Edit", edit_article_path(@article), class:"btn btn-primary" %>
+          </div>
+          <div class="col-md-6 text-center">
+            <%= button_to "Destroy", @article, method: :delete, class:"btn btn-danger", data: { confirm: "Are you sure?" } %>
+          </div>
+        </div>
+      <% else %>
+        <div class="row mt-4">
+          <div class="col-md-12 text-center">
+            <%= render "/articles/like" %>
+            <%= render "/articles/bookmark" %>
+          </div>
+        </div>
+      <% end %>
     </div>
-  </div>
-  <div class="col-sm-12">
-    <h1><%= @article.title %></h1>
-    <p><strong>勤務地:</strong> <%= @article.work_location %></p>
-    <p><strong>給与詳細:</strong> <%= @article.salary_details %></p>
-    <p><strong>言語要件:</strong> <%= @article.language_requirement %></p>
-    <p><strong>日本語レベル:</strong> <%= @article.japanese_level %></p>
-    <p><strong>雇用形態:</strong> <%= @article.employment_type %></p>
-    <p><strong>勤務時間:</strong> <%= @article.work_hours %></p>
-    <p><strong>試用期間:</strong> <%= @article.trial_period %></p>
-    <p><strong>休日:</strong> <%= @article.days_off %></p>
-    <p><strong>残業:</strong> <%= @article.overtime %></p>
-    <p><strong>交通手段:</strong> <%= @article.transportation %></p>
-    <p><strong>勤務環境:</strong> <%= @article.work_environment %></p>
-    <p><strong>その他手当:</strong> <%= @article.other_allowances %></p>
-    <p><strong>保険:</strong> <%= @article.insurance %></p>
-    <p><strong>その他福利厚生:</strong> <%= @article.other_benefits %></p>
-    <p><strong>説明:</strong> <%= @article.description %></p>
-
-    <!-- 記事の本文を表示 -->
-    <p><strong>本文:</strong> <%= @article.body %></p>
-
-    <% if current_user?(@article.user) %>
-      <br>
-      <div class="row">
-        <div class="col-sm-6" style="text-align: center">
-          <%= link_to "Edit", edit_article_path(@article), class:"btn btn-primary" %>
-        </div>
-        <div class="col-sm-6" style="text-align: center">
-          <%= button_to "Destroy", @article, method: :delete, class:"btn btn-danger", data: { confirm: "Are you sure?" } %>
-        </div>
-      </div>
-    <% else %>
-      <%= render "/articles/like" %>
-      <%= render "/articles/bookmark" %>
-    <% end %>
+    <div class="card-footer text-center">
+      <i class="fas fa-eye"></i> <%= @article.impressionist_count(:filter=>:ip_address) %>
+    </div>
   </div>
 </div>
