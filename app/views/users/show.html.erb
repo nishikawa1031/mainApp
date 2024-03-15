@@ -1,32 +1,31 @@
 <div class="container bg-light">
-<p style="color: green"><%= notice %></p>
   <div class="row">
     <div class="col-sm-4 text-center">
-        <div class="card">
-          <%= render "/users/avatar" %>
-          <%= "@#{@user.username}" %>
+      <div class="card">
+        <%= render "/users/avatar" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= "@#{@user.username}" %></h5>
           <hr>
           <% if current_user?(@user) %>
             <%
 =begin%>
- <%= link_to "edit", edit_user_registration_path, class:"p-2 text-dark btn-sm" %> 
+ <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary btn-sm" %> 
 <%
 =end%>
           <% end %>
         </div>
+      </div>
     </div>
     <div class="col-sm-8">
-        <div class="card">
-          <div class="card-body text-light" style="background-color: rgb(40, 43, 43);">
-          </div>
+      <div class="card">
+        <div class="card-body" style="background-color: rgb(40, 43, 43); color: white;">
+          <!-- ここにユーザーのプロフィール情報を表示 -->
         </div>
-        <br>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-sm-4 text-center">
-    </div>
-    <div class="col-sm-8">
+  <div class="row mt-4">
+    <div class="col-sm-12">
       <div id="articles">
         <% @articles.each do |article| %>
           <%= render "articles/article", article: article %>
@@ -34,8 +33,8 @@
       </div>
       <%= paginate @articles %>
       <% if Rails.env == "development" %>
-        <p>
-          debug用に下書きの記事数を表示:<%= @number_of_articles %>
+        <p class="text-muted mt-3">
+          Debug: <%= @number_of_articles %> draft articles
         </p>
       <% end %>
     </div>
