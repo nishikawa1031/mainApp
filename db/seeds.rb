@@ -60,7 +60,7 @@ Article.create([
     other_allowances: '通勤手当',
     insurance: '健康保険、厚生年金、雇用保険提供',
     other_benefits: '年次有給休暇、昇給制度あり',
-    statu: 1
+    status: 1
   },
   {
     title: '工場作業員',
