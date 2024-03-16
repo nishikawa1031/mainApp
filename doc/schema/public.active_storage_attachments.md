@@ -19,8 +19,8 @@ ActiveStorageの添付ファイルの関連付けテーブル
 
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
-| fk_rails_c3b3935057 | FOREIGN KEY | FOREIGN KEY (blob_id) REFERENCES active_storage_blobs(id) |
 | active_storage_attachments_pkey | PRIMARY KEY | PRIMARY KEY (id) |
+| fk_rails_c3b3935057 | FOREIGN KEY | FOREIGN KEY (blob_id) REFERENCES active_storage_blobs(id) |
 
 ## Indexes
 
