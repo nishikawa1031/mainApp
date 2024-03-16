@@ -4,7 +4,7 @@
       <div class="card">
         <%= render "/users/avatar" %>
         <div class="card-body">
-          <h5 class="card-title"><%= "@#{current_user.username}" %></h5>
+          <h5 class="card-title"><%= "#{current_user.email}" %></h5>
           <hr>
           <% if current_user?(@user) %>
            <%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-primary btn-sm" %> 
