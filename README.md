@@ -18,6 +18,8 @@ docker-compose run web rails db:seed
 [Makefile](/Makefile)
 
 # Document
+https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#document
+
 [doc](/doc/)
 
 ## DB
