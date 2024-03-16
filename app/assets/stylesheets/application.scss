@@ -49,6 +49,14 @@ html, body {
 }
 
 /* styles.css */
+.header-title {
+  flex: 1;
+  font-size: 6em;
+  text-align: right;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
 .header-title-link {
   font-family: Arial, sans-serif;
   font-size: 30px; /* フォントサイズを大きくする */
