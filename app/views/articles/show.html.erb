@@ -36,12 +36,14 @@
               </div>
             </div>
           <% else %>
+          <% if false %>
             <div class="row mt-4">
               <div class="col-md-12 text-center">
                 <%= render "/articles/like" %>
                 <%= render "/articles/bookmark" %>
               </div>
             </div>
+          <% end %>
           <% end %>
         </div>
         <div class="col-md-5"> <!-- col-md-4をcol-md-5に変更 -->
