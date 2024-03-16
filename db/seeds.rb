@@ -67,6 +67,31 @@ Article.create([
     skills_required: 'Java、Python、クラウドサービス（AWS/GCP/Azure）の経験',
     employment_type: '正社員',
     work_hours: '9:00 - 18:00（フレックスタイム制あり）'
+  },
+  {
+    title: 'Caregiver Wanted',
+    body: 'We are looking for a caregiver with experience in elderly care.',
+    user: user1,
+    company_id: company_care.id,
+    start_time: DateTime.now,
+    end_time: DateTime.now + 1.month,
+    salary_details: '¥350,000 - ¥450,000 per year',
+    work_location: 'Yokohama, Kanagawa',
+    language_requirement: 'Japanese (Native level)',
+    japanese_level: 'N1',
+    skills_required: 'Elderly care experience, good communication skills',
+    employment_type: 'Full-time',
+    description: 'This position requires providing care for elderly clients in their homes.',
+    work_hours: '9:00 AM - 6:00 PM',
+    trial_period: '3 months',
+    days_off: 'Sundays',
+    overtime: 'Paid overtime available',
+    transportation: 'Not provided',
+    work_environment: 'Home care',
+    other_allowances: 'None',
+    insurance: 'Health insurance provided',
+    other_benefits: 'Annual bonus',
+    status: 1
   }
 ])
 
