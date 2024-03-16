@@ -26,6 +26,12 @@ html, body {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .user-info {
+    display: none;
+  }
+}
+
 .header-container {
   display: flex;
   align-items: center;
