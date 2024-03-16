@@ -39,6 +39,12 @@ html, body {
   padding: 10px;
 }
 
+@media (min-width: 768px) {
+  .container-sm {
+    width: 90%;
+  }
+}
+
 .header-links {
   display: flex;
   align-items: center;
