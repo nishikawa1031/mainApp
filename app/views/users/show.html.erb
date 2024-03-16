@@ -1,17 +1,13 @@
-<div class="container bg-light">
+<div class="container bg-light" style="width: 90%;">
   <div class="row">
     <div class="col-sm-4 text-center">
       <div class="card">
         <%= render "/users/avatar" %>
         <div class="card-body">
-          <h5 class="card-title"><%= "@#{@user.username}" %></h5>
+          <h5 class="card-title"><%= "@#{current_user.username}" %></h5>
           <hr>
           <% if current_user?(@user) %>
-            <%
-=begin%>
- <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-primary btn-sm" %> 
-<%
-=end%>
+           <%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-primary btn-sm" %> 
           <% end %>
         </div>
       </div>
@@ -19,6 +15,7 @@
     <div class="col-sm-8">
       <div class="card">
         <div class="card-body" style="background-color: rgb(40, 43, 43); color: white;">
+          <img src="<%= asset_path('World-14.png') %>" alt="Matches Logo" style="flex: 1; width: auto; max-width: 100%;">
           <!-- ここにユーザーのプロフィール情報を表示 -->
         </div>
       </div>
