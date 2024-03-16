@@ -49,12 +49,37 @@ html, body {
 }
 
 /* styles.css */
+/* styles.css */
 .header-title {
   flex: 1;
   font-size: 6em;
   text-align: right;
   margin-bottom: 0;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-title {
+    font-size: 3em;
+  }
+}
+
+.logo-image {
+  flex: 1;
+  width: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 576px) {
+  .logo-image {
+    display: none;
+  }
 }
 
 .header-title-link {
