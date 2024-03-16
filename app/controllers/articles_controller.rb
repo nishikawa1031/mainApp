@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles
   def index
-    @articles = Article.all.order('start_time DESC').page(params[:page]).per(5)
+    @articles = Article.all.order('start_time DESC').page(params[:page]).per(20)
     @number_of_articles = @articles.count
     @user = current_user
   end

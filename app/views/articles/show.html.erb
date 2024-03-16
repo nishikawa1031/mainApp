@@ -26,7 +26,7 @@
           <!-- 記事の本文を表示 -->
           <p class="card-text"><strong>本文:</strong> <%= @article.body %></p>
 
-          <% if current_user?(@article.user) %>
+          <% if current_user?(@user) %>
             <div class="row mt-4">
               <div class="col-md-6 text-center">
                 <%= link_to "Edit", edit_article_path(@article), class:"btn btn-primary" %>
