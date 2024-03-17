@@ -29,6 +29,7 @@ https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#document
 # dashboard
 ## auth0
 https://manage.auth0.com/dashboard/jp/dev-kg26mhb8w8f3va47/applications/hgwPE8X64zNuE6ohT8yLYftVuQkYyr7s/settings
+googleログイン
 
 ## heroku
 https://dashboard.heroku.com/apps
