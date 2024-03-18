@@ -7,6 +7,7 @@ document:
 	bundle exec erd --attributes=foreign_keys,content
 	tbls doc --rm-dist
 	bin/rake diagram:all
+	bundle exec yard
 
 # デプロイ方法
 ## https://main-app-1209.herokuapp.com/articles
