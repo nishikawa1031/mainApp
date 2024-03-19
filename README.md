@@ -22,6 +22,9 @@ https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#document
 
 [doc](/doc/)
 
+[controller](/doc/controllers_complete.svg)
+[model](/doc/models_complete.svg)
+
 ## DB
 * [tbls](/doc/schema/README.md)
 * [ER図](/erd.pdf)
