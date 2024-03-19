@@ -40,3 +40,5 @@ https://main-app-1209-466d97d1a50c.herokuapp.com/
 https://main-app-1209-466d97d1a50c.herokuapp.com/admin
 
 https://rollbar.com/tatsunishitatsu/FirstProject/
+
+https://analytics.google.com/analytics/web/?authuser=0#/p347800174/reports/intelligenthome
