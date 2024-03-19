@@ -38,3 +38,5 @@ https://dashboard.heroku.com/apps
 https://main-app-1209-466d97d1a50c.herokuapp.com/
 
 https://main-app-1209-466d97d1a50c.herokuapp.com/admin
+
+https://rollbar.com/tatsunishitatsu/FirstProject/
