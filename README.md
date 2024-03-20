@@ -30,19 +30,11 @@ https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#document
 * [ER図](/erd.pdf)
 
 # dashboard
-## auth0
-https://manage.auth0.com/dashboard/jp/dev-kg26mhb8w8f3va47/applications/hgwPE8X64zNuE6ohT8yLYftVuQkYyr7s/settings
-googleログイン
-
-## site
 * [Top](https://main-app-1209-466d97d1a50c.herokuapp.com/)
-
-* [heroku](https://dashboard.heroku.com/apps)
-
 * [管理画面](https://main-app-1209-466d97d1a50c.herokuapp.com/admin)
-
+* [heroku](https://dashboard.heroku.com/apps)
 * [Rollbar](https://rollbar.com/tatsunishitatsu/FirstProject/)
-
+* [auth0](https://manage.auth0.com/dashboard/jp/dev-kg26mhb8w8f3va47/applications/hgwPE8X64zNuE6ohT8yLYftVuQkYyr7s/settings)
+googleログイン
 * [アナリティクス](https://analytics.google.com/analytics/web/?authuser=0#/p347800174/reports/intelligenthome)
-
 * [ドメイン](https://navi.onamae.com/domain/setting/renew/list)
