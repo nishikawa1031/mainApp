@@ -6,33 +6,77 @@
           <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
           <ul>
-            <% article.errors.each do |error| %>
-              <li><%= error.full_message %></li>
+            <% article.errors.full_messages.each do |error_message| %>
+              <li><%= error_message %></li>
             <% end %>
           </ul>
         </div>
       <% end %>
 
       <div>
+        <%= form.label :start_time %>
         <%= form.date_field :start_time, value: Date.today %>
       </div>
 
       <div>
-        <%= form.fields_for :applicant, article.applicant.build do |person_form| %>
-          <%= person_form.label :name %>
-          <%= person_form.text_field :name %>
-        <% end %>
-      </div>
-
-      <div>
-        <%= form.label :body, style: "display: block" %>
+        <%= form.label :body %>
         <%= form.text_area :body, style: "width: 100%; height: 100%;" %>
       </div>
 
+      <!-- 追加 -->
+      <div>
+        <%= form.label :title %>
+        <%= form.text_field :title %>
+      </div>
+
+      <div>
+        <%= form.label :application_deadline %>
+        <%= form.date_field :application_deadline %>
+      </div>
+
+      <div>
+        <%= form.label :salary_details %>
+        <%= form.text_area :salary_details, style: "width: 100%; height: 100%;" %>
+      </div>
+
+      <div>
+        <%= form.label :work_location %>
+        <%= form.text_field :work_location %>
+      </div>
+
+      <div>
+        <%= form.label :language_requirement %>
+        <%= form.text_field :language_requirement %>
+      </div>
+
+      <div>
+        <%= form.label :japanese_level %>
+        <%= form.text_field :japanese_level %>
+      </div>
+
+      <div>
+        <%= form.label :skills_required %>
+        <%= form.text_area :skills_required, style: "width: 100%; height: 100%;" %>
+      </div>
+
+      <div>
+        <%= form.label :employment_type %>
+        <%= form.text_field :employment_type %>
+      </div>
+
+      <div>
+        <%= form.label :description %>
+        <%= form.text_area :description, style: "width: 100%; height: 100%;" %>
+      </div>
+
+      <div>
+        <%= form.label :work_hours %>
+        <%= form.text_field :work_hours %>
+      </div>
+
       <div class="p-2">
-        <%= form.submit '保存', class: "btn", style:"background-color: black; color: white;"%>
+        <%= form.submit '保存', class: "btn", style:"background-color: black; color: white;" %>
       </div>
     <% end %>
   </div>
 </div>
-
