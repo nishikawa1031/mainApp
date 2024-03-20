@@ -2,6 +2,6 @@
  <% if @user&.avatar&.attached? %>
     <%= image_tag @user&.avatar, alt: "Avatar" %>
   <% else %>
-    <div class="circle" style="width: 80px; height: 80px; background: <%= Article::Colors[@user.id%11] %>"></div>
+    <div class="circle" style="width: 80px; height: 80px; background: black"></div>
   <% end %> 
 </div>
