@@ -67,7 +67,7 @@ class ArticlesController < ApplicationController
   # Only allow a list of trusted parameters through.
   def article_params
     params.require(:article).permit!
-    # params.require(:article).permit(:user_id, :body, :start_time, :end_time, person_ids: [], people_attributes: [:id, :name, :_destroy])
+    # params.require(:article).permit(:user_id, :body, :start_time, :end_time, person_ids: [], applicant_attributes: [:id, :name, :_destroy])
   end
 
   def correct_user

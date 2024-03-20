@@ -18,7 +18,7 @@
       </div>
 
       <div>
-        <%= form.fields_for :people, article.people.build do |person_form| %>
+        <%= form.fields_for :applicant, article.applicant.build do |person_form| %>
           <%= person_form.label :name %>
           <%= person_form.text_field :name %>
         <% end %>
