@@ -34,11 +34,10 @@ https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#document
 https://manage.auth0.com/dashboard/jp/dev-kg26mhb8w8f3va47/applications/hgwPE8X64zNuE6ohT8yLYftVuQkYyr7s/settings
 googleログイン
 
-## heroku
-https://dashboard.heroku.com/apps
-
 ## site
-* [heroku](https://main-app-1209-466d97d1a50c.herokuapp.com/)
+* [Top](https://main-app-1209-466d97d1a50c.herokuapp.com/)
+
+* [heroku](https://dashboard.heroku.com/apps)
 
 * [管理画面](https://main-app-1209-466d97d1a50c.herokuapp.com/admin)
 
