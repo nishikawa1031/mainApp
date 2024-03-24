@@ -38,3 +38,4 @@ https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#document
 googleログイン
 * [アナリティクス](https://analytics.google.com/analytics/web/?authuser=0#/p347800174/reports/intelligenthome)
 * [ドメイン](https://navi.onamae.com/domain/setting/renew/list)
+* [google API](https://console.cloud.google.com/apis/dashboard?project=cognito-341413)
