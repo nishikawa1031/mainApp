@@ -35,6 +35,11 @@ https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#document
 * [heroku](https://dashboard.heroku.com/apps)
 * [Rollbar](https://rollbar.com/tatsunishitatsu/FirstProject/)
 * [auth0](https://manage.auth0.com/dashboard/jp/dev-kg26mhb8w8f3va47/applications/hgwPE8X64zNuE6ohT8yLYftVuQkYyr7s/settings)
+
+## AWS
+* [S3](https://ap-northeast-1.console.aws.amazon.com/s3/home?region=ap-northeast-1#)
+* [cost](https://us-east-1.console.aws.amazon.com/costmanagement/home?region=ap-northeast-1#/home)
+
 googleログイン
 * [アナリティクス](https://analytics.google.com/analytics/web/?authuser=0#/p347800174/reports/intelligenthome)
 * [ドメイン](https://navi.onamae.com/domain/setting/renew/list)
