@@ -1,4 +1,8 @@
 # setup
+## local
+1. bundle install
+2. make up
+
 ## docker
 1. Uncomment
 ```
