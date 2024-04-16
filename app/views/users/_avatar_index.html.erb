@@ -1,6 +1,6 @@
 <div class="avatar-index">
   <% if article&.user&.avatar&.attached? %>
-    <%= image_tag article.user.avatar, alt: "Avatar" %>
+    <%= image_tag article&.user&.avatar, alt: "Avatar" %>
   <% else %>
     <div class="circle" style="width: 80px; height: 80px; background: <%= Article::Colors[article.user.id%11] %>"></div>
   <% end %>
