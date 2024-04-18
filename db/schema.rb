@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_03_20_042522) do
+ActiveRecord::Schema[7.0].define(version: 2024_04_18_134545) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -74,7 +74,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_20_042522) do
     t.string "file"
     t.datetime "start_time"
     t.datetime "end_time"
-    t.bigint "company_id", null: false
     t.string "title"
     t.date "application_deadline"
     t.text "salary_details"
@@ -94,7 +93,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_20_042522) do
     t.string "insurance"
     t.string "other_benefits"
     t.integer "status"
-    t.index ["company_id"], name: "index_articles_on_company_id"
     t.index ["user_id"], name: "index_articles_on_user_id"
   end
 
@@ -130,6 +128,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_20_042522) do
     t.string "string"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "employees", force: :cascade do |t|
+    t.bigint "company_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["company_id"], name: "index_employees_on_company_id"
+    t.index ["user_id"], name: "index_employees_on_user_id"
   end
 
   create_table "impressions", force: :cascade do |t|
@@ -181,12 +188,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_03_20_042522) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "applicant_articles", "applicants"
   add_foreign_key "applicant_articles", "articles", on_delete: :cascade
-  add_foreign_key "articles", "companies"
   add_foreign_key "articles", "users"
   add_foreign_key "bookmarks", "articles"
   add_foreign_key "bookmarks", "users"
   add_foreign_key "category_articles", "articles"
   add_foreign_key "category_articles", "categories"
+  add_foreign_key "employees", "companies"
+  add_foreign_key "employees", "users"
   add_foreign_key "likes", "articles"
   add_foreign_key "likes", "users"
 end
