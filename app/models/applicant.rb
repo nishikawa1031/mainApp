@@ -14,4 +14,6 @@
 class Applicant < ApplicationRecord
   has_many :applicant_articles
   has_many :articles, through: :applicant_articles
+
+  has_many_attached :files
 end

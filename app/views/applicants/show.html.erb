@@ -13,6 +13,14 @@
       <p class="card-text"><strong>Self Introduction:</strong> <%= @applicant.self_introduction %></p>
       <p class="card-text"><strong>Desired Salary:</strong> <%= @applicant.desired_salary %></p>
     </div>
+
+    <% if @applicant.files.attached? %>
+      <% @applicant.files.each do |file| %>
+        <%= image_tag file, style: "max-width: 100%; max-height: 100%;" %>
+      <% end %>
+    <% else %>
+      <img src="<%= asset_path('World-14.png') %>" alt="Matches Logo" style="flex: 1; width: auto; max-width: 100%;">
+    <% end %>
     <div class="card-footer bg-light d-flex justify-content-between">
       <%= link_to "Back to Applicants", applicants_path, class: "btn btn-secondary" %>
       <% if current_user?(@applicant.user_id) %>
