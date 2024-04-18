@@ -53,6 +53,6 @@ class ApplicantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def applicant_params
-      params.fetch(:applicant, {})
+      params.require(:applicant).permit(:name, :user_id, :creater_id, :birthday, :age, :nationality, :phone_number, :self_introduction, :desired_salary)
     end
 end
