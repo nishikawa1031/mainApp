@@ -3,6 +3,7 @@
 class User < ApplicationRecord
   has_many :articles
   enum role: { general: 0, admin: 1 }
+  has_one_attached :avatar
 
   class << self
     def find_or_create_from_auth(auth_hash)
