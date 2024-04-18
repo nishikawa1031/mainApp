@@ -1,10 +1,12 @@
 <div class="card create-new">
+  <div class="card-header">
+    <h5 class="card-title">新規作成</h5>
+  </div>
   <div class="card-body">
     <%= form_with(model: article) do |form| %>
       <% if article.errors.any? %>
-        <div style="color: red">
-          <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
-
+        <div class="alert alert-danger">
+          <h6><%= pluralize(article.errors.count, "error") %> が保存を妨げました:</h6>
           <ul>
             <% article.errors.full_messages.each do |error_message| %>
               <li><%= error_message %></li>
@@ -13,69 +15,69 @@
         </div>
       <% end %>
 
-      <div>
-        <%= form.label :start_time %>
-        <%= form.date_field :start_time, value: Date.today %>
+      <div class="mb-3">
+        <%= form.label :start_time, class: "form-label" %>
+        <%= form.date_field :start_time, class: "form-control", value: Date.today %>
       </div>
 
-      <div>
-        <%= form.label :body %>
-        <%= form.text_area :body, style: "width: 100%; height: 100%;" %>
+      <div class="mb-3">
+        <%= form.label :body, class: "form-label" %>
+        <%= form.text_area :body, class: "form-control", style: "height: 200px;" %>
       </div>
 
       <!-- 追加 -->
-      <div>
-        <%= form.label :title %>
-        <%= form.text_field :title %>
+      <div class="mb-3">
+        <%= form.label :title, class: "form-label" %>
+        <%= form.text_field :title, class: "form-control" %>
       </div>
 
-      <div>
-        <%= form.label :application_deadline %>
-        <%= form.date_field :application_deadline %>
+      <div class="mb-3">
+        <%= form.label :application_deadline, class: "form-label" %>
+        <%= form.date_field :application_deadline, class: "form-control" %>
       </div>
 
-      <div>
-        <%= form.label :salary_details %>
-        <%= form.text_area :salary_details, style: "width: 100%; height: 100%;" %>
+      <div class="mb-3">
+        <%= form.label :salary_details, class: "form-label" %>
+        <%= form.text_area :salary_details, class: "form-control", style: "height: 200px;" %>
       </div>
 
-      <div>
-        <%= form.label :work_location %>
-        <%= form.text_field :work_location %>
+      <div class="mb-3">
+        <%= form.label :work_location, class: "form-label" %>
+        <%= form.text_field :work_location, class: "form-control" %>
       </div>
 
-      <div>
-        <%= form.label :language_requirement %>
-        <%= form.text_field :language_requirement %>
+      <div class="mb-3">
+        <%= form.label :language_requirement, class: "form-label" %>
+        <%= form.text_field :language_requirement, class: "form-control" %>
       </div>
 
-      <div>
-        <%= form.label :japanese_level %>
-        <%= form.text_field :japanese_level %>
+      <div class="mb-3">
+        <%= form.label :japanese_level, class: "form-label" %>
+        <%= form.text_field :japanese_level, class: "form-control" %>
       </div>
 
-      <div>
-        <%= form.label :skills_required %>
-        <%= form.text_area :skills_required, style: "width: 100%; height: 100%;" %>
+      <div class="mb-3">
+        <%= form.label :skills_required, class: "form-label" %>
+        <%= form.text_area :skills_required, class: "form-control", style: "height: 200px;" %>
       </div>
 
-      <div>
-        <%= form.label :employment_type %>
-        <%= form.text_field :employment_type %>
+      <div class="mb-3">
+        <%= form.label :employment_type, class: "form-label" %>
+        <%= form.text_field :employment_type, class: "form-control" %>
       </div>
 
-      <div>
-        <%= form.label :description %>
-        <%= form.text_area :description, style: "width: 100%; height: 100%;" %>
+      <div class="mb-3">
+        <%= form.label :description, class: "form-label" %>
+        <%= form.text_area :description, class: "form-control", style: "height: 200px;" %>
       </div>
 
-      <div>
-        <%= form.label :work_hours %>
-        <%= form.text_field :work_hours %>
+      <div class="mb-3">
+        <%= form.label :work_hours, class: "form-label" %>
+        <%= form.text_field :work_hours, class: "form-control" %>
       </div>
 
-      <div class="p-2">
-        <%= form.submit '保存', class: "btn", style:"background-color: black; color: white;" %>
+      <div class="d-grid">
+        <%= form.submit '保存', class: "btn btn-primary" %>
       </div>
     <% end %>
   </div>
