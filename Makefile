@@ -1,6 +1,6 @@
 # ローカル環境
 up:
-	bundle exec rails s
+	bundle exec rails s -p 8080
 
 # #外部キーを明らかにし、他のカラムも表示する。
 document:

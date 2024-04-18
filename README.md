@@ -2,6 +2,8 @@
 ## local
 1. bundle install
 2. make up
+http://localhost:8080/
+※ auth0のcallback urlとして、設定しているため、8080出なければならない。
 
 ## docker
 1. Uncomment
