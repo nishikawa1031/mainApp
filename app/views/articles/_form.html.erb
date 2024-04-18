@@ -24,8 +24,12 @@
         <%= form.label :body, class: "form-label" %>
         <%= form.text_area :body, class: "form-control", style: "height: 200px;" %>
       </div>
+  
+      <div class="mb-3">
+        <%= form.label :file, class: "form-label" %>
+        <%= form.file_field :file, class: "form-control" %>
+      </div>
 
-      <!-- 追加 -->
       <div class="mb-3">
         <%= form.label :title, class: "form-label" %>
         <%= form.text_field :title, class: "form-control" %>

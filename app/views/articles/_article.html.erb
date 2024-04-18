@@ -3,7 +3,7 @@
     <h5 class="card-title px-2"><%= article.start_time&.strftime('%Y年%m月%d日') %></h5>
     <div class="card-body">
       <div class="row">
-        <div class="col-md-7"> <!-- col-md-8をcol-md-7に変更 -->
+        <div class="col-md-7">
           <h1 class="card-title"><%= article.title %></h1>
           <p class="card-text"><strong>勤務地:</strong> <%= article.work_location %></p>
           <p class="card-text"><strong>給与詳細:</strong> <%= article.salary_details %></p>
@@ -20,8 +20,6 @@
           <p class="card-text"><strong>保険:</strong> <%= article.insurance %></p>
           <p class="card-text"><strong>その他福利厚生:</strong> <%= article.other_benefits %></p>
           <p class="card-text"><strong>説明:</strong> <%= article.description %></p>
-
-          <!-- 記事の本文を表示 -->
           <p class="card-text"><strong>本文:</strong> <%= article.body %></p>
 
           <% if current_user?(@user) %>
@@ -44,8 +42,12 @@
           <% end %>
           <% end %>
         </div>
-        <div class="col-md-5"> <!-- col-md-4をcol-md-5に変更 -->
-          <img src="<%= asset_path('World-14.png') %>" alt="Matches Logo" style="flex: 1; width: auto; max-width: 100%;">
+        <div class="col-md-5">
+          <% if article.file.attached? %>
+            <%= image_tag article.file, style: "max-width: 100%; max-height: 100%;" %>
+          <% else %>
+            <img src="<%= asset_path('World-14.png') %>" alt="Matches Logo" style="flex: 1; width: auto; max-width: 100%;">
+          <% end %>
         </div>
       </div>
     </div>
