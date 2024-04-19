@@ -13,7 +13,6 @@
 | user_id | integer |  | true |  |  | この求職者がアプリのユーザーである場合のID |
 | created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
 | updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
-| creater_id | integer |  | false |  |  | この求職者を作成したユーザーのID |
 | birthday | date |  | true |  |  |  |
 | age | integer |  | true |  |  |  |
 | nationality | integer |  | true |  |  |  |

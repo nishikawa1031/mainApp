@@ -6,7 +6,7 @@
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
-| id | bigint | nextval('companies_id_seq'::regclass) | false | [public.articles](public.articles.md) |  |  |
+| id | bigint | nextval('companies_id_seq'::regclass) | false | [public.employees](public.employees.md) |  |  |
 | name | varchar |  | true |  |  |  |
 | area | integer |  | true |  |  |  |
 | location | varchar |  | true |  |  |  |

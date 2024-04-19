@@ -14,10 +14,8 @@
 | created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
 | updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
 | impressions_count | integer | 0 | true |  |  | インプレッションのカウント |
-| file | varchar |  | true |  |  | 添付ファイルへのパス |
 | start_time | timestamp(6) without time zone |  | true |  |  | 求人記事の開始時刻 |
 | end_time | timestamp(6) without time zone |  | true |  |  | 求人記事の終了時刻 |
-| company_id | bigint |  | false |  | [public.companies](public.companies.md) |  |
 | title | varchar |  | true |  |  |  |
 | application_deadline | date |  | true |  |  |  |
 | salary_details | text |  | true |  |  |  |
@@ -43,7 +41,6 @@
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
 | articles_pkey | PRIMARY KEY | PRIMARY KEY (id) |
-| fk_rails_9ae110b456 | FOREIGN KEY | FOREIGN KEY (company_id) REFERENCES companies(id) |
 | fk_rails_3d31dad1cc | FOREIGN KEY | FOREIGN KEY (user_id) REFERENCES users(id) |
 
 ## Indexes
@@ -51,7 +48,6 @@
 | Name | Definition |
 | ---- | ---------- |
 | articles_pkey | CREATE UNIQUE INDEX articles_pkey ON public.articles USING btree (id) |
-| index_articles_on_company_id | CREATE INDEX index_articles_on_company_id ON public.articles USING btree (company_id) |
 | index_articles_on_user_id | CREATE INDEX index_articles_on_user_id ON public.articles USING btree (user_id) |
 
 ## Relations

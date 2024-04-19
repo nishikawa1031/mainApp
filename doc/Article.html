@@ -116,7 +116,6 @@ user_id           :bigint           not null
 created_at        :datetime         not null
 updated_at        :datetime         not null
 impressions_count :integer          default(0)
-file              :string
 start_time        :datetime
 end_time          :datetime
 </code></pre>
@@ -239,12 +238,12 @@ end_time          :datetime
       <pre class="lines">
 
 
+35
 36
-37
-38</pre>
+37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/article.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'app/models/article.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bookmarked_by?'>bookmarked_by?</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_bookmarks'>bookmarks</span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>user_id:</span> <span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span>
@@ -291,12 +290,12 @@ end_time          :datetime
       <pre class="lines">
 
 
+31
 32
-33
-34</pre>
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/models/article.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'app/models/article.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_liked_by?'>liked_by?</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_likes'>likes</span><span class='period'>.</span><span class='id identifier rubyid_where'>where</span><span class='lparen'>(</span><span class='label'>user_id:</span> <span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span>
@@ -311,7 +310,7 @@ end_time          :datetime
 </div>
 
       <div id="footer">
-  Generated on Mon Mar 18 09:40:02 2024 by
+  Generated on Fri Apr 19 09:05:44 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.36 (ruby-3.1.2).
 </div>
