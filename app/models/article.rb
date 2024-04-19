@@ -10,7 +10,6 @@
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #  impressions_count :integer          default(0)
-#  file              :string
 #  start_time        :datetime
 #  end_time          :datetime
 #
