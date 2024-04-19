@@ -2,10 +2,10 @@ app/models/like.rb 7215aa825fbc5d0012cf8e791c12cc8fd618af67
 app/models/user.rb 1f24bb586683184734e480ad25e4f9c7b2f226ba
 app/models/ability.rb 618bbe4c5ffcb66aad1805d9afe5ed196ab89cb3
 app/models/article.rb 9e97e83ed67281a55bd462ac69299a3508f42ef3
-app/models/company.rb 5bfdea4fe6b10979061ff3b81c8da7142e736b50
+app/models/company.rb 470e6b52d411bcdaf4783f3ede628d7cff79388e
 app/models/bookmark.rb e896bc42988d5dc30798a72f8b2a96592e6c3736
 app/models/category.rb 9e9ef17ddc64664f7e34f4c6b97f106bf0d42de5
-app/models/employee.rb 65ba509ee93de8f2d036fe9d38eda11c6b6afeff
+app/models/employee.rb eb6dbec7a728968a538ab0cba5545ab517a26add
 app/models/applicant.rb 23d05533672ff83501c3a4db17768cebe95e3fa4
 app/helpers/home_helper.rb e0b7e061d20465036585bb566ae7625ec5466f3e
 app/helpers/likes_helper.rb 6fb60773eb04a31724ab545a887c29e83b3b04a9
