@@ -2,9 +2,8 @@
 
 class User < ApplicationRecord
   has_many :articles
-  enum role: { general: 0, admin: 1 }
+  enum role: { general: 0, admin: 1, employee: 2 }
 
-  belongs_to :rolable, polymorphic: true
   has_one_attached :avatar
 
   class << self

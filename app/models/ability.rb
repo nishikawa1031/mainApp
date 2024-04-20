@@ -13,6 +13,10 @@ class Ability
     if user&.admin?
       can :access, :rails_admin
       can :manage, :all
+    elsif user.employee?
+      can :manage, Article
+    else
+      can :read, Article
     end
 
     # Define abilities for the user here. For example:
