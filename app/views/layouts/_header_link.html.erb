@@ -1,0 +1,5 @@
+<% if current_page?(root_path) %>
+    <%= link_to '採用企業様はこちら', applicants_path, class: "header-link", style: "text-decoration: none;" %>
+<% else %>
+    <%= link_to 'Job seekers, click here', root_path, class: "header-link", style: "text-decoration: none;" %>
+<% end %>
