@@ -65,9 +65,6 @@ gem 'rack-cors'
 gem 'rails_admin'
 gem 'rollbar'
 
-gem 'graphql'
-gem 'graphql-batch'
-
 group :development, :test do
   gem 'pry-nav'
   gem 'pry-rails'

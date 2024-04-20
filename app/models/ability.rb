@@ -4,6 +4,12 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    # Unauthenticated users can only read articles
+    can :read, Article
+
+    binding.pry
+    return unless user.present?
+
     # ログインしているかつ、管理者の場合
     if user&.admin?
       can :access, :rails_admin
