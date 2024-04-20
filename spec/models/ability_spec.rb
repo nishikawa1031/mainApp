@@ -23,6 +23,23 @@ describe Ability do
       expect(ability).not_to be_able_to(:access, :rails_admin)
       expect(ability).not_to be_able_to(:manage, :all)
     end
+
+    it 'cannot read any User' do
+      expect(ability).not_to be_able_to(:read, User)
+    end
+  end
+
+  describe 'when logged in' do
+    let(:user) { create(:user) }
+
+    it 'can read their own User' do
+      expect(ability).to be_able_to(:read, user)
+    end
+
+    it 'cannot read other Users' do
+      other_user = create(:user)
+      expect(ability).not_to be_able_to(:read, other_user)
+    end
   end
 
   context 'when the user is an admin' do
@@ -38,6 +55,11 @@ describe Ability do
 
     it 'can read Applicants' do
       expect(ability).to be_able_to(:read, Applicant)
+    end
+
+    it 'can read any User' do
+      other_user = create(:user)
+      expect(ability).to be_able_to(:read, other_user)
     end
   end
 

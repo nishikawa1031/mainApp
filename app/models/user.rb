@@ -2,7 +2,7 @@
 
 class User < ApplicationRecord
   has_many :articles
-  enum role: { general: 0, admin: 1, employee: 2 }
+  enum role: { applicant: 0, admin: 1, employee: 2 }
 
   has_one_attached :avatar
 
