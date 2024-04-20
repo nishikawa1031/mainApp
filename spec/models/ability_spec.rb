@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 require 'cancan/matchers'
 
@@ -12,6 +10,10 @@ describe Ability do
 
     it 'can read Articles' do
       expect(ability).to be_able_to(:read, Article)
+    end
+
+    it 'cannot read Applicants' do
+      expect(ability).not_to be_able_to(:read, Applicant)
     end
 
     it 'cannot manage any resource' do
@@ -31,6 +33,10 @@ describe Ability do
     it 'can access Rails admin' do
       expect(ability).to be_able_to(:access, :rails_admin)
     end
+
+    it 'can read Applicants' do
+      expect(ability).to be_able_to(:read, Applicant)
+    end
   end
 
   context 'when the user is an employee' do
@@ -38,6 +44,10 @@ describe Ability do
 
     it 'can manage Articles' do
       expect(ability).to be_able_to(:manage, Article)
+    end
+
+    it 'can read Applicants' do
+      expect(ability).to be_able_to(:read, Applicant)
     end
 
     it 'cannot access Rails admin' do
@@ -50,6 +60,10 @@ describe Ability do
 
     it 'can read Articles' do
       expect(ability).to be_able_to(:read, Article)
+    end
+
+    it 'can read Applicants' do
+      expect(ability).not_to be_able_to(:read, Applicant)
     end
 
     it 'cannot manage Articles' do
