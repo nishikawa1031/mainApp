@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class LikesController < ApplicationController
+  load_and_authorize_resource
+
   def create
     @article = Article.find(params[:article_id])
     return if current_user?(@article.user)
