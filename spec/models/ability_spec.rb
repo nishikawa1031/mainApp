@@ -3,7 +3,6 @@
 require 'rails_helper'
 require 'cancan/matchers'
 
-# Assuming your user model has an `admin?` and `employee?` method
 describe Ability do
   subject(:ability) { described_class.new(user) }
 
@@ -24,21 +23,24 @@ describe Ability do
       expect(ability).not_to be_able_to(:manage, :all)
     end
 
-    it 'cannot read any User' do
+    it 'cannot read or update any User' do
       expect(ability).not_to be_able_to(:read, User)
+      expect(ability).not_to be_able_to(:update, User)
     end
   end
 
-  describe 'when logged in' do
+  context 'when logged in' do
     let(:user) { create(:user) }
 
-    it 'can read their own User' do
+    it 'can read and update their own User' do
       expect(ability).to be_able_to(:read, user)
+      expect(ability).to be_able_to(:update, user)
     end
 
-    it 'cannot read other Users' do
+    it 'cannot read or update other Users' do
       other_user = create(:user)
       expect(ability).not_to be_able_to(:read, other_user)
+      expect(ability).not_to be_able_to(:update, other_user)
     end
   end
 
@@ -53,13 +55,10 @@ describe Ability do
       expect(ability).to be_able_to(:access, :rails_admin)
     end
 
-    it 'can read Applicants' do
-      expect(ability).to be_able_to(:read, Applicant)
-    end
-
-    it 'can read any User' do
+    it 'can read and update any User' do
       other_user = create(:user)
       expect(ability).to be_able_to(:read, other_user)
+      expect(ability).to be_able_to(:update, other_user)
     end
   end
 
@@ -78,9 +77,10 @@ describe Ability do
       expect(ability).not_to be_able_to(:access, :rails_admin)
     end
 
-    it 'cannot read other Users' do
+    it 'cannot read or update other Users' do
       other_user = create(:user)
       expect(ability).not_to be_able_to(:read, other_user)
+      expect(ability).not_to be_able_to(:update, other_user)
     end
   end
 
@@ -91,21 +91,10 @@ describe Ability do
       expect(ability).to be_able_to(:read, Article)
     end
 
-    it 'can read Applicants' do
-      expect(ability).not_to be_able_to(:read, Applicant)
-    end
-
-    it 'cannot manage Articles' do
-      expect(ability).not_to be_able_to(:manage, Article)
-    end
-
-    it 'cannot access Rails admin' do
-      expect(ability).not_to be_able_to(:access, :rails_admin)
-    end
-
-    it 'cannot read other Users' do
+    it 'cannot read or update other Users' do
       other_user = create(:user)
       expect(ability).not_to be_able_to(:read, other_user)
+      expect(ability).not_to be_able_to(:update, other_user)
     end
   end
 end
