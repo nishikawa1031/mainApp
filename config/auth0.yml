@@ -9,6 +9,6 @@ development:
   auth0_client_secret: <%= ENV.fetch("AUTH_CLIENT_SECRET", 'default_client_secret') %>
 
 production:
-  auth0_domain: <%= ENV.fetch("AUTH_DOMAIN") %>
-  auth0_client_id: <%= ENV.fetch("AUTH_CLIENT_ID") %>
-  auth0_client_secret: <%= ENV.fetch("AUTH_CLIENT_SECRET") %>
+  auth0_domain: <%= ENV.fetch("AUTH_DOMAIN", 'default_domain') %>
+  auth0_client_id: <%= ENV.fetch("AUTH_CLIENT_ID", 'default_client_id') %>
+  auth0_client_secret: <%= ENV.fetch("AUTH_CLIENT_SECRET", 'default_client_secret') %>
