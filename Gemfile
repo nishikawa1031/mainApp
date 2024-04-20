@@ -82,7 +82,6 @@ group :development do
   gem 'rails-erd'
   gem 'rubocop', require: false
   gem 'web-console'
-  gem 'graphiql-rails'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
