@@ -33,7 +33,7 @@ module MyProj
                        controller_specs: false,  # controller specは作らない
                        view_specs: false,        # view specは作らない
                        helper_specs: false,      # helper specは作らない
-                       routing_specs: false,      # routing specは作らない
+                       routing_specs: false, # routing specは作らない
                        request_specs: false
     end
 
@@ -41,7 +41,7 @@ module MyProj
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins 'http://localhost:3000' # フロントエンドのオリジン
-        resource '*', headers: :any, methods: [:get, :post, :put, :patch, :delete, :options, :head]
+        resource '*', headers: :any, methods: %i[get post put patch delete options head]
       end
     end
   end

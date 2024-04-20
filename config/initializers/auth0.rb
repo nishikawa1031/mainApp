@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # ./config/initializers/auth0.rb
 AUTH0_CONFIG = Rails.application.config_for(:auth0)
 

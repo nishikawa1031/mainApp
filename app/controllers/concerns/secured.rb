@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # ./app/controllers/concerns/secured.rb
 module Secured
   extend ActiveSupport::Concern

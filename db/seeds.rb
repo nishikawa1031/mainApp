@@ -9,180 +9,179 @@ applicant_it = User.find_or_create_by(email: 'applicant_it@example.com', usernam
 applicant_care = User.find_or_create_by(email: 'applicant_care@example.com', username: 'applicant_care_username')
 applicant_factory = User.find_or_create_by(email: 'user_factory@example.com', username: 'user_factory_username')
 
-
 # Create companies
-company_care = Company.create(name: '横浜介護サービス', area: 1, location: '神奈川県横浜市', website_url: 'http://care-service-yokohama.com')
-company_factory = Company.create(name: '名古屋製造株式会社', area: 2, location: '愛知県名古屋市', website_url: 'http://nagoya-manufacturing.com')
-company_it = Company.create(name: 'イノベーションITソリューションズ株式会社', area: 3, location: '東京都渋谷区', website_url: 'http://innovation-it-solutions.com')
+Company.create(name: '横浜介護サービス', area: 1, location: '神奈川県横浜市', website_url: 'http://care-service-yokohama.com')
+Company.create(name: '名古屋製造株式会社', area: 2, location: '愛知県名古屋市', website_url: 'http://nagoya-manufacturing.com')
+Company.create(name: 'イノベーションITソリューションズ株式会社', area: 3, location: '東京都渋谷区', website_url: 'http://innovation-it-solutions.com')
 
 # Create articles
 Article.create([
-  {
-    title: '介護職員',
-    body: '介護職員募集の詳細情報',
-    user: user_care,
-    start_time: '現在の日時',
-    end_time: '現在の日時 + 1か月',
-    salary_details: '年収 350万円 - 500万円',
-    work_location: '神奈川県横浜市',
-    language_requirement: '日本語（ネイティブレベル）',
-    japanese_level: 'N1',
-    skills_required: '介護経験、コミュニケーションスキル',
-    employment_type: '正社員',
-    description: 'この職位では、お客様の自宅での介護が必要です。',
-    work_hours: '午前9時 - 午後6時',
-    trial_period: '3か月',
-    days_off: '日曜日',
-    overtime: '有給残業あり',
-    transportation: '提供されません',
-    work_environment: '在宅介護',
-    other_allowances: 'なし',
-    insurance: '健康保険提供',
-    other_benefits: '年次ボーナス',
-    status: 1
-  },
-  {
-    title: 'ケアマネージャー',
-    body: 'ケアマネージャー募集の詳細情報',
-    user: user_care,
-    language_requirement: '日本語（ネイティブレベル）',
-    skills_required: '介護職員初任者研修（ヘルパー2級）以上、コミュニケーション能力',
-    employment_type: '正社員、パート・アルバイト（選択可）',
-    work_hours: 'シフト制（週5日、1日8時間から）',
-    start_time: '募集開始日',
-    end_time: '募集終了日',
-    salary_details: '月給制、経験・能力に応じて優遇',
-    work_location: '愛知県名古屋市',
-    description: '高齢者や障がい者などのケアプランの作成やサポートを担当します。',
-    trial_period: '3か月',
-    days_off: 'シフトによる',
-    overtime: '時給の25%増し',
-    transportation: '自己負担',
-    work_environment: '介護施設内',
-    other_allowances: '通勤手当',
-    insurance: '健康保険、厚生年金、雇用保険提供',
-    other_benefits: '年次有給休暇、昇給制度あり',
-    status: 1
-  },
-  {
-    title: '工場作業員',
-    body: '工場作業員募集の詳細情報',
-    user: user_factory,
-    salary_details: '年収 300万円 - 50万円',
-    work_location: '愛知県名古屋市',
-    employment_type: '正社員',
-    language_requirement: '日本語（ネイティブレベル）',
-    skills_required: '工場作業経験、体力、コミュニケーション能力',
-    work_hours: 'シフト制（週5日、1日8時間から）',
-    start_time: '募集開始日',
-    end_time: '募集終了日',
-    description: '製造工程に従事し、製品の生産を担当します。',
-    trial_period: '3か月',
-    days_off: 'シフトによる',
-    overtime: '時給の25%増し',
-    transportation: '自己負担',
-    work_environment: '工場内',
-    other_allowances: '通勤手当',
-    insurance: '健康保険、厚生年金、雇用保険提供',
-    other_benefits: '年次有給休暇、昇給制度あり',
-    status: 1
-  },
-  {
-    title: '機械作業技術者',
-    body: '機械作業技術者募集の詳細情報',
-    user: user_factory,
-    skills_required: 'CNC旋盤操作、CAD図面の読解能力',
-    employment_type: '正社員',
-    work_hours: '8:00 - 17:00（週5日、土日休み）',
-    language_requirement: '日本語（ビジネスレベル）',
-    work_location: '愛知県名古屋市',
-    start_time: '即時',
-    salary_details: '年収 400万円 - 600万円',
-    description: '工場内で機械作業を担当し、生産ラインの効率化に貢献します。',
-    trial_period: '3か月',
-    days_off: '土日祝日',
-    overtime: '時給の25%増し',
-    transportation: '自己負担',
-    work_environment: '工場内',
-    other_allowances: '通勤手当',
-    insurance: '健康保険、厚生年金、雇用保険提供',
-    other_benefits: '年次有給休暇、昇給制度あり',
-    status: 1
-  },
-  {
-    title: 'シニアITエンジニア',
-    body: 'シニアITエンジニア募集の詳細情報',
-    user: user_it,
-    skills_required: 'Java、Python、クラウドサービス（AWS/GCP Azure）の経験',
-    employment_type: '正社員',
-    work_hours: '9:00 - 18:00（フレックスタイム制あり）',
-    language_requirement: '日本語（ビジネスレベル）、英語（ビジネスレベル）',
-    work_location: '東京都渋谷区',
-    start_time: '即時',
-    salary_details: '年収 600万円 - 900万円',
-    description: '高度なITシステムの設計・開発やプロジェクトマネジメントを担当します。',
-    trial_period: '3か月',
-    days_off: '土日祝日',
-    overtime: '時給の25%増し',
-    transportation: '自己負担',
-    work_environment: 'オフィス内',
-    other_allowances: '通勤手当',
-    insurance: '健康保険、厚生年金、雇用保険提供',
-    other_benefits: '年次有給休暇、昇給制度あり',
-    status: 1
-  },
-  {
-    title: 'ITエンジニア',
-    body: 'ITエンジニア募集の詳細情報',
-    user: user_it,
-    salary_details: '年収 400万円 - 600万円',
-    work_location: '東京都渋谷区',
-    employment_type: '正社員',
-    language_requirement: '日本語（ビジネスレベル）、英語（ビジネスレベル）',
-    skills_required: 'プログラミング言語の習熟（Java、Pythonなど）、システム開発経験',
-    work_hours: '10:00 - 19:00（週5日）',
-    start_time: '即時',
-    description: 'ITシステムの開発や保守、問題解決を担当します。',
-    trial_period: '3か月',
-    days_off: '土日祝日',
-    overtime: '時給の25%増し',
-    transportation: '自己負担',
-    work_environment: 'オフィス内',
-    other_allowances: '通勤手当',
-    insurance: '健康保険、厚生年金、雇用保険提供',
-    other_benefits: '年次有給休暇、昇給制度あり',
-    status: 1
-  },  
-  {
-    title: 'Caregiver Wanted',
-    body: 'We are looking for a caregiver with experience in elderly care.',
-    user: user1,
-    start_time: DateTime.now,
-    end_time: DateTime.now + 1.month,
-    salary_details: '¥350,000 - ¥450,000 per year',
-    work_location: 'Yokohama, Kanagawa',
-    language_requirement: 'Japanese (Native level)',
-    japanese_level: 'N1',
-    skills_required: 'Elderly care experience, good communication skills',
-    employment_type: 'Full-time',
-    description: 'This position requires providing care for elderly clients in their homes.',
-    work_hours: '9:00 AM - 6:00 PM',
-    trial_period: '3 months',
-    days_off: 'Sundays',
-    overtime: 'Paid overtime available',
-    transportation: 'Not provided',
-    work_environment: 'Home care',
-    other_allowances: 'None',
-    insurance: 'Health insurance provided',
-    other_benefits: 'Annual bonus',
-    status: 1
-  }
-])
+                 {
+                   title: '介護職員',
+                   body: '介護職員募集の詳細情報',
+                   user: user_care,
+                   start_time: '現在の日時',
+                   end_time: '現在の日時 + 1か月',
+                   salary_details: '年収 350万円 - 500万円',
+                   work_location: '神奈川県横浜市',
+                   language_requirement: '日本語（ネイティブレベル）',
+                   japanese_level: 'N1',
+                   skills_required: '介護経験、コミュニケーションスキル',
+                   employment_type: '正社員',
+                   description: 'この職位では、お客様の自宅での介護が必要です。',
+                   work_hours: '午前9時 - 午後6時',
+                   trial_period: '3か月',
+                   days_off: '日曜日',
+                   overtime: '有給残業あり',
+                   transportation: '提供されません',
+                   work_environment: '在宅介護',
+                   other_allowances: 'なし',
+                   insurance: '健康保険提供',
+                   other_benefits: '年次ボーナス',
+                   status: 1
+                 },
+                 {
+                   title: 'ケアマネージャー',
+                   body: 'ケアマネージャー募集の詳細情報',
+                   user: user_care,
+                   language_requirement: '日本語（ネイティブレベル）',
+                   skills_required: '介護職員初任者研修（ヘルパー2級）以上、コミュニケーション能力',
+                   employment_type: '正社員、パート・アルバイト（選択可）',
+                   work_hours: 'シフト制（週5日、1日8時間から）',
+                   start_time: '募集開始日',
+                   end_time: '募集終了日',
+                   salary_details: '月給制、経験・能力に応じて優遇',
+                   work_location: '愛知県名古屋市',
+                   description: '高齢者や障がい者などのケアプランの作成やサポートを担当します。',
+                   trial_period: '3か月',
+                   days_off: 'シフトによる',
+                   overtime: '時給の25%増し',
+                   transportation: '自己負担',
+                   work_environment: '介護施設内',
+                   other_allowances: '通勤手当',
+                   insurance: '健康保険、厚生年金、雇用保険提供',
+                   other_benefits: '年次有給休暇、昇給制度あり',
+                   status: 1
+                 },
+                 {
+                   title: '工場作業員',
+                   body: '工場作業員募集の詳細情報',
+                   user: user_factory,
+                   salary_details: '年収 300万円 - 50万円',
+                   work_location: '愛知県名古屋市',
+                   employment_type: '正社員',
+                   language_requirement: '日本語（ネイティブレベル）',
+                   skills_required: '工場作業経験、体力、コミュニケーション能力',
+                   work_hours: 'シフト制（週5日、1日8時間から）',
+                   start_time: '募集開始日',
+                   end_time: '募集終了日',
+                   description: '製造工程に従事し、製品の生産を担当します。',
+                   trial_period: '3か月',
+                   days_off: 'シフトによる',
+                   overtime: '時給の25%増し',
+                   transportation: '自己負担',
+                   work_environment: '工場内',
+                   other_allowances: '通勤手当',
+                   insurance: '健康保険、厚生年金、雇用保険提供',
+                   other_benefits: '年次有給休暇、昇給制度あり',
+                   status: 1
+                 },
+                 {
+                   title: '機械作業技術者',
+                   body: '機械作業技術者募集の詳細情報',
+                   user: user_factory,
+                   skills_required: 'CNC旋盤操作、CAD図面の読解能力',
+                   employment_type: '正社員',
+                   work_hours: '8:00 - 17:00（週5日、土日休み）',
+                   language_requirement: '日本語（ビジネスレベル）',
+                   work_location: '愛知県名古屋市',
+                   start_time: '即時',
+                   salary_details: '年収 400万円 - 600万円',
+                   description: '工場内で機械作業を担当し、生産ラインの効率化に貢献します。',
+                   trial_period: '3か月',
+                   days_off: '土日祝日',
+                   overtime: '時給の25%増し',
+                   transportation: '自己負担',
+                   work_environment: '工場内',
+                   other_allowances: '通勤手当',
+                   insurance: '健康保険、厚生年金、雇用保険提供',
+                   other_benefits: '年次有給休暇、昇給制度あり',
+                   status: 1
+                 },
+                 {
+                   title: 'シニアITエンジニア',
+                   body: 'シニアITエンジニア募集の詳細情報',
+                   user: user_it,
+                   skills_required: 'Java、Python、クラウドサービス（AWS/GCP Azure）の経験',
+                   employment_type: '正社員',
+                   work_hours: '9:00 - 18:00（フレックスタイム制あり）',
+                   language_requirement: '日本語（ビジネスレベル）、英語（ビジネスレベル）',
+                   work_location: '東京都渋谷区',
+                   start_time: '即時',
+                   salary_details: '年収 600万円 - 900万円',
+                   description: '高度なITシステムの設計・開発やプロジェクトマネジメントを担当します。',
+                   trial_period: '3か月',
+                   days_off: '土日祝日',
+                   overtime: '時給の25%増し',
+                   transportation: '自己負担',
+                   work_environment: 'オフィス内',
+                   other_allowances: '通勤手当',
+                   insurance: '健康保険、厚生年金、雇用保険提供',
+                   other_benefits: '年次有給休暇、昇給制度あり',
+                   status: 1
+                 },
+                 {
+                   title: 'ITエンジニア',
+                   body: 'ITエンジニア募集の詳細情報',
+                   user: user_it,
+                   salary_details: '年収 400万円 - 600万円',
+                   work_location: '東京都渋谷区',
+                   employment_type: '正社員',
+                   language_requirement: '日本語（ビジネスレベル）、英語（ビジネスレベル）',
+                   skills_required: 'プログラミング言語の習熟（Java、Pythonなど）、システム開発経験',
+                   work_hours: '10:00 - 19:00（週5日）',
+                   start_time: '即時',
+                   description: 'ITシステムの開発や保守、問題解決を担当します。',
+                   trial_period: '3か月',
+                   days_off: '土日祝日',
+                   overtime: '時給の25%増し',
+                   transportation: '自己負担',
+                   work_environment: 'オフィス内',
+                   other_allowances: '通勤手当',
+                   insurance: '健康保険、厚生年金、雇用保険提供',
+                   other_benefits: '年次有給休暇、昇給制度あり',
+                   status: 1
+                 },
+                 {
+                   title: 'Caregiver Wanted',
+                   body: 'We are looking for a caregiver with experience in elderly care.',
+                   user: user1,
+                   start_time: DateTime.now,
+                   end_time: DateTime.now + 1.month,
+                   salary_details: '¥350,000 - ¥450,000 per year',
+                   work_location: 'Yokohama, Kanagawa',
+                   language_requirement: 'Japanese (Native level)',
+                   japanese_level: 'N1',
+                   skills_required: 'Elderly care experience, good communication skills',
+                   employment_type: 'Full-time',
+                   description: 'This position requires providing care for elderly clients in their homes.',
+                   work_hours: '9:00 AM - 6:00 PM',
+                   trial_period: '3 months',
+                   days_off: 'Sundays',
+                   overtime: 'Paid overtime available',
+                   transportation: 'Not provided',
+                   work_environment: 'Home care',
+                   other_allowances: 'None',
+                   insurance: 'Health insurance provided',
+                   other_benefits: 'Annual bonus',
+                   status: 1
+                 }
+               ])
 
 # Create categories
-categories = ['介護', '製造', 'IT']
+categories = %w[介護 製造 IT]
 categories.each do |name|
-  Category.create(name: name)
+  Category.create(name:)
 end
 
 # Assign categories to articles
@@ -192,19 +191,19 @@ end
 
 # Create bookmarks
 Bookmark.create([
-  { user: user1, article: Article.last },
-  { user: user_care, article: Article.first },
-  { user: user_factory, article: Article.third },
-  { user: user_it, article: Article.fifth }
-])
+                  { user: user1, article: Article.last },
+                  { user: user_care, article: Article.first },
+                  { user: user_factory, article: Article.third },
+                  { user: user_it, article: Article.fifth }
+                ])
 
 # Create likes
 Like.create([
-  { user: user1, article: Article.last },
-  { user: user_care, article: Article.first },
-  { user: user_factory, article: Article.third },
-  { user: user_it, article: Article.fifth }
-])
+              { user: user1, article: Article.last },
+              { user: user_care, article: Article.first },
+              { user: user_factory, article: Article.third },
+              { user: user_it, article: Article.fifth }
+            ])
 
 # Create applicants
 applicant1 = Applicant.find_or_create_by(
@@ -224,7 +223,7 @@ applicant2 = Applicant.find_or_create_by(
   age: 37,
   nationality: 2,
   phone_number: 9876,
-  self_introduction: 'I am a certified care manager with 5 years of experience.', 
+  self_introduction: 'I am a certified care manager with 5 years of experience.',
   desired_salary: '¥450,000'
 )
 
@@ -241,7 +240,7 @@ applicant3 = Applicant.find_or_create_by(
 
 # Create applicant articles
 ApplicantArticle.create([
-  { applicant: applicant1, article: Article.first },
-  { applicant: applicant2, article: Article.second },
-  { applicant: applicant3, article: Article.third }
-])
+                          { applicant: applicant1, article: Article.first },
+                          { applicant: applicant2, article: Article.second },
+                          { applicant: applicant3, article: Article.third }
+                        ])

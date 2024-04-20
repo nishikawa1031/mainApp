@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :company do
-    name { "MyString" }
+    name { 'MyString' }
     area { 1 }
-    location { "MyString" }
-    website_url { "MyString" }
-    string { "MyString" }
+    location { 'MyString' }
+    website_url { 'MyString' }
+    string { 'MyString' }
   end
 end
