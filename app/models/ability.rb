@@ -8,6 +8,8 @@ class Ability
     can :read, Article
 
     return unless user.present?
+    # All authenticated users can read their own user profile
+    can :read, User, id: user.id
 
     # ログインしているかつ、管理者の場合
     if user&.admin?
