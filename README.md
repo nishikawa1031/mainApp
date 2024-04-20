@@ -41,6 +41,8 @@ https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#document
 * [heroku](https://dashboard.heroku.com/apps)
 * [Rollbar](https://rollbar.com/tatsunishitatsu/FirstProject/)
 * [auth0](https://manage.auth0.com/dashboard/jp/dev-kg26mhb8w8f3va47/applications/hgwPE8X64zNuE6ohT8yLYftVuQkYyr7s/settings)
+githubでログイン
+application: Frontend
 
 ## AWS
 * [S3](https://ap-northeast-1.console.aws.amazon.com/s3/home?region=ap-northeast-1#)
