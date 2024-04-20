@@ -125,6 +125,40 @@ html, body {
   margin-right: 5px;
 }
 
+.notification-bell {
+  background-color: transparent; /* A clear background */
+  border: none; /* No border for a button-like feel */
+  cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+  padding: 8px; /* Some padding around the icon for easier click */
+  border-radius: 50%; /* Circular shape */
+  align-items: center; /* Center the icon */
+  justify-content: center; /* Center the icon */
+  display: flex; /* To use Flexbox for centering */
+  position: relative; /* Positioning relative for potential badge positioning */
+}
+
+.notification-bell:hover,
+.notification-bell:focus {
+  background-color: #f0f0f0; /* Slight highlight on hover or focus */
+}
+
+/* If you have a badge for notification count */
+.notification-badge {
+  position: absolute; /* Absolute positioning inside the relative parent */
+  top: -5px; /* Positioning at the top right corner */
+  right: -5px; /* Positioning at the top right corner */
+  background-color: rgb(175, 163, 163); /* Red background for attention */
+  color: white; /* White text */
+  border-radius: 50%; /* Round shape */
+  width: 20px; /* Fixed width */
+  height: 20px; /* Fixed height */
+  display: flex; /* Use Flexbox for centering */
+  align-items: center; /* Center the text */
+  justify-content: center; /* Center the text */
+  font-size: 12px; /* Smaller font size for the badge */
+  line-height: 1; /* Line height to control the text alignment */
+}
+
 /* ボタンの基本スタイル */
 .button-modern {
   padding: 10px 20px; /* パディングを調整 */
