@@ -1,9 +1,8 @@
-<!-- Footer -->
 <footer class="footer-container">
-  <!-- Copyright -->
     © 2022 Copyright:
     <a class="footer-link" href="https://www.rememberme.jp/">RememberMe.jp</a>
     </br>
-    <%= link_to "admin", rails_admin.dashboard_path %>
+    <% if current_user&.admin? %>
+      <%= link_to "admin", rails_admin.dashboard_path %>
+    <% end %>
 </footer>
-<!-- Footer -->
