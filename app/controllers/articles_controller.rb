@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class ArticlesController < ApplicationController
+  load_and_authorize_resource
+
   impressionist actions: [:show]
 
   before_action :set_article, only: %i[show edit update destroy]
