@@ -210,19 +210,29 @@
 35
 36
 37
-38</pre>
+38
+39
+40
+41
+42
+43</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/models/ability.rb', line 6</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_user'>user</span><span class='rparen'>)</span>
+  <span class='comment'># Unauthenticated users can only read articles
+</span>  <span class='id identifier rubyid_can'>can</span> <span class='symbol'>:read</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Article.html" title="Article (class)">Article</a></span></span>
 
-  <span class='comment'># ログイン機能が実装されていないため、一旦コメントアウト
-</span>  <span class='comment'># if user&amp;.admin?
-</span>  <span class='comment'>#   can :access, :rails_admin
-</span>  <span class='comment'>#   can :manage, :all
-</span>  <span class='comment'># end
-</span>
+  <span class='id identifier rubyid_binding'>binding</span><span class='period'>.</span><span class='id identifier rubyid_pry'>pry</span>
+  <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
+
+  <span class='comment'># ログインしているかつ、管理者の場合
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_user'>user</span><span class='op'>&amp;.</span><span class='id identifier rubyid_admin?'>admin?</span>
+    <span class='id identifier rubyid_can'>can</span> <span class='symbol'>:access</span><span class='comma'>,</span> <span class='symbol'>:rails_admin</span>
+    <span class='id identifier rubyid_can'>can</span> <span class='symbol'>:manage</span><span class='comma'>,</span> <span class='symbol'>:all</span>
+  <span class='kw'>end</span>
+
   <span class='comment'># Define abilities for the user here. For example:
 </span>  <span class='comment'>#
 </span>  <span class='comment'>#   return unless user.present?
@@ -259,7 +269,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Apr 19 09:09:56 2024 by
+  Generated on Sat Apr 20 19:55:36 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.36 (ruby-3.1.2).
 </div>

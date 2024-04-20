@@ -299,7 +299,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#check_logged_in-instance_method" title="ApplicationController#check_logged_in (method)">#check_logged_in</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#check_logged_in-instance_method" title="ApplicationController#check_logged_in (method)">#check_logged_in</a></span>, <span class='object_link'><a href="ApplicationController.html#current_user-instance_method" title="ApplicationController#current_user (method)">#current_user</a></span></p>
 
   
   
@@ -339,18 +339,18 @@
       <pre class="lines">
 
 
-23
-24
 25
 26
 27
 28
 29
 30
-31</pre>
+31
+32
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
   <span class='ivar'>@applicant</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Applicant.html" title="Applicant (class)">Applicant</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_applicant_params'>applicant_params</span><span class='rparen'>)</span>
@@ -392,13 +392,13 @@
       <pre class="lines">
 
 
-43
-44
 45
-46</pre>
+46
+47
+48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 45</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span>
   <span class='ivar'>@applicant</span><span class='period'>.</span><span class='id identifier rubyid_destroy'>destroy</span>
@@ -435,11 +435,11 @@
       <pre class="lines">
 
 
-19
-20</pre>
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span>
 <span class='kw'>end</span></pre>
@@ -474,12 +474,12 @@
       <pre class="lines">
 
 
-5
-6
-7</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 5</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span>
   <span class='ivar'>@applicants</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Applicant.html" title="Applicant (class)">Applicant</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
@@ -515,12 +515,12 @@
       <pre class="lines">
 
 
-14
-15
-16</pre>
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span>
   <span class='ivar'>@applicant</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Applicant.html" title="Applicant (class)">Applicant</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -556,11 +556,11 @@
       <pre class="lines">
 
 
-10
-11</pre>
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 10</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span>
 <span class='kw'>end</span></pre>
@@ -595,16 +595,16 @@
       <pre class="lines">
 
 
-34
-35
 36
 37
 38
 39
-40</pre>
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
   <span class='kw'>if</span> <span class='ivar'>@applicant</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_applicant_params'>applicant_params</span><span class='rparen'>)</span>
@@ -623,7 +623,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Apr 19 09:09:56 2024 by
+  Generated on Sat Apr 20 19:55:36 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.36 (ruby-3.1.2).
 </div>

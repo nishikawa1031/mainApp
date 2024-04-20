@@ -108,7 +108,7 @@
 
 <div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="ApplicantsController.html" title="ApplicantsController (class)">ApplicantsController</a></span>, <span class='object_link'><a href="ArticlesController.html" title="ArticlesController (class)">ArticlesController</a></span>, <span class='object_link'><a href="Auth0Controller.html" title="Auth0Controller (class)">Auth0Controller</a></span>, <span class='object_link'><a href="BookmarksController.html" title="BookmarksController (class)">BookmarksController</a></span>, <span class='object_link'><a href="CategoryController.html" title="CategoryController (class)">CategoryController</a></span>, <span class='object_link'><a href="GraphqlController.html" title="GraphqlController (class)">GraphqlController</a></span>, <span class='object_link'><a href="HomeController.html" title="HomeController (class)">HomeController</a></span>, <span class='object_link'><a href="LikesController.html" title="LikesController (class)">LikesController</a></span>, <span class='object_link'><a href="UsersController.html" title="UsersController (class)">UsersController</a></span></p>
+  <p class="children"><span class='object_link'><a href="ApplicantsController.html" title="ApplicantsController (class)">ApplicantsController</a></span>, <span class='object_link'><a href="ArticlesController.html" title="ArticlesController (class)">ArticlesController</a></span>, <span class='object_link'><a href="Auth0Controller.html" title="Auth0Controller (class)">Auth0Controller</a></span>, <span class='object_link'><a href="BookmarksController.html" title="BookmarksController (class)">BookmarksController</a></span>, <span class='object_link'><a href="CategoryController.html" title="CategoryController (class)">CategoryController</a></span>, <span class='object_link'><a href="HomeController.html" title="HomeController (class)">HomeController</a></span>, <span class='object_link'><a href="LikesController.html" title="LikesController (class)">LikesController</a></span>, <span class='object_link'><a href="UsersController.html" title="UsersController (class)">UsersController</a></span></p>
 </div>
 
 
@@ -142,9 +142,29 @@
   
 
   
-    <span class="summary_desc"><div class='inline'>
-<p>include Secured before_action :check_logged_in.</p>
-</div></span>
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#current_user-instance_method" title="#current_user (instance method)">#<strong>current_user</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
   
 </li>
 
@@ -174,31 +194,20 @@
   
 
   
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>include Secured before_action :check_logged_in</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
+</h3><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-9
-10
-11
 12
-13</pre>
+13
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_logged_in'>check_logged_in</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_current_user'>current_user</span>
@@ -210,12 +219,42 @@
 </table>
 </div>
     
+      <div class="method_details ">
+  <h3 class="signature " id="current_user-instance_method">
+  
+    #<strong>current_user</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_current_user'>current_user</span>
+  <span class='ivar'>@current_user</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="User.html" title="User (class)">User</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_by'>find_by</span><span class='lparen'>(</span><span class='label'>id:</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:userinfo</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:userinfo</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
   </div>
 
 </div>
 
       <div id="footer">
-  Generated on Fri Apr 19 09:09:56 2024 by
+  Generated on Sat Apr 20 19:55:36 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.36 (ruby-3.1.2).
 </div>
