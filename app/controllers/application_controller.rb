@@ -15,11 +15,11 @@ class ApplicationController < ActionController::Base
     redirect_to home_index_path
   end
 
-  private
-
   def current_user
     @current_user ||= User.find_by(id: session[:userinfo]) if session[:userinfo]
   end
+
+  private
 
   def user_signed_in?
     !!session[:userinfo]
