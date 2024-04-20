@@ -77,6 +77,11 @@ describe Ability do
     it 'cannot access Rails admin' do
       expect(ability).not_to be_able_to(:access, :rails_admin)
     end
+
+    it 'cannot read other Users' do
+      other_user = create(:user)
+      expect(ability).not_to be_able_to(:read, other_user)
+    end
   end
 
   context 'when the user is neither an admin nor an employee' do
@@ -96,6 +101,11 @@ describe Ability do
 
     it 'cannot access Rails admin' do
       expect(ability).not_to be_able_to(:access, :rails_admin)
+    end
+
+    it 'cannot read other Users' do
+      other_user = create(:user)
+      expect(ability).not_to be_able_to(:read, other_user)
     end
   end
 end
