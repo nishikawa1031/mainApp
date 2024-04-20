@@ -7,7 +7,6 @@ class Ability
     # Unauthenticated users can only read articles
     can :read, Article
 
-    binding.pry
     return unless user.present?
 
     # ログインしているかつ、管理者の場合
