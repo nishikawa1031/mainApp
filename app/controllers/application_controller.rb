@@ -5,6 +5,9 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
   # include Secured
   # before_action :check_logged_in
+  rescue_from CanCan::AccessDenied do |_exception|
+    redirect_to '/home/index', alert: '画面を閲覧する権限がありません。'
+  end
 
   def check_logged_in
     return if current_user

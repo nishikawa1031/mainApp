@@ -4,12 +4,11 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-
-    # ログイン機能が実装されていないため、一旦コメントアウト
-    # if user&.admin?
-    #   can :access, :rails_admin
-    #   can :manage, :all
-    # end
+    # ログインしているかつ、管理者の場合
+    if user&.admin?
+      can :access, :rails_admin
+      can :manage, :all
+    end
 
     # Define abilities for the user here. For example:
     #

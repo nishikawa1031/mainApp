@@ -17,6 +17,7 @@
   <body class="pastel-blue-gradient">
     <div class="container main-container">
       <%= render "layouts/header" %>
+      <%= content_tag(:div, flash[:alert], class: "alert alert-danger") if flash[:alert] %>
       <%= yield %>
     </div>
     <%= render "layouts/footer" %>
