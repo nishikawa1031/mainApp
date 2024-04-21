@@ -52,6 +52,8 @@ application: Frontend
 googleログイン
 * [アナリティクス](https://analytics.google.com/analytics/web/?authuser=0#/p347800174/reports/intelligenthome)
 * [ドメイン](https://navi.onamae.com/domain/setting/renew/list)
+* [cloudflare](https://dash.cloudflare.com/63c34c3c7777cf7a1862d682130b6293/solution-hub.net)
+email認証
 * [google API](https://console.cloud.google.com/apis/dashboard?project=cognito-341413)
 
 ## Design
