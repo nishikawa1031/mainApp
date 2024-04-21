@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   # include Secured
   # before_action :check_logged_in
   rescue_from CanCan::AccessDenied do |_exception|
-    redirect_to '/home/index'
+    redirect_to '/articles'
   end
 
   def check_logged_in

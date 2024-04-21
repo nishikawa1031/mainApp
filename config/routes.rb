@@ -5,9 +5,7 @@
 
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  mount GraphiQL::Rails::Engine, at: '/graphiql', graphql_path: '/graphql' if Rails.env.development?
-  post '/graphql', to: 'graphql#execute'
-  get 'home/index' => 'home#index'
+  get 'home' => 'home#index', as: 'home_index'
 
   root to: 'articles#index'
   resources :articles do
