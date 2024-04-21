@@ -36,7 +36,8 @@ https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#document
 * [ER図](/erd.pdf)
 
 # dashboard
-* [Top](https://main-app-1209-466d97d1a50c.herokuapp.com/)
+* [Top](https://www.solution-hub.net/)
+  * [herokuドメイン](https://main-app-1209-466d97d1a50c.herokuapp.com/)
 * [管理画面](https://main-app-1209-466d97d1a50c.herokuapp.com/admin)
 * [heroku](https://dashboard.heroku.com/apps)
 * [Rollbar](https://rollbar.com/tatsunishitatsu/FirstProject/)
