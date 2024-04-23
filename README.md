@@ -58,3 +58,5 @@ email認証
 
 ## Design
 * [Uizard](https://app.uizard.io/prototypes/BMmgKXWLm1fZ34V9yOe0)
+* [canva](https://www.canva.com/)
+faviconの作成
