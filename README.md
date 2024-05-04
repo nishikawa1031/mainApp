@@ -61,3 +61,6 @@ email認証
 * [Uizard](https://app.uizard.io/prototypes/BMmgKXWLm1fZ34V9yOe0)
 * [canva](https://www.canva.com/)
 faviconの作成
+* [leonardo.ai](https://app.leonardo.ai/ai-generations)
+画像生成AI
+
