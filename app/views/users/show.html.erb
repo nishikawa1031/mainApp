@@ -11,8 +11,12 @@
           <% end %>
         </div>
       </div>
-      <%= link_to "New Article", new_article_path, class: "btn btn-primary btn-sm" %>
-      <%= link_to "New Applicant", new_applicant_path, class: "btn btn-primary btn-sm" %>
+      <% if current_user&.employee? || current_user&.admin? %>
+        <%= link_to "New Article", new_article_path, class: "btn btn-primary btn-sm" %>
+      <% end %>
+      <% if current_user&.applicant? || current_user&.admin? %>
+        <%= link_to "New Applicant", new_applicant_path, class: "btn btn-primary btn-sm" %>
+      <% end %>
     </div>
     <div class="col-sm-8">
       <div class="card">
