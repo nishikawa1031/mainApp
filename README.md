@@ -7,6 +7,7 @@ http://localhost:8080/
 
 ## docker
 1. Uncomment
+config/database.yml
 ```
   # dockerを利用する際は、host,password,usernameを指定する必要がある
   host: db # docker-compose.ymlで定義したMySQLのコンテナ名
