@@ -21,6 +21,7 @@ class Ability
       can :manage, Article
     else
       can :read, Article
+      can :manage, Applicant, user_id: user.id
     end
   end
 end
