@@ -63,4 +63,5 @@ email認証
 faviconの作成
 * [leonardo.ai](https://app.leonardo.ai/ai-generations)
 画像生成AI
-
+* https://www.miricanvas.com/v2/design/1364yp6
+アカウント作成したのみで使っていない。
