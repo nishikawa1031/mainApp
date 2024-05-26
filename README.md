@@ -65,3 +65,6 @@ faviconの作成
 画像生成AI
 * https://www.miricanvas.com/v2/design/1364yp6
 アカウント作成したのみで使っていない。
+
+## 構成
+* [draw.io](https://app.diagrams.net/#G1c-I8TScmMN83xNKbpS9RaoC_NS3x-6Zo#%7B%22pageId%22%3A%22TTj133cAQp3v-oLP87_n%22%7D)
