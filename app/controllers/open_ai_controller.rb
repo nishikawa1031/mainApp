@@ -14,14 +14,8 @@ class OpenAiController < ApplicationController
     Please return the characters or designs (CHARACTER) and the corresponding total number of spheres (TOTAL) that can be read from the image in json format.
     Create a CSV where the first line is the character and the second line is the total number of balls.
     when you apload test_file_name.png
-      {
-    'test_file_name': {
-    'R': 18,
-    'e': 14,
-    'f': 12
-  }
-}
-"
+      { 'test_file_name': { 'R': 18, 'e': 14, 'f': 12, 'l': 9, 'e': 14, 'c': 10, 't': 10 } }
+    "
 
     messages = [
       { "type": "text", "text": prompt },
