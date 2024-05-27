@@ -12,8 +12,16 @@ class OpenAiController < ApplicationController
 
     prompt = "
     Please return the characters or designs (CHARACTER) and the corresponding total number of spheres (TOTAL) that can be read from the image in json format.
-    The csv format is as follows: key: character, total
-    "
+    Create a CSV where the first line is the character and the second line is the total number of balls.
+    when you apload test_file_name.png
+      {
+    'test_file_name': {
+    'R': 18,
+    'e': 14,
+    'f': 12
+  }
+}
+"
 
     messages = [
       { "type": "text", "text": prompt },
@@ -37,13 +45,17 @@ class OpenAiController < ApplicationController
     # Define the CSV file path
     csv_file_path = Rails.root.join('public', 'output.csv')
 
-    # Write the JSON data to the CSV file
+    # CSVを生成します
     CSV.open(csv_file_path, 'w') do |csv|
-      # Add CSV headers
-      csv << response_json.keys
+      # ヘッダーを追加します
+      csv << ['char', 'total']
 
-      # Add CSV data
-      csv << response_json.values
+      # JSONデータを処理してCSVに追加します
+      response_json.each do |file_name, char_totals|
+        char_totals.each do |char, total|
+          csv << [char, total]
+        end
+      end
     end
 
     render "/articles/index"
