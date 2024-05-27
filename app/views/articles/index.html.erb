@@ -79,10 +79,14 @@
 </div>
 
 <h1>Azure OpenAI Input Form</h1>
-<%= form_with url: '/open_ai/submit', local: true do %>
+<%= form_with url: '/open_ai/submit', local: true, multipart: true do %>
   <div>
     <%= label_tag :input_text, "Enter your prompt:" %>
     <%= text_area_tag :input_text %>
+  </div>
+  <div>
+    <%= label_tag :image, "Upload an image:" %>
+    <%= file_field_tag :image %>
   </div>
   <div>
     <%= submit_tag "Submit" %>

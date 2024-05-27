@@ -4,12 +4,24 @@ class OpenAiController < ApplicationController
 
   def submit
     client = OpenAI::Client.new
-    response = client.chat(
-      parameters: {
-        model: "gpt-35-turbo",
-        messages: [{ role: "user", content: params[:input_text] }]
+
+    image = params[:image]
+    image_data = Base64.encode64(File.read(image.path))
+    image_url = "data:image/jpeg;base64,#{image_data}"
+
+    messages = [
+      { "type": "text", "text": "What’s in this image?"},
+      { "type": "image_url",
+        "image_url": {
+          "url": image_url
+        },
       }
-    )
+    ]
+    response = client.chat(
+        parameters: {
+            model: "gpt-4-vision-preview", # Required.
+            messages: [{ role: "user", content: messages}], # Required.
+        })
     @response_text = response.dig("choices", 0, "message", "content")
     render "/articles/index"
 
