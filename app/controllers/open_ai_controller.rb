@@ -5,8 +5,9 @@ class OpenAiController < ApplicationController
   def submit
     client = OpenAI::Client.new
 
-    image = params[:image]
-    image_data = Base64.encode64(File.read(image.path))
+    # image = params[:image]
+    image_path = "./app/assets/images/illustrator/404068.png"
+    image_data = Base64.encode64(File.read(image_path))
     image_url = "data:image/jpeg;base64,#{image_data}"
 
     messages = [
