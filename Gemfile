@@ -64,6 +64,7 @@ gem 'omniauth-rails_csrf_protection', '~> 1.0'
 gem 'rack-cors'
 gem 'rails_admin'
 gem 'rollbar'
+gem 'ruby-openai' # OpenAI API
 
 group :development, :test do
   gem 'pry-nav'
