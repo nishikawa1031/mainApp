@@ -77,3 +77,19 @@
     <p>必要な書類の準備から申請プロセスのサポートまで、在留資格の取得を徹底支援します。</p>
   </div>
 </div>
+
+<h1>Azure OpenAI Input Form</h1>
+<%= form_with url: '/open_ai/submit', local: true do %>
+  <div>
+    <%= label_tag :input_text, "Enter your prompt:" %>
+    <%= text_area_tag :input_text %>
+  </div>
+  <div>
+    <%= submit_tag "Submit" %>
+  </div>
+<% end %>
+
+<% if @response_text.present? %>
+  <h2>Response:</h2>
+  <p><%= @response_text %></p>
+<% end %>

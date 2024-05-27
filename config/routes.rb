@@ -4,6 +4,7 @@
 #
 
 Rails.application.routes.draw do
+  post 'open_ai/submit'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'home' => 'home#index', as: 'home_index'
 
