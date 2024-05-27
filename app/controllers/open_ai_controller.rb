@@ -11,7 +11,7 @@ class OpenAiController < ApplicationController
     image_url = "data:image/jpeg;base64,#{image_data}"
 
     messages = [
-      { "type": "text", "text": "What’s in this image?"},
+      { "type": "text", "text": "画像から読み取れる、文字やデザイン(character)とそれに対応する合計の球数(total)をjson形式で返却してください"},
       { "type": "image_url",
         "image_url": {
           "url": image_url
@@ -22,6 +22,7 @@ class OpenAiController < ApplicationController
         parameters: {
             model: "gpt-4-vision-preview", # Required.
             messages: [{ role: "user", content: messages}], # Required.
+            response_format: { type: "json_object" },
         })
     @response_text = response.dig("choices", 0, "message", "content")
     render "/articles/index"
