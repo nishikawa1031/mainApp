@@ -11,10 +11,9 @@ class OpenAiController < ApplicationController
     image_url = "data:image/jpeg;base64,#{image_data}"
 
     prompt = "
-    Please return the characters or designs (CHARACTER) and the corresponding total number of spheres (TOTAL) that can be read from the image in json format.
-    Create a CSV where the first line is the character and the second line is the total number of balls.
-    when you apload test_file_name.png
-      { 'test_file_name': { 'R': 18, 'e': 14, 'f': 12, 'l': 9, 'e': 14, 'c': 10, 't': 10 } }
+    The key of the response stores each letter of the sign and the value is the number of balls.The response must be returned in json format.
+    example response:
+    { 'R': 18, 'e': 14, 'f': 12, 'l': 9, 'e': 14, 'c': 10, 't': 10 }
     "
 
     messages = [
@@ -34,23 +33,14 @@ class OpenAiController < ApplicationController
     @response_text = response.dig("choices", 0, "message", "content")
 
     # Parse the response JSON
-    response_json = JSON.parse(@response_text)
+    puts response_json = JSON.parse(@response_text)
 
     # Define the CSV file path
     csv_file_path = Rails.root.join('public', 'output.csv')
 
-    # CSVを生成します
-    CSV.open(csv_file_path, 'w') do |csv|
-      # ヘッダーを追加します
-      csv << ['char', 'total']
+    file_name = '404068'
 
-      # JSONデータを処理してCSVに追加します
-      response_json.each do |file_name, char_totals|
-        char_totals.each do |char, total|
-          csv << [char, total]
-        end
-      end
-    end
+    generate_csv(csv_file_path, response_json, file_name)
 
     render "/articles/index"
 
@@ -64,3 +54,28 @@ class OpenAiController < ApplicationController
     render "/articles/index"
   end
 end
+
+private
+  # csv output
+  # project number, character, number of ball
+  # 404068, R, 18
+  # 404068, e, 14
+  # 404068, f, 12
+  # 404068, l, 9
+  # 404068, e, 14
+  # 404068, c, 10
+  # 404068, t, 10
+  def generate_csv(csv_file_path, response_json, file_name)
+    csv_content = CSV.generate do |csv|
+      # Add headers
+      csv << ['project number', 'character', 'number of ball']
+
+      response_json.each do |char, number_of_ball|
+        # Add character line
+        csv << [file_name, char, number_of_ball]
+      end
+    end
+
+    # Write the CSV content to the file
+    File.write(csv_file_path, csv_content)
+  end
