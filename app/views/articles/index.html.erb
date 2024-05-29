@@ -78,6 +78,7 @@
   </div>
 </div>
 
+<% if false %>
 <h1>Azure OpenAI Input Form</h1>
 <%= form_with url: '/open_ai/submit', local: true, multipart: true do %>
   <div>
@@ -96,4 +97,5 @@
 <% if @response_text.present? %>
   <h2>Response:</h2>
   <p><%= @response_text %></p>
+<% end %>
 <% end %>
