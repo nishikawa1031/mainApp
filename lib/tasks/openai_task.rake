@@ -4,6 +4,7 @@
 namespace :openai do
     desc "Process OpenAI API and generate CSV for each file in ./lib/assets/illustrator/"
     task submit: :environment do
+      puts 'Processing OpenAI API ...'
       directory_path = './lib/assets/illustrator/'
   
       # ディレクトリ内の全てのファイル名を取得
@@ -40,6 +41,7 @@ namespace :openai do
           client = OpenAI::Client.new
   
           begin
+            puts "Processing file: #{file_name}"
             response = client.chat(
               parameters: {
                 model: "gpt-4-vision-preview", # Required.
@@ -72,15 +74,28 @@ namespace :openai do
         end
       end
     end
+
+    def project_number(file_name)
+        # ファイル名からプロジェクト番号を取得
+        file_name.split('_')[0]
+    end
+
+    def index(file_name)
+        # ファイル名からインデックスを取得
+        file_name.split('_')[1]
+    end
   
     def generate_csv(csv_file_path, response_json, file_name)
+      puts "Generating CSV file: #{csv_file_path}"
+      project_number = project_number(file_name)
+      index = index(file_name)
       csv_content = CSV.generate do |csv|
         # Add headers
-        csv << ['project number', 'character', 'number of ball']
+        csv << ['file name', 'project number', 'index', 'character', 'number of ball']
   
         response_json.each do |char, number_of_ball|
           # Add character line
-          csv << [file_name, char, number_of_ball]
+          csv << [file_name, project_number, index, char, number_of_ball]
         end
       end
   
