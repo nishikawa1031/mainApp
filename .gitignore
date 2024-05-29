@@ -36,3 +36,6 @@ storage
 .env
 
 /docs/*
+
+/lib/assets/csv/*
+/lib/assets/illustrator/*
