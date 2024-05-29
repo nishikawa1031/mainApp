@@ -27,6 +27,10 @@ namespace :openai do
   
           If there are identical letters, the second and subsequent letters must be followed by a number at the end of the key name.
           ex. {'H'=>47, 'A'=>49, 'M'=>57,'A2'=>49, 'M2'=>57,'A3'=>49, 'T'=>46, 'S'=>43, 'U'=>43}
+
+          Characters may be in Chinese characters.
+
+          The number of balls may be listed separately in one letter section. In such cases, KEY should be stated as 'part of ポ'.
           "
   
           messages = [
@@ -52,7 +56,7 @@ namespace :openai do
             response_text = response.dig("choices", 0, "message", "content")
   
             # Parse the response JSON
-            response_json = JSON.parse(response_text)
+            puts response_json = JSON.parse(response_text)
   
             # Define the CSV file path
             csv_file_name = File.basename(file_name, File.extname(file_name))
