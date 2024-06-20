@@ -1,10 +1,9 @@
-# frozen_string_literal: true
-
 class User < ApplicationRecord
   has_many :articles
   enum role: { applicant: 0, admin: 1, employee: 2 }
 
   has_one_attached :avatar
+  has_one_attached :resume # ここに追加
 
   class << self
     def find_or_create_from_auth(auth_hash)

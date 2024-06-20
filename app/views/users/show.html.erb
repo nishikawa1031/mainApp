@@ -1,45 +1,38 @@
-<div class="container bg-light" style="width: 90%;">
-  <div class="row">
-    <div class="col-sm-4 text-center">
-      <div class="card">
-        <%= render "/users/avatar" %>
-        <div class="card-body">
-          <h5 class="card-title"><%= "#{current_user.email}" %></h5>
-          <hr>
-          <% if current_user?(@user) %>
-           <%= link_to "Edit Profile", edit_user_path(current_user), class: "btn btn-primary btn-sm" %> 
-          <% end %>
-        </div>
-      </div>
-      <% if current_user&.employee? || current_user&.admin? %>
-        <%= link_to "New Article", new_article_path, class: "btn btn-primary btn-sm" %>
-      <% end %>
-      <% if current_user&.applicant? || current_user&.admin? %>
-        <%= link_to "New Applicant", new_applicant_path, class: "btn btn-primary btn-sm" %>
-      <% end %>
-    </div>
-    <div class="col-sm-8">
-      <div class="card">
-        <div class="card-body" style="background-color: rgb(40, 43, 43); color: white;">
-          <img src="<%= asset_path('World-14.png') %>" alt="Matches Logo" style="flex: 1; width: auto; max-width: 100%;">
-          <!-- ここにユーザーのプロフィール情報を表示 -->
-        </div>
-      </div>
-    </div>
+<div class="bg-light">
+  <div class="service">
+    <h3>経歴書自動生成AI</h3>
+    <%= image_tag("resume_icon.jpg", alt: "Resume Icon") %>
+    </br>
+    <p>AI技術を用いて、日本語の経歴書を自動で生成。スピーディーに転職活動をサポートします。</p>
   </div>
-  <div class="row mt-4">
-    <div class="col-sm-12">
-      <div id="articles">
-        <% @articles.each do |article| %>
-          <%= render "articles/article", article: article %>
-        <% end %>
-      </div>
-      <%= paginate @articles %>
-      <% if Rails.env == "development" %>
-        <p class="text-muted mt-3">
-          Debug: <%= @number_of_articles %> draft articles
-        </p>
+  <div style="display: flex; justify-content: center; align-items: center;">
+    <div class="form-modern" style="background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <h2 style="text-align: center; margin: 20px; color: #333;">経歴書をアップロード</h2>
+      <%= form_with model: @user, url: user_path(@user), local: true, multipart: true do |form| %>
+        <div style="margin-bottom: 20px;">
+          <%= form.file_field :resume, style: "width: 100%; padding: 12px 20px; font-size: 16px; border: 1px solid #ddd; border-radius: 5px; background: #f9f9f9; outline: none; transition: border-color 0.3s;" %>
+        </div>
+        <div style="text-align: center;">
+          <%= form.submit "アップロード", style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;" %>
+        </div>
       <% end %>
     </div>
   </div>
+
+  <% if @user.resume.attached? %>
+    <div class="uploaded-file" style="margin-top: 20px; text-align: center;">
+      <h3>アップロードされたファイル</h3>
+      <% if @user.resume.content_type.start_with?('image/') %>
+        <%= image_tag url_for(@user.resume), style: "max-width: 100%; height: auto;" %>
+      <% elsif @user.resume.content_type == 'application/pdf' %>
+        <%= tag.iframe src: url_for(@user.resume), style: "width: 100%; height: 100vh;" %>
+      <% else %>
+        <p>このファイルは表示できません。<%= link_to 'こちらからダウンロード', url_for(@user.resume) %>してください。</p>
+      <% end %>
+    </div>
+    <div class="suggestions" style="margin-top: 20px;">
+      <h3>改善点の提案</h3>
+      <p><%= @response_text %></p>
+    </div>
+  <% end %>
 </div>
