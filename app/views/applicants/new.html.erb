@@ -1,8 +1,15 @@
-<h1>New applicant</h1>
-
-<%= render "form", applicant: @applicant %>
-
-<br>
+<div class="row">
+  <div class="col-md-6">
+    <h2>Fill in the form below to apply for a job.</h2>
+    <p>You can write in your mother tongue.</p>
+    <%= render "form", applicant: @applicant %>
+    <br>
+  </div>
+  <div class="col-md-6">
+    <h2>Resume in Japanese</h2>
+    <p>AIにより自動翻訳された履歴書です</p>
+  </div>
+</div>
 
 <div>
   <%= link_to "Back to applicants", applicants_path %>

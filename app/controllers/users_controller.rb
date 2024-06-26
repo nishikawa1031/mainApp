@@ -14,12 +14,18 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(id: params[:id])
     if @user.update(user_params)
-      file_path = ActiveStorage::Blob.service.send(:path_for, @user.resume.key)
-      improvement_suggestions = analyze_resume(file_path)
-      @response_text = improvement_suggestions
-      render :show
+      if @user.resume.attached?
+        begin
+          improvement_suggestions = analyze_resume(@user.resume)
+          render json: { advice: improvement_suggestions }
+        rescue StandardError => e
+          render json: { error: e.message }, status: :service_unavailable
+        end
+      else
+        render json: { error: "履歴書が添付されていません。" }, status: :unprocessable_entity
+      end
     else
-      render :edit
+      render json: { error: @user.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
@@ -29,29 +35,12 @@ class UsersController < ApplicationController
     params.require(:user).permit(:resume)
   end
 
-  def analyze_resume(file_path)
-    client = OpenAI::Client.new
-    file_data = Base64.encode64(File.read(file_path))
-    file_url = "data:application/pdf;base64,#{file_data}"
+  def analyze_resume(resume)
+    prompt = "以下の履歴書を分析し、改善点を日本語で提案してください。回答は箇条書きで、最大5つの改善点を挙げてください。"
 
-    prompt = "Please review the attached resume and suggest improvements. Provide your response in a clear, structured format."
-
-    messages = [
-      { "type": "text", "text": prompt },
-      { "type": "file_url",
-        "file_url": {
-          "url": file_url
-        },
-      }
-    ]
-
-    response = client.chat(
-      parameters: {
-        model: "gpt-4-vision-preview",
-        messages: [{ role: "user", content: messages }],
-        response_format: { type: "json_object" },
-      }
+    AzureOpenaiService.instance.analyze_image(
+      image_data: resume.download,
+      prompt: prompt
     )
-    response.dig("choices", 0, "message", "content")
   end
 end
