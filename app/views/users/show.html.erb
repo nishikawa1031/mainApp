@@ -8,24 +8,11 @@
       <%= link_to '経歴書を作成する', new_applicant_path, class: "header-link", style: "text-decoration: none;" %>
     </div>
   </div>
-  <div style="display: flex; justify-content: center; align-items: center;">
-    <div class="form-modern" style="background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-      <h2 style="text-align: center; margin: 20px; color: #333;">既存の経歴書をアップロード</h2>
-      <%= form_with model: @user, url: user_path(@user), local: true, multipart: true, data: { turbo: false } do |form| %>
-        <div style="margin-bottom: 20px;">
-          <%= form.file_field :resume, style: "width: 100%; padding: 12px 20px; font-size: 16px; border: 1px solid #ddd; border-radius: 5px; background: #f9f9f9; outline: none; transition: border-color 0.3s;" %>
-        </div>
-        <div style="text-align: center;">
-          <%= form.submit "アップロード", style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;" %>
-        </div>
-      <% end %>
-    </div>
-  </div>
 
-  <% if @user.resume.attached? %>
-    <div class="row m-4">
-      <div class="col-sm-6 mb-4">
-        <div class="uploaded-file" style="margin-top: 20px; text-align: center;">
+  <div class="row m-4">
+    <div class="col-sm-6 mb-4">
+      <div class="uploaded-file" style="margin-top: 20px; text-align: center;">
+        <% if @user.resume.attached? %>
           <h3>アップロードされたファイル</h3>
           <% if @user.resume.content_type.start_with?('image/') %>
             <%= image_tag url_for(@user.resume), style: "max-width: 100%; height: auto;" %>
@@ -34,47 +21,50 @@
           <% else %>
             <p>このファイルは表示できません。<%= link_to 'こちらからダウンロード', url_for(@user.resume) %>してください。</p>
           <% end %>
-        </div>
+        <% end %>
       </div>
-      <div class="col-sm-6 mb-4">
+      <h3>改善点の提案</h3>
+      <% if @improvement_suggestions %>
         <div class="suggestions" style="margin-top: 20px;">
-          <h3>改善点の提案</h3>
-          <div id="advice-content">
-            <% if @response_text %>
-              <%= render_markdown(@response_text) %>
-            <% else %>
-              <p>ファイルをアップロードすると、AIがアドバイスを生成します。</p>
-            <% end %>
+          <div class="advice-box">
+            <%= simple_format(@improvement_suggestions) %>
           </div>
         </div>
+      <% else %>
+        <p>なし</p>
+      <% end %>
+    </div>
+    <div class="col-sm-6 mb-4">
+      <div class="form-modern" style="background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h2 style="text-align: center; margin: 20px; color: #333;">既存の経歴書をアップロード</h2>
+        <%= form_with model: @user, url: user_path(@user), local: true, multipart: true do |form| %>
+          <div style="margin-bottom: 20px;">
+            <%= form.file_field :resume, style: "width: 100%; padding: 12px 20px; font-size: 16px; border: 1px solid #ddd; border-radius: 5px; background: #f9f9f9; outline: none; transition: border-color 0.3s;" %>
+          </div>
+          <div style="text-align: center;">
+            <%= form.submit "アップロード", style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;" %>
+          </div>
+        <% end %>
       </div>
     </div>
-  <% end %>
+  </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-  const form = document.querySelector('form');
-  const adviceContent = document.getElementById('advice-content');
+<style>
+.advice-box {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 10px;
+}
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const formData = new FormData(form);
+.advice-box ul {
+  padding-left: 20px;
+}
 
-    fetch(form.action, {
-      method: 'PATCH',
-      body: formData,
-      headers: {
-        'X-Requested-With': 'XMLHttpRequest'
-      }
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.advice) {
-        adviceContent.innerHTML = marked.parse(data.advice);
-      }
-    })
-    .catch(error => console.error('Error:', error));
-  });
-});
-</script>
+.advice-box li {
+  margin-bottom: 10px;
+}
+</style>
+Last edited just now

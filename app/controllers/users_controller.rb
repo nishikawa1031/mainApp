@@ -14,18 +14,19 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(id: params[:id])
     if @user.update(user_params)
+      p "ddddxxxx"
       if @user.resume.attached?
         begin
-          improvement_suggestions = analyze_resume(@user.resume)
-          render json: { advice: improvement_suggestions }
+          p @improvement_suggestions = analyze_resume(@user.resume)
+          redirect_to @user, notice: '履歴書がアップロードされ、分析が完了しました。'
         rescue StandardError => e
-          render json: { error: e.message }, status: :service_unavailable
+          redirect_to @user, alert: "エラーが発生しました: #{e.message}"
         end
       else
-        render json: { error: "履歴書が添付されていません。" }, status: :unprocessable_entity
+        redirect_to @user, alert: "履歴書が添付されていません。"
       end
     else
-      render json: { error: @user.errors.full_messages }, status: :unprocessable_entity
+      render :edit
     end
   end
 
