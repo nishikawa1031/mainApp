@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+  <%if false %>
   <div class="mb-3">
     <%= form.label :name, class: "form-label" %>
     <%= form.text_field :name, class: "form-control", required: true %>
@@ -20,12 +21,14 @@
     <%= form.label :birthday, class: "form-label" %>
     <%= form.date_field :birthday, class: "form-control" %>
   </div>
+  <% end %>
 
   <div class="mb-3">
     <%= form.label :files, class: "form-label" %>
     <%= form.file_field :files, multiple: true, class: "form-control" %>
   </div>
 
+  <%if false %>
   <div class="mb-3">
     <%= form.label :nationality, class: "form-label" %>
     <%= form.number_field :nationality, class: "form-control" %>
@@ -49,4 +52,5 @@
   <div class="mb-3">
     <%= form.submit "Save", class: "btn btn-primary" %>
   </div>
+<% end %>
 <% end %>
