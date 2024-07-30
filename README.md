@@ -6,7 +6,7 @@ bundle install
 make up
 ```
 tips: [Makefile](/Makefile)
-4. access http://localhost:8080/
+2. access http://localhost:8080/
 ※ auth0のcallback urlとして、設定しているため、8080でなければならない。
 
 ## docker( optional )
