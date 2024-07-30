@@ -1,12 +1,11 @@
 # About
 ##  Service Overview
-[about](/documents/about.md)
+- [about](/documents/about.md)
+- [Technical Docs](documents/technical_docs/Readme.md)
 ## Technical Description
 Framework: Rails 
 * https://guides.rubyonrails.org/getting_started.html
 * https://www.youtube.com/watch?v=wkNR1hG4yOk&list=PLm8ctt9NhMNV75T9WYIrA6m9I_uw7vS56 
-
-[Technical Docs](documents/technical_docs/Readme.md)
 
 # How to setup
 ## local
