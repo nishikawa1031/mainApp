@@ -1,7 +1,10 @@
 # About
+##  Service Overview
+[about](/documents/en/about.md)
+## Technical Description
 Framework: Rails 
 * https://guides.rubyonrails.org/getting_started.html
-* https://www.youtube.com/watch?v=wkNR1hG4yOk&list=PLm8ctt9NhMNV75T9WYIrA6m9I_uw7vS56
+* https://www.youtube.com/watch?v=wkNR1hG4yOk&list=PLm8ctt9NhMNV75T9WYIrA6m9I_uw7vS56 
 
 # How to setup
 ## local
@@ -21,7 +24,6 @@ make up
 <details><summary>If this screen appears, you have succeeded.</summary>
 <img width="1436" alt="スクリーンショット 2024-07-30 22 14 24" src="https://github.com/user-attachments/assets/753d2e88-ff63-4e1f-b2b4-3ceb715aa77a">
 </details>
-
 
 ## docker( optional )
 1. Uncomment
