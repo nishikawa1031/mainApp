@@ -1,6 +1,6 @@
 
 # Document
-https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#document
+https://github.com/nishikawa1031/mainApp/blob/master/documents/technical_docs/Readme.md
 
 [doc](/doc/)
 
