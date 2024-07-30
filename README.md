@@ -1,6 +1,6 @@
 # About
 ##  Service Overview
-[about](/documents/en/about.md)
+[about](/documents/about.md)
 ## Technical Description
 Framework: Rails 
 * https://guides.rubyonrails.org/getting_started.html
