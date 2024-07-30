@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   has_many :articles
   enum role: { applicant: 0, admin: 1, employee: 2 }
