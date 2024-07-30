@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   load_and_authorize_resource find_by: :id
 
@@ -14,7 +16,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(id: params[:id])
     if @user.update(user_params)
-      p "ddddxxxx"
+      p 'ddddxxxx'
       if @user.resume.attached?
         begin
           p @improvement_suggestions = analyze_resume(@user.resume)
@@ -23,7 +25,7 @@ class UsersController < ApplicationController
           redirect_to @user, alert: "エラーが発生しました: #{e.message}"
         end
       else
-        redirect_to @user, alert: "履歴書が添付されていません。"
+        redirect_to @user, alert: '履歴書が添付されていません。'
       end
     else
       render :edit
@@ -37,11 +39,11 @@ class UsersController < ApplicationController
   end
 
   def analyze_resume(resume)
-    prompt = "以下の履歴書を分析し、改善点を日本語で提案してください。回答は箇条書きで、最大5つの改善点を挙げてください。"
+    prompt = '以下の履歴書を分析し、改善点を日本語で提案してください。回答は箇条書きで、最大5つの改善点を挙げてください。'
 
     AzureOpenaiService.instance.analyze_image(
       image_data: resume.download,
-      prompt: prompt
+      prompt:
     )
   end
 end
