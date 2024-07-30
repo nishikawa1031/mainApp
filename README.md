@@ -45,12 +45,13 @@ docker-compose run web rails db:seed
 ```
 
 # How we work
-
 [how to create PR](documents/work_way/pr.md)
 
 ## when you have a question
-* ask Mr.Nishikawa whenever you want
-nishikawa@artie.jp or Line( ID: nishikawa1031 ) or github comment
+* ask Mr.Nishikawa whenever you want 
+  * nishikawa@artie.jp
+  * Line( ID: nishikawa1031 )
+  * github comment
 
 ## recommendation
 * Editor
