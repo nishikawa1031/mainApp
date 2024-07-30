@@ -50,6 +50,12 @@ docker-compose run web rails db:seed
 
 ## when you have a question
 * ask Mr.Nishikawa whenever you want
+
+## recommendation
+* Editor
+[The terminal with a modern text editor \| Warp](https://www.warp.dev/text-editor)
+* Terminal
+[Cursor](https://www.cursor.com/)
 * It is recommended to ask the AI about CODING.
   * [Claude](https://claude.ai/new)
   * [ChatGPT](https://chatgpt.com/)
