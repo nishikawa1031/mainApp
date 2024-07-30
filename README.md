@@ -1,4 +1,4 @@
-# setup
+# How to setup
 ## local
 1. bundle install
 2. make up
