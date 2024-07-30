@@ -1,7 +1,3 @@
-以下は指定された内容の英訳です。
-
----
-
 # Service Overview
 A web application providing a matching service between job seekers and companies.
 
