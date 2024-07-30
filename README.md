@@ -13,12 +13,13 @@ git clone https://github.com/nishikawa1031/mainApp
 bundle install
 make up
 ```
-tips: [Makefile](/Makefile)
+* tips: [Makefile](/Makefile)
 
 3. access http://localhost:8080/
-※ auth0のcallback urlとして、設定しているため、8080でなければならない。
-If this screen appears, you have succeeded.
+* ※ auth0のcallback urlとして、設定しているため、8080でなければならない。
+<details><summary>If this screen appears, you have succeeded.</summary>
 <img width="1436" alt="スクリーンショット 2024-07-30 22 14 24" src="https://github.com/user-attachments/assets/753d2e88-ff63-4e1f-b2b4-3ceb715aa77a">
+</details>
 
 
 ## docker( optional )
