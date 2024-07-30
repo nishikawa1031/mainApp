@@ -5,7 +5,7 @@
 http://localhost:8080/
 ※ auth0のcallback urlとして、設定しているため、8080でなければならない。
 
-## docker
+## docker( optional )
 1. Uncomment
 config/database.yml
 ```
