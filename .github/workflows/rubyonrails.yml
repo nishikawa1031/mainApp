@@ -22,6 +22,8 @@ jobs:
           POSTGRES_DB: rails_test
           POSTGRES_USER: rails
           POSTGRES_PASSWORD: password
+          AZURE_OPENAI_API_KEY: xxxx
+          AZURE_OPENAI_URI: xxxx
     env:
       RAILS_ENV: test
       DATABASE_URL: "postgres://rails:password@localhost:5432/rails_test"
