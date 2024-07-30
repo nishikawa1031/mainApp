@@ -6,9 +6,10 @@ Framework: Rails
 # How to setup
 ## local
 1. Download source code
+```
 git clone https://github.com/nishikawa1031/mainApp
-
-2. command
+```
+2. Execute command
 ```
 bundle install
 make up
