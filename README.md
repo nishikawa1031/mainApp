@@ -2,6 +2,7 @@
 ## local
 1. bundle install
 2. make up
+tips: [Makefile](/Makefile)
 3. access http://localhost:8080/
 ※ auth0のcallback urlとして、設定しているため、8080でなければならない。
 
@@ -20,9 +21,6 @@ docker-compose build
 docker-compose up
 docker-compose run web rails db:seed
 ```
-
-## tips
-[Makefile](/Makefile)
 
 # Document
 https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#document
