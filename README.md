@@ -1,8 +1,9 @@
 # About
 ##  Service Overview
 - [about services](/documents/about.md)
-- [Technical Docs](documents/technical_docs/Readme.md)
+
 ## Technical Description
+- [Technical Docs](documents/technical_docs/Readme.md)
 Framework: [Ruby on Rails](documents/for_rails_beginners/rails.md)
 
 
