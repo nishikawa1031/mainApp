@@ -2,13 +2,14 @@
 ##  Service Overview
 [about](/documents/en/about.md)
 ## Technical Description
-Framework: Rails 
-* https://guides.rubyonrails.org/getting_started.html
-* https://www.youtube.com/watch?v=wkNR1hG4yOk&list=PLm8ctt9NhMNV75T9WYIrA6m9I_uw7vS56 
+Framework: [Ruby on Rails](documents/for_rails_beginners/rails.md)
+
 
 [Technical Docs](documents/technical_docs/Readme.md)
 
 # How to setup
+If you find errors, shortcomings or outdated aspects of the procedure while building the environment, please submit a PR. Correcting documentation is one way to contribute immediately to the team and is greatly appreciated.
+
 ## local
 1. Download source code
 ```
@@ -42,3 +43,7 @@ docker-compose build
 docker-compose up
 docker-compose run web rails db:seed
 ```
+
+# How we work
+
+[how to create PR](documents/work_way/pr.md)
