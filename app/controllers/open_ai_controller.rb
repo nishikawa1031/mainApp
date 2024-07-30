@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class OpenAiController < ApplicationController
-  const PROMPT = "
+  PROMPT = "
   The key of the response stores each letter of the sign and the value is the number of balls.The response must be returned in json format.
   example response:
   { 'R': 18, 'e': 14, 'f': 12, 'l': 9, 'e': 14, 'c': 10, 't': 10 }
