@@ -61,3 +61,4 @@ docker-compose run web rails db:seed
 * It is recommended to ask the AI about CODING.
   * [Claude](https://claude.ai/new)
   * [ChatGPT](https://chatgpt.com/)
+  * [Gemini](https://gemini.google.com/app)
