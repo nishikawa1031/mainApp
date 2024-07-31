@@ -8,8 +8,6 @@
 
 
 # How to setup
-If you find errors, shortcomings or outdated aspects of the procedure while building the environment, please submit a PR. Correcting documentation is one way to contribute immediately to the team and is greatly appreciated.
-
 ## local
 1. Download source code
 ```
@@ -45,4 +43,5 @@ docker-compose run web rails db:seed
 ```
 
 # How we work
-[how to create PR](documents/work_way/pr.md)
+* If you find errors, shortcomings or outdated aspects of the procedure while building the environment, please submit a PR. Correcting documentation is one way to contribute immediately to the team and is greatly appreciated.
+  * [how to create PR](documents/work_way/pr.md)
