@@ -4,7 +4,7 @@
 
 ## Technical Description
 - [Technical Docs](documents/technical_docs/Readme.md)
-- Framework: [Ruby on Rails](documents/for_rails_beginners/rails.md)
+- Framework: Ruby on Rails [for beginners](documents/for_rails_beginners/rails.md)
 
 
 # How to setup
