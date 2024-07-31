@@ -7,8 +7,8 @@
 ### Write a technical blog
 Try to output what you have learnt immediately, for example by watching videos
 
-[Tips on How to Write Your First Successful Technical Blog \| by Hannah Pratte \| QuarkWorks, Inc\. \| Medium](https://medium.com/quark-works/tips-on-how-to-write-your-first-successful-technical-blog-4cb65e5b4ce4)
-[The Ultimate Guide to Writing Technical Blog Posts \- DEV Community](https://dev.to/blackgirlbytes/the-ultimate-guide-to-writing-technical-blog-posts-5464)
+* [Tips on How to Write Your First Successful Technical Blog \| by Hannah Pratte \| QuarkWorks, Inc\. \| Medium](https://medium.com/quark-works/tips-on-how-to-write-your-first-successful-technical-blog-4cb65e5b4ce4)
+* [The Ultimate Guide to Writing Technical Blog Posts \- DEV Community](https://dev.to/blackgirlbytes/the-ultimate-guide-to-writing-technical-blog-posts-5464)
 
 ### when you have a question
 * It is recommended to ask the AI about CODING.
