@@ -15,7 +15,7 @@ https://github.com/nishikawa1031/mainApp/blob/master/documents/technical_docs/Re
 # dashboard
 * [Top](https://www.solution-hub.net/)
   * [herokuドメイン](https://main-app-1209-44817d8898b5.herokuapp.com/)
-* [管理画面](https://main-app-1209-466d97d1a50c.herokuapp.com/admin)
+* [管理画面](https://main-app-1209-44817d8898b5.herokuapp.com/admin)
 * [heroku](https://dashboard.heroku.com/apps)
 * [Rollbar](https://rollbar.com/tatsunishitatsu/FirstProject/)
 * [auth0](https://manage.auth0.com/dashboard/jp/dev-kg26mhb8w8f3va47/applications/hgwPE8X64zNuE6ohT8yLYftVuQkYyr7s/settings)
