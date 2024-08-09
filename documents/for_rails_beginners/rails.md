@@ -29,3 +29,6 @@ Try to output what you have learnt immediately, for example by watching videos
 
 ## reference
 * [Getting Started with Rails — Ruby on Rails Guides](https://guides.rubyonrails.org/getting_started.html)
+
+## start developing
+https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#how-to-setup
