@@ -18,6 +18,7 @@ Try to output what you have learnt immediately, for example by watching videos
    * For the benefit of the next person who builds the environment, please write on this page about any stuck points or problems you encounter.
    * Correcting documentation is one way to contribute immediately to the team and is greatly appreciated.
      * [how to create PR](documents/work_way/pr.md)
+### working level
 5. Challenging issues
 If you see an issue that you think you can do, give it a go.
    * [Issues](https://github.com/nishikawa1031/mainApp/issues)
