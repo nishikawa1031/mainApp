@@ -1,9 +1,6 @@
 ![1](https://github.com/user-attachments/assets/685220c3-07bb-4b3e-8950-89fa434d24ca)
 
-# How to study
-* For those seeking employment in Japanese IT companies.
-* You can start at a level that suits you.
-
+# Level
 ## For begginers
 1. learn Ruby on Rails
      * [Learn Ruby on Rails \- Full Course \- YouTube](https://www.youtube.com/watch?v=fmyvWz5TUWg)
