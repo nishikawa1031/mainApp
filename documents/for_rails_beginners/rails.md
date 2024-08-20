@@ -30,11 +30,11 @@ If you see an issue that you think you can do, give it a go.
   * [ChatGPT](https://chatgpt.com/)
   * [Gemini](https://gemini.google.com/app)
 
-* ask Mr.Nishikawa whenever you want 
-  * art4510@outlook.jp
-  * Line group
-     * To make it easier for you to ask questions, we will invite you to the LINE group, so please email the above email address to request an invitation.
-
+* join slack group
+     * [Invitation Link](https://join.slack.com/t/artinternship/shared_invite/zt-2p0dn32tu-pMI7GtfsTifKIDHxPPze9w)
+         * To make it easier for you to ask questions, we will invite you to the slack group.
+         * Feel free to ask questions on this group
+     
 ## recommendation
 * Editor
 [The terminal with a modern text editor \| Warp](https://www.warp.dev/text-editor)
