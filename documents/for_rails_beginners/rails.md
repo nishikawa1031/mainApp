@@ -5,6 +5,9 @@
 1. learn Ruby on Rails
      * [Learn Ruby on Rails \- Full Course \- YouTube](https://www.youtube.com/watch?v=fmyvWz5TUWg)
        * It is recommended that you not only look at it, but actually try to build it.
+       * reference
+           * [Getting Started with Rails — Ruby on Rails Guides](https://guides.rubyonrails.org/getting_started.html)
+
 2. Write a technical blog
 Try to output what you have learnt immediately, for example by watching videos
       * [Tips on How to Write Your First Successful Technical Blog \| by Hannah Pratte \| QuarkWorks, Inc\. \| Medium](https://medium.com/quark-works/tips-on-how-to-write-your-first-successful-technical-blog-4cb65e5b4ce4)
@@ -43,5 +46,3 @@ If you see an issue that you think you can do, give it a go.
 * Terminal
 [Cursor](https://www.cursor.com/)
 
-## reference
-* [Getting Started with Rails — Ruby on Rails Guides](https://guides.rubyonrails.org/getting_started.html)
