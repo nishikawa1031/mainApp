@@ -17,8 +17,7 @@ Try to output what you have learnt immediately, for example by watching videos
   * [Gemini](https://gemini.google.com/app)
 
 * ask Mr.Nishikawa whenever you want 
-  * nishikawa@artie.jp
-  * Line( ID: nishikawa1031 )
+  * art4510@outlook.jp
   * github comment
 
 ### recommendation
