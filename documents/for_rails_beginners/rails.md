@@ -32,8 +32,8 @@ If you see an issue that you think you can do, give it a go.
 
 * ask Mr.Nishikawa whenever you want 
   * art4510@outlook.jp
-  * join our teams slack
-    * 
+  * Line group
+     * To make it easier for you to ask questions, we will invite you to the LINE group, so please email the above email address to request an invitation.
 
 ## recommendation
 * Editor
