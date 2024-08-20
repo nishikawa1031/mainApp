@@ -1,7 +1,8 @@
 # How to study
 * For those seeking employment in Japanese IT companies.
 * You can start at a level that suits you.
-## for begginers
+
+## For begginers
 1. learn Ruby on Rails
      * [Learn Ruby on Rails \- Full Course \- YouTube](https://www.youtube.com/watch?v=fmyvWz5TUWg)
        * It is recommended that you not only look at it, but actually try to build it.
@@ -18,7 +19,7 @@ Try to output what you have learnt immediately, for example by watching videos
       * [Tips on How to Write Your First Successful Technical Blog \| by Hannah Pratte \| QuarkWorks, Inc\. \| Medium](https://medium.com/quark-works/tips-on-how-to-write-your-first-successful-technical-blog-4cb65e5b4ce4)
       * [The Ultimate Guide to Writing Technical Blog Posts \- DEV Community](https://dev.to/blackgirlbytes/the-ultimate-guide-to-writing-technical-blog-posts-5464)
 
-## for intermediate level
+## For intermediate level
 3. setup Rails application
    * [how to setup](https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#how-to-setup)
 4. create PR
@@ -27,17 +28,17 @@ Try to output what you have learnt immediately, for example by watching videos
      * [how to create PR](documents/work_way/pr.md)
      * [Git and GitHub Tutorial for Beginners \- YouTube](https://www.youtube.com/watch?v=tRZGeaHPoaw)
 
-## Willingness to obtain qualifications.
+## For those who are motivated to obtain qualifications
 5. [AI-900](https://learn.microsoft.com/ja-jp/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
    * Qualifications for AI in Azure.
    * Qualification to build AI. Recommended due to the narrow scope of the exam.
-        
 
 ## Level of internship participation
 6. Challenging issues
 If you see an issue that you think you can do, give it a go.
    * [Issues](https://github.com/nishikawa1031/mainApp/issues)
 7. Introduce applicants to unpaid internships at other companies.
+
 ## working level
 8. I can introduce you to part-time work.
 9. Introduces permanent jobs.
