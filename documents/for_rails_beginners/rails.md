@@ -19,7 +19,7 @@ Try to output what you have learnt immediately, for example by watching videos
 5. Challenging issues
 If you see an issue that you think you can do, give it a go.
    * [Issues](https://github.com/nishikawa1031/mainApp/issues)
-6. Introduce people with experience to unpaid internships at other companies.
+6. Introduce applicants to unpaid internships at other companies.
 ## working level
 7. I can introduce you to part-time work.
 8. Introduces permanent jobs.
