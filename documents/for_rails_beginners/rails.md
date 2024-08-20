@@ -7,6 +7,11 @@
        * It is recommended that you not only look at it, but actually try to build it.
        * reference
            * [Getting Started with Rails — Ruby on Rails Guides](https://guides.rubyonrails.org/getting_started.html)
+       * recommendation
+            * Editor
+            [The terminal with a modern text editor \| Warp](https://www.warp.dev/text-editor)
+            * Terminal
+            [Cursor](https://www.cursor.com/)
 
 2. Write a technical blog
 Try to output what you have learnt immediately, for example by watching videos
@@ -40,9 +45,5 @@ If you see an issue that you think you can do, give it a go.
          * To make it easier for you to ask questions, we will invite you to the slack group.
          * Feel free to ask questions on this group
      
-## recommendation
-* Editor
-[The terminal with a modern text editor \| Warp](https://www.warp.dev/text-editor)
-* Terminal
-[Cursor](https://www.cursor.com/)
+## 
 
