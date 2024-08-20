@@ -28,18 +28,19 @@ Try to output what you have learnt immediately, for example by watching videos
      * [Git and GitHub Tutorial for Beginners \- YouTube](https://www.youtube.com/watch?v=tRZGeaHPoaw)
 
 ## Willingness to obtain qualifications.
-9.Qualifications for AI in Azure.
-Qualification to build AI. Recommended due to the narrow scope of the exam.
-[AI-900](https://learn.microsoft.com/ja-jp/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
+5. [AI-900](https://learn.microsoft.com/ja-jp/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
+   * Qualifications for AI in Azure.
+   * Qualification to build AI. Recommended due to the narrow scope of the exam.
+        
 
 ## Level of internship participation
-5. Challenging issues
+6. Challenging issues
 If you see an issue that you think you can do, give it a go.
    * [Issues](https://github.com/nishikawa1031/mainApp/issues)
-6. Introduce applicants to unpaid internships at other companies.
+7. Introduce applicants to unpaid internships at other companies.
 ## working level
-7. I can introduce you to part-time work.
-8. Introduces permanent jobs.
+8. I can introduce you to part-time work.
+9. Introduces permanent jobs.
 
 # when you have a question
 * It is recommended to ask the AI about CODING.
