@@ -19,6 +19,9 @@ Try to output what you have learnt immediately, for example by watching videos
 5. Challenging issues
 If you see an issue that you think you can do, give it a go.
    * [Issues](https://github.com/nishikawa1031/mainApp/issues)
+## working level
+6. I can introduce you to part-time work.
+7. Introduces permanent jobs.
 
 # when you have a question
 * It is recommended to ask the AI about CODING.
