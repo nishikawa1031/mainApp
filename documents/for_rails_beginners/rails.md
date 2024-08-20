@@ -2,6 +2,7 @@
 ## for begginers
 1. learn Ruby on Rails
      * [Learn Ruby on Rails \- Full Course \- YouTube](https://www.youtube.com/watch?v=fmyvWz5TUWg)
+       * It is recommended that you not only look at it, but actually try to build it.
      * [Git and GitHub Tutorial for Beginners \- YouTube](https://www.youtube.com/watch?v=tRZGeaHPoaw)
 2. Write a technical blog
 Try to output what you have learnt immediately, for example by watching videos
@@ -37,6 +38,3 @@ If you see an issue that you think you can do, give it a go.
 
 ## reference
 * [Getting Started with Rails — Ruby on Rails Guides](https://guides.rubyonrails.org/getting_started.html)
-
-## start developing
-https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#how-to-setup
