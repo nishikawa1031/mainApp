@@ -17,6 +17,7 @@
 Try to output what you have learnt immediately, for example by watching videos
       * [Tips on How to Write Your First Successful Technical Blog \| by Hannah Pratte \| QuarkWorks, Inc\. \| Medium](https://medium.com/quark-works/tips-on-how-to-write-your-first-successful-technical-blog-4cb65e5b4ce4)
       * [The Ultimate Guide to Writing Technical Blog Posts \- DEV Community](https://dev.to/blackgirlbytes/the-ultimate-guide-to-writing-technical-blog-posts-5464)
+
 ## for intermediate level
 3. setup Rails application
    * [how to setup](https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#how-to-setup)
@@ -25,6 +26,12 @@ Try to output what you have learnt immediately, for example by watching videos
    * Correcting documentation is one way to contribute immediately to the team and is greatly appreciated.
      * [how to create PR](documents/work_way/pr.md)
      * [Git and GitHub Tutorial for Beginners \- YouTube](https://www.youtube.com/watch?v=tRZGeaHPoaw)
+
+## Willingness to obtain qualifications.
+9.Qualifications for AI in Azure.
+Qualification to build AI. Recommended due to the narrow scope of the exam.
+[AI-900](https://learn.microsoft.com/ja-jp/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
+
 ## Level of internship participation
 5. Challenging issues
 If you see an issue that you think you can do, give it a go.
