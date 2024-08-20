@@ -28,7 +28,8 @@ If you see an issue that you think you can do, give it a go.
 
 * ask Mr.Nishikawa whenever you want 
   * art4510@outlook.jp
-  * github comment
+  * join our teams slack
+    * 
 
 ## recommendation
 * Editor
