@@ -1,6 +1,4 @@
-
-![1](https://github.com/user-attachments/assets/cc8e1a8a-04c8-444d-915b-76c29b37e635)
-
+![1](https://github.com/user-attachments/assets/0a01a914-e835-410f-97e6-e65546ced39a)
 
 # How to study
 * For those seeking employment in Japanese IT companies.
