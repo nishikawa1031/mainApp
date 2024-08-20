@@ -29,7 +29,7 @@ Try to output what you have learnt immediately, for example by watching videos
      * [Git and GitHub Tutorial for Beginners \- YouTube](https://www.youtube.com/watch?v=tRZGeaHPoaw)
 
 ## For those who are motivated to obtain qualifications
-5. [AI-900](https://learn.microsoft.com/ja-jp/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
+5. [AI-900](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
    * Qualifications for AI in Azure.
    * Qualification to build AI. Recommended due to the narrow scope of the exam.
 
