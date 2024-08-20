@@ -1,21 +1,24 @@
 # How to study
 
-## for begginers
-* [Learn Ruby on Rails \- Full Course \- YouTube](https://www.youtube.com/watch?v=fmyvWz5TUWg)
-* [Git and GitHub Tutorial for Beginners \- YouTube](https://www.youtube.com/watch?v=tRZGeaHPoaw)
+
 
 ## First Task
-1. setup Rails application
-   * [how to setup](https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#how-to-setup)
-2. create PR
-   * For the benefit of the next person who builds the environment, please write on this page about any stuck points or problems you encounter.
-   * Correcting documentation is one way to contribute immediately to the team and is greatly appreciated.
-     * [how to create PR](documents/work_way/pr.md)
-3. Write a technical blog
+### for begginers
+1. learn Ruby on Rails
+     * [Learn Ruby on Rails \- Full Course \- YouTube](https://www.youtube.com/watch?v=fmyvWz5TUWg)
+     * [Git and GitHub Tutorial for Beginners \- YouTube](https://www.youtube.com/watch?v=tRZGeaHPoaw)
+2. Write a technical blog
 Try to output what you have learnt immediately, for example by watching videos
       * [Tips on How to Write Your First Successful Technical Blog \| by Hannah Pratte \| QuarkWorks, Inc\. \| Medium](https://medium.com/quark-works/tips-on-how-to-write-your-first-successful-technical-blog-4cb65e5b4ce4)
       * [The Ultimate Guide to Writing Technical Blog Posts \- DEV Community](https://dev.to/blackgirlbytes/the-ultimate-guide-to-writing-technical-blog-posts-5464)
-4. Challenging issues
+### for intermediate level users
+3. setup Rails application
+   * [how to setup](https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#how-to-setup)
+4. create PR
+   * For the benefit of the next person who builds the environment, please write on this page about any stuck points or problems you encounter.
+   * Correcting documentation is one way to contribute immediately to the team and is greatly appreciated.
+     * [how to create PR](documents/work_way/pr.md)
+5. Challenging issues
 If you see an issue that you think you can do, give it a go.
    * [Issues](https://github.com/nishikawa1031/mainApp/issues)
 
