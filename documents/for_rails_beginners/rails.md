@@ -30,20 +30,15 @@ Try to output what you have learnt immediately, for example by watching videos
      * [how to create PR](documents/work_way/pr.md)
      * [Git and GitHub Tutorial for Beginners \- YouTube](https://www.youtube.com/watch?v=tRZGeaHPoaw)
 
-## For those who are motivated to obtain qualifications
-5. [AI-900](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
-   * Qualifications for AI in Azure.
-   * Qualification to build AI. Recommended due to the narrow scope of the exam.
-
 ## Level of internship participation
-6. Challenging issues
+5. Challenging issues
 If you see an issue that you think you can do, give it a go.
    * [Issues](https://github.com/nishikawa1031/mainApp/issues)
-7. Introduce applicants to unpaid internships at other companies.
+6. Introduce applicants to unpaid internships at other companies.
 
 ## working level
-8. I can introduce you to part-time work.
-9. Introduces permanent jobs.
+7. I can introduce you to part-time work.
+8. Introduces permanent jobs.
 
 # when you have a question
 * It is recommended to ask the AI about CODING.
@@ -55,3 +50,8 @@ If you see an issue that you think you can do, give it a go.
      * [Invitation Link](https://join.slack.com/t/artinternship/shared_invite/zt-2p0dn32tu-pMI7GtfsTifKIDHxPPze9w)
          * To make it easier for you to ask questions, we will invite you to the slack group.
          * Feel free to ask questions on this group
+
+# Recommended qualifications ( if interested )
+[AI-900](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
+   * Qualifications for AI in Azure.
+   * Qualification to build AI. Recommended due to the narrow scope of the exam.
