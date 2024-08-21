@@ -55,6 +55,3 @@ If you see an issue that you think you can do, give it a go.
      * [Invitation Link](https://join.slack.com/t/artinternship/shared_invite/zt-2p0dn32tu-pMI7GtfsTifKIDHxPPze9w)
          * To make it easier for you to ask questions, we will invite you to the slack group.
          * Feel free to ask questions on this group
-     
-## 
-
