@@ -1,4 +1,5 @@
 # How to setup
+## advance preparation
 * [Install Ruby On Rails on Windows 11 \| GoRails](https://gorails.com/setup/windows/11#linux-subsystem)
 * mac
 
