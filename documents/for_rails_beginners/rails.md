@@ -55,3 +55,4 @@ If you see an issue that you think you can do, give it a go.
 [AI-900](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
    * Qualifications for AI in Azure.
    * Qualification to build AI. Recommended due to the narrow scope of the exam.
+   * [AI\-900 Exam // EP 01 // Azure AI Fundamentals AI\-900 Course Introduction by Susanth Sutheesh \- YouTube](https://www.youtube.com/watch?v=E2644J4jgd8&list=PLhLKc18P9YOAGdtSpB3y7WMkjJbi7dva_)
