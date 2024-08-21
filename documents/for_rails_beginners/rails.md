@@ -1,8 +1,8 @@
 ![1](https://github.com/user-attachments/assets/685220c3-07bb-4b3e-8950-89fa434d24ca)
 
 # Level
-I think it would be a good idea to start with ‘For intermediate level’ 
-and if it is too difficult, watch ‘For begginers’ youtube.
+* I think it would be a good idea to start with ‘For intermediate level’ 
+* and if it is too difficult, watch ‘For begginers’ youtube.
 
 ## For begginers
 1. learn Ruby on Rails
