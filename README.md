@@ -1,3 +1,6 @@
+# For begginers
+[for beginners](documents/for_rails_beginners/rails.md)
+
 # How to setup
 ## advance preparation
 * [Install Ruby On Rails on Windows 11 \| GoRails](https://gorails.com/setup/windows/11#linux-subsystem)
@@ -43,6 +46,3 @@ docker-compose run web rails db:seed
 
 ## Technical Description
 - [Technical Docs](documents/technical_docs/Readme.md)
-
-# For begginers
-[for beginners](documents/for_rails_beginners/rails.md)
