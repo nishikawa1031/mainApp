@@ -1,12 +1,3 @@
-# About
-##  Service Overview
-- [about services](/documents/about.md)
-
-## Technical Description
-- [Technical Docs](documents/technical_docs/Readme.md)
-- Framework: Ruby on Rails [for beginners](documents/for_rails_beginners/rails.md)
-
-
 # How to setup
 ## local
 1. Download source code
@@ -41,3 +32,13 @@ docker-compose build
 docker-compose up
 docker-compose run web rails db:seed
 ```
+
+# Start developing
+##  Service Overview
+- [about services](/documents/about.md)
+
+## Technical Description
+- [Technical Docs](documents/technical_docs/Readme.md)
+
+# For begginers
+[for beginners](documents/for_rails_beginners/rails.md)
