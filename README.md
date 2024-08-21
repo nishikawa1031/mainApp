@@ -3,8 +3,10 @@
 
 # How to setup
 ## advance preparation
-* [Install Ruby On Rails on Windows 11 \| GoRails](https://gorails.com/setup/windows/11#linux-subsystem)
-* mac
+### windows
+[Install Ruby On Rails on Windows 11 \| GoRails](https://gorails.com/setup/windows/11#linux-subsystem)
+### Mac
+[Lesson 1 \- Install Rails 7 on MacOS \- YouTube](https://www.youtube.com/watch?v=rg9DCX33IDY)
 
 ## local
 1. Download source code
