@@ -19,7 +19,8 @@ class User < ApplicationRecord
 
     def user_params_from_auth_hash(auth_hash)
       {
-        email: auth_hash.info.name
+        email: auth_hash.info.name,
+        username: auth_hash.info.nickname || 'default_username'
       }
     end
   end
