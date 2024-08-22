@@ -15,7 +15,7 @@ git clone https://github.com/nishikawa1031/mainApp
 ```
 2. Execute command
 ```
-bundle install
+make setup
 make up
 ```
 * tips: [Makefile](/Makefile)
