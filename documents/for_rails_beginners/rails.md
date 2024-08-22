@@ -17,7 +17,7 @@
             [Cursor](https://www.cursor.com/)
 
 2. If you encounter errors or problems
-[wiki](https://github.com/nishikawa1031/mainApp/wiki)
+* [wiki](https://github.com/nishikawa1031/mainApp/wiki)
 * Please leave a note of the solution for your juniors.
 
 4. Write a technical blog
