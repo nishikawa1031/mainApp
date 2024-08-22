@@ -26,6 +26,13 @@ make up
 <img width="1436" alt="スクリーンショット 2024-07-30 22 14 24" src="https://github.com/user-attachments/assets/753d2e88-ff63-4e1f-b2b4-3ceb715aa77a">
 </details>
 
+4. run a test
+If necessary, ensure that all tests PASS.
+```ruby
+bundle exec rspec
+```
+[RSpec Tutorial for Beginners \- YouTube](https://www.youtube.com/watch?v=-uhFA74eBG0)
+
 ## docker( optional )
 1. Uncomment
 config/database.yml
