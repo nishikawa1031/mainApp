@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_04_18_141757) do
+ActiveRecord::Schema[7.0].define(version: 2024_08_23_122531) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -43,16 +43,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_18_141757) do
   end
 
   create_table "applicant_articles", force: :cascade do |t|
-    t.bigint "applicant_id", null: false
-    t.bigint "article_id", null: false
+    t.bigint "applicant_id"
+    t.bigint "article_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["applicant_id"], name: "index_applicant_articles_on_applicant_id"
-    t.index ["article_id"], name: "index_applicant_articles_on_article_id"
   end
 
   create_table "applicants", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -128,15 +126,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_18_141757) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "employees", force: :cascade do |t|
-    t.bigint "company_id", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["company_id"], name: "index_employees_on_company_id"
-    t.index ["user_id"], name: "index_employees_on_user_id"
-  end
-
   create_table "impressions", force: :cascade do |t|
     t.string "impressionable_type"
     t.integer "impressionable_id"
@@ -184,15 +173,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_18_141757) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "applicant_articles", "applicants"
-  add_foreign_key "applicant_articles", "articles", on_delete: :cascade
   add_foreign_key "articles", "users"
   add_foreign_key "bookmarks", "articles"
   add_foreign_key "bookmarks", "users"
   add_foreign_key "category_articles", "articles"
   add_foreign_key "category_articles", "categories"
-  add_foreign_key "employees", "companies"
-  add_foreign_key "employees", "users"
   add_foreign_key "likes", "articles"
   add_foreign_key "likes", "users"
 end
