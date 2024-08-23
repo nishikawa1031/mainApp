@@ -19,6 +19,11 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by(id: session[:userinfo]) if session[:userinfo]
   end
 
+  def authorize_user
+    user = User.find(params[:id]) if params[:id]
+    redirect_to root_path unless user == current_user
+  end
+
   private
 
   def user_signed_in?

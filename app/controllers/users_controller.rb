@@ -2,6 +2,8 @@
 
 class UsersController < ApplicationController
   load_and_authorize_resource find_by: :id
+  before_action :check_logged_in
+  before_action :authorize_user
 
   def show
     @articles = @user.articles
