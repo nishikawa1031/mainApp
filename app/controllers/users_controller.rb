@@ -18,7 +18,6 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(id: params[:id])
     if @user.update(user_params)
-      p 'ddddxxxx'
       if @user.resume.attached?
         begin
           p @improvement_suggestions = analyze_resume(@user.resume)
