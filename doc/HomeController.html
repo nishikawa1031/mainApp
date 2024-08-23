@@ -91,11 +91,6 @@
   
   
   
-  <dl>
-      <dt>Includes:</dt>
-      <dd><span class='object_link'><a href="Secured.html" title="Secured (module)">Secured</a></span></dd>
-  </dl>
-  
   
 
   
@@ -140,7 +135,9 @@
   
 
   
-    <span class="summary_desc"><div class='inline'></div></span>
+    <span class="summary_desc"><div class='inline'>
+<p>skip_before_action :check_logged_in, only: :index.</p>
+</div></span>
   
 </li>
 
@@ -149,18 +146,6 @@
   
 
 
-  
-  
-  
-  
-  
-  
-  
-  
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="Secured.html" title="Secured (module)">Secured</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="Secured.html#logged_in_using_omniauth%3F-instance_method" title="Secured#logged_in_using_omniauth? (method)">#logged_in_using_omniauth?</a></span></p>
-
-  
   
   
   
@@ -179,6 +164,11 @@
   
   
   
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="ApplicationHelper.html" title="ApplicationHelper (module)">ApplicationHelper</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="ApplicationHelper.html#render_markdown-instance_method" title="ApplicationHelper#render_markdown (method)">#render_markdown</a></span></p>
+
+  
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
@@ -193,22 +183,29 @@
   
 
   
-</h3><table class="source_code">
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>skip_before_action :check_logged_in, only: :index</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
 
 
-7
-8
-9</pre>
+6</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/home_controller.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/home_controller.rb', line 6</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span>
-  <span class='ivar'>@user</span> <span class='op'>=</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:userinfo</span><span class='rbracket'>]</span>
-<span class='kw'>end</span></pre>
+<span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
@@ -219,7 +216,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Apr 20 19:55:36 2024 by
+  Generated on Fri Aug 23 23:37:55 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.36 (ruby-3.1.2).
 </div>

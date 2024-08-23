@@ -79,11 +79,6 @@
   
 
   
-  <dl>
-    <dt>Included in:</dt>
-    <dd><span class='object_link'><a href="HomeController.html" title="HomeController (class)">HomeController</a></span></dd>
-  </dl>
-  
 
   
   <dl>
@@ -188,12 +183,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/concerns/secured.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/concerns/secured.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_logged_in_using_omniauth?'>logged_in_using_omniauth?</span>
   <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:userinfo</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_present?'>present?</span>
@@ -208,7 +203,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Apr 20 19:55:36 2024 by
+  Generated on Fri Aug 23 23:37:55 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.36 (ruby-3.1.2).
 </div>

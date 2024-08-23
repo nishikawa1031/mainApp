@@ -184,8 +184,8 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_find_or_create_from_auth'>find_or_create_from_auth</span><span class='lparen'>(</span><span class='id identifier rubyid_auth_hash'>auth_hash</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_user_params'>user_params</span> <span class='op'>=</span> <span class='id identifier rubyid_user_params_from_auth_hash'>user_params_from_auth_hash</span><span class='lparen'>(</span><span class='id identifier rubyid_auth_hash'>auth_hash</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_find_or_create_by'>find_or_create_by</span><span class='lparen'>(</span><span class='label'>email:</span> <span class='id identifier rubyid_user_params'>user_params</span><span class='lbracket'>[</span><span class='symbol'>:email</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_user'>user</span><span class='op'>|</span>
-    <span class='comment'># user.update(user_params)
-</span>  <span class='kw'>end</span>
+    <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_user_params'>user_params</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -197,7 +197,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Apr 20 19:55:36 2024 by
+  Generated on Fri Aug 23 23:37:55 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.36 (ruby-3.1.2).
 </div>
