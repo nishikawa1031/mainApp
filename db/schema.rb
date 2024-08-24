@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_08_23_122531) do
+ActiveRecord::Schema[7.0].define(version: 2024_08_24_050416) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -168,7 +168,10 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_23_122531) do
     t.integer "role", default: 0, null: false
     t.string "username"
     t.string "avatar"
+    t.string "rolable_type"
+    t.bigint "rolable_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["rolable_type", "rolable_id"], name: "index_users_on_rolable"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
