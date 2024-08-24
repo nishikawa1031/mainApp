@@ -8,8 +8,8 @@
 
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
-| id | bigint | nextval('applicants_id_seq'::regclass) | false | [public.applicant_articles](public.applicant_articles.md) |  |  |
-| name | varchar |  | false |  |  | 求職者の名前 |
+| id | bigint | nextval('applicants_id_seq'::regclass) | false |  |  |  |
+| name | varchar |  | true |  |  | 求職者の名前 |
 | user_id | integer |  | true |  |  | この求職者がアプリのユーザーである場合のID |
 | created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
 | updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |

@@ -2,6 +2,8 @@
 
 class UsersController < ApplicationController
   load_and_authorize_resource find_by: :id
+  before_action :check_logged_in
+  before_action :authorize_user
 
   def show
     @articles = @user.articles
@@ -16,7 +18,6 @@ class UsersController < ApplicationController
   def update
     @user = User.find_by(id: params[:id])
     if @user.update(user_params)
-      p 'ddddxxxx'
       if @user.resume.attached?
         begin
           p @improvement_suggestions = analyze_resume(@user.resume)

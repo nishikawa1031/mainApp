@@ -9,8 +9,8 @@
 | Name | Type | Default | Nullable | Children | Parents | Comment |
 | ---- | ---- | ------- | -------- | -------- | ------- | ------- |
 | id | bigint | nextval('applicant_articles_id_seq'::regclass) | false |  |  |  |
-| applicant_id | bigint |  | false |  | [public.applicants](public.applicants.md) | 求職者のID |
-| article_id | bigint |  | false |  | [public.articles](public.articles.md) | 求人記事のID |
+| applicant_id | bigint |  | true |  |  | 求職者のID |
+| article_id | bigint |  | true |  |  | 求人記事のID |
 | created_at | timestamp(6) without time zone |  | false |  |  | 作成日時 |
 | updated_at | timestamp(6) without time zone |  | false |  |  | 更新日時 |
 
@@ -19,16 +19,12 @@
 | Name | Type | Definition |
 | ---- | ---- | ---------- |
 | applicant_articles_pkey | PRIMARY KEY | PRIMARY KEY (id) |
-| fk_rails_0d1746e0af | FOREIGN KEY | FOREIGN KEY (applicant_id) REFERENCES applicants(id) |
-| fk_rails_a39e270f07 | FOREIGN KEY | FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE |
 
 ## Indexes
 
 | Name | Definition |
 | ---- | ---------- |
 | applicant_articles_pkey | CREATE UNIQUE INDEX applicant_articles_pkey ON public.applicant_articles USING btree (id) |
-| index_applicant_articles_on_applicant_id | CREATE INDEX index_applicant_articles_on_applicant_id ON public.applicant_articles USING btree (applicant_id) |
-| index_applicant_articles_on_article_id | CREATE INDEX index_applicant_articles_on_article_id ON public.applicant_articles USING btree (article_id) |
 
 ## Relations
 

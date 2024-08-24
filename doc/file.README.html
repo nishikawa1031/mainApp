@@ -58,18 +58,45 @@
       </div>
 
       <div id="content"><div id='filecontents'>
-<h1 id="label-setup">setup</h1>
+<h1 id="label-For+begginers">For begginers</h1>
+
+<p><a href="documents/for_rails_beginners/rails_md.html">for beginners</a></p>
+
+<h1 id="label-How+to+setup">How to setup</h1>
+
+<h2 id="label-advance+preparation">advance preparation</h2>
+
+<h3 id="label-windows">windows</h3>
+
+<p><a href="https://gorails.com/setup/windows/11#linux-subsystem">Install Ruby On Rails on Windows 11 | GoRails</a></p>
+
+<h3 id="label-Mac">Mac</h3>
+
+<p><a href="https://www.youtube.com/watch?v=rg9DCX33IDY">Lesson 1 - Install Rails 7 on MacOS - YouTube</a></p>
 
 <h2 id="label-local">local</h2>
 <ol><li>
-<p>bundle install</p>
+<p>Download source code</p>
+
+<pre class="code ruby"><code class="ruby">git clone https://github.com/nishikawa1031/mainApp
+</code></pre>
 </li><li>
-<p>make up <a href="http://localhost:8080">localhost:8080</a>/ ※ auth0のcallback urlとして、設定しているため、8080出なければならない。</p>
+<p>Execute command</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_make'>make</span> <span class='id identifier rubyid_setup'>setup</span>
+<span class='id identifier rubyid_make'>make</span> <span class='id identifier rubyid_up'>up</span>
+</code></pre>
+</li><li>
+<p>tips: <a href="/Makefile">Makefile</a></p>
+</li><li>
+<p>access <a href="http://localhost:8080">localhost:8080</a>/</p>
+</li><li>
+<p>※ auth0のcallback urlとして、設定しているため、8080でなければならない。 &lt;details&gt;&lt;summary&gt;If this screen appears, you have succeeded.&lt;/summary&gt; &lt;img width=“1436” alt=“スクリーンショット 2024-07-30 22 14 24” src=“<a href="https://github.com/user-attachments/assets/753d2e88-ff63-4e1f-b2b4-3ceb715aa77a">github.com/user-attachments/assets/753d2e88-ff63-4e1f-b2b4-3ceb715aa77a</a>”&gt; &lt;/details&gt;</p>
 </li></ol>
 
-<h2 id="label-docker">docker</h2>
+<h2 id="label-docker-28+optional+-29">docker( optional )</h2>
 <ol><li>
-<p>Uncomment</p>
+<p>Uncomment config/database.yml</p>
 
 <pre class="code ruby"><code class="ruby"># dockerを利用する際は、host,password,usernameを指定する必要がある
   host: db # docker-compose.ymlで定義したMySQLのコンテナ名
@@ -85,53 +112,21 @@ docker-compose run web rails db:seed
 </code></pre>
 </li></ol>
 
-<h2 id="label-tips">tips</h2>
+<h1 id="label-Start+developing">Start developing</h1>
 
-<p><a href="/Makefile">Makefile</a></p>
-
-<h1 id="label-Document">Document</h1>
-
-<p><a href="https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#document">github.com/nishikawa1031/mainApp?tab=readme-ov-file#document</a></p>
-
-<p><a href="/doc/">doc</a></p>
+<h2 id="label-Service+Overview">Service Overview</h2>
 <ul><li>
-<p><a href="/doc/controllers_complete.svg">controller</a></p>
-</li><li>
-<p><a href="/doc/models_complete.svg">model</a></p>
+<p><a href="/documents/about_md.html">about services</a></p>
 </li></ul>
 
-<h2 id="label-DB">DB</h2>
+<h2 id="label-Technical+Description">Technical Description</h2>
 <ul><li>
-<p><a href="/doc/schema/README_md.html">tbls</a></p>
-</li><li>
-<p><a href="/erd.pdf">ER図</a></p>
+<p><a href="documents/technical_docs/Readme_md.html">Technical Docs</a></p>
 </li></ul>
-
-<h1 id="label-dashboard">dashboard</h1>
-<ul><li>
-<p><a href="https://main-app-1209-466d97d1a50c.herokuapp.com/">Top</a></p>
-</li><li>
-<p><a href="https://main-app-1209-466d97d1a50c.herokuapp.com/admin">管理画面</a></p>
-</li><li>
-<p><a href="https://dashboard.heroku.com/apps">heroku</a></p>
-</li><li>
-<p><a href="https://rollbar.com/tatsunishitatsu/FirstProject/">Rollbar</a></p>
-</li><li>
-<p><a href="https://manage.auth0.com/dashboard/jp/dev-kg26mhb8w8f3va47/applications/hgwPE8X64zNuE6ohT8yLYftVuQkYyr7s/settings">auth0</a></p>
-</li></ul>
-
-<h2 id="label-AWS">AWS</h2>
-<ul><li>
-<p><a href="https://ap-northeast-1.console.aws.amazon.com/s3/home?region=ap-northeast-1#">S3</a></p>
-</li><li>
-<p><a href="https://us-east-1.console.aws.amazon.com/costmanagement/home?region=ap-northeast-1#/home">cost</a></p>
-</li></ul>
-
-<p>googleログイン * <a href="https://analytics.google.com/analytics/web/?authuser=0#/p347800174/reports/intelligenthome">アナリティクス</a> * <a href="https://navi.onamae.com/domain/setting/renew/list">ドメイン</a> * <a href="https://console.cloud.google.com/apis/dashboard?project=cognito-341413">google API</a></p>
 </div></div>
 
       <div id="footer">
-  Generated on Sat Apr 20 19:55:36 2024 by
+  Generated on Fri Aug 23 23:37:55 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.36 (ruby-3.1.2).
 </div>
