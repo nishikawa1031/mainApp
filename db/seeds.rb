@@ -36,6 +36,7 @@ user1 = User.find_or_create_by(email: 'test@example.com', username: 'test_userna
   user.role = :admin
   user.rolable = applicant2
 end
+user1.avatar.attach(io: File.open(Rails.root.join('db', 'seeds', 'images', 'avatar1.jpg')), filename: 'avatar1.jpg')
 
 user_care = User.find_or_create_by(email: 'care@example.com', username: 'care_username') do |user|
   user.role = :employee
