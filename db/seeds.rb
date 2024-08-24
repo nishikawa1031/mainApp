@@ -17,9 +17,9 @@ Company.create(name: 'イノベーションITソリューションズ株式会�
 # Create articles
 Article.create([
                  {
+                   user_id: user_care.id,
                    title: '介護職員',
                    body: '介護職員募集の詳細情報',
-                   user: user_care,
                    start_time: '現在の日時',
                    end_time: '現在の日時 + 1か月',
                    salary_details: '年収 350万円 - 500万円',
@@ -41,9 +41,9 @@ Article.create([
                    status: 1
                  },
                  {
+                   user_id: user_care.id,
                    title: 'ケアマネージャー',
                    body: 'ケアマネージャー募集の詳細情報',
-                   user: user_care,
                    language_requirement: '日本語（ネイティブレベル）',
                    skills_required: '介護職員初任者研修（ヘルパー2級）以上、コミュニケーション能力',
                    employment_type: '正社員、パート・アルバイト（選択可）',
@@ -64,9 +64,9 @@ Article.create([
                    status: 1
                  },
                  {
+                   user_id: user_factory.id,
                    title: '工場作業員',
                    body: '工場作業員募集の詳細情報',
-                   user: user_factory,
                    salary_details: '年収 300万円 - 50万円',
                    work_location: '愛知県名古屋市',
                    employment_type: '正社員',
@@ -89,7 +89,7 @@ Article.create([
                  {
                    title: '機械作業技術者',
                    body: '機械作業技術者募集の詳細情報',
-                   user: user_factory,
+                   user_id: user_factory.id,
                    skills_required: 'CNC旋盤操作、CAD図面の読解能力',
                    employment_type: '正社員',
                    work_hours: '8:00 - 17:00（週5日、土日休み）',
@@ -111,7 +111,7 @@ Article.create([
                  {
                    title: 'シニアITエンジニア',
                    body: 'シニアITエンジニア募集の詳細情報',
-                   user: user_it,
+                   user_id: user_it.id,
                    skills_required: 'Java、Python、クラウドサービス（AWS/GCP Azure）の経験',
                    employment_type: '正社員',
                    work_hours: '9:00 - 18:00（フレックスタイム制あり）',
@@ -133,7 +133,7 @@ Article.create([
                  {
                    title: 'ITエンジニア',
                    body: 'ITエンジニア募集の詳細情報',
-                   user: user_it,
+                   user_id: user_it.id,
                    salary_details: '年収 400万円 - 600万円',
                    work_location: '東京都渋谷区',
                    employment_type: '正社員',
@@ -155,7 +155,7 @@ Article.create([
                  {
                    title: 'Caregiver Wanted',
                    body: 'We are looking for a caregiver with experience in elderly care.',
-                   user: user1,
+                   user_id: user1.id,
                    start_time: DateTime.now,
                    end_time: DateTime.now + 1.month,
                    salary_details: '¥350,000 - ¥450,000 per year',
