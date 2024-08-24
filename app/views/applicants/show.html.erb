@@ -1,12 +1,12 @@
 <div class="container-sm">
   <!-- Notification -->
   <p class="notice"><%= notice %></p>
-
+  <%= link_to "Back", applicants_path, class: "btn btn-secondary" %>
   <!-- Profile Card -->
   <div class="card profile-card">
     <div class="card-header profile-header">
       <% if @applicant.user&.avatar&.attached? %>
-        <img src="<%= url_for(@applicant.user&.avatar) %>" alt="Applicant Image" style="flex: 1; width: auto; max-width: 100%;">
+        <img src="<%= url_for(@applicant.user&.avatar) %>" alt="Applicant Image" style="flex: 1; width: 10%;">
       <% else %>
         <img src="<%= asset_path('World-14.png') %>" alt="Default Image" style="flex: 1; width: auto; max-width: 100%;">
       <% end %>
@@ -30,8 +30,7 @@
             <p class="card-text"><strong>Self Introduction:</strong> <%= @applicant.self_introduction %></p>
             <p class="card-text"><strong>Desired Salary:</strong> <%= @applicant.desired_salary %></p>
           </div>
-          <div class="card-footer bg-light d-flex justify-content-between">
-            <%= link_to "Back to Applicants", applicants_path, class: "btn btn-secondary" %>
+          <div class="card-footer d-flex justify-content-between">
             <% if current_user?(@applicant.user_id) %>
               <div>
                 <%= link_to "Edit", edit_applicant_path(@applicant), class: "btn btn-primary mr-2" %>
