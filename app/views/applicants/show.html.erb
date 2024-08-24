@@ -28,16 +28,14 @@
             <p class="card-text"><strong>Self Introduction:</strong> <%= @applicant.self_introduction %></p>
             <p class="card-text"><strong>Desired Salary:</strong> <%= @applicant.desired_salary %></p>
           </div>
-          <div class="card-footer d-flex justify-content-between">
-            <% if current_user?(@applicant.user_id) %>
-              <div>
-                <%= link_to "Edit", edit_applicant_path(@applicant), class: "btn btn-primary mr-2" %>
-              </div>
-              <div>
-                <%= button_to "Destroy", @applicant, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
-              </div>
-            <% end %>
-          </div>
+          <% if current_user?(@applicant.user_id) %>
+            <div>
+              <%= link_to "Edit", edit_applicant_path(@applicant), class: "btn btn-primary mr-2" %>
+            </div>
+            <div>
+              <%= button_to "Destroy", @applicant, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+            </div>
+          <% end %>
         </div>
       <div class="col-sm-8 mb-8">
         <div class="personal-details">
