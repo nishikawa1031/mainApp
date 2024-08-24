@@ -4,9 +4,11 @@
   <%= link_to "Back", applicants_path, class: "btn btn-secondary" %>
   <!-- Profile Card -->
   <div class="card profile-card">
-    <div class="card-header">
+    <div class="card-body profile-body">
+      <div class="row">
+        <div class="col-sm-4 mb-4">
       <% if @applicant.user&.avatar&.attached? %>
-        <%= image_tag(@applicant.user&.avatar, alt: "Applicant Image", style: "flex: 1; width: 10%;") %>
+        <%= image_tag(@applicant.user&.avatar, alt: "Applicant Image", style: "flex: 1; width: 100%;") %>
       <% else %>
         <img src="<%= asset_path('World-14.png') %>" alt="Default Image" style="flex: 1; width: auto; max-width: 100%;">
       <% end %>
@@ -18,10 +20,6 @@
           <%= link_to "Chat", applicants_path, class: "btn btn-outline-primary" %>
         </div>
       </div>
-    </div>
-    <div class="card-body profile-body">
-      <div class="row">
-        <div class="col-sm-4 mb-4">
           <div class="profile-tabs">
             <p class="card-text"><strong>Birthday:</strong> <%= @applicant.birthday %></p>
             <p class="card-text"><strong>Age:</strong> <%= @applicant.age %></p>
