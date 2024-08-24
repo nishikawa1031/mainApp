@@ -42,30 +42,32 @@ user_care = User.find_or_create_by(email: 'care@example.com', username: 'care_us
   user.role = :employee
   user.rolable = applicant2
 end
+user_care.avatar.attach(io: File.open(Rails.root.join('db', 'seeds', 'images', 'avatar2.jpg')), filename: 'avatar2.jpg')
 
 user_factory = User.find_or_create_by(email: 'factory@example.com', username: 'factory_username') do |user|
   user.role = :employee
   user.rolable = applicant3
 end
+user_factory.avatar.attach(io: File.open(Rails.root.join('db', 'seeds', 'images', 'avatar3.jpg')), filename: 'avatar3.jpg')
 
 user_it = User.find_or_create_by(email: 'it@example.com', username: 'it_username') do |user|
   user.role = :employee
 end
 
-applicant_it = User.find_or_create_by(email: 'applicant_it@example.com', username: 'applicant_it_username') do |user|
-  user.role = :applicant
-  user.rolable = applicant1
-end
+# applicant_it = User.find_or_create_by(email: 'applicant_it@example.com', username: 'applicant_it_username') do |user|
+#   user.role = :applicant
+#   user.rolable = applicant1
+# end
 
-applicant_care = User.find_or_create_by(email: 'applicant_care@example.com', username: 'applicant_care_username') do |user|
-  user.role = :applicant
-  user.rolable = applicant2
-end
+# applicant_care = User.find_or_create_by(email: 'applicant_care@example.com', username: 'applicant_care_username') do |user|
+#   user.role = :applicant
+#   user.rolable = applicant2
+# end
 
-applicant_factory = User.find_or_create_by(email: 'user_factory@example.com', username: 'user_factory_username') do |user|
-  user.role = :applicant
-  user.rolable = applicant3
-end
+# applicant_factory = User.find_or_create_by(email: 'user_factory@example.com', username: 'user_factory_username') do |user|
+#   user.role = :applicant
+#   user.rolable = applicant3
+# end
 
 # Create companies
 Company.create(name: '横浜介護サービス', area: 1, location: '神奈川県横浜市', website_url: 'http://care-service-yokohama.com')
