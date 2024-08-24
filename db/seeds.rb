@@ -1,13 +1,70 @@
 # frozen_string_literal: true
 
+# Create applicants
+applicant1 = Applicant.find_or_create_by(
+  name: 'John Doe',
+  birthday: Date.new(1990, 5, 10),
+  age: 32,
+  nationality: 1,
+  phone_number: '1234',
+  self_introduction: 'I have experience in caregiving.',
+  desired_salary: '¥400,000'
+)
+
+applicant2 = Applicant.find_or_create_by(
+  name: 'Jane Smith',
+  birthday: Date.new(1985, 8, 20),
+  age: 37,
+  nationality: 2,
+  phone_number: '9876',
+  self_introduction: 'I am a certified care manager with 5 years of experience.',
+  desired_salary: '¥450,000'
+)
+
+applicant3 = Applicant.find_or_create_by(
+  name: 'Robert Johnson',
+  birthday: Date.new(1992, 3, 15),
+  age: 30,
+  nationality: 3,
+  phone_number: '5551',
+  self_introduction: 'I have worked in manufacturing for 5 years.',
+  desired_salary: '¥500,000'
+)
+
 # Create users
-user1 = User.find_or_create_by(email: 'test@example.com', username: 'test_username', role: 1)
-user_care = User.find_or_create_by(email: 'care@example.com', username: 'care_username', role: 2)
-user_factory = User.find_or_create_by(email: 'factory@example.com', username: 'factory_username', role: 2)
-user_it = User.find_or_create_by(email: 'it@example.com', username: 'it_username', role: 2)
-applicant_it = User.find_or_create_by(email: 'applicant_it@example.com', username: 'applicant_it_username')
-applicant_care = User.find_or_create_by(email: 'applicant_care@example.com', username: 'applicant_care_username')
-applicant_factory = User.find_or_create_by(email: 'user_factory@example.com', username: 'user_factory_username')
+user1 = User.find_or_create_by(email: 'test@example.com', username: 'test_username') do |user|
+  user.role = :admin
+  user.rolable = applicant2
+end
+
+user_care = User.find_or_create_by(email: 'care@example.com', username: 'care_username') do |user|
+  user.role = :employee
+  user.rolable = applicant2
+end
+
+user_factory = User.find_or_create_by(email: 'factory@example.com', username: 'factory_username') do |user|
+  user.role = :employee
+  user.rolable = applicant3
+end
+
+user_it = User.find_or_create_by(email: 'it@example.com', username: 'it_username') do |user|
+  user.role = :employee
+end
+
+applicant_it = User.find_or_create_by(email: 'applicant_it@example.com', username: 'applicant_it_username') do |user|
+  user.role = :applicant
+  user.rolable = applicant1
+end
+
+applicant_care = User.find_or_create_by(email: 'applicant_care@example.com', username: 'applicant_care_username') do |user|
+  user.role = :applicant
+  user.rolable = applicant2
+end
+
+applicant_factory = User.find_or_create_by(email: 'user_factory@example.com', username: 'user_factory_username') do |user|
+  user.role = :applicant
+  user.rolable = applicant3
+end
 
 # Create companies
 Company.create(name: '横浜介護サービス', area: 1, location: '神奈川県横浜市', website_url: 'http://care-service-yokohama.com')
@@ -17,9 +74,9 @@ Company.create(name: 'イノベーションITソリューションズ株式会�
 # Create articles
 Article.create([
                  {
+                   user_id: user_care.id,
                    title: '介護職員',
                    body: '介護職員募集の詳細情報',
-                   user: user_care,
                    start_time: '現在の日時',
                    end_time: '現在の日時 + 1か月',
                    salary_details: '年収 350万円 - 500万円',
@@ -41,9 +98,9 @@ Article.create([
                    status: 1
                  },
                  {
+                   user_id: user_care.id,
                    title: 'ケアマネージャー',
                    body: 'ケアマネージャー募集の詳細情報',
-                   user: user_care,
                    language_requirement: '日本語（ネイティブレベル）',
                    skills_required: '介護職員初任者研修（ヘルパー2級）以上、コミュニケーション能力',
                    employment_type: '正社員、パート・アルバイト（選択可）',
@@ -64,9 +121,9 @@ Article.create([
                    status: 1
                  },
                  {
+                   user_id: user_factory.id,
                    title: '工場作業員',
                    body: '工場作業員募集の詳細情報',
-                   user: user_factory,
                    salary_details: '年収 300万円 - 50万円',
                    work_location: '愛知県名古屋市',
                    employment_type: '正社員',
@@ -89,7 +146,7 @@ Article.create([
                  {
                    title: '機械作業技術者',
                    body: '機械作業技術者募集の詳細情報',
-                   user: user_factory,
+                   user_id: user_factory.id,
                    skills_required: 'CNC旋盤操作、CAD図面の読解能力',
                    employment_type: '正社員',
                    work_hours: '8:00 - 17:00（週5日、土日休み）',
@@ -111,7 +168,7 @@ Article.create([
                  {
                    title: 'シニアITエンジニア',
                    body: 'シニアITエンジニア募集の詳細情報',
-                   user: user_it,
+                   user_id: user_it.id,
                    skills_required: 'Java、Python、クラウドサービス（AWS/GCP Azure）の経験',
                    employment_type: '正社員',
                    work_hours: '9:00 - 18:00（フレックスタイム制あり）',
@@ -133,7 +190,7 @@ Article.create([
                  {
                    title: 'ITエンジニア',
                    body: 'ITエンジニア募集の詳細情報',
-                   user: user_it,
+                   user_id: user_it.id,
                    salary_details: '年収 400万円 - 600万円',
                    work_location: '東京都渋谷区',
                    employment_type: '正社員',
@@ -155,7 +212,7 @@ Article.create([
                  {
                    title: 'Caregiver Wanted',
                    body: 'We are looking for a caregiver with experience in elderly care.',
-                   user: user1,
+                   user_id: user1.id,
                    start_time: DateTime.now,
                    end_time: DateTime.now + 1.month,
                    salary_details: '¥350,000 - ¥450,000 per year',
@@ -188,55 +245,6 @@ end
 Article.all.each_with_index do |article, index|
   article.categories << Category.find_by(name: categories[index % 3]) # Cycling through categories
 end
-
-# Create bookmarks
-Bookmark.create([
-                  { user: user1, article: Article.last },
-                  { user: user_care, article: Article.first },
-                  { user: user_factory, article: Article.third },
-                  { user: user_it, article: Article.fifth }
-                ])
-
-# Create likes
-Like.create([
-              { user: user1, article: Article.last },
-              { user: user_care, article: Article.first },
-              { user: user_factory, article: Article.third },
-              { user: user_it, article: Article.fifth }
-            ])
-
-# Create applicants
-applicant1 = Applicant.find_or_create_by(
-  name: 'John Doe',
-  user_id: applicant_it.id,
-  birthday: Date.new(1990, 5, 10),
-  age: 32,
-  nationality: 1,
-  phone_number: 1234,
-  self_introduction: 'I have experience in caregiving.',
-  desired_salary: '¥400,000'
-)
-applicant2 = Applicant.find_or_create_by(
-  name: 'Jane Smith',
-  user_id: applicant_care.id,
-  birthday: Date.new(1985, 8, 20),
-  age: 37,
-  nationality: 2,
-  phone_number: 9876,
-  self_introduction: 'I am a certified care manager with 5 years of experience.',
-  desired_salary: '¥450,000'
-)
-
-applicant3 = Applicant.find_or_create_by(
-  name: 'Robert Johnson',
-  user_id: applicant_factory.id,
-  birthday: Date.new(1992, 3, 15),
-  age: 30,
-  nationality: 3,
-  phone_number: 5551,
-  self_introduction: 'I have worked in manufacturing for 5 years.',
-  desired_salary: '¥500,000'
-)
 
 # Create applicant articles
 ApplicantArticle.create([
