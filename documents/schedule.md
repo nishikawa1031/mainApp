@@ -10,7 +10,7 @@ https://www.macnica.co.jp/business/security/manufacturers/okta/tech_auth0_terms_
 ファイルアップロード機能 ✅
 https://devcenter.heroku.com/ja/articles/s3#setting-up-s3-for-your-heroku-app
 
-求職者の一覧検索
+求職者の一覧検索 ✅
 
 求職者の登録
 
