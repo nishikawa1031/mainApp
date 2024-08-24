@@ -45,4 +45,6 @@ prod_reset:
 	heroku run rake db:drop DISABLE_DATABASE_ENVIRONMENT_CHECK=1 --app main-app-1209
 	heroku pg:reset DATABASE_URL --confirm main-app-1209 --app main-app-1209
 	heroku run rails db:migrate --app main-app-1209
-# heroku run rails db:seed --app main-app-1209
+
+seed:
+    heroku run rails db:seed --app main-app-1209

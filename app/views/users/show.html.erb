@@ -1,7 +1,31 @@
-<div class="bg-light">
+<div>
+  <h1><%= @user.username %>のプロフィール</h1>
+  
+  <div>
+    <% if @user.avatar.attached? %>
+      <%= image_tag url_for(@user.avatar), style: "max-width: 10%; height: auto;" %>
+    <% else %>
+      <p>アバター画像がありません。</p>
+    <% end %>
+  </div>
+
+  <p>メール: <%= @user.email %></p>
+  <p>ユーザー名: <%= @user.username %></p>
+  <p>役割: <%= @user.role %></p>
+
+  <% if @user.rolable_type == 'Applicant' %>
+    <h2>応募者情報</h2>
+    <p>名前: <%= @user.rolable.name %></p>
+    <p>生年月日: <%= @user.rolable.birthday %></p>
+    <p>年齢: <%= @user.rolable.age %></p>
+    <p>国籍: <%= @user.rolable.nationality %></p>
+    <p>電話番号: <%= @user.rolable.phone_number %></p>
+    <p>自己紹介: <%= @user.rolable.self_introduction %></p>
+    <p>希望給与: <%= @user.rolable.desired_salary %></p>
+  <% end %>
+
   <div class="service">
     <h3>経歴書自動生成AI</h3>
-    <%= image_tag url_for(@user.avatar), style: "max-width: 10%; height: auto;" %>
     </br>
     <p>AI技術を用いて、日本語の経歴書を自動で生成。スピーディーに転職活動をサポートします。</p>
     <div style="display: flex; justify-content: center; align-items: center; flex: 1;">

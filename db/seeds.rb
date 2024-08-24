@@ -34,7 +34,7 @@ applicant3 = Applicant.find_or_create_by(
 # Create users
 user1 = User.find_or_create_by(email: 'test@example.com', username: 'test_username') do |user|
   user.role = :admin
-  user.rolable = applicant2
+  user.rolable = applicant1
 end
 user1.avatar.attach(io: File.open(Rails.root.join('db', 'seeds', 'images', 'avatar1.jpg')), filename: 'avatar1.jpg')
 
@@ -53,6 +53,7 @@ user_factory.avatar.attach(io: File.open(Rails.root.join('db', 'seeds', 'images'
 user_it = User.find_or_create_by(email: 'it@example.com', username: 'it_username') do |user|
   user.role = :employee
 end
+user_it.avatar.attach(io: File.open(Rails.root.join('db', 'seeds', 'images', 'avatar_it.jpg')), filename: 'avatar_it.jpg')
 
 # applicant_it = User.find_or_create_by(email: 'applicant_it@example.com', username: 'applicant_it_username') do |user|
 #   user.role = :applicant
