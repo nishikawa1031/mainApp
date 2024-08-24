@@ -26,10 +26,12 @@
       <div class="user-info">
         <%= link_to "#{current_user.email}", user_path(current_user.id), class: "header-link", style: "text-decoration: none; color: #000; font-size: 15px;" %>
       </div>
+      <% if false %>
       <div class="notification-bell">
         <i class="fas fa-bell" style="color: black;"></i>
         <span class="notification-badge">0</span>
       </div>
+      <% end %>
       <div class="logout-button">
         <%= button_to 'Logout', 'auth/logout', method: :get, data: { turbo: false }, class: "button-modern" %>
       </div>
