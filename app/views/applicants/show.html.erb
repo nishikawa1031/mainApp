@@ -7,50 +7,53 @@
     <div class="card-body profile-body">
       <div class="row">
         <div class="col-sm-4 mb-4">
-      <% if @applicant.user&.avatar&.attached? %>
-        <%= image_tag(@applicant.user&.avatar, alt: "Applicant Image", style: "flex: 1; width: 100%;") %>
-      <% else %>
-        <img src="<%= asset_path('World-14.png') %>" alt="Default Image" style="flex: 1; width: auto; max-width: 100%;">
-      <% end %>
-      <div class="profile-details">
-        <div class="profile-header">
-          <h1 class="profile-name"><%= @applicant.name %></h1>
-          <div class="profile-actions">
-            <%= link_to "Apply", applicants_path, class: "btn btn-success" %>
-            <% if false %><%= link_to "Chat", applicants_path, class: "btn btn-outline-primary" %><% end %>
-          </div>
-        </div>
-      </div>
+                <% if @applicant.user&.avatar&.attached? %>
+                  <%= image_tag(@applicant.user&.avatar, alt: "Applicant Image", style: "flex: 1; width: 100%;") %>
+                <% else %>
+                  <img src="<%= asset_path('World-14.png') %>" alt="Default Image" style="flex: 1; width: auto; max-width: 100%;">
+                <% end %>
+            <div class="profile-details">
+              <div class="profile-header">
+                <h1 class="profile-name"><%= @applicant.name %></h1>
+                <div class="profile-actions">
+                  <%= link_to "Apply", applicants_path, class: "btn btn-success" %>
+                  <% if false %><%= link_to "Chat", applicants_path, class: "btn btn-outline-primary" %><% end %>
+                </div>
+              </div>
+            </div>
 
-      <div class="profile-tabs">
-        <p class="card-text"><strong>Birthday:</strong> <%= @applicant.birthday %></p>
-        <p class="card-text"><strong>Age:</strong> <%= @applicant.age %></p>
-        <p class="card-text"><strong>Nationality:</strong> <%= @applicant.nationality %></p>
-        <p class="card-text"><strong>Phone Number:</strong> <%= @applicant.phone_number %></p>
-        <p class="card-text"><strong>Self Introduction:</strong> <%= @applicant.self_introduction %></p>
-        <p class="card-text"><strong>Desired Salary:</strong> <%= @applicant.desired_salary %></p>
-      </div>
-      <% if current_user?(@applicant.user_id) %>
-        <div>
-          <%= link_to "Edit", edit_applicant_path(@applicant), class: "btn btn-primary mr-2" %>
-        </div>
-        <div>
-          <%= button_to "Destroy", @applicant, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
-        </div>
-      <% end %>
-      <div class="col-sm-8 mb-8">
-        <div class="personal-details">
-          <% if @applicant.files.attached? %>
-            <% @applicant.files.each do |file| %>
-              <p>
-                <%= link_to "#{file.filename}", rails_blob_path(file, disposition: "attachment"), class: "btn btn-primary" %>
-              </p>
+            <div class="profile-tabs">
+              <p class="card-text"><strong>Birthday:</strong> <%= @applicant.birthday %></p>
+              <p class="card-text"><strong>Age:</strong> <%= @applicant.age %></p>
+              <p class="card-text"><strong>Nationality:</strong> <%= @applicant.nationality %></p>
+              <p class="card-text"><strong>Phone Number:</strong> <%= @applicant.phone_number %></p>
+              <p class="card-text"><strong>Self Introduction:</strong> <%= @applicant.self_introduction %></p>
+              <p class="card-text"><strong>Desired Salary:</strong> <%= @applicant.desired_salary %></p>
+            </div>
+            <% if current_user?(@applicant.user_id) %>
+              <div>
+                <%= link_to "Edit", edit_applicant_path(@applicant), class: "btn btn-primary mr-2" %>
+              </div>
+              <div>
+                <%= button_to "Destroy", @applicant, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+              </div>
             <% end %>
-          <% else %>
-            <p>ファイルが添付されていません。</p>
-          <% end %>
+            <div class="col-sm-8 mb-8">
+              <div class="personal-details">
+                <% if @applicant.files.attached? %>
+                  <% @applicant.files.each do |file| %>
+                    <p>
+                      <%= link_to "#{file.filename}", rails_blob_path(file, disposition: "attachment"), class: "btn btn-primary" %>
+                    </p>
+                  <% end %>
+                <% else %>
+                  <p>ファイルが添付されていません。</p>
+                <% end %>
+              </div>
+            </div>
           </div>
       </div>
+    </div>
   </div>
 </div>
 
