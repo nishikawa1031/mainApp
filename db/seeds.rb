@@ -10,6 +10,8 @@ applicant1 = Applicant.find_or_create_by(
   self_introduction: 'I have experience in caregiving.',
   desired_salary: '¥400,000'
 )
+resume_path = Rails.root.join('db/seeds/files/sample_resume1.pdf')
+applicant1.files.attach(io: File.open(resume_path), filename: 'sample_resume1.pdf', content_type: 'application/pdf')
 
 applicant2 = Applicant.find_or_create_by(
   name: 'Jane Smith',
@@ -19,6 +21,12 @@ applicant2 = Applicant.find_or_create_by(
   phone_number: '9876',
   self_introduction: 'I am a certified care manager with 5 years of experience.',
   desired_salary: '¥450,000'
+)
+resume_path = Rails.root.join('db/seeds/files/sample_resume2.docx')
+applicant2.files.attach(
+  io: File.open(resume_path),
+  filename: 'sample_resume2.docx',
+  content_type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 )
 
 applicant3 = Applicant.find_or_create_by(
