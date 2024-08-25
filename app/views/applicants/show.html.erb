@@ -41,7 +41,13 @@
         <div class="personal-details">
           <% if @applicant.files.attached? %>
             <% @applicant.files.each do |file| %>
-              <%= tag.embed src: url_for(file), type: "application/pdf", style: "width: 100%; height: 600px;" %>
+              <% if file.content_type == "application/pdf" %>
+                <iframe src="<%= url_for(file) %>" type="application/pdf" style="width: 100%; height: 600px;" frameborder="0"></iframe>
+              <% elsif file.content_type == "application/vnd.openxmlformats-officedocument.wordprocessingml.document" %>
+                <iframe src="https://view.officeapps.live.com/op/embed.aspx?src=<%= CGI.escape(url_for(file)) %>" style="width: 100%; height: 600px;" frameborder="0"></iframe>
+              <% else %>
+                <p>このファイル形式には対応していません: <%= file.filename %></p>
+              <% end %>
             <% end %>
           <% else %>
             <img src="<%= asset_path('World-14.png') %>" alt="Matches Logo" style="flex: 1; width: auto; max-width: 100%;">
