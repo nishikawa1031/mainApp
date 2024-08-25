@@ -16,7 +16,7 @@
               <div class="profile-header">
                 <h1 class="profile-name"><%= @applicant.name %></h1>
                 <div class="profile-actions">
-                  <%= link_to "Apply", applicants_path, class: "btn btn-success" %>
+                  <%= link_to "Apply", applicant_path(@applicant), class: "btn btn-success", id: "apply-button", data: { confirm: "申し込みました" } %>
                   <% if false %><%= link_to "Chat", applicants_path, class: "btn btn-outline-primary" %><% end %>
                 </div>
               </div>
