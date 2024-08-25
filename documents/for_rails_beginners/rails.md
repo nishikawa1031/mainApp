@@ -4,8 +4,8 @@
 * I think it would be a good idea to start with ‘For intermediate level’ 
 * and if it is too difficult, watch ‘For begginers’ youtube.
 
-## For begginers
-1. learn Ruby on Rails
+## 0. For begginers ( optional )
+0-1. learn Ruby on Rails
      * [Learn Ruby on Rails \- Full Course \- YouTube](https://www.youtube.com/watch?v=fmyvWz5TUWg)
        * It is recommended that you not only look at it, but actually try to build it.
        * reference
@@ -16,32 +16,32 @@
             * Terminal
             [Cursor](https://www.cursor.com/)
 
-2. If you encounter errors or problems
+0-2. If you encounter errors or problems
 * Please leave a note of the solution for your juniors.:  [wiki](https://github.com/nishikawa1031/mainApp/wiki)
 
-3. Write a technical blog
+0-3. Write a technical blog
 Try to output what you have learnt immediately, for example by watching videos
       * [Tips on How to Write Your First Successful Technical Blog \| by Hannah Pratte \| QuarkWorks, Inc\. \| Medium](https://medium.com/quark-works/tips-on-how-to-write-your-first-successful-technical-blog-4cb65e5b4ce4)
       * [The Ultimate Guide to Writing Technical Blog Posts \- DEV Community](https://dev.to/blackgirlbytes/the-ultimate-guide-to-writing-technical-blog-posts-5464)
 
-## For intermediate level
-3. setup Rails application
+## 1. For intermediate level
+1-1. setup Rails application
    * [how to setup](https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#how-to-setup)
-4. create PR
+1-2. create PR
    * For the benefit of the next person who builds the environment, please write on this page about any stuck points or problems you encounter.
    * Correcting documentation is one way to contribute immediately to the team and is greatly appreciated.
      * [how to create PR](documents/work_way/pr.md)
      * [Git and GitHub Tutorial for Beginners \- YouTube](https://www.youtube.com/watch?v=tRZGeaHPoaw)
 
-## Level of internship participation
-5. Challenging issues
+## 2. Level of internship participation
+2-1. Challenging issues
 If you see an issue that you think you can do, give it a go.
    * [Issues](https://github.com/nishikawa1031/mainApp/issues)
-6. Introduce applicants to unpaid internships at other companies.
+2-2. Introduce applicants to unpaid internships at other companies.
 
-## Working level
-7. I can introduce you to part-time work.
-8. Introduces permanent jobs.
+## 3. Working level
+3-1. I can introduce you to part-time work.
+3-2. Introduces permanent jobs.
 
 # when you have a question
 * It is recommended to ask the AI about CODING.
