@@ -19,7 +19,7 @@
       <%= render "layouts/header" %>
       <%= content_tag(:div, flash[:alert], class: "alert alert-danger") if flash[:alert] %>
       <%= yield %>
+      <%= render "layouts/footer" %>
     </div>
-    <%= render "layouts/footer" %>
   </body>
 </html>
