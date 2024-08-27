@@ -8,6 +8,7 @@ class Auth0Controller < ApplicationController
 
     begin
       user = User.find_or_create_from_auth(auth_info)
+      Rails.logger.debug("User Info: #{user.inspect}")
       session[:userinfo] = user.id
       redirect_to user_path(user)
     rescue StandardError => e
