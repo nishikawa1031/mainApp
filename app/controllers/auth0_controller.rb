@@ -10,7 +10,7 @@ class Auth0Controller < ApplicationController
       user = User.find_or_create_from_auth(auth_info)
       Rails.logger.debug("User Info: #{user.inspect}")
       session[:userinfo] = user.id
-      redirect_to user_path(user)
+      redirect_to root_path
     rescue StandardError => e
       Rails.logger.error("Auth0 Callback Error: #{e.message}")
       redirect_to failure_path(message: e.message)
