@@ -1,5 +1,5 @@
 # Service Site
-https://www.solution-hub.net/
+https://solution-hub.net/
 
 # For begginers
 [for beginners](documents/for_rails_beginners/rails.md)
