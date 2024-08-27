@@ -370,8 +370,6 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    simple_calendar (3.0.2)
-      rails (>= 6.1)
     snaky_hash (2.0.1)
       hashie
       version_gem (~> 1.1, >= 1.1.1)
@@ -449,7 +447,6 @@ DEPENDENCIES
   rubocop
   ruby-openai
   sassc-rails
-  simple_calendar
   sprockets-rails
   stimulus-rails
   turbo-rails
