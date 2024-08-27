@@ -9,10 +9,10 @@ class User < ApplicationRecord
   has_one_attached :resume
 
   class << self
-    def find_or_create_from_auth(auth_hash)
+    def self.find_or_create_from_auth(auth_hash)
       user_params = user_params_from_auth_hash(auth_hash)
       find_or_create_by(email: user_params[:email]) do |user|
-        user.update(user_params)
+        user.assign_attributes(user_params)
       end
     end
 
@@ -20,7 +20,7 @@ class User < ApplicationRecord
 
     def user_params_from_auth_hash(auth_hash)
       {
-        email: auth_hash.info.name,
+        email: auth_hash.info.email,
         username: auth_hash.info.nickname || 'default_username'
       }
     end
