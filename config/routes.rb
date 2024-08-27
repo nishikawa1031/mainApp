@@ -18,6 +18,6 @@ Rails.application.routes.draw do
   resources :users
 
   get '/auth/auth0/callback' => 'auth0#callback'
-  get '/auth/failure' => 'auth0#failure'
+  get '/auth/failure' => 'auth0#failure', as: :failure
   get '/auth/logout' => 'auth0#logout', as: :log_out
 end
