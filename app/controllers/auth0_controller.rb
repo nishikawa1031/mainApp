@@ -3,15 +3,17 @@
 # ./app/controllers/auth0_controller.rb
 class Auth0Controller < ApplicationController
   def callback
-    # OmniAuth stores the information returned from Auth0 and the IdP in request.env['omniauth.auth'].
-    # In this code, you will pull the raw_info supplied from the id_token and assign it to the session.
-    # Refer to https://github.com/auth0/omniauth-auth0/blob/master/EXAMPLES.md#example-of-the-resulting-authentication-hash for complete information on 'omniauth.auth' contents.
     auth_info = request.env['omniauth.auth']
-    user = User.find_or_create_from_auth(auth_info)
-    session[:userinfo] = user.id
+    Rails.logger.debug("Auth Info: #{auth_info.inspect}")
 
-    # Redirect to the URL you want after successful auth
-    redirect_to user_path(user)
+    begin
+      user = User.find_or_create_from_auth(auth_info)
+      session[:userinfo] = user.id
+      redirect_to user_path(user)
+    rescue StandardError => e
+      Rails.logger.error("Auth0 Callback Error: #{e.message}")
+      redirect_to failure_path(message: e.message)
+    end
   end
 
   def failure
