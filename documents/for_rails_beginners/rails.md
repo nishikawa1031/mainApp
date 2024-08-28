@@ -16,11 +16,11 @@
             * Terminal
             [Cursor](https://www.cursor.com/)
 
-2. If you encounter errors or problems
+2. If you encounter errors or problems ( optional )
 * Please leave a note of the solution for your juniors.:  [wiki](https://github.com/nishikawa1031/mainApp/wiki)
 
-3. Write a technical blog
-Try to output what you have learnt immediately, for example by watching videos
+3. Write a technical blog ( optional )
+      * Try to output what you have learnt immediately, for example by watching videos
       * [Tips on How to Write Your First Successful Technical Blog \| by Hannah Pratte \| QuarkWorks, Inc\. \| Medium](https://medium.com/quark-works/tips-on-how-to-write-your-first-successful-technical-blog-4cb65e5b4ce4)
       * [The Ultimate Guide to Writing Technical Blog Posts \- DEV Community](https://dev.to/blackgirlbytes/the-ultimate-guide-to-writing-technical-blog-posts-5464)
 
