@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  belongs_to :rolable, polymorphic: true
+  belongs_to :rolable, polymorphic: true, optional: true
   has_many :articles
   enum role: { applicant: 0, admin: 1, employee: 2 }
 
@@ -12,7 +12,7 @@ class User < ApplicationRecord
     def find_or_create_from_auth(auth_hash)
       user_params = user_params_from_auth_hash(auth_hash)
       find_or_create_by(email: user_params[:email]) do |user|
-        user.assign_attributes(user_params)
+        user.update!(user_params)
       end
     end
 
@@ -20,7 +20,7 @@ class User < ApplicationRecord
 
     def user_params_from_auth_hash(auth_hash)
       {
-        email: auth_hash.info.email,
+        email: auth_hash.info.name || 'default_username',
         username: auth_hash.info.nickname || 'default_username'
       }
     end
