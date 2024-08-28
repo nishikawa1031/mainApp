@@ -26,7 +26,7 @@ Try to output what you have learnt immediately, for example by watching videos
 
 ## Ⅱ. For intermediate level
 1. setup Rails application
-   * [how to setup](https://github.com/nishikawa1031/mainApp?tab=readme-ov-file#how-to-setup)
+   * [how to setup](https://github.com/nishikawa1031/mainApp/wiki/How-to-setup)
 
 2. create PR
    * For the benefit of the next person who builds the environment, please write on this page about any stuck points or problems you encounter.
