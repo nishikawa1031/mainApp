@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :user do
-    role { 'applicant' }  # Default role
+    role { 'applicant' } # Default role
     sequence(:email) { |n| "user#{n}@example.com" }
 
     trait :admin do
