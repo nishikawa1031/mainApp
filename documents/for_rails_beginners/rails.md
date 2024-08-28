@@ -31,7 +31,7 @@
 2. create PR ⭐️
    * For the benefit of the next person who builds the environment, please write on this page about any stuck points or problems you encounter.
    * Correcting documentation is one way to contribute immediately to the team and is greatly appreciated.
-     * [how to create PR](documents/work_way/pr.md)
+     * [how to create PR](../work_way/pr.md)
      * [Git and GitHub Tutorial for Beginners \- YouTube](https://www.youtube.com/watch?v=tRZGeaHPoaw)
 
 ## Ⅲ. Level of internship participation
