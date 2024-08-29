@@ -40,7 +40,7 @@ If you see an issue that you think you can do, give it a go.
    * [Issues](https://github.com/nishikawa1031/mainApp/issues)
 2. Introduce applicants to unpaid internships at other companies.
 
-## Ⅳ To be able to write tests. ( optional )
+## Ⅳ. To be able to write tests. ( optional )
 run a test
 * Ensure that all tests PASS.
 ```ruby
