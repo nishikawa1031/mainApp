@@ -14,9 +14,10 @@
        * recommendation
             * Editor
                * windows: [Visual Studio Code \- Code Editing\. Redefined](https://code.visualstudio.com/)
-               * mac: [The terminal with a modern text editor \| Warp](https://www.warp.dev/text-editor)
+               * mac: [Cursor](https://www.cursor.com/)
             * Terminal
-            [Cursor](https://www.cursor.com/)
+              * mac: [The terminal with a modern text editor \| Warp](https://www.warp.dev/text-editor)
+            
 2. Basic knowledge
 - [What is a server? Types of Servers? Virtual server vs Physical server 🖥️🌐 \- YouTube](https://www.youtube.com/watch?v=BPVcsOKfd34)
 -  [How Websites Work \| simply explained with examples \- YouTube](https://www.youtube.com/watch?v=vcRmKtL4o_4)
