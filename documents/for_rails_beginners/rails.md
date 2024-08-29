@@ -13,7 +13,8 @@
            * [Getting Started with Rails — Ruby on Rails Guides](https://guides.rubyonrails.org/getting_started.html)
        * recommendation
             * Editor
-            [The terminal with a modern text editor \| Warp](https://www.warp.dev/text-editor)
+               * windows: [Visual Studio Code \- Code Editing\. Redefined](https://code.visualstudio.com/)
+               * mac[The terminal with a modern text editor \| Warp](https://www.warp.dev/text-editor)
             * Terminal
             [Cursor](https://www.cursor.com/)
 2. Basic knowledge
