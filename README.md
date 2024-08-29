@@ -3,7 +3,7 @@ https://solution-hub.net/
 
 - [about this service](/documents/about.md)
 
-# For begginers
+# For beginners
 - [for beginners](documents/for_rails_beginners/rails.md)
 
 # How to setup
