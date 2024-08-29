@@ -73,6 +73,9 @@ bundle exec rspec
          * To make it easier for you to ask questions, we will invite you to the slack group.
          * Feel free to ask questions on this group
 
+# Coding Tests
+[Top Interview 150 \- Study Plan \- LeetCode](https://leetcode.com/studyplan/top-interview-150/)
+
 # Recommended qualifications ( if interested )
 [AI-900](https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification)
    * Qualifications for AI in Azure.
