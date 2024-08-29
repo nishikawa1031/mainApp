@@ -23,11 +23,11 @@
 3. Basic Linux command
 - [60 Linux Commands you NEED to know \(in 10 minutes\) \- YouTube](https://www.youtube.com/watch?v=gd7BXuUQ91w)
  
-### Output
-4. If you encounter errors or problems ( optional )
+### Output ( optional )
+4. If you encounter errors or problems
 * Please leave a note of the solution for your juniors.:  [wiki](https://github.com/nishikawa1031/mainApp/wiki)
 
-5. Write a technical blog ( optional )
+5. Write a technical blog
       * Try to output what you have learnt immediately, for example by watching videos
       * [Tips on How to Write Your First Successful Technical Blog \| by Hannah Pratte \| QuarkWorks, Inc\. \| Medium](https://medium.com/quark-works/tips-on-how-to-write-your-first-successful-technical-blog-4cb65e5b4ce4)
       * [The Ultimate Guide to Writing Technical Blog Posts \- DEV Community](https://dev.to/blackgirlbytes/the-ultimate-guide-to-writing-technical-blog-posts-5464)
