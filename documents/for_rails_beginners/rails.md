@@ -14,7 +14,7 @@
        * recommendation
             * Editor
                * windows: [Visual Studio Code \- Code Editing\. Redefined](https://code.visualstudio.com/)
-               * mac[The terminal with a modern text editor \| Warp](https://www.warp.dev/text-editor)
+               * mac: [The terminal with a modern text editor \| Warp](https://www.warp.dev/text-editor)
             * Terminal
             [Cursor](https://www.cursor.com/)
 2. Basic knowledge
