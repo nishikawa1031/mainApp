@@ -60,7 +60,7 @@ bundle exec rspec
 1. I can introduce you to part-time work.
 2. Introduces permanent jobs.
 
-# when you have a question
+# When you have a question
 * It is recommended to ask the AI about CODING.
   * [Claude](https://claude.ai/new)
   * [ChatGPT](https://chatgpt.com/)
