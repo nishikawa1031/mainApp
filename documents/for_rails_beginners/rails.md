@@ -2,7 +2,7 @@
 
 # Level
 * I think it would be a good idea to start with ‘Ⅱ. For intermediate level’ 
-* and if it is too difficult, watch ‘Ⅰ. For begginers’ youtube.
+* and if it is too difficult, watch ‘Ⅰ. For beginners’ youtube.
 
 ## Ⅰ. For beginners ( optional )
 ### Input
