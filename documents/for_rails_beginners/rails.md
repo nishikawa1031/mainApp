@@ -18,7 +18,7 @@
             [Cursor](https://www.cursor.com/)
 2. What is webserver
 - [What is a server? Types of Servers? Virtual server vs Physical server 🖥️🌐 \- YouTube](https://www.youtube.com/watch?v=BPVcsOKfd34)
--  [What is a server? Types of Servers? Virtual server vs Physical server 🖥️🌐 \- YouTube](https://www.youtube.com/watch?v=BPVcsOKfd34)
+-  [How Websites Work \| simply explained with examples \- YouTube](https://www.youtube.com/watch?v=vcRmKtL4o_4)
 -  [Networking \- What is Localhost, 127\.0\.0\.1, and Loopback in TCPIP? \- YouTube](https://www.youtube.com/watch?v=MDu6hWknk70)
 3. Basic Linux command
 - [60 Linux Commands you NEED to know \(in 10 minutes\) \- YouTube](https://www.youtube.com/watch?v=gd7BXuUQ91w)
