@@ -4,7 +4,7 @@
 * I think it would be a good idea to start with ‘Ⅱ. For intermediate level’ 
 * and if it is too difficult, watch ‘Ⅰ. For begginers’ youtube.
 
-## Ⅰ. For begginers ( optional )
+## Ⅰ. For beginners ( optional )
 ### Input
 1. learn Ruby on Rails
      * [Learn Ruby on Rails \- Full Course \- YouTube](https://www.youtube.com/watch?v=fmyvWz5TUWg)
