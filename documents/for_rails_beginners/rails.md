@@ -6,7 +6,7 @@
 
 ## Ⅰ. For beginners ( optional )
 ### Input
-1. learn Ruby on Rails
+1. Learn Ruby on Rails
      * [Learn Ruby on Rails \- Full Course \- YouTube](https://www.youtube.com/watch?v=fmyvWz5TUWg)
        * It is recommended that you not only look at it, but actually try to build it.
        * reference
@@ -35,7 +35,7 @@
       * [The Ultimate Guide to Writing Technical Blog Posts \- DEV Community](https://dev.to/blackgirlbytes/the-ultimate-guide-to-writing-technical-blog-posts-5464)
 
 ## Ⅱ. For intermediate level
-1. setup Rails application ⭐️( most important )
+1. Setup Rails application ⭐️( most important )
    * [how to setup](https://github.com/nishikawa1031/mainApp/wiki/How-to-setup)
 
 2. create PR ⭐️
@@ -51,8 +51,7 @@ If you see an issue that you think you can do, give it a go.
 2. Introduce applicants to unpaid internships at other companies.
 
 ## Ⅳ. To be able to write tests. ( optional )
-run a test
-* Ensure that all tests PASS.
+* run a test and ensure that all tests Pass.
 ```ruby
 bundle exec rspec
 ```
