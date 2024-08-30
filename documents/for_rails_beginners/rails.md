@@ -26,10 +26,7 @@
     - [60 Linux Commands you NEED to know \(in 10 minutes\) \- YouTube](https://www.youtube.com/watch?v=gd7BXuUQ91w)
  
 ### Output ( optional )
-4. If you encounter errors or problems
-    * Please leave a note of the solution for your juniors.:  [wiki](https://github.com/nishikawa1031/mainApp/wiki)
-
-5. Write a technical blog
+4. Write a technical blog
       * Try to output what you have learnt immediately, for example by watching videos
       * [Tips on How to Write Your First Successful Technical Blog \| by Hannah Pratte \| QuarkWorks, Inc\. \| Medium](https://medium.com/quark-works/tips-on-how-to-write-your-first-successful-technical-blog-4cb65e5b4ce4)
       * [The Ultimate Guide to Writing Technical Blog Posts \- DEV Community](https://dev.to/blackgirlbytes/the-ultimate-guide-to-writing-technical-blog-posts-5464)
@@ -37,16 +34,14 @@
 ## Ⅱ. For intermediate level
 1. Setup Rails application ⭐️( most important )
    * [how to setup](https://github.com/nishikawa1031/mainApp/wiki/How-to-setup)
-
-
+     * If you encounter errors or problems, Please leave a note of the solution for your juniors.:  [wiki](https://github.com/nishikawa1031/mainApp/wiki)
+         * For the benefit of the next person who builds the environment, please write on this page about any stuck points or problems you encounter.
 
 ## Ⅲ. Level of internship participation
 1. Challenging issues
 If you see an issue that you think you can do, give it a go.
    * [Issues](https://github.com/nishikawa1031/mainApp/issues)
    * create PR ⭐️
-       * For the benefit of the next person who builds the environment, please write on this page about any stuck points or problems you encounter.
-       * Correcting documentation is one way to contribute immediately to the team and is greatly appreciated.
          * [how to create PR](../work_way/pr.md)
          * [Git and GitHub Tutorial for Beginners \- YouTube](https://www.youtube.com/watch?v=tRZGeaHPoaw)
 2. Introduce applicants to unpaid internships at other companies.
