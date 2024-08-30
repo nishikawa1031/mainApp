@@ -35,8 +35,9 @@
 1. Setup Rails application ⭐️( most important )
    * [how to setup](https://github.com/nishikawa1031/mainApp/wiki/How-to-setup)
 
-2. If you encounter errors or problems, Please leave a note of the solution for your juniors. [wiki](https://github.com/nishikawa1031/mainApp/wiki)
-   * For the benefit of the next person who builds the environment, please write on this page about any stuck points or problems you encounter.
+2. If you encounter errors or problems, Please leave a note of the solution for your juniors. ( optional )
+    * [wiki](https://github.com/nishikawa1031/mainApp/wiki)
+    * For the benefit of the next person who builds the environment, please write on this page about any stuck points or problems you encounter.
 
 ## Ⅲ. Level of internship participation
 1. Challenging issues
