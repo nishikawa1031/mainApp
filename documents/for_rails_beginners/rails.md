@@ -19,15 +19,15 @@
               * mac: [The terminal with a modern text editor \| Warp](https://www.warp.dev/text-editor)
             
 2. Basic knowledge
-- [What is a server? Types of Servers? Virtual server vs Physical server 🖥️🌐 \- YouTube](https://www.youtube.com/watch?v=BPVcsOKfd34)
--  [How Websites Work \| simply explained with examples \- YouTube](https://www.youtube.com/watch?v=vcRmKtL4o_4)
--  [Networking \- What is Localhost, 127\.0\.0\.1, and Loopback in TCPIP? \- YouTube](https://www.youtube.com/watch?v=MDu6hWknk70)
+    - [What is a server? Types of Servers? Virtual server vs Physical server 🖥️🌐 \- YouTube](https://www.youtube.com/watch?v=BPVcsOKfd34)
+    -  [How Websites Work \| simply explained with examples \- YouTube](https://www.youtube.com/watch?v=vcRmKtL4o_4)
+    -  [Networking \- What is Localhost, 127\.0\.0\.1, and Loopback in TCPIP? \- YouTube](https://www.youtube.com/watch?v=MDu6hWknk70)
 3. Basic Linux command
-- [60 Linux Commands you NEED to know \(in 10 minutes\) \- YouTube](https://www.youtube.com/watch?v=gd7BXuUQ91w)
+    - [60 Linux Commands you NEED to know \(in 10 minutes\) \- YouTube](https://www.youtube.com/watch?v=gd7BXuUQ91w)
  
 ### Output ( optional )
 4. If you encounter errors or problems
-* Please leave a note of the solution for your juniors.:  [wiki](https://github.com/nishikawa1031/mainApp/wiki)
+    * Please leave a note of the solution for your juniors.:  [wiki](https://github.com/nishikawa1031/mainApp/wiki)
 
 5. Write a technical blog
       * Try to output what you have learnt immediately, for example by watching videos
