@@ -48,3 +48,6 @@ prod_reset:
 
 seed:
     heroku run rails db:seed --app main-app-1209
+
+config:
+	heroku config --app main-app-1209
