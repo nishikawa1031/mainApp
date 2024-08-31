@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
+  after_create :create_associated_applicant, if: -> { role == 'applicant' }
+
   class << self
     def find_or_create_from_auth(auth_hash)
       user_params = user_params_from_auth_hash(auth_hash)
@@ -20,7 +22,7 @@ class User < ApplicationRecord
     def user_params_from_auth_hash(auth_hash)
       puts auth_hash
       {
-        email: auth_hash.info.name || 'default_username',
+        email: auth_hash.info.email || 'default_email',
         username: auth_hash.info.nickname || 'default_username',
         role: determine_role(auth_hash),
         rolable_type: determine_rolable_type(auth_hash)
@@ -28,8 +30,6 @@ class User < ApplicationRecord
     end
 
     def determine_role(auth_hash)
-      # ロールを決定するロジック
-      # 例: admin属性が存在する場合はadmin、そうでなければemployeeかapplicantなど
       if auth_hash.info.is_admin
         'admin'
       elsif auth_hash.info.is_employee
@@ -40,7 +40,6 @@ class User < ApplicationRecord
     end
 
     def determine_rolable_type(auth_hash)
-      # ロールに基づいてrolable_typeを決定
       case determine_role(auth_hash)
       when 'employee'
         'Employee' # Employeeモデルも存在する前提です
@@ -48,5 +47,11 @@ class User < ApplicationRecord
         'Applicant' # 'employee' 以外はすべて 'applicant' として扱う
       end
     end
+  end
+
+  private
+
+  def create_associated_applicant
+    create_rolable(rolable_type.constantize.new) if rolable_type == 'Applicant'
   end
 end
