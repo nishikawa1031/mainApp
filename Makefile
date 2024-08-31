@@ -51,3 +51,5 @@ seed:
 
 config:
 	heroku config --app main-app-1209
+# how to set config
+## heroku config:set KEY_NAME=value --app main-app-1209
