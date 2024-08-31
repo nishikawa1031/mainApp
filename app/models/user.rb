@@ -23,8 +23,8 @@ class User < ApplicationRecord
     def user_params_from_auth_hash(auth_hash)
       puts auth_hash
       {
-        email: auth_hash.info.email || 'default_email',
-        username: auth_hash.info.nickname || 'default_username',
+        email: auth_hash.info.email || 'guest',
+        username: auth_hash.info.nickname || 'guest',
         role: determine_role(auth_hash),
         rolable_type: determine_rolable_type(auth_hash)
       }
