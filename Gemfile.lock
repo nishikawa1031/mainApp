@@ -78,22 +78,14 @@ GEM
     ast (2.4.2)
     autoprefixer-rails (10.4.19.0)
       execjs (~> 2)
-    aws-eventstream (1.3.0)
-    aws-partitions (1.968.0)
-    aws-sdk-core (3.201.5)
-      aws-eventstream (~> 1, >= 1.3.0)
-      aws-partitions (~> 1, >= 1.651.0)
-      aws-sigv4 (~> 1.9)
-      jmespath (~> 1, >= 1.6.1)
-    aws-sdk-kms (1.88.0)
-      aws-sdk-core (~> 3, >= 3.201.0)
-      aws-sigv4 (~> 1.5)
-    aws-sdk-s3 (1.159.0)
-      aws-sdk-core (~> 3, >= 3.201.0)
-      aws-sdk-kms (~> 1)
-      aws-sigv4 (~> 1.5)
-    aws-sigv4 (1.9.1)
-      aws-eventstream (~> 1, >= 1.0.2)
+    azure-storage-blob (2.0.3)
+      azure-storage-common (~> 2.0)
+      nokogiri (~> 1, >= 1.10.8)
+    azure-storage-common (2.0.4)
+      faraday (~> 1.0)
+      faraday_middleware (~> 1.0, >= 1.0.0.rc1)
+      net-http-persistent (~> 4.0)
+      nokogiri (~> 1, >= 1.10.8)
     base64 (0.2.0)
     bigdecimal (3.1.8)
     bindex (0.8.1)
@@ -122,6 +114,7 @@ GEM
     choice (0.2.0)
     coderay (1.1.3)
     concurrent-ruby (1.3.4)
+    connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.4)
     debug (1.9.2)
@@ -140,13 +133,13 @@ GEM
     factory_bot_rails (6.4.3)
       factory_bot (~> 6.4)
       railties (>= 5.0.0)
-    faraday (2.10.1)
-      faraday-net_http (>= 2.0, < 3.2)
-      logger
+    faraday (1.2.0)
+      multipart-post (>= 1.2, < 3)
+      ruby2_keywords
     faraday-multipart (1.0.4)
       multipart-post (~> 2)
-    faraday-net_http (3.1.1)
-      net-http
+    faraday_middleware (1.2.0)
+      faraday (~> 1.0)
     ffi (1.16.3)
     font-awesome-sass (6.5.2)
       sassc (~> 2.0)
@@ -168,7 +161,6 @@ GEM
     irb (1.14.0)
       rdoc (>= 4.0.0)
       reline (>= 0.4.2)
-    jmespath (1.6.2)
     jquery-rails (4.6.0)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -208,8 +200,8 @@ GEM
       bigdecimal (~> 3.1)
     multipart-post (2.4.1)
     nested_form (0.3.2)
-    net-http (0.4.1)
-      uri
+    net-http-persistent (4.0.2)
+      connection_pool (~> 2.2)
     net-imap (0.4.14)
       date
       net-protocol
@@ -361,6 +353,7 @@ GEM
     ruby-vips (2.2.2)
       ffi (~> 1.12)
       logger
+    ruby2_keywords (0.0.5)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -397,7 +390,6 @@ GEM
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.5.0)
     uniform_notifier (1.16.0)
-    uri (0.13.0)
     version_gem (1.1.4)
     web-console (4.2.1)
       actionview (>= 6.0.0)
@@ -416,7 +408,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
-  aws-sdk-s3
+  azure-storage-blob
   bootsnap
   bootstrap
   bullet
