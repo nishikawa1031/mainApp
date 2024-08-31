@@ -35,7 +35,7 @@ class ApplicantsController < ApplicationController
   # PATCH/PUT /applicants/1
   def update
     if @applicant.update(applicant_params)
-      redirect_to @applicant, notice: 'Applicant was successfully updated.', status: :see_other
+      redirect_to user_path(@applicant.user), notice: 'Applicant was successfully updated.', status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end
@@ -56,6 +56,6 @@ class ApplicantsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def applicant_params
-    params.require(:applicant).permit(:name, :user_id, :creater_id, :birthday, :age, :nationality, :phone_number, :self_introduction, :desired_salary, files: [])
+    params.require(:applicant).permit(:name, :user_id, :creater_id, :birthday, :age, :nationality, :phone_number, :self_introduction, :desired_salary, :resume, files: [])
   end
 end
