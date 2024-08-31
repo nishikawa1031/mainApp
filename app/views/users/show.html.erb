@@ -70,14 +70,16 @@
       <div class="card shadow-sm">
         <div class="card-body">
           <h2 class="card-title text-center mb-4">AI に添削を依頼する</h2>
-          <p class="text-center text-muted mb-4">誤字脱字や日本語の不備を確認します</p>
+          <p class="text-center text-muted mb-4">履歴書・職務経歴書をアップロードして、誤字脱字や日本語の不備を確認します</p>
           
           <%= form_with model: @user, url: user_path(@user), local: true, multipart: true, class: "mb-4" do |form| %>
             <div class="mb-3">
-              <%= form.file_field :resume, class: "form-control", accept: "application/pdf,image/*" %>
+              <div class="d-flex justify-content-center mb-3">
+                <%= form.file_field :resume, class: "form-control", accept: "application/pdf,image/*", style: "max-width: 50%;" %>
+              </div>
             </div>
             <div class="text-center">
-              <%= form.submit "経歴書をアップロード", class: "btn btn-primary" %>
+              <%= form.submit "アップロード", class: "btn btn-primary" %>
             </div>
           <% end %>
 
