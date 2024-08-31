@@ -17,5 +17,4 @@ class Applicant < ApplicationRecord
   has_one :user, as: :rolable, dependent: :destroy
 
   has_many_attached :files
-  has_one_attached :resume
 end

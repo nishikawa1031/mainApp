@@ -75,7 +75,7 @@
           <%= form_with model: @user.rolable, url: applicant_path(@user.rolable), local: true, multipart: true, class: "mb-4" do |form| %>
             <div class="mb-3">
               <div class="d-flex justify-content-center mb-3">
-                <%= form.file_field :resume, class: "form-control", accept: "application/pdf,image/*", style: "max-width: 50%;" %>
+                <%= form.file_field :files, class: "form-control", accept: "application/pdf,image/*", style: "max-width: 50%;", multipart: true %>
               </div>
             </div>
             <div class="text-center">
@@ -83,17 +83,19 @@
             </div>
           <% end %>
 
-          <% if @user.rolable.resume.attached? %>
+          <% if @user.rolable.files.attached? %>
             <div class="mt-4">
               <h5 class="card-title">アップロードされたファイル</h5>
-              <% if @user.rolable.resume.content_type.start_with?('image/') %>
-                <%= image_tag url_for(@user.rolable.resume), class: "img-fluid rounded" %>
-              <% elsif @user.rolable.resume.content_type == 'application/pdf' %>
-                <div class="ratio ratio-16x9">
-                  <%= tag.iframe src: url_for(@user.rolable.resume), class: "rounded" %>
-                </div>
-              <% else %>
-                <p>このファイルは表示できません。<%= link_to 'こちらからダウンロード', url_for(@user.rolable.resume), class: "btn btn-sm btn-outline-primary" %>してください。</p>
+              <% @user.rolable.files.each do |file| %>
+                <% if file.content_type.start_with?('image/') %>
+                  <%= image_tag url_for(file), class: "img-fluid rounded" %>
+                <% elsif file.content_type == 'application/pdf' %>
+                  <div class="ratio ratio-16x9">
+                    <%= tag.iframe src: url_for(file), class: "rounded" %>
+                  </div>
+                <% else %>
+                  <p>このファイルは表示できません。<%= link_to 'こちらからダウンロード', url_for(file), class: "btn btn-sm btn-outline-primary" %>してください。</p>
+                <% end %>
               <% end %>
             </div>
           <% end %>
