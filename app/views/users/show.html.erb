@@ -1,12 +1,11 @@
-<div>
+<div class="container container-sm container-md container-lg">
   <div class="row m-4">
     <div class="col-sm-4 mb-4">
-      <h1><%= @user.username %>のプロフィール</h1>
       <div>
         <% if @user.avatar.attached? %>
           <%= image_tag url_for(@user.avatar), style: "max-width: 10%; height: auto;" %>
         <% else %>
-          <p>アバター画像がありません。</p>
+          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" style="width: 150px;" alt="Avatar" />
         <% end %>
       </div>
       <p>メール: <%= @user.email %></p>
