@@ -1,93 +1,140 @@
-<div>
-  <div class="service">
-    <h3>経歴書自動生成AI</h3>
-    </br>
-    <p>AI技術を用いて、日本語の経歴書を自動で生成。スピーディーに転職活動をサポートします。</p>
-    <div style="display: flex; justify-content: center; align-items: center; flex: 1;">
-      <%= link_to '経歴書を作成する', new_applicant_path, class: "header-link", style: "text-decoration: none;" %>
+<div class="container container-sm container-md container-lg">
+  <div class="row">
+    <!-- プロフィールセクション -->
+    <div class="col-lg-4 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="text-center mb-4">
+            <%= image_tag @user.avatar.attached? ? url_for(@user.avatar) : "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp", class: "profile-avatar" %>
+          </div>
+          <h4 class="card-title text-center mb-3"><%= @user.username %></h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="bi bi-envelope-fill me-2"></i><%= @user.email %></li>
+            <% if Rails.env.development? %>
+              <li class="list-group-item"><i class="bi bi-person-badge-fill me-2"></i><%= @user.role %></li>
+            <% end %>
+          </ul>
+
+          <% if @user.rolable_type == 'Applicant' %>
+            <div class="mt-4">
+              <% if @user.rolable.birthday.present? %>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-calendar me-2"></i>
+                  <span>生年月日: <%= @user.rolable.birthday %></span>
+                </div>
+              <% end %>
+              
+              <% if @user.rolable.age.present? %>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-person me-2"></i>
+                  <span>年齢: <%= @user.rolable.age %></span>
+                </div>
+              <% end %>
+              
+              <% if @user.rolable.nationality.present? %>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-globe me-2"></i>
+                  <span>国籍: <%= @user.rolable.nationality %></span>
+                </div>
+              <% end %>
+              
+              <% if @user.rolable.phone_number.present? %>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-telephone me-2"></i>
+                  <span>電話番号: <%= @user.rolable.phone_number %></span>
+                </div>
+              <% end %>
+              
+              <% if @user.rolable.desired_salary.present? %>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-currency-dollar me-2"></i>
+                  <span>希望給与: <%= @user.rolable.desired_salary %></span>
+                </div>
+              <% end %>
+            </div>
+
+
+            <% if @user.rolable.self_introduction.present? %>
+              <div class="mt-4">
+                <h5 class="card-title">自己紹介</h5>
+                <p class="card-text"><%= @user.rolable.self_introduction %></p>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <!-- 経歴書アップロードと表示セクション -->
+    <div class="col-lg-8 mb-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">AI に添削を依頼する</h2>
+          <p class="text-center text-muted mb-4">履歴書・職務経歴書をアップロードして、誤字脱字や日本語の不備を確認します</p>
+          
+          <%= form_with model: @user, url: user_path(@user), local: true, multipart: true, class: "mb-4" do |form| %>
+            <div class="mb-3">
+              <div class="d-flex justify-content-center mb-3">
+                <%= form.file_field :resume, class: "form-control", accept: "application/pdf,image/*", style: "max-width: 50%;" %>
+              </div>
+            </div>
+            <div class="text-center">
+              <%= form.submit "アップロード", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+
+          <% if @user.rolable&.resume.attached? %>
+            <div class="mt-4">
+              <h5 class="card-title">アップロードされたファイル</h5>
+              <% if @user.resume.content_type.start_with?('image/') %>
+                <%= image_tag url_for(@user.resume), class: "img-fluid rounded" %>
+              <% elsif @user.resume.content_type == 'application/pdf' %>
+                <div class="ratio ratio-16x9">
+                  <%= tag.iframe src: url_for(@user.resume), class: "rounded" %>
+                </div>
+              <% else %>
+                <p>このファイルは表示できません。<%= link_to 'こちらからダウンロード', url_for(@user.resume), class: "btn btn-sm btn-outline-primary" %>してください。</p>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="row m-4">
-    <div class="col-sm-6 mb-4">
-      <div class="uploaded-file" style="margin-top: 20px; text-align: center;">
-        <% if @user.rolable&.resume.attached? %>
-          <h3>アップロードされたファイル</h3>
-          <% if @user.resume.content_type.start_with?('image/') %>
-            <%= image_tag url_for(@user.resume), style: "max-width: 100%; height: auto;" %>
-          <% elsif @user.resume.content_type == 'application/pdf' %>
-            <%= tag.iframe src: url_for(@user.resume), style: "width: 100%; height: 100vh;" %>
-          <% else %>
-            <p>このファイルは表示できません。<%= link_to 'こちらからダウンロード', url_for(@user.resume) %>してください。</p>
-          <% end %>
-        <% end %>
-      </div>
-      <h3>改善点の提案</h3>
-      <% if @improvement_suggestions %>
-        <div class="suggestions" style="margin-top: 20px;">
-          <div class="advice-box">
-            <%= simple_format(@improvement_suggestions) %>
+  <!-- 改善点の提案セクション -->
+  <% if @improvement_suggestions %>
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title mb-3">改善点の提案</h3>
+            <div class="bg-light border rounded p-3">
+              <%= simple_format(@improvement_suggestions) %>
+            </div>
           </div>
         </div>
-      <% else %>
-        <p>なし</p>
-      <% end %>
-    </div>
-    <div class="col-sm-6 mb-4">
-      <div class="form-modern" style="background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <h2 style="text-align: center; margin: 20px; color: #333;">既存の経歴書をアップロード</h2>
-        <%= form_with model: @user, url: user_path(@user), local: true, multipart: true do |form| %>
-          <div style="margin-bottom: 20px;">
-            <%= form.file_field :resume, style: "width: 100%; padding: 12px 20px; font-size: 16px; border: 1px solid #ddd; border-radius: 5px; background: #f9f9f9; outline: none; transition: border-color 0.3s;" %>
-          </div>
-          <div style="text-align: center;">
-            <%= form.submit "アップロード", style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;" %>
-          </div>
-        <% end %>
       </div>
     </div>
-  </div>
-
-  <h1><%= @user.username %>のプロフィール</h1>
-  
-  <div>
-    <% if @user.avatar.attached? %>
-      <%= image_tag url_for(@user.avatar), style: "max-width: 10%; height: auto;" %>
-    <% else %>
-      <p>アバター画像がありません。</p>
-    <% end %>
-  </div>
-
-  <p>メール: <%= @user.email %></p>
-  <p>ユーザー名: <%= @user.username %></p>
-  <p>役割: <%= @user.role %></p>
-
-  <% if @user.rolable_type == 'Applicant' %>
-    <h2>応募者情報</h2>
-    <p>名前: <%= @user.rolable.name %></p>
-    <p>生年月日: <%= @user.rolable.birthday %></p>
-    <p>年齢: <%= @user.rolable.age %></p>
-    <p>国籍: <%= @user.rolable.nationality %></p>
-    <p>電話番号: <%= @user.rolable.phone_number %></p>
-    <p>自己紹介: <%= @user.rolable.self_introduction %></p>
-    <p>希望給与: <%= @user.rolable.desired_salary %></p>
   <% end %>
 </div>
 
-<style>
-.advice-box {
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 5px;
-  padding: 15px;
-  margin-top: 10px;
-}
-
-.advice-box ul {
-  padding-left: 20px;
-}
-
-.advice-box li {
-  margin-bottom: 10px;
-}
-</style>
+<% content_for :head do %>
+  <style>
+    .profile-avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #f8f9fa;
+    }
+    .btn-primary {
+      background-color: #4285F4;
+      border-color: #4285F4;
+    }
+    .btn-primary:hover {
+      background-color: #357ae8;
+      border-color: #357ae8;
+    }
+  </style>
+<% end %>
