@@ -11,7 +11,7 @@
   <div class="row m-4">
     <div class="col-sm-6 mb-4">
       <div class="uploaded-file" style="margin-top: 20px; text-align: center;">
-        <% if @user.resume.attached? %>
+        <% if @user.rolable&.resume.attached? %>
           <h3>アップロードされたファイル</h3>
           <% if @user.resume.content_type.start_with?('image/') %>
             <%= image_tag url_for(@user.resume), style: "max-width: 100%; height: auto;" %>

@@ -53,14 +53,18 @@ class User < ApplicationRecord
   private
 
   def create_associated_applicant
-    applicant = Applicant.new(user: self)
-    self.rolable = applicant if applicant.save
+    applicant = Applicant.new(user_id: id) # user_id を明示的に設定
+    return unless applicant.save
+
+    self.rolable = applicant
     save!
   end
 
   def create_associated_employee
-    employee = Employee.new(user: self)
-    self.rolable = employee if employee.save
+    employee = Employee.new(user_id: id) # user_id を明示的に設定
+    return unless employee.save
+
+    self.rolable = employee
     save!
   end
 end
