@@ -66,6 +66,6 @@ class ApplicantsController < ApplicationController
                                       :self_introduction,
                                       :desired_salary,
                                       :resume,
-                                      :files)
+                                      files: [])
   end
 end

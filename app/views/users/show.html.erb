@@ -87,15 +87,19 @@
             <div class="mt-4">
               <h5 class="card-title">アップロードされたファイル</h5>
               <% @user.rolable.files.each do |file| %>
-                <% if file.content_type.start_with?('image/') %>
-                  <%= image_tag url_for(file), class: "img-fluid rounded" %>
-                <% elsif file.content_type == 'application/pdf' %>
-                  <div class="ratio ratio-16x9">
-                    <%= tag.iframe src: url_for(file), class: "rounded" %>
-                  </div>
-                <% else %>
-                  <p>このファイルは表示できません。<%= link_to 'こちらからダウンロード', url_for(file), class: "btn btn-sm btn-outline-primary" %>してください。</p>
-                <% end %>
+                <div class="mb-3">
+                  <% if file.content_type.start_with?('image/') %>
+                    <%= image_tag url_for(file), class: "img-fluid rounded", style: "margin-bottom: 15px;" %>
+                  <% elsif file.content_type == 'application/pdf' %>
+                    <div class="ratio ratio-16x9" style="margin-bottom: 15px;">
+                      <%= tag.iframe src: url_for(file), class: "rounded" %>
+                    </div>
+                  <% else %>
+                    <p style="margin-bottom: 15px;">
+                      このファイルは表示できません。<%= link_to 'こちらからダウンロード', url_for(file), class: "btn btn-sm btn-outline-primary" %>してください。
+                    </p>
+                  <% end %>
+                </div>
               <% end %>
             </div>
           <% end %>
