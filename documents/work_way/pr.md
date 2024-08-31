@@ -4,5 +4,11 @@
 We will check your work against the PR. 
 So please attach a screenshot or screen recording of your work when you have checked the PR.
 
+## Before you create a PR
+You need to run this command.
+```ruby
+rubocop -A
+```
+
 ## good
 [Writing A Great Pull Request Description](https://www.pullrequest.com/blog/writing-a-great-pull-request-description/)
