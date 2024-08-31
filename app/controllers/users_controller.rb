@@ -36,7 +36,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:resume)
+    params.require(:use).permit(:avatar)
   end
 
   def analyze_resume(resume)
