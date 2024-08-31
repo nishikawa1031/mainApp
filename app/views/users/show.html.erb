@@ -2,138 +2,137 @@
   <div class="row">
     <!-- プロフィールセクション -->
     <div class="col-lg-4 mb-4">
-      <div class="text-center mb-4">
-        <% if @user.avatar.attached? %>
-          <%= image_tag url_for(@user.avatar), class: "profile-avatar" %>
-        <% else %>
-          <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle profile-avatar" alt="Avatar" />
-        <% end %>
-      </div>
-      <div class="text-center mb-4">
-        <p class="mb-1"><strong>メール:</strong> <%= @user.email %></p>
-        <p class="mb-1"><strong>ユーザー名:</strong> <%= @user.username %></p>
-        <% if Rails.env.development? %>
-          <p class="mb-1"><strong>役割:</strong> <%= @user.role %></p>
-        <% end %>
-      </div>
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <div class="text-center mb-4">
+            <%= image_tag @user.avatar.attached? ? url_for(@user.avatar) : "https://mdbcdn.b-cdn.net/img/new/avatars/2.webp", class: "profile-avatar" %>
+          </div>
+          <h4 class="card-title text-center mb-3"><%= @user.username %></h4>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="bi bi-envelope-fill me-2"></i><%= @user.email %></li>
+            <% if Rails.env.development? %>
+              <li class="list-group-item"><i class="bi bi-person-badge-fill me-2"></i><%= @user.role %></li>
+            <% end %>
+          </ul>
 
-      <% if @user.rolable_type == 'Applicant' %>
-        <div class="mb-4">
-          <% if @user.rolable.birthday.present? %>
-            <p><strong>生年月日:</strong> <%= @user.rolable.birthday %></p>
-          <% end %>
+          <% if @user.rolable_type == 'Applicant' %>
+            <div class="mt-4">
+              <% if @user.rolable.birthday.present? %>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-calendar me-2"></i>
+                  <span>生年月日: <%= @user.rolable.birthday %></span>
+                </div>
+              <% end %>
+              
+              <% if @user.rolable.age.present? %>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-person me-2"></i>
+                  <span>年齢: <%= @user.rolable.age %></span>
+                </div>
+              <% end %>
+              
+              <% if @user.rolable.nationality.present? %>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-globe me-2"></i>
+                  <span>国籍: <%= @user.rolable.nationality %></span>
+                </div>
+              <% end %>
+              
+              <% if @user.rolable.phone_number.present? %>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-telephone me-2"></i>
+                  <span>電話番号: <%= @user.rolable.phone_number %></span>
+                </div>
+              <% end %>
+              
+              <% if @user.rolable.desired_salary.present? %>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-currency-dollar me-2"></i>
+                  <span>希望給与: <%= @user.rolable.desired_salary %></span>
+                </div>
+              <% end %>
+            </div>
 
-          <% if @user.rolable.age.present? %>
-            <p><strong>年齢:</strong> <%= @user.rolable.age %></p>
-          <% end %>
 
-          <% if @user.rolable.nationality.present? %>
-            <p><strong>国籍:</strong> <%= @user.rolable.nationality %></p>
-          <% end %>
-
-          <% if @user.rolable.phone_number.present? %>
-            <p><strong>電話番号:</strong> <%= @user.rolable.phone_number %></p>
-          <% end %>
-
-          <% if @user.rolable.self_introduction.present? %>
-            <p><strong>自己紹介:</strong> <%= @user.rolable.self_introduction %></p>
-          <% end %>
-
-          <% if @user.rolable.desired_salary.present? %>
-            <p><strong>希望給与:</strong> <%= @user.rolable.desired_salary %></p>
-          <% end %>
-        </div>
-
-        <div class="uploaded-file text-center">
-          <% if @user.rolable&.resume.attached? %>
-            <h3>アップロードされたファイル</h3>
-            <% if @user.resume.content_type.start_with?('image/') %>
-              <%= image_tag url_for(@user.resume), class: "uploaded-image" %>
-            <% elsif @user.resume.content_type == 'application/pdf' %>
-              <%= tag.iframe src: url_for(@user.resume), class: "uploaded-pdf" %>
-            <% else %>
-              <p>このファイルは表示できません。<%= link_to 'こちらからダウンロード', url_for(@user.resume) %>してください。</p>
+            <% if @user.rolable.self_introduction.present? %>
+              <div class="mt-4">
+                <h5 class="card-title">自己紹介</h5>
+                <p class="card-text"><%= @user.rolable.self_introduction %></p>
+              </div>
             <% end %>
           <% end %>
         </div>
-      <% end %>
+      </div>
     </div>
 
-    <!-- 経歴書アップロードセクション -->
+    <!-- 経歴書アップロードと表示セクション -->
     <div class="col-lg-8 mb-4">
-      <h2 class="text-center mb-4">AI に添削を依頼する</h2>
-      <p class="text-center">誤字脱字や日本語の不備を確認する</p>
-      <div class="form-modern bg-white p-4 rounded shadow-sm">
-        <%= form_with model: @user, url: user_path(@user), local: true, multipart: true do |form| %>
-          <div class="mb-3">
-            <%= form.file_field :resume, class: "form-control" %>
-          </div>
-          <div class="text-center">
-            <%= form.submit "経歴書をアップロード", class: "btn btn-primary" %>
-          </div>
-        <% end %>
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4">AI に添削を依頼する</h2>
+          <p class="text-center text-muted mb-4">誤字脱字や日本語の不備を確認します</p>
+          
+          <%= form_with model: @user, url: user_path(@user), local: true, multipart: true, class: "mb-4" do |form| %>
+            <div class="mb-3">
+              <%= form.file_field :resume, class: "form-control", accept: "application/pdf,image/*" %>
+            </div>
+            <div class="text-center">
+              <%= form.submit "経歴書をアップロード", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+
+          <% if @user.rolable&.resume.attached? %>
+            <div class="mt-4">
+              <h5 class="card-title">アップロードされたファイル</h5>
+              <% if @user.resume.content_type.start_with?('image/') %>
+                <%= image_tag url_for(@user.resume), class: "img-fluid rounded" %>
+              <% elsif @user.resume.content_type == 'application/pdf' %>
+                <div class="ratio ratio-16x9">
+                  <%= tag.iframe src: url_for(@user.resume), class: "rounded" %>
+                </div>
+              <% else %>
+                <p>このファイルは表示できません。<%= link_to 'こちらからダウンロード', url_for(@user.resume), class: "btn btn-sm btn-outline-primary" %>してください。</p>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 改善点の提案セクション -->
-  <div class="row mt-4">
-    <div class="col-12">
-      <% if @improvement_suggestions %>
-        <h3 class="mb-3">改善点の提案</h3>
-        <div class="suggestions bg-light border rounded p-3">
-          <%= simple_format(@improvement_suggestions) %>
+  <% if @improvement_suggestions %>
+    <div class="row mt-4">
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title mb-3">改善点の提案</h3>
+            <div class="bg-light border rounded p-3">
+              <%= simple_format(@improvement_suggestions) %>
+            </div>
+          </div>
         </div>
-      <% else %>
-      <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
 
-<style>
-.profile-avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.uploaded-image {
-  max-width: 100%;
-  height: auto;
-}
-
-.uploaded-pdf {
-  width: 100%;
-  height: 600px;
-  border: none;
-}
-
-.form-modern .form-control {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.btn-primary {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4285F4;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #357ae8;
-}
-
-.suggestions {
-  background-color: #f8f9fa;
-  border: 1px solid #e9ecef;
-  border-radius: 5px;
-  padding: 15px;
-  margin-top: 10px;
-}
-</style>
+<% content_for :head do %>
+  <style>
+    .profile-avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #f8f9fa;
+    }
+    .btn-primary {
+      background-color: #4285F4;
+      border-color: #4285F4;
+    }
+    .btn-primary:hover {
+      background-color: #357ae8;
+      border-color: #357ae8;
+    }
+  </style>
+<% end %>
