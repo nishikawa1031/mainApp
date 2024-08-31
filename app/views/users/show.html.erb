@@ -1,6 +1,45 @@
 <div>
   <div class="row m-4">
-    <div class="col-sm-6 mb-4">
+    <div class="col-sm-4 mb-4">
+      <h1><%= @user.username %>のプロフィール</h1>
+      <div>
+        <% if @user.avatar.attached? %>
+          <%= image_tag url_for(@user.avatar), style: "max-width: 10%; height: auto;" %>
+        <% else %>
+          <p>アバター画像がありません。</p>
+        <% end %>
+      </div>
+      <p>メール: <%= @user.email %></p>
+      <p>ユーザー名: <%= @user.username %></p>
+      <% if Rails.env.development? %>
+        <p><strong>役割:</strong> <%= @user.role %></p>
+      <% end %>
+
+      <% if @user.rolable_type == 'Applicant' %>
+        <% if @user.rolable.birthday.present? %>
+          <p>生年月日: <%= @user.rolable.birthday %></p>
+        <% end %>
+        
+        <% if @user.rolable.age.present? %>
+          <p>年齢: <%= @user.rolable.age %></p>
+        <% end %>
+        
+        <% if @user.rolable.nationality.present? %>
+          <p>国籍: <%= @user.rolable.nationality %></p>
+        <% end %>
+        
+        <% if @user.rolable.phone_number.present? %>
+          <p>電話番号: <%= @user.rolable.phone_number %></p>
+        <% end %>
+        
+        <% if @user.rolable.self_introduction.present? %>
+          <p>自己紹介: <%= @user.rolable.self_introduction %></p>
+        <% end %>
+        
+        <% if @user.rolable.desired_salary.present? %>
+          <p>希望給与: <%= @user.rolable.desired_salary %></p>
+        <% end %>
+
       <div class="uploaded-file" style="margin-top: 20px; text-align: center;">
         <% if @user.rolable&.resume.attached? %>
           <h3>アップロードされたファイル</h3>
@@ -13,18 +52,10 @@
           <% end %>
         <% end %>
       </div>
-      <h3>改善点の提案</h3>
-      <% if @improvement_suggestions %>
-        <div class="suggestions" style="margin-top: 20px;">
-          <div class="advice-box">
-            <%= simple_format(@improvement_suggestions) %>
-          </div>
-        </div>
-      <% else %>
-        <p>なし</p>
       <% end %>
     </div>
-    <div class="col-sm-6 mb-4">
+
+    <div class="col-sm-8 mb-8">
       <div class="form-modern" style="background: #fff; padding: 40px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
         <h2 style="text-align: center; margin: 20px; color: #333;">既存の経歴書をアップロード</h2>
         <%= form_with model: @user, url: user_path(@user), local: true, multipart: true do |form| %>
@@ -38,49 +69,18 @@
       </div>
     </div>
   </div>
-
-  <h1><%= @user.username %>のプロフィール</h1>
-  
-  <div>
-    <% if @user.avatar.attached? %>
-      <%= image_tag url_for(@user.avatar), style: "max-width: 10%; height: auto;" %>
-    <% else %>
-      <p>アバター画像がありません。</p>
-    <% end %>
-  </div>
-
-  <p>メール: <%= @user.email %></p>
-  <p>ユーザー名: <%= @user.username %></p>
-  <% if Rails.env.development? %>
-    <p><strong>役割:</strong> <%= @user.role %></p>
-  <% end %>
-
-  <% if @user.rolable_type == 'Applicant' %>
-    <% if @user.rolable.birthday.present? %>
-      <p>生年月日: <%= @user.rolable.birthday %></p>
-    <% end %>
-    
-    <% if @user.rolable.age.present? %>
-      <p>年齢: <%= @user.rolable.age %></p>
-    <% end %>
-    
-    <% if @user.rolable.nationality.present? %>
-      <p>国籍: <%= @user.rolable.nationality %></p>
-    <% end %>
-    
-    <% if @user.rolable.phone_number.present? %>
-      <p>電話番号: <%= @user.rolable.phone_number %></p>
-    <% end %>
-    
-    <% if @user.rolable.self_introduction.present? %>
-      <p>自己紹介: <%= @user.rolable.self_introduction %></p>
-    <% end %>
-    
-    <% if @user.rolable.desired_salary.present? %>
-      <p>希望給与: <%= @user.rolable.desired_salary %></p>
-    <% end %>
-  <% end %>
-
+    <div class="row m-4">
+        <h3>改善点の提案</h3>
+      <% if @improvement_suggestions %>
+        <div class="suggestions" style="margin-top: 20px;">
+          <div class="advice-box">
+            <%= simple_format(@improvement_suggestions) %>
+          </div>
+        </div>
+      <% else %>
+        <p>なし</p>
+      <% end %>
+    </div>
 </div>
 
 <style>
