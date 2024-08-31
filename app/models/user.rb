@@ -8,13 +8,14 @@ class User < ApplicationRecord
   has_one_attached :avatar
 
   after_create :create_associated_applicant, if: -> { role == 'applicant' }
+  after_create :create_associated_employee, if: -> { role == 'employee' }
 
   class << self
     def find_or_create_from_auth(auth_hash)
       user_params = user_params_from_auth_hash(auth_hash)
-      find_or_create_by(email: user_params[:email]) do |user|
-        user.update!(user_params)
-      end
+      user = find_or_create_by(email: user_params[:email])
+      user.update!(user_params)
+      user
     end
 
     private
@@ -52,6 +53,18 @@ class User < ApplicationRecord
   private
 
   def create_associated_applicant
-    create_rolable(rolable_type.constantize.new) if rolable_type == 'Applicant'
+    applicant = Applicant.new
+    return unless applicant.save
+
+    self.rolable = applicant
+    save!
+  end
+
+  def create_associated_employee
+    employee = Employee.new
+    return unless employee.save
+
+    self.rolable = employee
+    save!
   end
 end
