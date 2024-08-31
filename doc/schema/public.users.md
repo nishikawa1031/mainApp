@@ -15,6 +15,8 @@
 | role | integer | 0 | false |  |  |  |
 | username | varchar |  | true |  |  |  |
 | avatar | varchar |  | true |  |  |  |
+| rolable_type | varchar |  | true |  |  |  |
+| rolable_id | bigint |  | true |  |  |  |
 
 ## Constraints
 
@@ -28,6 +30,7 @@
 | ---- | ---------- |
 | users_pkey | CREATE UNIQUE INDEX users_pkey ON public.users USING btree (id) |
 | index_users_on_email | CREATE UNIQUE INDEX index_users_on_email ON public.users USING btree (email) |
+| index_users_on_rolable | CREATE INDEX index_users_on_rolable ON public.users USING btree (rolable_type, rolable_id) |
 
 ## Relations
 
