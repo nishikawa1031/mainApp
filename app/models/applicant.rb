@@ -14,7 +14,8 @@
 class Applicant < ApplicationRecord
   has_many :applicant_articles
   has_many :articles, through: :applicant_articles
-  has_one :user, as: :rolable
+  has_one :user, as: :rolable, dependent: :destroy
 
   has_many_attached :files
+  has_one_attached :resume
 end
