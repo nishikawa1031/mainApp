@@ -25,12 +25,6 @@ html, body {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .user-info {
-    display: none;
-  }
-}
-
 .header-container {
   display: flex;
   align-items: center;
@@ -56,11 +50,6 @@ html, body {
 
 .header-link:hover {
   color: #0056b3; /* リンクのホバー時のテキスト色 */
-}
-
-.user-info {
-  margin-right: 10px;
-  margin-left: 10px;
 }
 
 .logout-button,
