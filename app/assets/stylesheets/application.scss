@@ -638,21 +638,6 @@ h1 {
   box-shadow: 1px 1px 2px #e6e6e6;
 }
 
-// トップページ
-.services-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
-}
-
-.services-section h2 {
-  width: 100%;
-  text-align: center;
-  color: #000000;
-  margin-bottom: 20px;
-}
-
 .service {
   flex-basis: 30%; /* 各サービスボックスを3列にするために幅を調整 */
   display: flex;
