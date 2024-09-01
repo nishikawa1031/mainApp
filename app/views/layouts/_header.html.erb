@@ -5,30 +5,32 @@
     <% if current_user %>
       <% if current_user&.employee? || current_user&.admin? %>
         <% if current_page?(root_path) %>
-          <%= link_to '採用企業様はこちら', applicants_path, class: "header-link", style: "text-decoration: none;" %>
+          <%= link_to '採用企業様はこちら', applicants_path, class: "header-link" %>
         <% else %>
-          <%= link_to 'Job seekers, click here', root_path, class: "header-link", style: "text-decoration: none;" %>
+          <%= link_to 'Job seekers, click here', root_path, class: "header-link" %>
         <% end %>
       <% else %>
         <% unless current_page?(root_path) %>
-          <%= link_to 'Job seekers, click here', root_path, class: "header-link", style: "text-decoration: none;" %>
+          <%= link_to 'Job seekers, click here', root_path, class: "header-link" %>
         <% end %>
       <% end %>
     <% else %>
       <% if current_page?(root_path) %>
-          <%= link_to '採用企業様はこちら', home_index_path, class: "header-link", style: "text-decoration: none;" %>
+        <%= link_to '採用企業様はこちら', home_index_path, class: "header-link" %>
       <% else %>
-          <%= link_to 'Job seekers, click here', root_path, class: "header-link", style: "text-decoration: none;" %>
+        <%= link_to 'Job seekers, click here', root_path, class: "header-link" %>
       <% end %>
     <% end %>
 
     <% if current_user %>
       <div class="user-info">
-        <%= link_to "#{current_user.email}", user_path(current_user.id), class: "header-link", style: "text-decoration: none; color: #000; font-size: 15px;" %>
+        <%= link_to user_path(current_user.id), class: "header-link user-icon-link" do %>
+          <i class="fas fa-user-circle user-icon"></i>
+        <% end %>
       </div>
       <% if false %>
       <div class="notification-bell">
-        <i class="fas fa-bell" style="color: black;"></i>
+        <i class="fas fa-bell"></i>
         <span class="notification-badge">0</span>
       </div>
       <% end %>
@@ -42,3 +44,85 @@
     <% end %>
   </div>
 </header>
+
+<style>
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 20px; /* ヘッダーとコンテンツの間のマージン */
+  }
+
+  .header-title-link {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .header-title-link:hover {
+    color: #007bff;
+  }
+
+  .header-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-link {
+    margin-left: 20px;
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .header-link:hover {
+    color: #007bff;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* アイコンの左マージン */
+  }
+
+  .user-icon-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px; /* アイコンのサイズを調整 */
+    margin-left: 0; /* アイコンを左に移動させるマージンを削除 */
+  }
+
+  .user-icon {
+    transition: color 0.3s;
+  }
+
+  .user-icon-link:hover .user-icon {
+    color: #007bff; /* ホバー時の色を調整 */
+  }
+
+  .logout-button, .login-button {
+    margin-left: 20px;
+  }
+
+  .button-modern {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .button-modern:hover {
+    background-color: #0056b3;
+  }
+</style>
