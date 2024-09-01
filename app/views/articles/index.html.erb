@@ -62,11 +62,11 @@
 <!-- Add Resume Upload Button at Center -->
 <% if current_user %>
   <div style="text-align: center;">
-    <%= button_to '経歴書をアップロード', user_path(current_user), method: :get, style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;" %>
+    <%= button_to '経歴書をアップロード', user_path(current_user), method: :get, style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" %>
   </div>
 <% else %>
   <div style="text-align: center;">
-    <%= button_to '経歴書をアップロード', '/auth/auth0', method: :post, data: { turbo: false }, style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s;" %>
+    <%= button_to '経歴書をアップロード', '/auth/auth0', method: :post, data: { turbo: false }, style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" %>
   </div>
 <% end %>
 
