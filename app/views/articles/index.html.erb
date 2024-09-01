@@ -70,29 +70,35 @@
   </div>
 <% end %>
 
-
-<div class="services-section">
-  <h2>私たちのサービス</h2>
-  <div class="service">
-    <%= image_tag("resume_icon.jpg", alt: "Resume Icon") %>
-    <h3>経歴書自動生成AI</h3>
-    <p>AI技術を用いて、日本語の経歴書を自動で生成。スピーディーに転職活動をサポートします。</p>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="service-card text-center">
+          <%= image_tag("resume_icon.jpg", alt: "Resume Icon", class: "img-fluid") %>
+          <h3>生成AIによる添削サービス</h3>
+          <p>AI技術を用いて、経歴書を自動で添削して、書類選考の通過率をアップさせます。</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="service-card text-center">
+          <%= image_tag("recruiter_icon.jpg", alt: "Recruiter Icon", class: "img-fluid") %>
+          <h3>専任リクルーターサポート</h3>
+          <p>経験豊富なリクルーターが一貫してサポート。就職活動を全面的にバックアップします。</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="service-card text-center">
+          <%= image_tag("visa_support_icon.jpg", alt: "Visa Icon", class: "img-fluid") %>
+          <h3>在留資格申請サポート</h3>
+          <p>必要な書類の準備から申請プロセスのサポートまで、在留資格の取得を徹底支援します。</p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="service">
-    <%= image_tag("recruiter_icon.jpg", alt: "Recruiter Icon") %>
-    <h3>専任リクルーターサポート</h3>
-    <p>経験豊富なリクルーターが一貫してサポート。就職活動を全面的にバックアップします。</p>
-  </div>
-  <div class="service">
-    <%= image_tag("visa_support_icon.jpg", alt: "Visa Icon") %>
-    <h3>在留資格申請サポート</h3>
-    <p>必要な書類の準備から申請プロセスのサポートまで、在留資格の取得を徹底支援します。</p>
-  </div>
-</div>
 
 <% if false %>
 <h1>Azure OpenAI Input Form</h1>
-<%= form_with url: '/open_ai/submit', local: true, multipart: true do %>
+<%= form_with url: '/open_ai/submit', local: true, multiple: true do %>
   <div>
     <%= label_tag :input_text, "Enter your prompt:" %>
     <%= text_area_tag :input_text %>
@@ -111,3 +117,25 @@
   <p><%= @response_text %></p>
 <% end %>
 <% end %>
+
+  <style>
+    .service-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      padding: 20px;
+    }
+
+    .service-card img {
+      height: auto;
+    }
+    .service-card h3 {
+      margin-top: 15px;
+      font-size: 1.25rem;
+      color: #333;
+    }
+    .service-card p {
+      color: #333;
+    }
+  </style>
