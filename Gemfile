@@ -68,6 +68,7 @@ gem 'docx'
 gem 'pdf-reader'
 gem 'rack-cors'
 gem 'rails_admin'
+gem 'redcarpet'
 gem 'rollbar'
 gem 'ruby-openai' # OpenAI API
 

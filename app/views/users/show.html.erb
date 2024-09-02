@@ -1,16 +1,21 @@
 <div class="container container-sm container-md container-lg">
   <div class="row">
-  <% if flash[:success] %>
-    <div class="alert alert-success">
-      <%= flash[:success] %>
-    </div>
-  <% elsif flash[:alert] %>
-    <div class="alert alert-danger">
-      <%= flash[:alert] %>
-    </div>
-  <% end %>
+    <% if flash[:success] %>
+      <div class="row mt-4">
+        <div class="col-12">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h3 class="card-title mb-3">改善点の提案</h3>
+              <div class="bg-light border rounded p-3">
+                <%= render_markdown(flash[:success]) %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
     <!-- プロフィールセクション -->
-    <div class="col-lg-4 mb-4 d-none d-lg-block">
+    <div class="col-lg-4 mt-4 mb-4 d-none d-lg-block">
       <div class="card shadow-sm">
         <div class="card-body">
           <div class="text-center mb-4">
@@ -75,7 +80,7 @@
     </div>
 
     <!-- 経歴書アップロードと表示セクション -->
-    <div class="col-lg-8 mb-4">
+    <div class="col-lg-8 mt-4 mb-4">
       <div class="card shadow-sm">
         <div class="card-body">
           <h2 class="card-title text-center mb-4">AI に添削を依頼する</h2>
