@@ -1,5 +1,14 @@
 <div class="container container-sm container-md container-lg">
   <div class="row">
+  <% if flash[:success] %>
+    <div class="alert alert-success">
+      <%= flash[:success] %>
+    </div>
+  <% elsif flash[:alert] %>
+    <div class="alert alert-danger">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
     <!-- プロフィールセクション -->
     <div class="col-lg-4 mb-4 d-none d-lg-block">
       <div class="card shadow-sm">
@@ -108,21 +117,6 @@
     </div>
   </div>
 
-  <!-- 改善点の提案セクション -->
-  <% if @improvement_suggestions %>
-    <div class="row mt-4">
-      <div class="col-12">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h3 class="card-title mb-3">改善点の提案</h3>
-            <div class="bg-light border rounded p-3">
-              <%= simple_format(@improvement_suggestions) %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  <% end %>
 </div>
 
 <% content_for :head do %>

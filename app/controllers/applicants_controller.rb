@@ -38,7 +38,8 @@ class ApplicantsController < ApplicationController
       if @applicant.files.attached?
         begin
           p @improvement_suggestions = analyze_resume(@applicant.files.last)
-          redirect_to user_path(@applicant.user), notice: '履歴書がアップロードされ、分析が完了しました。', status: :see_other
+          flash[:success] = "履歴書がアップロードされ、分析が完了しました。改善点:\n#{@improvement_suggestions}"
+          redirect_to user_path(@applicant.user)
         rescue StandardError => e
           redirect_to @applicant.user, alert: "エラーが発生しました: #{e.message}"
         end
