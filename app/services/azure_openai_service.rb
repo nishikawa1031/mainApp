@@ -34,6 +34,17 @@ class AzureOpenaiService
     end
   end
 
+  def analyze_text(text:, prompt:)
+    messages = [
+      { role: 'user', content: [
+        { type: 'text', text: prompt },
+        { type: 'text', text: }
+      ] }
+    ]
+
+    chat(messages:, model: ENV['AZURE_OPENAI_TEXT_DEPLOYMENT_NAME'])
+  end
+
   def analyze_image(image_data:, prompt:)
     file_url = Base64.encode64(image_data)
     messages = [
