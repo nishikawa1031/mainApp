@@ -1,5 +1,5 @@
 # Service Site
-https://solution-hub.net/
+https://job-in-japan.com/
 
 - [about this service](/documents/about.md)
 
