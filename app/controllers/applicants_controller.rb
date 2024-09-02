@@ -35,7 +35,16 @@ class ApplicantsController < ApplicationController
   # PATCH/PUT /applicants/1
   def update
     if @applicant.update(applicant_params)
-      redirect_to user_path(@applicant.user), notice: 'Applicant was successfully updated.', status: :see_other
+      if @applicant.files.attached?
+        begin
+          p @improvement_suggestions = analyze_resume(@applicant.files.last)
+          redirect_to user_path(@applicant.user), notice: '履歴書がアップロードされ、分析が完了しました。', status: :see_other
+        rescue StandardError => e
+          redirect_to @applicant.user, alert: "エラーが発生しました: #{e.message}"
+        end
+      else
+        redirect_to @applicant.user, alert: '履歴書が添付されていません。'
+      end
     else
       render :edit, status: :unprocessable_entity
     end
@@ -67,5 +76,36 @@ class ApplicantsController < ApplicationController
                                       :desired_salary,
                                       :resume,
                                       files: [])
+  end
+
+  def extract_text_from_pdf(file)
+    reader = PDF::Reader.new(StringIO.new(file.download))
+    reader.pages.map(&:text).join("\n")
+  end
+
+  def extract_text_from_docx(file)
+    doc = Docx::Document.open(StringIO.new(file.download))
+    doc.paragraphs.map(&:text).join("\n")
+  end
+
+  def analyze_resume(file)
+    prompt = '以下の履歴書を分析し、改善点を日本語で提案してください。回答は箇条書きで、最大5つの改善点を挙げてください。'
+
+    extname = File.extname(file.filename.to_s).downcase
+    text = case extname
+           when '.pdf'
+             extract_text_from_pdf(file)
+           when '.docx'
+             extract_text_from_docx(file)
+           else
+             raise "Unsupported file type: #{file.filename}"
+           end
+
+    Rails.logger.info("Extracted text (first 100 chars): #{text[0..99]}")
+
+    AzureOpenaiService.instance.analyze_text(
+      text:,
+      prompt:
+    )
   end
 end

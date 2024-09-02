@@ -64,6 +64,8 @@ gem 'impressionist' # PVカウント
 gem 'omniauth-auth0', '~> 3.0'
 gem 'omniauth-rails_csrf_protection', '~> 1.0'
 
+gem 'docx'
+gem 'pdf-reader'
 gem 'rack-cors'
 gem 'rails_admin'
 gem 'rollbar'
