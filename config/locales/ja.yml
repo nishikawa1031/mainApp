@@ -12,7 +12,6 @@ ja:
       previous: 前に
       next: 次に
       last: 最後
-  article:
     title: タイトル
     body: 本文
     created_at: 作成日時
@@ -43,3 +42,58 @@ ja:
       long: "%Y年%m月%d日(%a) %H時%M分%S秒 %Z"
     am: "午前"
     pm: "午後"
+  flash:
+    success: "改善点の提案"
+  profile:
+    avatar: "プロフィール画像"
+    username: "ユーザー名"
+    email: "メールアドレス"
+    role: "役割"
+    birthday: "生年月日"
+    age: "年齢"
+    nationality: "国籍"
+    phone_number: "電話番号"
+    desired_salary: "希望給与"
+    self_introduction: "自己紹介"
+  upload:
+    title: "AI に添削を依頼する"
+    description: "履歴書・職務経歴書をアップロードして、誤字脱字や日本語の不備を確認します"
+    button: "アップロード"
+    uploaded_files: "アップロードされたファイル"
+    download: "こちらからダウンロードしてください。"
+    file_not_displayable: "このファイルは表示できません。"
+  header:
+    title:
+      full: "日本で仕事を見つける"
+      short: "仕事を探す"
+  search:
+    industry: "業界"
+    region: "地域"
+    salary: "希望年収"
+    placeholder: "検索"
+    button: "検索"
+  article:
+    language_requirement: "必要言語スキル"
+    skills_required: "必須スキル"
+    employment_type: "雇用形態"
+    work_hours: "勤務時間"
+    description: "詳細"
+    view_details: "詳細を見る"
+    apply: "応募する"
+  resume:
+    upload: "経歴書をアップロード"
+    description: "AI技術を用いて、経歴書を自動で添削して、書類選考の通過率をアップさせます。"
+    button: "アップロード"
+  services:
+    ai_review: "生成AIによる添削サービス"
+    ai_review_description: "AI技術を用いて、経歴書を自動で添削して、書類選考の通過率をアップさせます。"
+    recruiter_support: "専任リクルーターサポート"
+    recruiter_support_description: "経験豊富なリクルーターが一貫してサポート。就職活動を全面的にバックアップします。"
+    visa_support: "在留資格申請サポート"
+    visa_support_description: "必要な書類の準備から申請プロセスのサポートまで、在留資格の取得を徹底支援します。"
+  azure_form:
+    title: "Azure OpenAI 入力フォーム"
+    prompt: "プロンプトを入力してください:"
+    upload_image: "画像をアップロード:"
+    submit: "送信"
+    response: "応答:"

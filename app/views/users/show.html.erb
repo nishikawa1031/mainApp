@@ -5,7 +5,7 @@
         <div class="col-12">
           <div class="card shadow-sm">
             <div class="card-body">
-              <h3 class="card-title mb-3">改善点の提案</h3>
+              <h3 class="card-title mb-3"><%= t('flash.success') %></h3>
               <div class="bg-light border rounded p-3">
                 <%= render_markdown(flash[:success]) %>
               </div>
@@ -24,8 +24,8 @@
           <h4 class="card-title text-center mb-3"><%= @user.username %></h4>
           <ul class="list-group list-group-flush">
             <% if Rails.env.development? %>
-              <li class="list-group-item"><i class="bi bi-envelope-fill me-2"></i><%= @user.email %></li>
-              <li class="list-group-item"><i class="bi bi-person-badge-fill me-2"></i><%= @user.role %></li>
+              <li class="list-group-item"><i class="bi bi-envelope-fill me-2"></i><%= t('profile.email') %>: <%= @user.email %></li>
+              <li class="list-group-item"><i class="bi bi-person-badge-fill me-2"></i><%= t('profile.role') %>: <%= @user.role %></li>
             <% end %>
           </ul>
 
@@ -34,43 +34,42 @@
               <% if @user.rolable.birthday.present? %>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-calendar me-2"></i>
-                  <span>生年月日: <%= @user.rolable.birthday %></span>
+                  <span><%= t('profile.birthday') %>: <%= @user.rolable.birthday %></span>
                 </div>
               <% end %>
-              
+
               <% if @user.rolable.age.present? %>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-person me-2"></i>
-                  <span>年齢: <%= @user.rolable.age %></span>
+                  <span><%= t('profile.age') %>: <%= @user.rolable.age %></span>
                 </div>
               <% end %>
-              
+
               <% if @user.rolable.nationality.present? %>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-globe me-2"></i>
-                  <span>国籍: <%= @user.rolable.nationality %></span>
+                  <span><%= t('profile.nationality') %>: <%= @user.rolable.nationality %></span>
                 </div>
               <% end %>
-              
+
               <% if @user.rolable.phone_number.present? %>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-telephone me-2"></i>
-                  <span>電話番号: <%= @user.rolable.phone_number %></span>
+                  <span><%= t('profile.phone_number') %>: <%= @user.rolable.phone_number %></span>
                 </div>
               <% end %>
-              
+
               <% if @user.rolable.desired_salary.present? %>
                 <div class="d-flex align-items-center mb-2">
                   <i class="bi bi-currency-dollar me-2"></i>
-                  <span>希望給与: <%= @user.rolable.desired_salary %></span>
+                  <span><%= t('profile.desired_salary') %>: <%= @user.rolable.desired_salary %></span>
                 </div>
               <% end %>
             </div>
 
-
             <% if @user.rolable.self_introduction.present? %>
               <div class="mt-4">
-                <h5 class="card-title">自己紹介</h5>
+                <h5 class="card-title"><%= t('profile.self_introduction') %></h5>
                 <p class="card-text"><%= @user.rolable.self_introduction %></p>
               </div>
             <% end %>
@@ -83,8 +82,8 @@
     <div class="col-lg-8 mt-4 mb-4">
       <div class="card shadow-sm">
         <div class="card-body">
-          <h2 class="card-title text-center mb-4">AI に添削を依頼する</h2>
-          <p class="text-center text-muted mb-4">履歴書・職務経歴書をアップロードして、誤字脱字や日本語の不備を確認します</p>
+          <h2 class="card-title text-center mb-4"><%= t('upload.title') %></h2>
+          <p class="text-center text-muted mb-4"><%= t('upload.description') %></p>
           
           <%= form_with model: @user.rolable, url: applicant_path(@user.rolable), local: true, multiple: true, class: "mb-4" do |form| %>
             <div class="mb-3">
@@ -93,13 +92,13 @@
               </div>
             </div>
             <div class="text-center">
-              <%= form.submit "アップロード", class: "btn btn-primary" %>
+              <%= form.submit t('upload.button'), class: "btn btn-primary" %>
             </div>
           <% end %>
 
           <% if @user.rolable.files.attached? %>
             <div class="mt-4">
-              <h5 class="card-title">アップロードされたファイル</h5>
+              <h5 class="card-title"><%= t('upload.uploaded_files') %></h5>
               <% @user.rolable.files.each do |file| %>
                 <div class="mb-3">
                   <% if file.content_type.start_with?('image/') %>
@@ -110,7 +109,7 @@
                     </div>
                   <% else %>
                     <p style="margin-bottom: 15px;">
-                      このファイルは表示できません。<%= link_to 'こちらからダウンロード', url_for(file), class: "btn btn-sm btn-outline-primary" %>してください。
+                      <%= t('upload.file_not_displayable') %> <%= link_to t('upload.download'), url_for(file), class: "btn btn-sm btn-outline-primary" %>
                     </p>
                   <% end %>
                 </div>

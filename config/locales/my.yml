@@ -1,0 +1,99 @@
+my:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "စကားဝှက်ကို ထည့်ပါ"
+  views:
+    pagination:
+      first: ပထမ
+      previous: ယခင်
+      next: နောက်တစ်ခု
+      last: နောက်ဆုံး
+    title: ခေါင်းစဉ်
+    body: အကြောင်းအရာ
+    created_at: ဖန်တီးသည့်ရက်စွဲ
+    updated_at: ပြင်ဆင်သည့်ရက်စွဲ
+  simple_calendar:
+    previous: "<"
+    next: ">"
+    week: သီတင်းပတ်
+  date:
+    formats:
+      default: "%Y/%m/%d"
+      short: "%m/%d"
+      long: "%Y ခုနှစ် %m လ %d ရက် (%a)"
+    day_names: [တနင်္ဂနွေ, တနင်္လာ, အင်္ဂါ, ဗုဒ္ဓဟူး, ကြာသပတေး, သောကြာ, စနေ]
+    abbr_day_names: [နွေ, လာ, ဂါ, ဟူး, တေး, ကြာ, နေ]
+    month_names:
+      [~, ဇန်နဝါရီ, ဖေဖော်ဝါရီ, မတ်, ဧပြီ, မေ, ဇွန်, ဇူလိုင်, သြဂုတ်, စက်တင်ဘာ, အောက်တိုဘာ, နိုဝင်ဘာ, ဒီဇင်ဘာ]
+    abbr_month_names:
+      [~, ဇန်, ဖေ, မတ်, ဧ, မေ, ဇွန်, ဇူ, သြ, စက်, အောက်, နို, ဒီ]
+    order:
+      - :year
+      - :month
+      - :day
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+      short: "%y/%m/%d %H:%M"
+      long: "%Y ခုနှစ် %m လ %d ရက် (%a) %H နာရီ %M မိနစ် %S စက္ကန့် %Z"
+    am: "နံနက်"
+    pm: "ညနေ"
+  flash:
+    success: "တိုးတက်မှုအကြံပေးချက်"
+  profile:
+    avatar: "ပရိုဖိုင်းပုံ"
+    username: "အသုံးပြုသူအမည်"
+    email: "အီးမေးလ်လိပ်စာ"
+    role: "တာဝန်"
+    birthday: "မွေးနေ့"
+    age: "အသက်"
+    nationality: "နိုင်ငံသား"
+    phone_number: "ဖုန်းနံပါတ်"
+    desired_salary: "လိုချင်တဲ့ လစာ"
+    self_introduction: "ကိုယ့်အကြောင်းပြောရန်"
+  upload:
+    title: "AI ကို ပြင်ဆင်ရန် တောင်းဆိုပါ"
+    description: "လုပ်ငန်းသမားရေးအကြောင်းပြုပြင်ဖို့၊ မှားယွင်းချက်များနှင့် ဂရုမစိုက်မှုများကို AI နည်းပညာကို အသုံးပြု၍ ပြင်ဆင်ပါ"
+    button: "တင်ပါ"
+    uploaded_files: "တင်ပြီးသော ဖိုင်များ"
+    download: "ဒီနေရာမှာ ဒေါင်းလုဒ်လုပ်ပါ။"
+    file_not_displayable: "ဒီဖိုင်ကို ပြသလို့ မရပါ။"
+  header:
+    title:
+      full: "မြန်မာတွင် အလုပ်ရှာရန်"
+      short: "အလုပ်ရှာရန်"
+  search:
+    industry: "စက်မှုလုပ်ငန်း"
+    region: "ဒေသ"
+    salary: "လိုချင်တဲ့ လစာ"
+    placeholder: "ရှာဖွေရန်"
+    button: "ရှာဖွေရန်"
+  article:
+    language_requirement: "လိုအပ်သော ဘာသာစကားကျွမ်းကျင်မှု"
+    skills_required: "လိုအပ်သော ကျွမ်းကျင်မှုများ"
+    employment_type: "အလုပ်အမျိုးအစား"
+    work_hours: "အလုပ်ချိန်"
+    description: "အသေးစိတ်"
+    view_details: "အသေးစိတ်ကြည့်ရန်"
+    apply: "လျှောက်ထားရန်"
+  resume:
+    upload: "ရက်ထပ်တင်ပါ"
+    description: "AI နည်းပညာကို အသုံးပြု၍၊ ရက်ထပ်များကို ပညာရေးရှုရှင်းပြီး အလုပ်လျှောက်မှုတွင် လက်ခံခံနိုင်ရန် အခြေအနေများကို မြှင့်တင်ပါ။"
+    button: "တင်ပါ"
+  services:
+    ai_review: "AI ကူညီချက် ဝန်ဆောင်မှု"
+    ai_review_description: "AI နည်းပညာကို အသုံးပြု၍၊ ရက်ထပ်များကို ပညာရေးရှုရှင်းပြီး အလုပ်လျှောက်မှုတွင် လက်ခံခံနိုင်ရန် အခြေအနေများကို မြှင့်တင်ပါ။"
+    recruiter_support: "ဌာနဆိုင်ရာအကူအညီ"
+    recruiter_support_description: "အတွေ့အကြုံများနဲ့ အတူ ဝန်ဆောင်မှုပေးသည့် ဌာနဆိုင်ရာအကူအညီ။ အလုပ်လျှောက်မှုကို ပြည့်စုံစွာ ကူညီပါသည်။"
+    visa_support: "ဗီဇာလျှောက်လွှာအကူအညီ"
+    visa_support_description: "လိုအပ်သော စာရွက်စာတမ်းများ ရေးဆွဲခြင်းမှ စပြီး ဗီဇာလျှောက်လွှာလုပ်ငန်းစဉ်ကို အကူအညီပေးပါသည်။"
+  azure_form:
+    title: "Azure OpenAI အကူအညီပေးရန်"
+    prompt: "အကြံပြုချက် ရေးပါ:"
+    upload_image: "ပုံတင်ပါ:"
+    submit: "တင်ပါ"
+    response: "တုံ့ပြန်ချက်:"
