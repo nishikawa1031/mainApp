@@ -85,3 +85,8 @@ en:
     upload_image: "Upload an image:"
     submit: "Submit"
     response: "Response:"
+  job_seekers_click_here: "Job seekers, click here"
+  hiring_companies_here: "Hiring companies, click here"
+  logout: "Logout"
+  login: "Login"
+  user_profile: "User Profile"

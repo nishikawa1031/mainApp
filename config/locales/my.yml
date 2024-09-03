@@ -64,7 +64,7 @@ my:
     file_not_displayable: "ဒီဖိုင်ကို ပြသလို့ မရပါ။"
   header:
     title:
-      full: "မြန်မာတွင် အလုပ်ရှာရန်"
+      full: "ဂျပန်နိုင်ငံအလုပ်ရှာဖွေရန်"
       short: "အလုပ်ရှာရန်"
   search:
     industry: "စက်မှုလုပ်ငန်း"
@@ -97,3 +97,8 @@ my:
     upload_image: "ပုံတင်ပါ:"
     submit: "တင်ပါ"
     response: "တုံ့ပြန်ချက်:"
+  job_seekers_click_here: "အလုပ်ရှာသူများ၊ ဒီမှာနှိပ်ပါ"
+  hiring_companies_here: "အလုပ်လျှောက်သူများ၊ ဒီမှာနှိပ်ပါ"
+  logout: "ထွက်မည်"
+  login: "ဝင်မည်"
+  user_profile: "အသုံးပြုသူ ပရိုဖိုင်း"

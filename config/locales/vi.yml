@@ -62,7 +62,7 @@ vi:
     file_not_displayable: "Không thể hiển thị tệp này"
   header:
     title:
-      full: "Tìm việc tại Việt Nam"
+      full: "Tìm việc tại Nhật Bản"
       short: "Tìm việc"
   search:
     industry: "Ngành công nghiệp"
@@ -95,3 +95,8 @@ vi:
     upload_image: "Tải lên hình ảnh:"
     submit: "Gửi"
     response: "Phản hồi:"
+  job_seekers_click_here: "Người tìm việc, nhấp vào đây"
+  hiring_companies_here: "Các công ty tuyển dụng, nhấp vào đây"
+  logout: "Đăng xuất"
+  login: "Đăng nhập"
+  user_profile: "Hồ sơ người dùng"
