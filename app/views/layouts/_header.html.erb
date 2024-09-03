@@ -1,5 +1,5 @@
 <header class="header-container">
-  <%= link_to 'Job in Japan', root_path, class: "header-title-link" %>
+  <%= link_to t('job_in_japan'), root_path, class: "header-title-link" %>
 
   <div class="language-selector">
     <%= link_to 'English', switch_locale_path(locale: 'en'), class: "header-link" %>
@@ -13,24 +13,25 @@
     <%= link_to 'မြန်မာစာ', switch_locale_path(locale: 'my'), class: "header-link" %>
   </div>
 
+
   <div class="header-links">
     <% if current_user %>
       <% if current_user&.employee? || current_user&.admin? %>
         <% if current_page?(root_path) %>
-          <%= link_to '採用企業様はこちら', applicants_path, class: "header-link" %>
+          <%= link_to t('hiring_companies_here'), applicants_path, class: "header-link" %>
         <% else %>
-          <%= link_to 'Job seekers, click here', root_path, class: "header-link" %>
+          <%= link_to t('job_seekers_click_here'), root_path, class: "header-link" %>
         <% end %>
       <% else %>
         <% unless current_page?(root_path) %>
-          <%= link_to 'Job seekers, click here', root_path, class: "header-link" %>
+          <%= link_to t('job_seekers_click_here'), root_path, class: "header-link" %>
         <% end %>
       <% end %>
     <% else %>
       <% if current_page?(root_path) %>
-        <%= link_to '採用企業様はこちら', home_index_path, class: "header-link" %>
+        <%= link_to t('hiring_companies_here'), home_index_path, class: "header-link" %>
       <% else %>
-        <%= link_to 'Job seekers, click here', root_path, class: "header-link" %>
+        <%= link_to t('job_seekers_click_here'), root_path, class: "header-link" %>
       <% end %>
     <% end %>
 
@@ -47,98 +48,12 @@
       </div>
       <% end %>
       <div class="logout-button">
-        <%= button_to 'Logout', 'auth/logout', method: :get, data: { turbo: false }, class: "button-modern" %>
+        <%= button_to t('logout'), 'auth/logout', method: :get, data: { turbo: false }, class: "button-modern" %>
       </div>
     <% else %>
       <div class="login-button">
-        <%= button_to 'Login', '/auth/auth0', method: :post, data: { turbo: false }, class: "button-modern" %>
+        <%= button_to t('login'), '/auth/auth0', method: :post, data: { turbo: false }, class: "button-modern" %>
       </div>
     <% end %>
   </div>
 </header>
-
-
-<style>
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px; 
-    background: linear-gradient(135deg, #8aafed, #e0f0ff);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid #e1e1e1;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
-  }
-
-  .header-title-link {
-    font-size: 28px;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  .header-title-link:hover {
-    color: #007bff;
-  }
-
-  .header-links {
-    display: flex;
-    align-items: center;
-  }
-
-  .header-link {
-    margin-left: 20px;
-    font-size: 20px;
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  .header-link:hover {
-    color: #007bff;
-  }
-
-  .user-info {
-    display: flex;
-    align-items: center;
-    margin-left: 20px; /* アイコンの左マージン */
-  }
-
-  .user-icon-link {
-    text-decoration: none;
-    color: #000;
-    font-size: 24px; /* アイコンのサイズを調整 */
-    margin-left: 0; /* アイコンを左に移動させるマージンを削除 */
-  }
-
-  .user-icon {
-    transition: color 0.3s;
-  }
-
-  .user-icon-link:hover .user-icon {
-    color: #007bff; /* ホバー時の色を調整 */
-  }
-
-  .logout-button, .login-button {
-    margin-left: 20px;
-  }
-
-  .button-modern {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-
-  .button-modern:hover {
-    background-color: #0056b3;
-  }
-</style>
