@@ -1,0 +1,99 @@
+bn:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "দয়া করে পাসওয়ার্ড প্রবেশ করুন"
+  views:
+    pagination:
+      first: প্রথম
+      previous: পূর্ববর্তী
+      next: পরবর্তী
+      last: শেষ
+    title: শিরোনাম
+    body: বিষয়বস্তু
+    created_at: তৈরি তারিখ
+    updated_at: আপডেটের তারিখ
+  simple_calendar:
+    previous: "<"
+    next: ">"
+    week: সপ্তাহ
+  date:
+    formats:
+      default: "%Y/%m/%d"
+      short: "%m/%d"
+      long: "%Y年%m月%d日(%a)"
+    day_names: [রবিবার, সোমবার, মঙ্গলবার, বুধবার, বৃহস্পতিবার, শুক্রবার, শনিবার]
+    abbr_day_names: [রবি, সোম, মঙ্গল, বুধ, বৃহ, শুক্র, শনি]
+    month_names:
+      [~, জানুয়ারি, ফেব্রুয়ারি, মার্চ, এপ্রিল, মে, জুন, জুলাই, আগস্ট, সেপ্টেম্বর, অক্টোবর, নভেম্বর, ডিসেম্বর]
+    abbr_month_names:
+      [~, জানু, ফেব্রু, মার্চ, এপ্রিল, মে, জুন, জুলাই, আগস্ট, সেপ্টে, অক্টো, নভে, ডিসে]
+    order:
+      - :year
+      - :month
+      - :day
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+      short: "%y/%m/%d %H:%M"
+      long: "%Y年%m月%d日(%a) %H時%M分%S秒 %Z"
+    am: "AM"
+    pm: "PM"
+  flash:
+    success: "প্রস্তাবনা সফল হয়েছে"
+  profile:
+    avatar: "প্রোফাইল চিত্র"
+    username: "ব্যবহারকারীর নাম"
+    email: "ইমেইল"
+    role: "ভূমিকা"
+    birthday: "জন্মদিন"
+    age: "বয়স"
+    nationality: "জাতীয়তা"
+    phone_number: "ফোন নম্বর"
+    desired_salary: "কাঙ্খিত বেতন"
+    self_introduction: "নিজের পরিচয়"
+  upload:
+    title: "AI এর কাছে সংশোধন করার জন্য অনুরোধ করুন"
+    description: "বায়োডাটা আপলোড করুন এবং বানান বা ব্যাকরণ ত্রুটি পরীক্ষা করুন"
+    button: "আপলোড"
+    uploaded_files: "আপলোড করা ফাইল"
+    download: "এখান থেকে ডাউনলোড করুন।"
+    file_not_displayable: "এই ফাইলটি প্রদর্শন করা সম্ভব নয়।"
+  header:
+    title:
+      full: "জাপানে চাকরি খুঁজুন"
+      short: "চাকরি খুঁজুন"
+  search:
+    industry: "শিল্প"
+    region: "অঞ্চল"
+    salary: "কাঙ্খিত বার্ষিক বেতন"
+    placeholder: "অনুসন্ধান করুন"
+    button: "অনুসন্ধান"
+  article:
+    language_requirement: "প্রয়োজনীয় ভাষা দক্ষতা"
+    skills_required: "প্রয়োজনীয় দক্ষতা"
+    employment_type: "নিয়োগের ধরন"
+    work_hours: "কাজের সময়"
+    description: "বিস্তারিত"
+    view_details: "বিস্তারিত দেখুন"
+    apply: "আবেদন করুন"
+  resume:
+    upload: "বায়োডাটা আপলোড করুন"
+    description: "AI প্রযুক্তি ব্যবহার করে, বায়োডাটাকে স্বয়ংক্রিয়ভাবে সংশোধন করুন এবং নির্বাচন প্রক্রিয়ার পাসের হার বাড়ান।"
+    button: "আপলোড"
+  services:
+    ai_review: "AI দ্বারা সংশোধন সেবা"
+    ai_review_description: "AI প্রযুক্তি ব্যবহার করে, বায়োডাটাকে স্বয়ংক্রিয়ভাবে সংশোধন করুন এবং নির্বাচন প্রক্রিয়ার পাসের হার বাড়ান।"
+    recruiter_support: "নিয়োগকারী সমর্থন"
+    recruiter_support_description: "অভিজ্ঞ নিয়োগকারীদের দ্বারা সমর্থন। আপনার চাকরি প্রাপ্তি প্রক্রিয়াকে সম্পূর্ণভাবে সহায়তা করুন।"
+    visa_support: "ভিসা আবেদন সমর্থন"
+    visa_support_description: "আপনার ভিসা আবেদন প্রক্রিয়ার জন্য প্রয়োজনীয় ডকুমেন্ট প্রস্তুতি থেকে শুরু করে সম্পূর্ণ সহায়তা।"
+  azure_form:
+    title: "Azure OpenAI ইনপুট ফর্ম"
+    prompt: "প্রম্পট প্রবেশ করুন:"
+    upload_image: "ছবি আপলোড করুন:"
+    submit: "জমা দিন"
+    response: "উত্তর:"
