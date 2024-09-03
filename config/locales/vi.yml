@@ -1,0 +1,97 @@
+vi:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "Mật khẩu không được để trống"
+  views:
+    pagination:
+      first: "Đầu"
+      previous: "Trước"
+      next: "Sau"
+      last: "Cuối"
+    title: "Tiêu đề"
+    body: "Nội dung"
+    created_at: "Ngày tạo"
+    updated_at: "Ngày cập nhật"
+  simple_calendar:
+    previous: "<"
+    next: ">"
+    week: "Tuần"
+  date:
+    formats:
+      default: "%d/%m/%Y"
+      short: "%d/%m"
+      long: "%d %B, %Y"
+    day_names: [Chủ nhật, Thứ hai, Thứ ba, Thứ tư, Thứ năm, Thứ sáu, Thứ bảy]
+    abbr_day_names: [CN, T2, T3, T4, T5, T6, T7]
+    month_names: [~, Tháng một, Tháng hai, Tháng ba, Tháng tư, Tháng năm, Tháng sáu, Tháng bảy, Tháng tám, Tháng chín, Tháng mười, Tháng mười một, Tháng mười hai]
+    abbr_month_names: [~, Th1, Th2, Th3, Th4, Th5, Th6, Th7, Th8, Th9, Th10, Th11, Th12]
+    order:
+      - :day
+      - :month
+      - :year
+  time:
+    formats:
+      default: "%H:%M %d/%m/%Y"
+      short: "%H:%M %d/%m"
+      long: "%H giờ %M phút, %d/%m/%Y"
+    am: "SA"
+    pm: "CH"
+  flash:
+    success: "Thành công"
+  profile:
+    avatar: "Ảnh đại diện"
+    username: "Tên người dùng"
+    email: "Email"
+    role: "Vai trò"
+    birthday: "Ngày sinh"
+    age: "Tuổi"
+    nationality: "Quốc tịch"
+    phone_number: "Số điện thoại"
+    desired_salary: "Mức lương mong muốn"
+    self_introduction: "Giới thiệu bản thân"
+  upload:
+    title: "Yêu cầu chỉnh sửa AI"
+    description: "Sử dụng công nghệ AI để chỉnh sửa và nâng cao các thông tin liên quan đến công việc"
+    button: "Tải lên"
+    uploaded_files: "Tệp đã tải lên"
+    download: "Tải về"
+    file_not_displayable: "Không thể hiển thị tệp này"
+  header:
+    title:
+      full: "Tìm việc tại Việt Nam"
+      short: "Tìm việc"
+  search:
+    industry: "Ngành công nghiệp"
+    region: "Khu vực"
+    salary: "Mức lương mong muốn"
+    placeholder: "Tìm kiếm"
+    button: "Tìm kiếm"
+  article:
+    language_requirement: "Yêu cầu ngôn ngữ"
+    skills_required: "Kỹ năng yêu cầu"
+    employment_type: "Loại hình công việc"
+    work_hours: "Giờ làm việc"
+    description: "Mô tả chi tiết"
+    view_details: "Xem chi tiết"
+    apply: "Nộp đơn"
+  resume:
+    upload: "Tải lên hồ sơ"
+    description: "Sử dụng công nghệ AI để nâng cao hồ sơ của bạn, giúp nó nổi bật trong quá trình ứng tuyển"
+    button: "Tải lên"
+  services:
+    ai_review: "Dịch vụ hỗ trợ AI"
+    ai_review_description: "Sử dụng công nghệ AI để nâng cao và chỉnh sửa hồ sơ của bạn"
+    recruiter_support: "Hỗ trợ nhà tuyển dụng"
+    recruiter_support_description: "Dịch vụ hỗ trợ toàn diện từ các chuyên gia tuyển dụng"
+    visa_support: "Hỗ trợ xin visa"
+    visa_support_description: "Hỗ trợ toàn diện trong việc xin visa, từ việc chuẩn bị tài liệu đến nộp đơn"
+  azure_form:
+    title: "Hỗ trợ Azure OpenAI"
+    prompt: "Nhập gợi ý của bạn:"
+    upload_image: "Tải lên hình ảnh:"
+    submit: "Gửi"
+    response: "Phản hồi:"
