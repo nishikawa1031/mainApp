@@ -1,21 +1,21 @@
 <div style="display: flex; align-items: center; padding: 2px; text-align: center;">
-  <h1 class="header-title d-none d-lg-block">Find your job <br>in Japan</h1>
-  <h1 class="header-title d-lg-none" style="margin-bottom: 20px;">Find your job</h1>
-  <img src="<%= asset_path('World-10.png') %>" alt="Matches Logo" class="logo-image">
+  <h1 class="header-title d-none d-lg-block"><%= t('header.title.full') %></h1>
+  <h1 class="header-title d-lg-none" style="margin-bottom: 20px;"><%= t('header.title.short') %></h1>
+  <img src="<%= asset_path('World-10.png') %>" alt="<%= t('header.title.full') %>" class="logo-image">
 </div>
 
 <% if false %>
 <div style="display: flex; justify-content: center; margin-bottom: 20px;">
   <div>
-    <%= link_to '業界', root_path, class: "link-modern" %>
-    <%= link_to '地域', root_path, class: "link-modern" %>
-    <%= link_to '希望年収', root_path, class: "link-modern" %>
+    <%= link_to t('search.industry'), root_path, class: "link-modern" %>
+    <%= link_to t('search.region'), root_path, class: "link-modern" %>
+    <%= link_to t('search.salary'), root_path, class: "link-modern" %>
   </div>
 
   <div class="form-modern">
     <%= form_with url: root_path, local: true do |form| %>
-      <%= form.search_field :query, style: "padding: 10px; font-size: 16px; border: 2px solid #ccc; border-radius: 20px 0 0 20px; outline: none;" %>
-      <%= form.submit "Search", style: "padding: 10px 15px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 0 20px 20px 0; cursor: pointer;" %>
+      <%= form.search_field :query, placeholder: t('search.placeholder'), style: "padding: 10px; font-size: 16px; border: 2px solid #ccc; border-radius: 20px 0 0 20px; outline: none;" %>
+      <%= form.submit t('search.button'), style: "padding: 10px 15px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 0 20px 20px 0; cursor: pointer;" %>
     <% end %>
   </div>
 </div>
@@ -28,30 +28,29 @@
       <div class="col-sm-4 mb-4">
         <div class="card article-card">
           <% if article.file.attached? %>
-            <%= image_tag article.file.variant(resize_to_fill: [600, 400]), class: "card-img-top", alt: "Article Image" %>
+            <%= image_tag article.file.variant(resize_to_fill: [600, 400]), class: "card-img-top", alt: t('article.description') %>
           <% else %>
-            <img src="<%= asset_path('World-14.png') %>" class="card-img-top" alt="Placeholder Image">
+            <img src="<%= asset_path('World-14.png') %>" class="card-img-top" alt="<%= t('article.description') %>">
           <% end %>
           <div class="card-body">
             <h5 class="card-title"><%= article.title %></h5>
             <% if article.language_requirement.present? %>
-              <p class="card-text"><strong>必要言語スキル:</strong> <%= article.language_requirement %></p>
+              <p class="card-text"><strong><%= t('article.language_requirement') %>:</strong> <%= article.language_requirement %></p>
             <% end %>
             <% if article.skills_required.present? %>
-              <p class="card-text"><strong>必須スキル:</strong> <%= article.skills_required %></p>
+              <p class="card-text"><strong><%= t('article.skills_required') %>:</strong> <%= article.skills_required %></p>
             <% end %>
             <% if article.employment_type.present? %>
-              <p class="card-text"><strong>雇用形態:</strong> <%= article.employment_type %></p>
+              <p class="card-text"><strong><%= t('article.employment_type') %>:</strong> <%= article.employment_type %></p>
             <% end %>
             <% if article.work_hours.present? %>
-              <p class="card-text"><strong>勤務時間:</strong> <%= article.work_hours %></p>
+              <p class="card-text"><strong><%= t('article.work_hours') %>:</strong> <%= article.work_hours %></p>
             <% end %>
             <% if article.description.present? %>
-              <p class="card-text"><strong>詳細:</strong> <%= article.description %></p>
+              <p class="card-text"><strong><%= t('article.description') %>:</strong> <%= article.description %></p>
             <% end %>
-            <%= link_to "詳細を見る", article_path(article), class: "btn btn-primary" %>
-
-            <a href="#" class="btn" style="background-color: #FF5733; color: white">応募する</a>
+            <%= link_to t('article.view_details'), article_path(article), class: "btn btn-primary" %>
+            <a href="#" class="btn" style="background-color: #FF5733; color: white"><%= t('article.apply') %></a>
           </div>
         </div>
       </div>
@@ -63,80 +62,80 @@
 <!-- Add Resume Upload Button at Center -->
 <% if current_user %>
   <div style="text-align: center;">
-    <%= button_to '経歴書をアップロード', user_path(current_user), method: :get, style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" %>
+    <%= button_to t('resume.upload'), user_path(current_user), method: :get, style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" %>
   </div>
 <% else %>
   <div style="text-align: center;">
-    <%= button_to '経歴書をアップロード', '/auth/auth0', method: :post, data: { turbo: false }, style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" %>
+    <%= button_to t('resume.upload'), '/auth/auth0', method: :post, data: { turbo: false }, style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" %>
   </div>
 <% end %>
 
-  <div class="container mt-5">
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <div class="service-card text-center">
-          <%= image_tag("resume_icon.jpg", alt: "Resume Icon", class: "img-fluid") %>
-          <h3>生成AIによる添削サービス</h3>
-          <p>AI技術を用いて、経歴書を自動で添削して、書類選考の通過率をアップさせます。</p>
-        </div>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="service-card text-center">
+        <%= image_tag("resume_icon.jpg", alt: t('services.ai_review'), class: "img-fluid") %>
+        <h3><%= t('services.ai_review') %></h3>
+        <p><%= t('services.ai_review_description') %></p>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="service-card text-center">
-          <%= image_tag("recruiter_icon.jpg", alt: "Recruiter Icon", class: "img-fluid") %>
-          <h3>専任リクルーターサポート</h3>
-          <p>経験豊富なリクルーターが一貫してサポート。就職活動を全面的にバックアップします。</p>
-        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="service-card text-center">
+        <%= image_tag("recruiter_icon.jpg", alt: t('services.recruiter_support'), class: "img-fluid") %>
+        <h3><%= t('services.recruiter_support') %></h3>
+        <p><%= t('services.recruiter_support_description') %></p>
       </div>
-      <div class="col-md-4 mb-4">
-        <div class="service-card text-center">
-          <%= image_tag("visa_support_icon.jpg", alt: "Visa Icon", class: "img-fluid") %>
-          <h3>在留資格申請サポート</h3>
-          <p>必要な書類の準備から申請プロセスのサポートまで、在留資格の取得を徹底支援します。</p>
-        </div>
+    </div>
+    <div class="col-md-4 mb-4">
+      <div class="service-card text-center">
+        <%= image_tag("visa_support_icon.jpg", alt: t('services.visa_support'), class: "img-fluid") %>
+        <h3><%= t('services.visa_support') %></h3>
+        <p><%= t('services.visa_support_description') %></p>
       </div>
     </div>
   </div>
+</div>
 
 <% if false %>
-<h1>Azure OpenAI Input Form</h1>
+<h1><%= t('azure_form.title') %></h1>
 <%= form_with url: '/open_ai/submit', local: true, multiple: true do %>
   <div>
-    <%= label_tag :input_text, "Enter your prompt:" %>
+    <%= label_tag :input_text, t('azure_form.prompt') %>
     <%= text_area_tag :input_text %>
   </div>
   <div>
-    <%= label_tag :image, "Upload an image:" %>
+    <%= label_tag :image, t('azure_form.upload_image') %>
     <%= file_field_tag :image %>
   </div>
   <div>
-    <%= submit_tag "Submit" %>
+    <%= submit_tag t('azure_form.submit') %>
   </div>
 <% end %>
 
 <% if @response_text.present? %>
-  <h2>Response:</h2>
+  <h2><%= t('azure_form.response') %></h2>
   <p><%= @response_text %></p>
 <% end %>
 <% end %>
 
-  <style>
-    .service-card {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-      padding: 20px;
-    }
+<style>
+  .service-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+  }
 
-    .service-card img {
-      height: auto;
-    }
-    .service-card h3 {
-      margin-top: 15px;
-      font-size: 1.25rem;
-      color: #333;
-    }
-    .service-card p {
-      color: #333;
-    }
-  </style>
+  .service-card img {
+    height: auto;
+  }
+  .service-card h3 {
+    margin-top: 15px;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  .service-card p {
+    color: #333;
+  }
+</style>
