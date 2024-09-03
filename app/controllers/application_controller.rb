@@ -1,12 +1,19 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
+  before_action :set_locale
   helper_method :current_user, :user_signed_in?
   include ApplicationHelper
   # include Secured
   # before_action :check_logged_in
   rescue_from CanCan::AccessDenied do |_exception|
     redirect_to '/articles'
+  end
+
+  def switch_locale
+    I18n.locale = params[:locale] || I18n.default_locale
+    session[:locale] = I18n.locale
+    redirect_back(fallback_location: root_path)
   end
 
   def check_logged_in
@@ -28,5 +35,9 @@ class ApplicationController < ActionController::Base
 
   def user_signed_in?
     !!session[:userinfo]
+  end
+
+  def set_locale
+    I18n.locale = session[:locale] || I18n.default_locale
   end
 end
