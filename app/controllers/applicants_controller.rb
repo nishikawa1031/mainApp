@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # app/controllers/applicants_controller.rb
 class ApplicantsController < ApplicationController
   load_and_authorize_resource

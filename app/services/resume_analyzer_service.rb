@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # app/services/resume_analyzer_service.rb
 class ResumeAnalyzerService
   def initialize(file)
