@@ -1,11 +1,24 @@
 <footer class="footer-container">
    <hr style="border: 1px solid black;">
+  <div class="language-selector">
+    <%= link_to 'English', switch_locale_path(locale: 'en'), class: "header-link" %>
+    &nbsp;
+    <%= link_to '日本語', switch_locale_path(locale: 'ja'), class: "header-link" %>
+    &nbsp;
+    <%= link_to 'Tiếng Việt', switch_locale_path(locale: 'vi'), class: "header-link" %>
+    &nbsp;
+    <%= link_to 'বাংলা', switch_locale_path(locale: 'bn'), class: "header-link" %>
+    &nbsp;
+    <%= link_to 'မြန်မာစာ', switch_locale_path(locale: 'my'), class: "header-link" %>
+  </div>
+  <br />
     © 2022 Copyright:
     <a class="footer-link" href="https://job-in-japan.com/">Job in Japan</a>
     </br>
     <% if current_user&.admin? %>
       <%= link_to "admin", rails_admin.dashboard_path %>
     <% end %>
+  <br />
 </footer>
 
 <style>

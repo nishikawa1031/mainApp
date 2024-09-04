@@ -1,19 +1,6 @@
 <header class="header-container">
   <%= link_to "Job in Japan", root_path, class: "header-title-link" %>
 
-  <div class="language-selector">
-    <%= link_to 'English', switch_locale_path(locale: 'en'), class: "header-link" %>
-    &nbsp;
-    <%= link_to '日本語', switch_locale_path(locale: 'ja'), class: "header-link" %>
-    &nbsp;
-    <%= link_to 'Tiếng Việt', switch_locale_path(locale: 'vi'), class: "header-link" %>
-    &nbsp;
-    <%= link_to 'বাংলা', switch_locale_path(locale: 'bn'), class: "header-link" %>
-    &nbsp;
-    <%= link_to 'မြန်မာစာ', switch_locale_path(locale: 'my'), class: "header-link" %>
-  </div>
-
-
   <div class="header-links">
     <% if current_user %>
       <% if current_user&.employee? || current_user&.admin? %>
