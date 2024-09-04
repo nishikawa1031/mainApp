@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# app/controllers/applicants_controller.rb
 class ApplicantsController < ApplicationController
   load_and_authorize_resource
 
@@ -32,11 +33,13 @@ class ApplicantsController < ApplicationController
     end
   end
 
+  # PATCH/PUT /applicants/1
   def update
     if @applicant.update(applicant_params)
       if @applicant.files.attached?
         begin
-          @improvement_suggestions = analyze_resume(@applicant.files.last)
+          analyzer = ResumeAnalyzerService.new(@applicant.files.last)
+          @improvement_suggestions = analyzer.analyze_resume
           flash[:success] = '履歴書がアップロードされ、分析が完了しました。'
           @user = @applicant.user
           render 'users/show'
@@ -61,12 +64,10 @@ class ApplicantsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_applicant
     @applicant = Applicant.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def applicant_params
     params.require(:applicant).permit(:name,
                                       :user_id,
@@ -79,64 +80,5 @@ class ApplicantsController < ApplicationController
                                       :desired_salary,
                                       :resume,
                                       files: [])
-  end
-
-  def extract_text_from_pdf(file)
-    reader = PDF::Reader.new(StringIO.new(file.download))
-    reader.pages.map(&:text).join("\n")
-  end
-
-  def extract_text_from_docx(file)
-    doc = Docx::Document.open(StringIO.new(file.download))
-    doc.paragraphs.map(&:text).join("\n")
-  end
-
-  def analyze_resume(file)
-    # ブラウザの言語設定を取得
-    language = extract_language_from_request
-
-    # 言語設定に応じたプロンプトを生成
-    prompt = generate_prompt_by_language(language)
-
-    extname = File.extname(file.filename.to_s).downcase
-    text = case extname
-           when '.pdf'
-             extract_text_from_pdf(file)
-           when '.docx'
-             extract_text_from_docx(file)
-           else
-             raise "Unsupported file type: #{file.filename}"
-           end
-
-    Rails.logger.info("Extracted text (first 100 chars): #{text[0..99]}")
-
-    AzureOpenaiService.instance.analyze_text(
-      text:,
-      prompt:
-    )
-  end
-
-  # 言語設定に応じたプロンプトを生成するメソッド
-  def generate_prompt_by_language(language)
-    case language
-    when 'ja'
-      '以下の履歴書を分析し、改善点を日本語で提案してください。回答は箇条書きで、最大5つの改善点を挙げてください。'
-    when 'en'
-      'Please analyze the following resume and suggest improvements in English. Provide up to 5 bullet points with areas of improvement.'
-    when 'my'
-      'ဤအကြောင်းအရာကို ချမှတ်ပါ။ မြန်မာဘာသာဖြင့် အကြံပြုချက်များကို ငွေရှင်းပါ။ ပြုပြင်စရာလိုအပ်ချက် ၅ ခုအထိ မှတ်သားပါ။'
-    when 'bn'
-      'অনুগ্রহ করে নিম্নলিখিত জীবনবৃত্তান্ত বিশ্লেষণ করুন এবং বাংলা ভাষায় উন্নতির পরামর্শ দিন। সর্বাধিক ৫টি উন্নতির দিকের তালিকা তৈরি করুন।'
-    when 'vi'
-      'Vui lòng phân tích sơ yếu lý lịch sau đây và đề xuất cải tiến bằng tiếng Việt. Đưa ra tối đa 5 gạch đầu dòng về những điểm cần cải thiện.'
-    else
-      'Please analyze the following resume and suggest improvements in English. Provide up to 5 bullet points with areas of improvement.'
-    end
-  end
-
-  # ブラウザの言語設定を取得するヘルパーメソッド
-  def extract_language_from_request
-    lang = request.env['HTTP_ACCEPT_LANGUAGE'].to_s.scan(/^[a-z]{2}/).first
-    %w[ja en my bn vi].include?(lang) ? lang : 'en' # サポートする言語が他にあれば追加
   end
 end
