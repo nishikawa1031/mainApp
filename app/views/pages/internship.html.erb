@@ -1,0 +1,222 @@
+<%= image_tag "internship", style: "width: 100%;" %>
+<h1 class="m-4">Internship Learning Path</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Learning Path</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .pastel-blue-gradient {
+    background: #f4f4f4;
+    }
+    
+    .header-container {
+    display: none;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      background: #fff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .recommendation, .output, .when-you-have-a-question {
+      background: #e9ecef;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .code {
+      background: #f8f9fa;
+      border-left: 4px solid #007bff;
+      padding: 10px;
+      margin: 20px 0;
+      border-radius: 5px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section">
+      <h2>Ⅰ. For Beginners (Optional)</h2>
+      <ul>
+        <li>
+          <strong>Learn Ruby on Rails</strong>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=fmyvWz5TUWg">Learn Ruby on Rails - Full Course - YouTube</a></li>
+            <li>It is recommended that you not only look at it, but actually try to build it.</li>
+            <li><a href="https://guides.rubyonrails.org/getting_started.html">Getting Started with Rails — Ruby on Rails Guides</a></li>
+            <li class="recommendation">
+              <strong>Recommendation</strong>
+              <ul>
+                <li>Editor:
+                  <ul>
+                    <li><a href="https://code.visualstudio.com/">Visual Studio Code</a> (Windows)</li>
+                    <li><a href="https://www.cursor.com/">Cursor</a> (Mac)</li>
+                  </ul>
+                </li>
+                <li>Terminal:
+                  <ul>
+                    <li><a href="https://www.warp.dev/text-editor">Warp</a> (Mac)</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Basic Knowledge</strong>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=BPVcsOKfd34">What is a server? Types of Servers? Virtual server vs Physical server 🖥️🌐 - YouTube</a></li>
+            <li><a href="https://www.youtube.com/watch?v=vcRmKtL4o_4">How Websites Work | simply explained with examples - YouTube</a></li>
+            <li><a href="https://www.youtube.com/watch?v=MDu6hWknk70">Networking - What is Localhost, 127.0.0.1, and Loopback in TCPIP? - YouTube</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong>Basic Linux Command</strong>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=gd7BXuUQ91w">60 Linux Commands you NEED to know (in 10 minutes) - YouTube</a></li>
+          </ul>
+        </li>
+        <li class="output">
+          <strong>Output (Optional)</strong>
+          <ul>
+            <li>Write a technical blog
+              <ul>
+                <li><a href="https://medium.com/quark-works/tips-on-how-to-write-your-first-successful-technical-blog-4cb65e5b4ce4">Tips on How to Write Your First Successful Technical Blog - Medium</a></li>
+                <li><a href="https://dev.to/blackgirlbytes/the-ultimate-guide-to-writing-technical-blog-posts-5464">The Ultimate Guide to Writing Technical Blog Posts - DEV Community</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Ⅱ. For Intermediate Level</h2>
+      <ul>
+        <li>
+          <strong>Setup Rails Application ⭐️ (Most Important)</strong>
+          <ul>
+            <li><a href="https://github.com/nishikawa1031/mainApp/wiki/How-to-setup">How to Setup</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong>If you encounter errors or problems</strong>
+          <ul>
+            <li><a href="https://github.com/nishikawa1031/mainApp/wiki">Wiki</a></li>
+            <li>For the benefit of the next person who builds the environment, please write on this page about any stuck points or problems you encounter.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Ⅲ. Level of Internship Participation</h2>
+      <ul>
+        <li>
+          <strong>Challenging Issues</strong>
+          <ul>
+            <li><a href="https://github.com/nishikawa1031/mainApp/issues">Issues</a></li>
+            <li>Create PR ⭐️
+              <ul>
+                <li><a href="../work_way/pr.md">How to Create PR</a></li>
+                <li><a href="https://www.youtube.com/watch?v=tRZGeaHPoaw">Git and GitHub Tutorial for Beginners - YouTube</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Introduce Applicants to Unpaid Internships at Other Companies</strong>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Ⅳ. To Be Able to Write Tests (Optional)</h2>
+      <ul>
+        <li>Run a test and ensure that all tests pass.
+          <div class="code">
+            bundle exec rspec
+          </div>
+        </li>
+        <li><a href="https://www.youtube.com/watch?v=-uhFA74eBG0">RSpec Tutorial for Beginners - YouTube</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Ⅴ. Working Level</h2>
+      <ul>
+        <li>I can introduce you to part-time work.</li>
+        <li>Introduces permanent jobs.</li>
+      </ul>
+    </div>
+
+    <div class="section when-you-have-a-question">
+      <h2>When You Have a Question</h2>
+      <ul>
+        <li>It is recommended to ask the AI about CODING.
+          <ul>
+            <li><a href="https://claude.ai/new">Claude</a></li>
+            <li><a href="https://chatgpt.com/">ChatGPT</a></li>
+            <li><a href="https://gemini.google.com/app">Gemini</a></li>
+          </ul>
+        </li>
+        <li>Join Slack Group
+          <ul>
+            <li><a href="https://join.slack.com/t/artinternship/shared_invite/zt-2p0dn32tu-pMI7GtfsTifKIDHxPPze9w">Invitation Link</a></li>
+            <li>To make it easier for you to ask questions, we will invite you to the slack group. Feel free to ask questions on this group</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Coding Tests</h2>
+      <ul>
+        <li><a href="https://leetcode.com/studyplan/top-interview-150/">Top Interview 150 - Study Plan - LeetCode</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Recommended Qualifications (If Interested)</h2>
+      <ul>
+        <li><a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/?practice-assessment-type=certification">AI-900</a>
+          <ul>
+            <li>Qualifications for AI in Azure.</li>
+            <li>Qualification to build AI. Recommended due to the narrow scope of the exam.</li>
+            <li><a href="https://www.youtube.com/watch?v=E2644J4jgd8&list=PLhLKc18P9YOAGdtSpB3y7WMkjJbi7dva_">AI-900 Exam // EP 01 // Azure AI Fundamentals AI-900 Course Introduction by Susanth Sutheesh - YouTube</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
