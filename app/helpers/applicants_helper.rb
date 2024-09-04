@@ -10,4 +10,9 @@ module ApplicantsHelper
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     markdown.render(File.read(Rails.root.join('markdown/service_term.md')))
   end
+
+  def internship
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    markdown.render(File.read(Rails.root.join('markdown/internship.md')))
+  end
 end
