@@ -32,19 +32,21 @@ class ApplicantsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /applicants/1
   def update
     if @applicant.update(applicant_params)
       if @applicant.files.attached?
         begin
-          p @improvement_suggestions = analyze_resume(@applicant.files.last)
-          flash[:success] = "履歴書がアップロードされ、分析が完了しました。改善点:\n#{@improvement_suggestions}"
-          redirect_to user_path(@applicant.user)
+          @improvement_suggestions = analyze_resume(@applicant.files.last)
+          flash[:success] = '履歴書がアップロードされ、分析が完了しました。'
+          @user = @applicant.user
+          render 'users/show'
         rescue StandardError => e
-          redirect_to @applicant.user, alert: "エラーが発生しました: #{e.message}"
+          flash[:alert] = "エラーが発生しました: #{e.message}"
+          render :edit, status: :unprocessable_entity
         end
       else
-        redirect_to @applicant.user, alert: '履歴書が添付されていません。'
+        flash[:alert] = '履歴書が添付されていません。'
+        render :edit, status: :unprocessable_entity
       end
     else
       render :edit, status: :unprocessable_entity
@@ -90,7 +92,11 @@ class ApplicantsController < ApplicationController
   end
 
   def analyze_resume(file)
-    prompt = '以下の履歴書を分析し、改善点を日本語で提案してください。回答は箇条書きで、最大5つの改善点を挙げてください。'
+    # ブラウザの言語設定を取得
+    language = extract_language_from_request
+
+    # 言語設定に応じたプロンプトを生成
+    prompt = generate_prompt_by_language(language)
 
     extname = File.extname(file.filename.to_s).downcase
     text = case extname
@@ -108,5 +114,29 @@ class ApplicantsController < ApplicationController
       text:,
       prompt:
     )
+  end
+
+  # 言語設定に応じたプロンプトを生成するメソッド
+  def generate_prompt_by_language(language)
+    case language
+    when 'ja'
+      '以下の履歴書を分析し、改善点を日本語で提案してください。回答は箇条書きで、最大5つの改善点を挙げてください。'
+    when 'en'
+      'Please analyze the following resume and suggest improvements in English. Provide up to 5 bullet points with areas of improvement.'
+    when 'my'
+      'ဤအကြောင်းအရာကို ချမှတ်ပါ။ မြန်မာဘာသာဖြင့် အကြံပြုချက်များကို ငွေရှင်းပါ။ ပြုပြင်စရာလိုအပ်ချက် ၅ ခုအထိ မှတ်သားပါ။'
+    when 'bn'
+      'অনুগ্রহ করে নিম্নলিখিত জীবনবৃত্তান্ত বিশ্লেষণ করুন এবং বাংলা ভাষায় উন্নতির পরামর্শ দিন। সর্বাধিক ৫টি উন্নতির দিকের তালিকা তৈরি করুন।'
+    when 'vi'
+      'Vui lòng phân tích sơ yếu lý lịch sau đây và đề xuất cải tiến bằng tiếng Việt. Đưa ra tối đa 5 gạch đầu dòng về những điểm cần cải thiện.'
+    else
+      'Please analyze the following resume and suggest improvements in English. Provide up to 5 bullet points with areas of improvement.'
+    end
+  end
+
+  # ブラウザの言語設定を取得するヘルパーメソッド
+  def extract_language_from_request
+    lang = request.env['HTTP_ACCEPT_LANGUAGE'].to_s.scan(/^[a-z]{2}/).first
+    %w[ja en my bn vi].include?(lang) ? lang : 'en' # サポートする言語が他にあれば追加
   end
 end
