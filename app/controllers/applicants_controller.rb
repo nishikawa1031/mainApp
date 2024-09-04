@@ -32,19 +32,21 @@ class ApplicantsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /applicants/1
   def update
     if @applicant.update(applicant_params)
       if @applicant.files.attached?
         begin
-          p @improvement_suggestions = analyze_resume(@applicant.files.last)
-          flash[:success] = "履歴書がアップロードされ、分析が完了しました。改善点:\n#{@improvement_suggestions}"
-          redirect_to user_path(@applicant.user)
+          @improvement_suggestions = analyze_resume(@applicant.files.last)
+          flash[:success] = '履歴書がアップロードされ、分析が完了しました。'
+          @user = @applicant.user
+          render 'users/show'
         rescue StandardError => e
-          redirect_to @applicant.user, alert: "エラーが発生しました: #{e.message}"
+          flash[:alert] = "エラーが発生しました: #{e.message}"
+          render :edit, status: :unprocessable_entity
         end
       else
-        redirect_to @applicant.user, alert: '履歴書が添付されていません。'
+        flash[:alert] = '履歴書が添付されていません。'
+        render :edit, status: :unprocessable_entity
       end
     else
       render :edit, status: :unprocessable_entity
