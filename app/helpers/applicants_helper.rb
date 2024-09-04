@@ -15,4 +15,9 @@ module ApplicantsHelper
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     markdown.render(File.read(Rails.root.join('markdown/internship.md')))
   end
+
+  def about
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    markdown.render(File.read(Rails.root.join('markdown/about.md')))
+  end
 end
