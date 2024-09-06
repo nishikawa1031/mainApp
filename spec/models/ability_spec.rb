@@ -86,13 +86,23 @@ describe Ability do
 
   context 'when the user is neither an admin nor an employee' do
     let(:user) { create(:user) }
+    let(:other_user) { create(:user) }
 
     it 'can read Articles' do
       expect(ability).to be_able_to(:read, Article)
     end
 
+    it 'cannot read or update other Applicants' do
+      applicant = Applicant.create!(user_id: user.id)
+      expect(ability).to be_able_to(:read, applicant)
+      expect(ability).to be_able_to(:update, applicant)
+
+      other_applicant = Applicant.create!(user_id: other_user.id)
+      expect(ability).not_to be_able_to(:read, other_applicant)
+      expect(ability).not_to be_able_to(:update, other_applicant)
+    end
+
     it 'cannot read or update other Users' do
-      other_user = create(:user)
       expect(ability).not_to be_able_to(:read, other_user)
       expect(ability).not_to be_able_to(:update, other_user)
     end
