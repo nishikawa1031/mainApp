@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get 'switch_locale/:locale', to: 'application#switch_locale', as: :switch_locale
   post 'open_ai/submit'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  get 'home' => 'home#index', as: 'home_index'
 
   root to: 'articles#index'
   resources :articles do

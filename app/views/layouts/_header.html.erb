@@ -2,24 +2,10 @@
   <%= link_to "Job in Japan", root_path, class: "header-title-link" %>
 
   <div class="header-links">
-    <% if current_user %>
-      <% if current_user&.employee? || current_user&.admin? %>
-        <% if current_page?(root_path) %>
-          <%= link_to t('hiring_companies_here'), applicants_path, class: "header-link" %>
-        <% else %>
-          <%= link_to t('job_seekers_click_here'), root_path, class: "header-link" %>
-        <% end %>
-      <% else %>
-        <% unless current_page?(root_path) %>
-          <%= link_to t('job_seekers_click_here'), root_path, class: "header-link" %>
-        <% end %>
-      <% end %>
+    <% if current_page?(root_path) %>
+      <%= link_to t('hiring_companies_here'), applicants_path, class: "header-link" %>
     <% else %>
-      <% if current_page?(root_path) %>
-        <%= link_to t('hiring_companies_here'), home_index_path, class: "header-link" %>
-      <% else %>
-        <%= link_to t('job_seekers_click_here'), root_path, class: "header-link" %>
-      <% end %>
+      <%= link_to t('job_seekers_click_here'), root_path, class: "header-link" %>
     <% end %>
 
     <% if current_user %>
