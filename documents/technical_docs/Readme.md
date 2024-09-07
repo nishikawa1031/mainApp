@@ -28,6 +28,7 @@ application: Frontend
 
 googleログイン
 * [アナリティクス](https://analytics.google.com/analytics/web/?authuser=0#/p347800174/reports/intelligenthome)
+* [AdSense](https://www.google.com/adsense/new/u/0/pub-6034033690905779/onboarding)
 * [ドメイン](https://navi.onamae.com/domain/setting/renew/list)
 * [cloudflare](https://dash.cloudflare.com/63c34c3c7777cf7a1862d682130b6293/solution-hub.net)
 email認証
