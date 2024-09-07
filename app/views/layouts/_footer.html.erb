@@ -21,8 +21,16 @@
     © 2024 Copyright:
     <a class="footer-link" href="https://job-in-japan.com/">Job in Japan</a>
     </br>
-    <% if current_user&.admin? %>
-      <%= link_to "admin", rails_admin.dashboard_path %>
+    <% unless Rails.env.production? %>
+      <% if current_user&.admin? %>
+        <%= link_to "admin", rails_admin.dashboard_path %>
+      <% elseif current_user&.employee %>
+        <p>Employee</p>
+      <% elseif current_user&.applicant %>
+        <p>Applicant</p>
+      <% else %>
+        <p>Guest</p>
+      <% end %>
     <% end %>
   <br />
 </footer>
