@@ -1,0 +1,20 @@
+<div class="container">
+    <%= raw(contact) %>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSee_EOyynp7TWysBjDOz8NN8RBJxXWBQ4O6xe4i-eh6qRcuww/viewform?embedded=true" 
+        frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+</div>
+
+<style>
+.container {
+  width: 100vw; /* ビューポートの幅いっぱいに広がる */
+  height: 100vh; /* ビューポートの高さいっぱいに広がる */
+  justify-content: center; /* 水平方向に中央揃え */
+  align-items: center; /* 垂直方向に中央揃え */
+}
+
+iframe {
+  width: 100%; /* 幅を親要素に合わせる */
+  height: 100%; /* 高さを親要素に合わせる */
+  border: none; /* ボーダーをなくす */
+}
+</style>
