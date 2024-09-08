@@ -15,8 +15,50 @@
       </div>
     <% end %>
 
+    <!-- 経歴書アップロードと表示セクション -->
+    <div class="col-lg-12 mt-12 mb-12">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h2 class="card-title text-center mb-4"><%= t('upload.title') %></h2>
+          <p class="text-center text-muted mb-4"><%= t('upload.description') %></p>
+          
+          <%= form_with model: @user.rolable, url: applicant_path(@user.rolable), local: true, multiple: true, class: "mb-4" do |form| %>
+            <div class="mb-3">
+              <div class="d-flex justify-content-center mb-3">
+                <%= form.file_field :files, class: "form-control", accept: "application/pdf,image/*", style: "max-width: 50%;", multiple: true %>
+              </div>
+            </div>
+            <div class="text-center">
+              <%= form.submit t('upload.button'), class: "btn btn-primary" %>
+            </div>
+          <% end %>
+
+          <% if @user.rolable.files.attached? %>
+            <div class="mt-4">
+              <h5 class="card-title"><%= t('upload.uploaded_files') %></h5>
+              <% @user.rolable.files.each do |file| %>
+                <div class="mb-3">
+                  <% if file.content_type.start_with?('image/') %>
+                    <%= image_tag url_for(file), class: "img-fluid rounded", style: "margin-bottom: 15px;" %>
+                  <% elsif file.content_type == 'application/pdf' %>
+                    <div class="ratio ratio-16x9" style="margin-bottom: 15px;">
+                      <%= tag.iframe src: url_for(file), class: "rounded" %>
+                    </div>
+                  <% else %>
+                    <p style="margin-bottom: 15px;">
+                      <%= t('upload.file_not_displayable') %> <%= link_to t('upload.download'), url_for(file), class: "btn btn-sm btn-outline-primary" %>
+                    </p>
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
     <!-- プロフィールセクション -->
-    <% if false %>
     <div class="col-lg-4 mt-4 mb-4 d-none d-lg-block">
       <div class="card shadow-sm">
         <div class="card-body">
@@ -76,54 +118,13 @@
               </div>
             <% end %>
           <% end %>
-        </div>
-      </div>
-    </div>
-  <% end %>
-
-    <!-- 経歴書アップロードと表示セクション -->
-    <div class="col-lg-12 mt-12 mb-12">
-      <div class="card shadow-sm">
-        <div class="card-body">
-          <h2 class="card-title text-center mb-4"><%= t('upload.title') %></h2>
-          <p class="text-center text-muted mb-4"><%= t('upload.description') %></p>
-          
-          <%= form_with model: @user.rolable, url: applicant_path(@user.rolable), local: true, multiple: true, class: "mb-4" do |form| %>
-            <div class="mb-3">
-              <div class="d-flex justify-content-center mb-3">
-                <%= form.file_field :files, class: "form-control", accept: "application/pdf,image/*", style: "max-width: 50%;", multiple: true %>
-              </div>
-            </div>
-            <div class="text-center">
-              <%= form.submit t('upload.button'), class: "btn btn-primary" %>
-            </div>
-          <% end %>
-
-          <% if @user.rolable.files.attached? %>
-            <div class="mt-4">
-              <h5 class="card-title"><%= t('upload.uploaded_files') %></h5>
-              <% @user.rolable.files.each do |file| %>
-                <div class="mb-3">
-                  <% if file.content_type.start_with?('image/') %>
-                    <%= image_tag url_for(file), class: "img-fluid rounded", style: "margin-bottom: 15px;" %>
-                  <% elsif file.content_type == 'application/pdf' %>
-                    <div class="ratio ratio-16x9" style="margin-bottom: 15px;">
-                      <%= tag.iframe src: url_for(file), class: "rounded" %>
-                    </div>
-                  <% else %>
-                    <p style="margin-bottom: 15px;">
-                      <%= t('upload.file_not_displayable') %> <%= link_to t('upload.download'), url_for(file), class: "btn btn-sm btn-outline-primary" %>
-                    </p>
-                  <% end %>
-                </div>
-              <% end %>
-            </div>
-          <% end %>
+          <div class="logout-button text-center">
+            <%= button_to t('logout'), 'auth/logout', method: :get, data: { turbo: false }, class: "button-modern" %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
 </div>
 
 <% content_for :head do %>
