@@ -1,10 +1,8 @@
 # Service Site
 https://job-in-japan.com/
-
-- [about this service](https://github.com/nishikawa1031/mainApp/wiki)
-
-- [for beginners](https://job-in-japan.com/pages/internship)
+    - [about this service](https://github.com/nishikawa1031/mainApp/wiki)
 
 - [How to setup](https://github.com/nishikawa1031/mainApp/wiki/How-to-setup)
+    - [for beginners](https://job-in-japan.com/pages/internship)
+    - [Technical Description](documents/technical_docs/Readme.md)
 
-- [Technical Description](documents/technical_docs/Readme.md)
