@@ -1,3 +1,72 @@
+# Terms of Service for Job in Japan
+
+These Terms of Service (hereinafter referred to as "Terms") set forth the conditions for using the matching service provided by Job in Japan (hereinafter referred to as "the Service"). Users (hereinafter referred to as "Users") agree to these Terms and use the Service in accordance with them.
+
+## Article 1 (Application)
+1. These Terms apply to all relationships between the Users and the operator of the Service (hereinafter referred to as "the Operator") regarding the use of the Service.
+2. Guidelines, precautions, and other documents provided by the Service are also considered part of these Terms.
+
+## Article 2 (Registration)
+1. Those who wish to use the Service must agree to these Terms and register for the Service by the method specified by the Operator.
+2. The Operator may reject the registration of an applicant if it determines that the applicant falls under any of the following categories:
+   - If false information was provided during the registration process
+   - If the applicant has previously violated these Terms
+   - If the Operator deems the registration inappropriate for any other reason
+
+## Article 3 (User Responsibility)
+1. Users shall use the Service at their own responsibility and bear full responsibility for all actions taken and their consequences in connection with the use of the Service.
+2. Users must promptly notify the Operator of any changes to their registration information.
+
+## Article 4 (Prohibited Actions)
+Users shall not engage in the following actions when using the Service:
+1. Actions that violate laws or public order and morals
+2. Criminal activities or related actions
+3. Infringement of intellectual property rights, image rights, privacy, reputation, or other rights or interests of the Operator, other Users, or third parties
+4. Transmission or posting of excessively violent expressions, explicit sexual content, discriminatory expressions, or other anti-social content
+5. Unauthorized collection or accumulation of personal information of other Users
+6. Interference with the operation of the Service
+7. Any other actions deemed inappropriate by the Operator
+
+## Article 5 (Service Suspension)
+1. The Operator may suspend or discontinue the Service, in whole or in part, without prior notice to the User if it determines that any of the following circumstances apply:
+   - Maintenance or updates of the computer systems related to the Service
+   - If the provision of the Service becomes difficult due to force majeure such as fire, power outage, or natural disasters
+   - Any other reason the Operator deems it difficult to continue providing the Service
+2. The Operator shall not be liable for any disadvantage or damage incurred by the User or third parties due to the suspension or discontinuation of the Service.
+
+## Article 6 (Usage Restrictions and Deregistration)
+1. The Operator may, without prior notice, restrict the use of the Service or deregister the User if:
+   - The User violates any provisions of these Terms
+   - It is discovered that the User provided false information during registration
+   - The Operator deems the use of the Service inappropriate for any other reason
+2. The Operator shall not be liable for any damages caused to the User due to actions taken under this Article.
+
+## Article 7 (Withdrawal)
+Users may withdraw from the Service at any time by following the procedures specified by the Operator.
+
+## Article 8 (Disclaimer)
+1. The Operator makes no express or implied warranties regarding the absence of factual or legal defects (including safety, reliability, accuracy, completeness, suitability, fitness for particular purposes, security, etc.) in the Service.
+2. The Operator shall not be liable for any damages incurred by the User arising from the use of the Service. However, this disclaimer does not apply if the agreement between the Operator and the User regarding the Service (including these Terms) constitutes a consumer contract under the Consumer Contract Act.
+3. Even in the case of the preceding paragraph, the Operator shall not be liable for any damages arising from special circumstances (including cases where the Operator or User foresaw or could have foreseen the occurrence of damages) caused by the Operator's negligence (excluding gross negligence).
+
+## Article 9 (Handling of Personal Information)
+The Operator shall appropriately handle personal information obtained through the use of the Service in accordance with the Operator's separately established Privacy Policy.
+
+## Article 10 (Changes to the Service)
+The Operator may change, add to, or discontinue the Service's content without prior notice to Users.
+
+## Article 11 (Amendments to the Terms)
+The Operator may amend these Terms at any time without notice if deemed necessary. Users who continue to use the Service after the amendments are deemed to have agreed to the amended Terms.
+
+## Article 12 (Notices and Communication)
+Notifications or communication between Users and the Operator shall be conducted by the method specified by the Operator.
+
+## Article 13 (Governing Law and Jurisdiction)
+1. These Terms shall be interpreted in accordance with Japanese law.
+2. In the event of a dispute regarding the Service, the exclusive jurisdiction shall be the court with jurisdiction over the location of the Operator's headquarters.
+
+---
+
 # Job in Japan 利用規約
 
 この利用規約（以下「本規約」といいます）は、Job in Japan（以下「当サービス」といいます）が提供するマッチングサービス（以下「本サービス」といいます）の利用条件を定めるものです。利用者（以下「ユーザー」といいます）は、本規約に同意した上で、本サービスを利用するものとします。

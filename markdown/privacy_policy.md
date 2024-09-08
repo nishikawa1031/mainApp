@@ -1,3 +1,66 @@
+# Privacy Policy
+
+Job in Japan (hereinafter referred to as "the Company") hereby establishes the following privacy policy (hereinafter referred to as "this Policy") regarding the handling of users' personal information in the services provided by Job in Japan (hereinafter referred to as "the Service").
+
+### Article 1 (Personal Information)
+"Personal Information" refers to "personal information" as defined in the Personal Information Protection Act. It means information about a living individual, such as name, date of birth, address, telephone number, email address, and resume content, that can identify a specific individual.
+
+### Article 2 (Methods of Collecting Personal Information)
+The Company collects personal information such as name, date of birth, address, telephone number, email address, work history, qualifications, and other necessary information when users register for the Service. Additionally, during the course of using the Service, we may collect transaction records and payment-related information.
+
+### Article 3 (Purpose of Collecting and Using Personal Information)
+The purposes for which the Company collects and uses personal information are as follows:
+
+1. To provide and operate the Service
+2. To respond to inquiries from users (including identity verification)
+3. To provide information on new features, updates, campaigns, and other services offered by the Company
+4. To contact users for maintenance, important notices, or as necessary
+5. To identify and take measures against users who violate the terms of service or attempt to use the Service for fraudulent purposes
+6. To allow users to view, modify, or delete their registration information
+7. To provide users' personal information to companies for job applications through the Service
+8. To bill users for paid services
+9. For purposes related to the above
+
+### Article 4 (Changes in the Purpose of Use)
+The Company may change the purpose of use of personal information only when the change is reasonably related to the original purpose. When changes are made, the Company will notify users of the new purpose by publishing it on the website or through other appropriate methods.
+
+### Article 5 (Provision of Personal Information to Third Parties)
+The Company will not provide personal information to third parties without prior consent from the user, except in the following cases or where permitted by the Personal Information Protection Act or other laws:
+
+1. When necessary to protect the life, body, or property of a person and it is difficult to obtain the user's consent
+2. When particularly necessary for improving public health or promoting the sound growth of children, and it is difficult to obtain the user's consent
+3. When cooperation with a governmental organization or local public entity is required by law, and obtaining the user's consent would interfere with the execution of duties
+4. When the following conditions are met and the Company has notified the Personal Information Protection Commission:
+    - The purpose of use includes provision to third parties
+    - Items of data provided to third parties
+    - Means or methods of provision to third parties
+    - The user’s right to request the cessation of third-party provision
+    - The method by which the user can make such a request
+
+### Article 6 (Disclosure of Personal Information)
+Upon request from a user, the Company will promptly disclose their personal information. However, the Company may choose not to disclose all or part of the information in the following cases:
+
+1. If there is a risk of harm to the life, body, property, or other rights and interests of the user or a third party
+2. If the disclosure would significantly hinder the proper execution of the Company's business
+3. If the disclosure would violate other laws
+
+A fee may be charged for the disclosure of personal information.
+
+### Article 7 (Correction and Deletion of Personal Information)
+If a user finds that their personal information held by the Company is incorrect, they may request correction, addition, or deletion (hereinafter referred to as "corrections"). The Company will promptly investigate the matter and make any necessary corrections.
+
+### Article 8 (Suspension of Use, etc. of Personal Information)
+If a user requests the suspension or deletion of personal information (hereinafter referred to as "suspension") on the grounds that it is being used beyond the scope of the purpose of use or was acquired unlawfully, the Company will promptly investigate and take appropriate actions.
+
+### Article 9 (Changes to the Privacy Policy)
+This Policy may be changed without prior notice due to changes in laws or other reasons. The updated Privacy Policy will become effective once posted on the website.
+
+### Article 10 (Contact Information)
+For inquiries regarding this Policy, please contact the following:
+[Contact Us](https://job-in-japan.com/pages/contact)
+
+---
+
 # プライバシーポリシー
 
 Job in Japan（以下，「当社」といいます。）は，当社が提供する「Job in Japan」サービス（以下，「本サービス」といいます。）における，ユーザーの個人情報の取扱いについて，以下のとおりプライバシーポリシー（以下，「本ポリシー」といいます。）を定めます。
@@ -58,5 +121,4 @@ Job in Japan（以下，「当社」といいます。）は，当社が提供�
 
 ### 第10条（お問い合わせ窓口）
 本ポリシーに関するお問い合わせは，下記の窓口までお願いいたします。
-
-https://job-in-japan.com/pages/about
+[contact us](https://job-in-japan.com/pages/contact)
