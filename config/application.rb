@@ -14,8 +14,8 @@ module MyProj
     config.load_defaults 7.0
     config.time_zone = 'Tokyo'
 
-    config.i18n.available_locales = %i[en ja bn my vi]
-    config.i18n.default_locale = :ja
+    config.i18n.available_locales = %i[en ja bn my vi ru]
+    config.i18n.default_locale = :en
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
 
     # Configuration for the application, engines, and railties goes here.
