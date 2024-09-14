@@ -1,0 +1,104 @@
+ru:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              blank: "необходимо ввести"
+  views:
+    pagination:
+      first: "Первая"
+      previous: "Предыдущая"
+      next: "Следующая"
+      last: "Последняя"
+    title: "Заголовок"
+    body: "Тело"
+    created_at: "Дата создания"
+    updated_at: "Дата обновления"
+  simple_calendar:
+    previous: "<"
+    next: ">"
+    week: "Неделя"
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      short: "%d.%m"
+      long: "%d %B %Y (%a)"
+    day_names: [Воскресенье, Понедельник, Вторник, Среда, Четверг, Пятница, Суббота]
+    abbr_day_names: [Вс, Пн, Вт, Ср, Чт, Пт, Сб]
+    month_names:
+      [~, Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь]
+    abbr_month_names:
+      [~, Янв, Фев, Мар, Апр, Май, Июн, Июл, Авг, Сен, Окт, Ноя, Дек]
+    order:
+      - :year
+      - :month
+      - :day
+  time:
+    formats:
+      default: "%d.%m.%Y %H:%M:%S"
+      short: "%d.%m.%y %H:%M"
+      long: "%d %B %Y (%a) %H:%M:%S %Z"
+    am: "AM"
+    pm: "PM"
+  flash:
+    success: "Предложение по улучшению"
+  profile:
+    avatar: "Аватар"
+    username: "Имя пользователя"
+    email: "Электронная почта"
+    role: "Роль"
+    birthday: "Дата рождения"
+    age: "Возраст"
+    nationality: "Национальность"
+    phone_number: "Номер телефона"
+    desired_salary: "Желаемая зарплата"
+    self_introduction: "Самопредставление"
+  upload:
+    title: "Запросить проверку AI"
+    description: "Загрузите резюме или CV для проверки на ошибки и корректности японского языка."
+    button: "Загрузить"
+    uploaded_files: "Загруженные файлы"
+    download: "Скачать здесь."
+    file_not_displayable: "Этот файл не может быть отображен."
+  header:
+    title:
+      full: "Найдите работу в Японии"
+      short: "Найти работу"
+  search:
+    industry: "Отрасль"
+    region: "Регион"
+    salary: "Желаемая зарплата"
+    placeholder: "Поиск"
+    button: "Поиск"
+  article:
+    language_requirement: "Требования к языковым навыкам"
+    skills_required: "Необходимые навыки"
+    employment_type: "Тип занятости"
+    work_hours: "Рабочие часы"
+    description: "Описание"
+    view_details: "Подробнее"
+    apply: "Подать заявку"
+  resume:
+    upload: "Загрузить резюме"
+    description: "Используйте AI для автоматической проверки резюме и повышения шансов на успешное прохождение отбора."
+    button: "Загрузить"
+  services:
+    ai_review: "Сервис проверки на основе AI"
+    ai_review_description: "Используйте AI для автоматической проверки резюме и повышения шансов на успешное прохождение отбора."
+    recruiter_support: "Поддержка рекрутера"
+    recruiter_support_description: "Опытные рекрутеры обеспечат полную поддержку в процессе поиска работы."
+    visa_support: "Поддержка в подаче заявления на визу"
+    visa_support_description: "Помощь в подготовке необходимых документов и поддержка в процессе подачи заявления на визу."
+  azure_form:
+    title: "Форма ввода для Azure OpenAI"
+    prompt: "Введите запрос:"
+    upload_image: "Загрузить изображение:"
+    submit: "Отправить"
+    response: "Ответ:"
+  job_seekers_click_here: "Соискатели, нажмите здесь"
+  hiring_companies_here: "Для работодателей нажмите здесь"
+  logout: "Выйти"
+  login: "Войти"
+  user_profile: "Профиль"
