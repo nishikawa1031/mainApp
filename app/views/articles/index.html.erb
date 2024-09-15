@@ -5,14 +5,14 @@
 </div>
 
 <div class="benefits">
-  <h2>サービスのメリット</h2>
+  <h2><%= t('global_career_support.service_benefits.section_title') %></h2>
   <br />
   <ul>
-      <li><strong>収入アップのチャンス：</strong> 日本企業からリモートワークで高額案件を受注できます。物価差や為替レートを活かすことで、収入が2倍になった方もいます！</li>
-      <li><strong>言語の壁を超える：</strong> 日本語が話せなくても心配ありません。専門の業務サポーターが、コミュニケーションをしっかりサポートします。</li>
-      <li><strong>将来の日本就職をサポート：</strong> 将来、日本での就職を希望する場合、ビザ取得などの手続きを無料でサポートします。</li>
+      <li><strong><%= t('global_career_support.service_benefits.income_opportunity.title') %>:</strong> <%= t('global_career_support.service_benefits.income_opportunity.description') %></li>
+      <li><strong><%= t('global_career_support.service_benefits.language_support.title') %>:</strong> <%= t('global_career_support.service_benefits.language_support.description') %></li>
+      <li><strong><%= t('global_career_support.service_benefits.future_career.title') %>:</strong> <%= t('global_career_support.service_benefits.future_career.description') %></li>
   </ul>
-  <p>このサービスは、あなたのグローバルなキャリアの可能性を大きく広げます。日本とのつながりを築きながら、スキルアップと収入アップを同時に実現できる、まさに一石三鳥のチャンスです！</p>
+  <p><%= t('global_career_support.service_benefits.summary') %></p>
   <% if current_user %>
     <div style="text-align: center;">
       <%= button_to t('resume.upload'), user_path(current_user), method: :get, style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" %>
