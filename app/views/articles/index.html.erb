@@ -12,7 +12,7 @@
       <li><strong><%= t('global_career_support.service_benefits.language_support.title') %>:</strong> <%= t('global_career_support.service_benefits.language_support.description') %></li>
       <li><strong><%= t('global_career_support.service_benefits.future_career.title') %>:</strong> <%= t('global_career_support.service_benefits.future_career.description') %></li>
   </ul>
-  <p><%= t('global_career_support.service_benefits.summary') %></p>
+  <p class="d-none d-md-block"><%= t('global_career_support.service_benefits.summary') %></p>
   <% if current_user %>
     <div style="text-align: center;">
       <%= button_to t('resume.upload'), user_path(current_user), method: :get, style: "padding: 12px 30px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);" %>
