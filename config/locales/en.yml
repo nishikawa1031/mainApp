@@ -90,3 +90,16 @@ en:
   logout: "Logout"
   login: "Login"
   user_profile: "User Profile"
+  global_career_support:
+    service_benefits:
+      section_title: "Service Benefits"
+      income_opportunity:
+        title: "Income Increase Opportunities"
+        description: "You can receive high-paying remote work projects from Japanese companies. Some have doubled their income by leveraging differences in the cost of living and exchange rates!"
+      language_support:
+        title: "Overcoming Language Barriers"
+        description: "Don't worry if you can't speak Japanese. Our specialized support team will assist with communication."
+      future_career:
+        title: "Supporting Your Future Career in Japan"
+        description: "If you wish to work in Japan in the future, we will support you in obtaining a visa and other necessary procedures free of charge."
+      summary: "This service greatly expands your global career opportunities. It’s a chance to improve both your skills and income while building a connection with Japan, making it a win-win-win situation!"

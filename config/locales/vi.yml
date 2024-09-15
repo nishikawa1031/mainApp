@@ -100,3 +100,16 @@ vi:
   logout: "Đăng xuất"
   login: "Đăng nhập"
   user_profile: "Hồ sơ người dùng"
+  global_career_support:
+    service_benefits:
+      section_title: "Lợi ích dịch vụ"
+      income_opportunity:
+        title: "Cơ hội tăng thu nhập"
+        description: "Bạn có thể nhận các dự án làm việc từ xa với mức lương cao từ các công ty Nhật Bản. Một số người đã tăng gấp đôi thu nhập bằng cách tận dụng sự khác biệt về chi phí sinh hoạt và tỷ giá hối đoái!"
+      language_support:
+        title: "Vượt qua rào cản ngôn ngữ"
+        description: "Đừng lo nếu bạn không nói được tiếng Nhật. Nhóm hỗ trợ chuyên nghiệp của chúng tôi sẽ hỗ trợ bạn trong việc giao tiếp."
+      future_career:
+        title: "Hỗ trợ sự nghiệp tương lai của bạn tại Nhật Bản"
+        description: "Nếu bạn muốn làm việc tại Nhật Bản trong tương lai, chúng tôi sẽ hỗ trợ bạn các thủ tục cần thiết như xin visa miễn phí."
+      summary: "Dịch vụ này mở rộng cơ hội nghề nghiệp toàn cầu của bạn. Đây là cơ hội để vừa nâng cao kỹ năng, thu nhập vừa xây dựng mối liên kết với Nhật Bản, thật là một cơ hội ba trong một!"

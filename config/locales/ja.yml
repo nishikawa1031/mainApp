@@ -102,3 +102,16 @@ ja:
   logout: "ログアウト"
   login: "ログイン"
   user_profile: "プロフィール"
+  global_career_support:
+    service_benefits:
+      section_title: "サービスのメリット"
+      income_opportunity:
+        title: "収入アップのチャンス"
+        description: "日本企業からリモートワークで高額案件を受注できます。物価差や為替レートを活かすことで、収入が2倍になった方もいます！"
+      language_support:
+        title: "言語の壁を超える"
+        description: "日本語が話せなくても心配ありません。専門の業務サポーターが、コミュニケーションをしっかりサポートします。"
+      future_career:
+        title: "将来の日本就職をサポート"
+        description: "将来、日本での就職を希望する場合、ビザ取得などの手続きを無料でサポートします。"
+      summary: "このサービスは、あなたのグローバルなキャリアの可能性を大きく広げます。日本とのつながりを築きながら、スキルアップと収入アップを同時に実現できる、まさに一石三鳥のチャンスです！"
