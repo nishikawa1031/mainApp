@@ -4,61 +4,6 @@
   <img src="<%= asset_path('World-10.png') %>" alt="<%= t('header.title.full') %>" class="logo-image">
 </div>
 
-<% if false %>
-<div style="display: flex; justify-content: center; margin-bottom: 20px;">
-  <div>
-    <%= link_to t('search.industry'), root_path, class: "link-modern" %>
-    <%= link_to t('search.region'), root_path, class: "link-modern" %>
-    <%= link_to t('search.salary'), root_path, class: "link-modern" %>
-  </div>
-
-  <div class="form-modern">
-    <%= form_with url: root_path, local: true do |form| %>
-      <%= form.search_field :query, placeholder: t('search.placeholder'), style: "padding: 10px; font-size: 16px; border: 2px solid #ccc; border-radius: 20px 0 0 20px; outline: none;" %>
-      <%= form.submit t('search.button'), style: "padding: 10px 15px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 0 20px 20px 0; cursor: pointer;" %>
-    <% end %>
-  </div>
-</div>
-<% end %>
-
-<% if false %>
-<div class="row">
-  <% @articles.each_slice(2) do |article_slice| %>
-    <% article_slice.each do |article| %>
-      <div class="col-sm-4 mb-4">
-        <div class="card article-card">
-          <% if article.file.attached? %>
-            <%= image_tag article.file.variant(resize_to_fill: [600, 400]), class: "card-img-top", alt: t('article.description') %>
-          <% else %>
-            <img src="<%= asset_path('World-14.png') %>" class="card-img-top" alt="<%= t('article.description') %>">
-          <% end %>
-          <div class="card-body">
-            <h5 class="card-title"><%= article.title %></h5>
-            <% if article.language_requirement.present? %>
-              <p class="card-text"><strong><%= t('article.language_requirement') %>:</strong> <%= article.language_requirement %></p>
-            <% end %>
-            <% if article.skills_required.present? %>
-              <p class="card-text"><strong><%= t('article.skills_required') %>:</strong> <%= article.skills_required %></p>
-            <% end %>
-            <% if article.employment_type.present? %>
-              <p class="card-text"><strong><%= t('article.employment_type') %>:</strong> <%= article.employment_type %></p>
-            <% end %>
-            <% if article.work_hours.present? %>
-              <p class="card-text"><strong><%= t('article.work_hours') %>:</strong> <%= article.work_hours %></p>
-            <% end %>
-            <% if article.description.present? %>
-              <p class="card-text"><strong><%= t('article.description') %>:</strong> <%= article.description %></p>
-            <% end %>
-            <%= link_to t('article.view_details'), article_path(article), class: "btn btn-primary" %>
-            <a href="#" class="btn" style="background-color: #FF5733; color: white"><%= t('article.apply') %></a>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  <% end %>
-</div>
-<% end %>
-
 <!-- Add Resume Upload Button at Center -->
 <% if current_user %>
   <div style="text-align: center;">
@@ -95,28 +40,6 @@
     </div>
   </div>
 </div>
-
-<% if false %>
-<h1><%= t('azure_form.title') %></h1>
-<%= form_with url: '/open_ai/submit', local: true, multiple: true do %>
-  <div>
-    <%= label_tag :input_text, t('azure_form.prompt') %>
-    <%= text_area_tag :input_text %>
-  </div>
-  <div>
-    <%= label_tag :image, t('azure_form.upload_image') %>
-    <%= file_field_tag :image %>
-  </div>
-  <div>
-    <%= submit_tag t('azure_form.submit') %>
-  </div>
-<% end %>
-
-<% if @response_text.present? %>
-  <h2><%= t('azure_form.response') %></h2>
-  <p><%= @response_text %></p>
-<% end %>
-<% end %>
 
 <style>
   .service-card {
