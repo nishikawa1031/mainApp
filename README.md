@@ -9,4 +9,4 @@ https://job-in-japan.com/
  
 # For Beginners
 
-[how to learn](https://job-in-japan.com/pages/internship)
+* [how to learn](https://job-in-japan.com/pages/internship)
