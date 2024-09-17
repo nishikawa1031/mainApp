@@ -44,8 +44,8 @@ en:
     desired_salary: "Desired Salary"
     self_introduction: "Self Introduction"
   upload:
-    title: "Request AI Review"
-    description: "Upload your resume and career history to check for typos and language issues."
+    title: "Upload your resume and career history"
+    description: "If you're interested in remote jobs with Japanese companies, feel free to share your CV or resume with us. We'll do our best to match you with positions that fit your skills and preferences."
     button: "Upload"
     uploaded_files: "Uploaded Files"
     download: "Download it here."
