@@ -27,9 +27,9 @@
     <% unless Rails.env.production? %>
       <% if current_user&.admin? %>
         <%= link_to "admin", rails_admin.dashboard_path %>
-      <% elseif current_user&.employee %>
+      <% elsif current_user&.employee? %>
         <p>Employee</p>
-      <% elseif current_user&.applicant %>
+      <% elsif current_user&.applicant? %>
         <p>Applicant</p>
       <% else %>
         <p>Guest</p>
