@@ -1,5 +1,5 @@
 <div style="display: flex; align-items: center; padding: 2px; text-align: center;">
-  <h1 class="header-title d-none d-lg-block"><%= t('header.title.full') %></h1>
+  <h1 class="header-title d-none d-lg-block slide-in"><%= t('header.title.full') %></h1>
   <h1 class="header-title d-lg-none" style="margin-bottom: 10px;"><%= t('header.title.short') %></h1>
   <img src="<%= asset_path('World-10.png') %>" alt="<%= t('header.title.full') %>" class="logo-image">
 </div>
@@ -50,6 +50,19 @@
 </div>
 
 <style>
+  .slide-in {
+    transform: translateY(-30px);
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards;
+  }
+
+  @keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
   .service-card {
     border: 1px solid #ddd;
     border-radius: 8px;
