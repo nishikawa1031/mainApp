@@ -119,7 +119,7 @@
             <% end %>
           <% end %>
           <div class="logout-button text-center">
-            <%= button_to t('logout'), 'auth/logout', method: :get, data: { turbo: false }, class: "button-modern" %>
+            <%= button_to t('logout'), log_out_path, method: :get, data: { turbo: false }, class: "button-modern" %>
           </div>
         </div>
       </div>
