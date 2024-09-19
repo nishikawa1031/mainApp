@@ -31,8 +31,6 @@ class Auth0Controller < ApplicationController
   private
 
   def logout_url
-    Rails.logger.debug("Generated logout URL: #{logout_url}")
-
     request_params = {
       returnTo: root_url,
       client_id: AUTH0_CONFIG['auth0_client_id']
