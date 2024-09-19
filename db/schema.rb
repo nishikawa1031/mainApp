@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_08_31_070834) do
+ActiveRecord::Schema[7.0].define(version: 2024_09_19_133444) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -179,6 +179,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_08_31_070834) do
     t.string "avatar"
     t.string "rolable_type"
     t.bigint "rolable_id"
+    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["rolable_type", "rolable_id"], name: "index_users_on_rolable"
   end
