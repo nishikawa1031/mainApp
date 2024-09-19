@@ -2,7 +2,7 @@
 
 ## Our Mission
 
-We aim to bridge the gap between job seekers and companies, creating a seamless platform where opportunities meet talent. Our web application provides an efficient and user-friendly matching service designed to connect job seekers with recruiters looking for the right fit for their teams.
+We are Job in Japan, dedicated to connecting global talent with remote working opportunities in Japanese companies.
 
 ## What We Offer
 
