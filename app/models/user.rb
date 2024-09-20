@@ -14,7 +14,7 @@ class User < ApplicationRecord
   class << self
     def find_or_create_from_auth(auth_hash)
       user_params = user_params_from_auth_hash(auth_hash)
-      user = User.find_or_create_by(uid: auth_hash['uid']) do |u|
+      user = User.find_or_create_by(email: auth_hash['info']['email']) do |u|
         u.email = auth_hash['info']['email'] if auth_hash['info']['email'].present?
         u.username = auth_hash['info']['username'] if auth_hash['info']['username'].present?
       end
@@ -26,17 +26,17 @@ class User < ApplicationRecord
 
     def user_params_from_auth_hash(auth_hash)
       {
-        email: auth_hash.info.email,
-        username: auth_hash.info.username,
+        email: auth_hash['info']['email'],
+        username: auth_hash['info']['username'],
         role: determine_role(auth_hash),
         rolable_type: determine_rolable_type(auth_hash)
       }
     end
 
     def determine_role(auth_hash)
-      if auth_hash.info.is_admin
+      if auth_hash['info']['is_admin']
         'admin'
-      elsif auth_hash.info.is_employee
+      elsif auth_hash['info']['is_employee']
         'employee'
       else
         'applicant'
