@@ -33,7 +33,7 @@
               </div>
             </div>
             <div class="text-center">
-              <%= form.submit t('upload.button'), class: "btn btn-primary" %>
+              <%= form.submit t('upload.button'), class: "btn btn-primary", id: "uploadButton", disabled: true %>
             </div>
           <% end %>
 
@@ -156,6 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const fileInput = document.getElementById('fileInput');
   const fileList = document.getElementById('fileList');
   const fileLabel = document.querySelector('label[for="fileInput"]');
+  const uploadButton = document.getElementById('uploadButton');
 
   fileInput.addEventListener('change', function(e) {
     fileList.innerHTML = '';
@@ -166,8 +167,10 @@ document.addEventListener('DOMContentLoaded', function() {
         fileName.textContent = this.files[i].name;
         fileList.appendChild(fileName);
       }
+      uploadButton.disabled = false;  // Enable the upload button
     } else {
       fileLabel.textContent = 'Choose Files';
+      uploadButton.disabled = true;  // Disable the upload button
     }
   });
 });
