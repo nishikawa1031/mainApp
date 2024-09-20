@@ -57,89 +57,23 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'>
-<h1 id="label-Service+Site">Service Site</h1>
+      <div id="content"><div id='filecontents'><h1 id="service-site">Service Site</h1>
 
-<p><a href="https://solution-hub.net">solution-hub.net</a>/</p>
+<p><a href="https://job-in-japan.com/">https://job-in-japan.com/</a></p>
 
-<h1 id="label-For+begginers">For begginers</h1>
+<ul>
+<li><a href="https://github.com/nishikawa1031/mainApp/wiki/How-to-setup">How to setup</a>
 
-<p><a href="documents/for_rails_beginners/rails_md.html">for beginners</a></p>
-
-<h1 id="label-How+to+setup">How to setup</h1>
-
-<h2 id="label-advance+preparation">advance preparation</h2>
-
-<h3 id="label-windows">windows</h3>
-
-<p><a href="https://gorails.com/setup/windows/11#linux-subsystem">Install Ruby On Rails on Windows 11 | GoRails</a></p>
-
-<h3 id="label-Mac">Mac</h3>
-
-<p><a href="https://www.youtube.com/watch?v=rg9DCX33IDY">Lesson 1 - Install Rails 7 on MacOS - YouTube</a></p>
-
-<h2 id="label-local">local</h2>
-<ol><li>
-<p>Download source code</p>
-
-<pre class="code ruby"><code class="ruby">git clone https://github.com/nishikawa1031/mainApp
-</code></pre>
-</li><li>
-<p>Execute command</p>
-
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_make'>make</span> <span class='id identifier rubyid_setup'>setup</span>
-<span class='id identifier rubyid_make'>make</span> <span class='id identifier rubyid_up'>up</span>
-</code></pre>
-</li><li>
-<p>tips: <a href="/Makefile">Makefile</a></p>
-</li><li>
-<p>access <a href="http://localhost:8080">localhost:8080</a>/</p>
-</li><li>
-<p>※ auth0のcallback urlとして、設定しているため、8080でなければならない。&lt;details&gt;&lt;summary&gt;If this screen appears, you have succeeded.&lt;/summary&gt; &lt;img width=“1436” alt=“スクリーンショット 2024-07-30 22 14 24” src=“<a href="https://github.com/user-attachments/assets/753d2e88-ff63-4e1f-b2b4-3ceb715aa77a">github.com/user-attachments/assets/753d2e88-ff63-4e1f-b2b4-3ceb715aa77a</a>”&gt; &lt;/details&gt;</p>
-</li><li>
-<p>run a test ( optional )</p>
-</li><li>
-<p>Ensure that all tests PASS.</p>
-
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bundle'>bundle</span> <span class='id identifier rubyid_exec'>exec</span> <span class='id identifier rubyid_rspec'>rspec</span>
-</code></pre>
-
-<p><a href="https://www.youtube.com/watch?v=-uhFA74eBG0">RSpec Tutorial for Beginners - YouTube</a></p>
-</li></ol>
-
-<h2 id="label-docker-28+optional+-29">docker( optional )</h2>
-<ol><li>
-<p>Uncomment config/database.yml</p>
-
-<pre class="code ruby"><code class="ruby"># dockerを利用する際は、host,password,usernameを指定する必要がある
-  host: db # docker-compose.ymlで定義したMySQLのコンテナ名
-  password: password
-  username: postgres
-</code></pre>
-</li><li>
-<p>setup docker</p>
-
-<pre class="code ruby"><code class="ruby">docker-compose build
-docker-compose up
-docker-compose run web rails db:seed
-</code></pre>
-</li></ol>
-
-<h1 id="label-Start+developing">Start developing</h1>
-
-<h2 id="label-Service+Overview">Service Overview</h2>
-<ul><li>
-<p><a href="/documents/about_md.html">about services</a></p>
-</li></ul>
-
-<h2 id="label-Technical+Description">Technical Description</h2>
-<ul><li>
-<p><a href="documents/technical_docs/Readme_md.html">Technical Docs</a></p>
-</li></ul>
+<ul>
+<li><a href="https://job-in-japan.com/pages/internship">for beginners</a></li>
+<li><a href="documents/technical_docs/Readme.md">Technical Description</a></li>
+<li><a href="https://github.com/nishikawa1031/mainApp/wiki">about this service</a></li>
+</ul></li>
+</ul>
 </div></div>
 
       <div id="footer">
-  Generated on Sat Aug 31 16:24:14 2024 by
+  Generated on Fri Sep 20 23:47:32 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.36 (ruby-3.1.2).
 </div>

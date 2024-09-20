@@ -17,6 +17,7 @@
 | avatar | varchar |  | true |  |  |  |
 | rolable_type | varchar |  | true |  |  |  |
 | rolable_id | bigint |  | true |  |  |  |
+| uid | varchar |  | true |  |  |  |
 
 ## Constraints
 

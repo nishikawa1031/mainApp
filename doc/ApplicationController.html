@@ -108,7 +108,7 @@
 
 <div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="ApplicantsController.html" title="ApplicantsController (class)">ApplicantsController</a></span>, <span class='object_link'><a href="ArticlesController.html" title="ArticlesController (class)">ArticlesController</a></span>, <span class='object_link'><a href="Auth0Controller.html" title="Auth0Controller (class)">Auth0Controller</a></span>, <span class='object_link'><a href="BookmarksController.html" title="BookmarksController (class)">BookmarksController</a></span>, <span class='object_link'><a href="CategoryController.html" title="CategoryController (class)">CategoryController</a></span>, <span class='object_link'><a href="HomeController.html" title="HomeController (class)">HomeController</a></span>, <span class='object_link'><a href="LikesController.html" title="LikesController (class)">LikesController</a></span>, <span class='object_link'><a href="OpenAiController.html" title="OpenAiController (class)">OpenAiController</a></span>, <span class='object_link'><a href="UsersController.html" title="UsersController (class)">UsersController</a></span></p>
+  <p class="children"><span class='object_link'><a href="ApplicantsController.html" title="ApplicantsController (class)">ApplicantsController</a></span>, <span class='object_link'><a href="ArticlesController.html" title="ArticlesController (class)">ArticlesController</a></span>, <span class='object_link'><a href="Auth0Controller.html" title="Auth0Controller (class)">Auth0Controller</a></span>, <span class='object_link'><a href="BookmarksController.html" title="BookmarksController (class)">BookmarksController</a></span>, <span class='object_link'><a href="CategoryController.html" title="CategoryController (class)">CategoryController</a></span>, <span class='object_link'><a href="LikesController.html" title="LikesController (class)">LikesController</a></span>, <span class='object_link'><a href="OpenAiController.html" title="OpenAiController (class)">OpenAiController</a></span>, <span class='object_link'><a href="UsersController.html" title="UsersController (class)">UsersController</a></span></p>
 </div>
 
 
@@ -191,6 +191,28 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#switch_locale-instance_method" title="#switch_locale (instance method)">#<strong>switch_locale</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -204,7 +226,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="ApplicationHelper.html" title="ApplicationHelper (module)">ApplicationHelper</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="ApplicationHelper.html#render_markdown-instance_method" title="ApplicationHelper#render_markdown (method)">#render_markdown</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="ApplicationHelper.html#about-instance_method" title="ApplicationHelper#about (method)">#about</a></span>, <span class='object_link'><a href="ApplicationHelper.html#contact-instance_method" title="ApplicationHelper#contact (method)">#contact</a></span>, <span class='object_link'><a href="ApplicationHelper.html#internship-instance_method" title="ApplicationHelper#internship (method)">#internship</a></span>, <span class='object_link'><a href="ApplicationHelper.html#privacy_policy-instance_method" title="ApplicationHelper#privacy_policy (method)">#privacy_policy</a></span>, <span class='object_link'><a href="ApplicationHelper.html#render_markdown-instance_method" title="ApplicationHelper#render_markdown (method)">#render_markdown</a></span>, <span class='object_link'><a href="ApplicationHelper.html#service_term-instance_method" title="ApplicationHelper#service_term (method)">#service_term</a></span></p>
 
   
 
@@ -227,13 +249,13 @@
       <pre class="lines">
 
 
-22
-23
-24
-25</pre>
+29
+30
+31
+32</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 29</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_authorize_user'>authorize_user</span>
   <span class='id identifier rubyid_user'>user</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="User.html" title="User (class)">User</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span>
@@ -259,19 +281,19 @@
       <pre class="lines">
 
 
-12
-13
-14
-15
-16</pre>
+19
+20
+21
+22
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_check_logged_in'>check_logged_in</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_current_user'>current_user</span>
 
-  <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_home_index_path'>home_index_path</span>
+  <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='id identifier rubyid_root_path'>root_path</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -293,15 +315,49 @@
       <pre class="lines">
 
 
-18
-19
-20</pre>
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 25</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_current_user'>current_user</span>
   <span class='ivar'>@current_user</span> <span class='op'>||=</span> <span class='const'><span class='object_link'><a href="User.html" title="User (class)">User</a></span></span><span class='period'>.</span><span class='id identifier rubyid_find_by'>find_by</span><span class='lparen'>(</span><span class='label'>id:</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:userinfo</span><span class='rbracket'>]</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:userinfo</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="switch_locale-instance_method">
+  
+    #<strong>switch_locale</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/application_controller.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_switch_locale'>switch_locale</span>
+  <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:locale</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_default_locale'>default_locale</span>
+  <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:locale</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_locale'>locale</span>
+  <span class='id identifier rubyid_redirect_back'>redirect_back</span><span class='lparen'>(</span><span class='label'>fallback_location:</span> <span class='id identifier rubyid_root_path'>root_path</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -313,7 +369,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Aug 31 16:24:15 2024 by
+  Generated on Fri Sep 20 23:47:32 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.36 (ruby-3.1.2).
 </div>

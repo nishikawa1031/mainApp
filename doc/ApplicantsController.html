@@ -103,7 +103,18 @@
   
 </div>
 
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>app/controllers/applicants_controller.rb</p>
 
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
 
 
 
@@ -299,7 +310,7 @@
   
   
   <h3 class="inherited">Methods inherited from <span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#authorize_user-instance_method" title="ApplicationController#authorize_user (method)">#authorize_user</a></span>, <span class='object_link'><a href="ApplicationController.html#check_logged_in-instance_method" title="ApplicationController#check_logged_in (method)">#check_logged_in</a></span>, <span class='object_link'><a href="ApplicationController.html#current_user-instance_method" title="ApplicationController#current_user (method)">#current_user</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="ApplicationController.html#authorize_user-instance_method" title="ApplicationController#authorize_user (method)">#authorize_user</a></span>, <span class='object_link'><a href="ApplicationController.html#check_logged_in-instance_method" title="ApplicationController#check_logged_in (method)">#check_logged_in</a></span>, <span class='object_link'><a href="ApplicationController.html#current_user-instance_method" title="ApplicationController#current_user (method)">#current_user</a></span>, <span class='object_link'><a href="ApplicationController.html#switch_locale-instance_method" title="ApplicationController#switch_locale (method)">#switch_locale</a></span></p>
 
   
   
@@ -310,7 +321,7 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="ApplicationHelper.html" title="ApplicationHelper (module)">ApplicationHelper</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="ApplicationHelper.html#render_markdown-instance_method" title="ApplicationHelper#render_markdown (method)">#render_markdown</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="ApplicationHelper.html#about-instance_method" title="ApplicationHelper#about (method)">#about</a></span>, <span class='object_link'><a href="ApplicationHelper.html#contact-instance_method" title="ApplicationHelper#contact (method)">#contact</a></span>, <span class='object_link'><a href="ApplicationHelper.html#internship-instance_method" title="ApplicationHelper#internship (method)">#internship</a></span>, <span class='object_link'><a href="ApplicationHelper.html#privacy_policy-instance_method" title="ApplicationHelper#privacy_policy (method)">#privacy_policy</a></span>, <span class='object_link'><a href="ApplicationHelper.html#render_markdown-instance_method" title="ApplicationHelper#render_markdown (method)">#render_markdown</a></span>, <span class='object_link'><a href="ApplicationHelper.html#service_term-instance_method" title="ApplicationHelper#service_term (method)">#service_term</a></span></p>
 
   
 
@@ -344,7 +355,6 @@
       <pre class="lines">
 
 
-25
 26
 27
 28
@@ -352,10 +362,11 @@
 30
 31
 32
-33</pre>
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 25</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_create'>create</span>
   <span class='ivar'>@applicant</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Applicant.html" title="Applicant (class)">Applicant</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_applicant_params'>applicant_params</span><span class='rparen'>)</span>
@@ -397,13 +408,13 @@
       <pre class="lines">
 
 
-54
-55
-56
-57</pre>
+60
+61
+62
+63</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 54</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_destroy'>destroy</span>
   <span class='ivar'>@applicant</span><span class='period'>.</span><span class='id identifier rubyid_destroy'>destroy</span>
@@ -440,10 +451,10 @@
       <pre class="lines">
 
 
-22</pre>
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 23</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_edit'>edit</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -477,12 +488,12 @@
       <pre class="lines">
 
 
-9
 10
-11</pre>
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span>
   <span class='ivar'>@applicants</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Applicant.html" title="Applicant (class)">Applicant</a></span></span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
@@ -518,12 +529,12 @@
       <pre class="lines">
 
 
-17
 18
-19</pre>
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_new'>new</span>
   <span class='ivar'>@applicant</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Applicant.html" title="Applicant (class)">Applicant</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -559,10 +570,10 @@
       <pre class="lines">
 
 
-14</pre>
+15</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_show'>show</span><span class='semicolon'>;</span> <span class='kw'>end</span></pre>
     </td>
@@ -596,7 +607,6 @@
       <pre class="lines">
 
 
-36
 37
 38
 39
@@ -611,22 +621,33 @@
 48
 49
 50
-51</pre>
+51
+52
+53
+54
+55
+56
+57</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/applicants_controller.rb', line 37</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_update'>update</span>
   <span class='kw'>if</span> <span class='ivar'>@applicant</span><span class='period'>.</span><span class='id identifier rubyid_update'>update</span><span class='lparen'>(</span><span class='id identifier rubyid_applicant_params'>applicant_params</span><span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='ivar'>@applicant</span><span class='period'>.</span><span class='id identifier rubyid_resume'>resume</span><span class='period'>.</span><span class='id identifier rubyid_attached?'>attached?</span>
+    <span class='kw'>if</span> <span class='ivar'>@applicant</span><span class='period'>.</span><span class='id identifier rubyid_files'>files</span><span class='period'>.</span><span class='id identifier rubyid_attached?'>attached?</span>
       <span class='kw'>begin</span>
-        <span class='id identifier rubyid_p'>p</span> <span class='ivar'>@improvement_suggestions</span> <span class='op'>=</span> <span class='id identifier rubyid_analyze_resume'>analyze_resume</span><span class='lparen'>(</span><span class='ivar'>@user</span><span class='period'>.</span><span class='id identifier rubyid_resume'>resume</span><span class='rparen'>)</span>
-        <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='ivar'>@applicant</span><span class='comma'>,</span> <span class='label'>notice:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>履歴書がアップロードされ、分析が完了しました。</span><span class='tstring_end'>&#39;</span></span>
+        <span class='id identifier rubyid_analyzer'>analyzer</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ResumeAnalyzerService.html" title="ResumeAnalyzerService (class)">ResumeAnalyzerService</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ResumeAnalyzerService.html#initialize-instance_method" title="ResumeAnalyzerService#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='ivar'>@applicant</span><span class='period'>.</span><span class='id identifier rubyid_files'>files</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='rparen'>)</span>
+        <span class='ivar'>@improvement_suggestions</span> <span class='op'>=</span> <span class='id identifier rubyid_analyzer'>analyzer</span><span class='period'>.</span><span class='id identifier rubyid_analyze_resume'>analyze_resume</span>
+        <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:success</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>履歴書がアップロードされ、分析が完了しました。</span><span class='tstring_end'>&#39;</span></span>
+        <span class='ivar'>@user</span> <span class='op'>=</span> <span class='ivar'>@applicant</span><span class='period'>.</span><span class='id identifier rubyid_user'>user</span>
+        <span class='id identifier rubyid_render'>render</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>users/show</span><span class='tstring_end'>&#39;</span></span>
       <span class='kw'>rescue</span> <span class='const'>StandardError</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
-        <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='ivar'>@applicant</span><span class='comma'>,</span> <span class='label'>alert:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>エラーが発生しました: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:alert</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>エラーが発生しました: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_render'>render</span> <span class='symbol'>:edit</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:unprocessable_entity</span>
       <span class='kw'>end</span>
     <span class='kw'>else</span>
-      <span class='id identifier rubyid_redirect_to'>redirect_to</span> <span class='ivar'>@applicant</span><span class='comma'>,</span> <span class='label'>notice:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Applicant was successfully updated.</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:see_other</span>
+      <span class='id identifier rubyid_flash'>flash</span><span class='lbracket'>[</span><span class='symbol'>:alert</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>履歴書が添付されていません。</span><span class='tstring_end'>&#39;</span></span>
+      <span class='id identifier rubyid_render'>render</span> <span class='symbol'>:edit</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:unprocessable_entity</span>
     <span class='kw'>end</span>
   <span class='kw'>else</span>
     <span class='id identifier rubyid_render'>render</span> <span class='symbol'>:edit</span><span class='comma'>,</span> <span class='label'>status:</span> <span class='symbol'>:unprocessable_entity</span>
@@ -642,7 +663,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Aug 31 16:24:15 2024 by
+  Generated on Fri Sep 20 23:47:32 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.36 (ruby-3.1.2).
 </div>
