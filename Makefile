@@ -15,6 +15,9 @@ doc:
 	bin/rake diagram:all
 	bundle exec yard
 
+reset:
+	bin/rails db:reset
+
 # デプロイ方法
 ## https://main-app-1209.herokuapp.com/articles
 ## https://dashboard.heroku.com/apps
