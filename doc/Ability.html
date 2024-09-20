@@ -198,7 +198,9 @@
 23
 24
 25
-26</pre>
+26
+27
+28</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/models/ability.rb', line 6</span>
@@ -222,6 +224,8 @@
   <span class='kw'>else</span>
     <span class='id identifier rubyid_can'>can</span> <span class='symbol'>:read</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Article.html" title="Article (class)">Article</a></span></span>
     <span class='id identifier rubyid_can'>can</span> <span class='symbol'>:manage</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Applicant.html" title="Applicant (class)">Applicant</a></span></span><span class='comma'>,</span> <span class='label'>user_id:</span> <span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+    <span class='id identifier rubyid_cannot'>cannot</span> <span class='symbol'>:read</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Applicant.html" title="Applicant (class)">Applicant</a></span></span><span class='comma'>,</span> <span class='label'>user_id:</span> <span class='op'>!</span><span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
+    <span class='id identifier rubyid_cannot'>cannot</span> <span class='symbol'>:update</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="Applicant.html" title="Applicant (class)">Applicant</a></span></span><span class='comma'>,</span> <span class='label'>user_id:</span> <span class='op'>!</span><span class='id identifier rubyid_user'>user</span><span class='period'>.</span><span class='id identifier rubyid_id'>id</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -235,7 +239,7 @@
 </div>
 
       <div id="footer">
-  Generated on Sat Aug 31 16:24:14 2024 by
+  Generated on Fri Sep 20 23:47:32 2024 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.36 (ruby-3.1.2).
 </div>

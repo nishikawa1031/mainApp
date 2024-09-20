@@ -17,7 +17,7 @@
 | [public.employees](public.employees.md) | 7 |  | BASE TABLE |
 | [public.impressions](public.impressions.md) | 15 | インプレッションのテーブル | BASE TABLE |
 | [public.likes](public.likes.md) | 5 | ユーザーがいいねした求人記事のテーブル | BASE TABLE |
-| [public.users](public.users.md) | 9 | アプリケーションのユーザー情報テーブル | BASE TABLE |
+| [public.users](public.users.md) | 10 | アプリケーションのユーザー情報テーブル | BASE TABLE |
 | [public.schema_migrations](public.schema_migrations.md) | 1 |  | BASE TABLE |
 | [public.ar_internal_metadata](public.ar_internal_metadata.md) | 4 |  | BASE TABLE |
 

@@ -9,11 +9,14 @@ up:
 	bundle exec rails s -p 8080
 
 # #外部キーを明らかにし、他のカラムも表示する。
-doc:
+document:
 	bundle exec erd --attributes=foreign_keys,content
 	tbls doc --rm-dist
 	bin/rake diagram:all
 	bundle exec yard
+
+reset:
+	bin/rails db:reset
 
 # デプロイ方法
 ## https://main-app-1209.herokuapp.com/articles

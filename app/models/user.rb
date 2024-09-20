@@ -4,6 +4,7 @@ class User < ApplicationRecord
   belongs_to :rolable, polymorphic: true, optional: true
   has_many :articles
   enum role: { applicant: 0, admin: 1, employee: 2 }
+  encrypts :uid
 
   has_one_attached :avatar
 
@@ -13,7 +14,10 @@ class User < ApplicationRecord
   class << self
     def find_or_create_from_auth(auth_hash)
       user_params = user_params_from_auth_hash(auth_hash)
-      user = find_or_create_by(email: user_params[:email])
+      user = User.find_or_create_by(uid: auth_hash['uid']) do |u|
+        u.email = auth_hash['info']['email'] if auth_hash['info']['email'].present?
+        u.username = auth_hash['info']['username'] if auth_hash['info']['username'].present?
+      end
       user.update!(user_params)
       user
     end
@@ -21,10 +25,9 @@ class User < ApplicationRecord
     private
 
     def user_params_from_auth_hash(auth_hash)
-      puts auth_hash
       {
-        email: auth_hash.info.email || 'guest',
-        username: auth_hash.info.nickname || 'guest',
+        email: auth_hash.info.email,
+        username: auth_hash.info.username,
         role: determine_role(auth_hash),
         rolable_type: determine_rolable_type(auth_hash)
       }
