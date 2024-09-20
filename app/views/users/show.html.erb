@@ -25,11 +25,15 @@
           <%= form_with model: @user.rolable, url: applicant_path(@user.rolable), local: true, multiple: true, class: "mb-4" do |form| %>
             <div class="mb-3">
               <div class="d-flex justify-content-center mb-3">
-                <%= form.file_field :files, class: "form-control", accept: "application/pdf,image/*", style: "max-width: 50%;", multiple: true %>
+                <div style="max-width: 50%;">
+                  <%= form.file_field :files, id: "fileInput", class: "form-control", accept: "application/pdf,image/*", multiple: true, style: "display: none;" %>
+                  <label for="fileInput" class="btn btn-outline-secondary shadow">Choose Files</label>
+                  <div id="fileList" class="mt-2"></div>
+                </div>
               </div>
             </div>
             <div class="text-center">
-              <%= form.submit t('upload.button'), class: "btn btn-primary" %>
+              <%= form.submit t('upload.button'), class: "btn btn-primary", id: "uploadButton", disabled: true %>
             </div>
           <% end %>
 
@@ -146,3 +150,28 @@
     }
   </style>
 <% end %>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const fileInput = document.getElementById('fileInput');
+  const fileList = document.getElementById('fileList');
+  const fileLabel = document.querySelector('label[for="fileInput"]');
+  const uploadButton = document.getElementById('uploadButton');
+
+  fileInput.addEventListener('change', function(e) {
+    fileList.innerHTML = '';
+    if (this.files.length > 0) {
+      fileLabel.textContent = `${this.files.length} file(s) selected`;
+      for (let i = 0; i < this.files.length; i++) {
+        const fileName = document.createElement('div');
+        fileName.textContent = this.files[i].name;
+        fileList.appendChild(fileName);
+      }
+      uploadButton.disabled = false;  // Enable the upload button
+    } else {
+      fileLabel.textContent = 'Choose Files';
+      uploadButton.disabled = true;  // Disable the upload button
+    }
+  });
+});
+</script>
