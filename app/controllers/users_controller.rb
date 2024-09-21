@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       if @user.resume.attached?
         begin
-          p @improvement_suggestions = analyze_resume(@user.resume)
+          @improvement_suggestions = analyze_resume(@user.resume)
           redirect_to @user, notice: '履歴書がアップロードされ、分析が完了しました。'
         rescue StandardError => e
           redirect_to @user, alert: "エラーが発生しました: #{e.message}"
