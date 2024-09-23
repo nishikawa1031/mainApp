@@ -38,7 +38,7 @@
                 <%= button_to "Destroy", @applicant, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
               </div>
             <% end %>
-            <% if false %>
+            <% if @applicant.user&.admin? %>
             <div class="col-sm-8 mb-8">
               <div class="personal-details">
                 <% if @applicant.files.attached? %>
