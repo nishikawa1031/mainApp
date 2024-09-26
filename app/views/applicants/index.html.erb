@@ -20,6 +20,20 @@
           <p class="card-text">国籍: <%= applicant.nationality %></p>
           <p class="card-text">自己紹介: <%= applicant.self_introduction %></p>
           <%= link_to "詳細を見る", applicant, class: "btn btn-primary" %>
+          <% if applicant.user&.admin? %>
+            <div class="col-sm-8 m-8">
+              <div class="personal-details">
+                <% if applicant.files.attached? %>
+                  <hr style="border: 1px solid black;">
+                  <% applicant.files.each do |file| %>
+                    <p>
+                      <%= link_to "#{file.filename}", rails_blob_path(file, disposition: "attachment"), class: "btn btn-primary" %>
+                    </p>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
