@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ActiveRecord::Encryption.configure(
   primary_key: ENV['PRIMARY_KEY'],
   deterministic_key: ENV['DETERMINISTIC_KEY'],
